@@ -5,6 +5,8 @@ project:
 website:
   title: "Formation Business Intelligence & Power BI"
   description: "Modules 1 & 2 - Fondamentaux et Modélisation"
+  site-url: https://nevermind78.github.io/PBI_BI/
+
   navbar:
     left:
       - href: index.qmd
