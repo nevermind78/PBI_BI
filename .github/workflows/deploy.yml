@@ -4,13 +4,11 @@ on:
   push:
     branches: [main]
 
-# Permissions pour le GITHUB_TOKEN
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Autoriser un seul déploiement concurrent
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -18,6 +16,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:  # ← ENVIRONNEMENT AJOUTÉ
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -32,10 +33,10 @@ jobs:
         uses: actions/configure-pages@v3
         
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3  # ← Version corrigée
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
           
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4  # ← Version corrigée
+        id: deployment  # ← ID IMPORTANT POUR L'URL
+        uses: actions/deploy-pages@v4
