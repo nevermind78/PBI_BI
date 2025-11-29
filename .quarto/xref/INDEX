@@ -1,0 +1,11 @@
+{
+  "index.qmd": {
+    "index.html": "2b7664ca"
+  },
+  "modules/module1.qmd": {
+    "module1.html": "169c0cd0"
+  },
+  "modules/module2.qmd": {
+    "module2.html": "56a629be"
+  }
+}

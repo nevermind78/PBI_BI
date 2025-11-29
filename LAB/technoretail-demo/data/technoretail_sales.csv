@@ -1,0 +1,1001 @@
+transaction_id,date,product_sku,product_name,category,brand,store_id,store_name,region,channel,quantity,unit_price,sales_amount,cost_amount,discount_percent
+TXN1000,2023-01-19,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,1299.99,3314.97,2940.0,15
+TXN1001,2024-03-09,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Web,3,989.99,2821.47,2250.0,5
+TXN1002,2023-08-02,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,989.99,989.99,750.0,0
+TXN1003,2023-04-27,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,1,899.99,899.99,650.0,0
+TXN1004,2023-08-22,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,899.99,1619.98,1300.0,10
+TXN1005,2023-02-12,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,989.99,2821.47,2250.0,5
+TXN1006,2024-03-12,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,989.99,1979.98,1500.0,0
+TXN1007,2023-11-19,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,3,899.99,2699.97,1950.0,0
+TXN1008,2023-11-14,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,699.99,664.99,520.0,5
+TXN1009,2024-03-14,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,499.99,849.98,760.0,15
+TXN1010,2024-05-09,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,2,499.99,999.98,760.0,0
+TXN1011,2023-05-13,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Web,1,1299.99,1104.99,980.0,15
+TXN1012,2023-05-29,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,989.99,2969.97,2250.0,0
+TXN1013,2024-05-15,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Web,2,699.99,1399.98,1040.0,0
+TXN1014,2024-01-22,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Mobile,3,699.99,1889.97,1560.0,10
+TXN1015,2024-06-19,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Web,1,699.99,629.99,520.0,10
+TXN1016,2024-02-26,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,989.99,2969.97,2250.0,0
+TXN1017,2023-03-16,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,989.99,2821.47,2250.0,5
+TXN1018,2023-09-28,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,2,699.99,1399.98,1040.0,0
+TXN1019,2023-03-26,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,1,699.99,664.99,520.0,5
+TXN1020,2023-07-03,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,1,899.99,809.99,650.0,10
+TXN1021,2023-10-28,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Mobile,3,1299.99,3899.97,2940.0,0
+TXN1022,2023-11-07,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,499.99,899.98,760.0,10
+TXN1023,2023-02-08,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,1,899.99,854.99,650.0,5
+TXN1024,2023-03-07,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,989.99,1979.98,1500.0,0
+TXN1025,2023-01-20,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Magasin,3,989.99,2969.97,2250.0,0
+TXN1026,2023-07-30,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Mobile,2,1299.99,2339.98,1960.0,10
+TXN1027,2023-05-06,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,899.99,1799.98,1300.0,0
+TXN1028,2024-02-20,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Mobile,1,1299.99,1299.99,980.0,0
+TXN1029,2024-05-28,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,3,899.99,2699.97,1950.0,0
+TXN1030,2023-12-12,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,899.99,899.99,650.0,0
+TXN1031,2024-02-12,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,3,499.99,1274.97,1140.0,15
+TXN1032,2023-09-16,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Web,3,989.99,2969.97,2250.0,0
+TXN1033,2023-12-14,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,1,699.99,699.99,520.0,0
+TXN1034,2024-03-15,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,899.99,2564.97,1950.0,5
+TXN1035,2023-01-22,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,1299.99,2469.98,1960.0,5
+TXN1036,2023-07-17,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,3,899.99,2294.97,1950.0,15
+TXN1037,2023-01-17,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,1299.99,2339.98,1960.0,10
+TXN1038,2024-01-26,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,1,699.99,699.99,520.0,0
+TXN1039,2023-02-08,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Web,3,699.99,2099.97,1560.0,0
+TXN1040,2023-05-23,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,3,1299.99,3899.97,2940.0,0
+TXN1041,2023-02-20,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,899.99,899.99,650.0,0
+TXN1042,2024-04-10,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,499.99,1349.97,1140.0,10
+TXN1043,2023-04-27,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,2,899.99,1799.98,1300.0,0
+TXN1044,2024-03-25,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,699.99,699.99,520.0,0
+TXN1045,2023-11-07,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,699.99,1889.97,1560.0,10
+TXN1046,2023-10-04,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,3,499.99,1274.97,1140.0,15
+TXN1047,2023-07-20,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,989.99,1781.98,1500.0,10
+TXN1048,2023-07-17,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,499.99,949.98,760.0,5
+TXN1049,2023-03-22,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,1299.99,3314.97,2940.0,15
+TXN1050,2023-11-27,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,1299.99,3704.97,2940.0,5
+TXN1051,2023-08-08,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,1299.99,3704.97,2940.0,5
+TXN1052,2023-11-30,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,2,989.99,1979.98,1500.0,0
+TXN1053,2023-02-13,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,1299.99,2209.98,1960.0,15
+TXN1054,2023-06-03,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Magasin,2,989.99,1880.98,1500.0,5
+TXN1055,2023-12-21,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,499.99,949.98,760.0,5
+TXN1056,2023-09-09,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Web,1,699.99,699.99,520.0,0
+TXN1057,2023-02-05,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,989.99,2524.47,2250.0,15
+TXN1058,2023-06-10,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,1299.99,3704.97,2940.0,5
+TXN1059,2023-02-08,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,699.99,1889.97,1560.0,10
+TXN1060,2023-02-23,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,1,899.99,899.99,650.0,0
+TXN1061,2023-03-16,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,2,989.99,1979.98,1500.0,0
+TXN1062,2023-11-09,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,699.99,1399.98,1040.0,0
+TXN1063,2024-02-14,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,1,899.99,854.99,650.0,5
+TXN1064,2023-09-30,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,899.99,899.99,650.0,0
+TXN1065,2023-11-22,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,1,699.99,594.99,520.0,15
+TXN1066,2023-04-23,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,989.99,2969.97,2250.0,0
+TXN1067,2023-09-27,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,2,499.99,999.98,760.0,0
+TXN1068,2024-01-25,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,2,1299.99,2599.98,1960.0,0
+TXN1069,2023-05-06,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,2,899.99,1799.98,1300.0,0
+TXN1070,2023-12-25,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,699.99,1889.97,1560.0,10
+TXN1071,2023-02-17,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,1299.99,3314.97,2940.0,15
+TXN1072,2023-04-06,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,699.99,1889.97,1560.0,10
+TXN1073,2024-06-03,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Mobile,1,1299.99,1169.99,980.0,10
+TXN1074,2023-03-03,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,1,899.99,854.99,650.0,5
+TXN1075,2023-10-12,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,1299.99,1299.99,980.0,0
+TXN1076,2023-05-15,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,499.99,449.99,380.0,10
+TXN1077,2023-02-20,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,499.99,449.99,380.0,10
+TXN1078,2023-04-28,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,499.99,949.98,760.0,5
+TXN1079,2023-09-10,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,3,989.99,2524.47,2250.0,15
+TXN1080,2023-12-27,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,499.99,1499.97,1140.0,0
+TXN1081,2023-08-02,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,1299.99,1299.99,980.0,0
+TXN1082,2024-04-14,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,3,989.99,2672.97,2250.0,10
+TXN1083,2023-12-13,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,2,499.99,999.98,760.0,0
+TXN1084,2023-07-11,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,1,499.99,499.99,380.0,0
+TXN1085,2023-04-21,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Web,2,699.99,1399.98,1040.0,0
+TXN1086,2023-09-06,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,1,899.99,809.99,650.0,10
+TXN1087,2024-04-25,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,2,499.99,999.98,760.0,0
+TXN1088,2024-01-11,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,989.99,940.49,750.0,5
+TXN1089,2023-04-03,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,499.99,474.99,380.0,5
+TXN1090,2023-12-12,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,499.99,1499.97,1140.0,0
+TXN1091,2024-06-02,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,1299.99,3899.97,2940.0,0
+TXN1092,2023-02-15,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,1,499.99,449.99,380.0,10
+TXN1093,2023-07-16,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,899.99,854.99,650.0,5
+TXN1094,2023-01-06,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Web,3,699.99,2099.97,1560.0,0
+TXN1095,2023-03-11,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,1,699.99,594.99,520.0,15
+TXN1096,2023-06-15,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,899.99,2294.97,1950.0,15
+TXN1097,2023-04-04,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,1299.99,1234.99,980.0,5
+TXN1098,2023-01-26,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,989.99,2672.97,2250.0,10
+TXN1099,2023-06-03,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,2,899.99,1619.98,1300.0,10
+TXN1100,2024-04-29,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,989.99,2821.47,2250.0,5
+TXN1101,2024-02-09,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,1299.99,1299.99,980.0,0
+TXN1102,2023-02-01,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,899.99,1799.98,1300.0,0
+TXN1103,2023-10-14,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Magasin,3,1299.99,3899.97,2940.0,0
+TXN1104,2024-03-11,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,2,989.99,1979.98,1500.0,0
+TXN1105,2023-09-24,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,1,1299.99,1104.99,980.0,15
+TXN1106,2023-03-27,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Mobile,3,1299.99,3704.97,2940.0,5
+TXN1107,2023-03-28,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,499.99,474.99,380.0,5
+TXN1108,2023-05-30,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,989.99,2969.97,2250.0,0
+TXN1109,2023-07-04,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,899.99,2699.97,1950.0,0
+TXN1110,2023-01-02,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Magasin,1,1299.99,1169.99,980.0,10
+TXN1111,2023-08-29,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,899.99,2429.97,1950.0,10
+TXN1112,2024-03-06,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Mobile,2,699.99,1329.98,1040.0,5
+TXN1113,2023-04-02,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,2,499.99,999.98,760.0,0
+TXN1114,2023-02-07,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,1299.99,1299.99,980.0,0
+TXN1115,2023-02-13,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,499.99,899.98,760.0,10
+TXN1116,2024-02-12,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,2,989.99,1979.98,1500.0,0
+TXN1117,2023-07-29,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Magasin,1,699.99,699.99,520.0,0
+TXN1118,2023-04-04,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,499.99,949.98,760.0,5
+TXN1119,2023-10-28,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,1,989.99,940.49,750.0,5
+TXN1120,2023-11-05,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,499.99,849.98,760.0,15
+TXN1121,2024-01-09,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,3,899.99,2429.97,1950.0,10
+TXN1122,2023-01-29,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,989.99,2821.47,2250.0,5
+TXN1123,2024-03-21,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,699.99,1329.98,1040.0,5
+TXN1124,2024-01-27,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,1299.99,3899.97,2940.0,0
+TXN1125,2023-11-19,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,699.99,699.99,520.0,0
+TXN1126,2023-10-15,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,1299.99,2599.98,1960.0,0
+TXN1127,2024-05-24,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Magasin,1,1299.99,1299.99,980.0,0
+TXN1128,2024-01-24,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,3,499.99,1349.97,1140.0,10
+TXN1129,2024-06-29,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Mobile,3,989.99,2821.47,2250.0,5
+TXN1130,2023-08-18,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,3,899.99,2429.97,1950.0,10
+TXN1131,2023-08-25,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Web,2,699.99,1399.98,1040.0,0
+TXN1132,2023-07-08,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,1,899.99,809.99,650.0,10
+TXN1133,2023-08-16,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,699.99,1784.97,1560.0,15
+TXN1134,2023-12-06,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Mobile,1,989.99,890.99,750.0,10
+TXN1135,2024-01-07,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,1,699.99,699.99,520.0,0
+TXN1136,2023-10-15,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,899.99,2564.97,1950.0,5
+TXN1137,2024-02-13,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,899.99,1799.98,1300.0,0
+TXN1138,2023-10-07,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,699.99,1784.97,1560.0,15
+TXN1139,2023-10-18,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Magasin,2,989.99,1979.98,1500.0,0
+TXN1140,2023-05-02,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,3,899.99,2564.97,1950.0,5
+TXN1141,2023-07-29,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Web,3,989.99,2821.47,2250.0,5
+TXN1142,2023-12-31,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,899.99,1529.98,1300.0,15
+TXN1143,2023-01-21,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,3,499.99,1274.97,1140.0,15
+TXN1144,2023-06-15,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,699.99,1329.98,1040.0,5
+TXN1145,2023-08-23,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Mobile,2,989.99,1880.98,1500.0,5
+TXN1146,2024-05-24,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,899.99,899.99,650.0,0
+TXN1147,2024-03-21,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Mobile,1,989.99,940.49,750.0,5
+TXN1148,2023-12-24,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,899.99,1529.98,1300.0,15
+TXN1149,2024-01-17,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,699.99,1259.98,1040.0,10
+TXN1150,2024-01-03,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,899.99,854.99,650.0,5
+TXN1151,2024-01-13,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Web,2,699.99,1399.98,1040.0,0
+TXN1152,2023-06-28,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,989.99,1979.98,1500.0,0
+TXN1153,2023-09-08,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,899.99,854.99,650.0,5
+TXN1154,2023-08-09,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Magasin,3,989.99,2821.47,2250.0,5
+TXN1155,2023-06-04,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,989.99,2524.47,2250.0,15
+TXN1156,2023-02-09,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,899.99,1619.98,1300.0,10
+TXN1157,2023-12-29,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,499.99,999.98,760.0,0
+TXN1158,2023-06-25,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,499.99,499.99,380.0,0
+TXN1159,2024-03-25,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,1,899.99,899.99,650.0,0
+TXN1160,2023-02-08,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,1299.99,2599.98,1960.0,0
+TXN1161,2023-07-19,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,899.99,1619.98,1300.0,10
+TXN1162,2023-12-21,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,699.99,699.99,520.0,0
+TXN1163,2023-07-23,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,1,989.99,989.99,750.0,0
+TXN1164,2023-03-17,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,3,899.99,2699.97,1950.0,0
+TXN1165,2024-01-18,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,989.99,2821.47,2250.0,5
+TXN1166,2023-06-01,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,989.99,1880.98,1500.0,5
+TXN1167,2023-03-04,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,989.99,989.99,750.0,0
+TXN1168,2023-04-14,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,499.99,999.98,760.0,0
+TXN1169,2023-06-28,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,1,1299.99,1234.99,980.0,5
+TXN1170,2023-03-17,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,989.99,2969.97,2250.0,0
+TXN1171,2023-03-20,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,699.99,594.99,520.0,15
+TXN1172,2023-02-21,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,1299.99,3704.97,2940.0,5
+TXN1173,2024-03-03,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,1,899.99,899.99,650.0,0
+TXN1174,2023-06-04,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,899.99,1709.98,1300.0,5
+TXN1175,2024-04-04,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,1299.99,1104.99,980.0,15
+TXN1176,2023-06-21,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,1299.99,2209.98,1960.0,15
+TXN1177,2024-01-23,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,1,499.99,474.99,380.0,5
+TXN1178,2023-08-17,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Mobile,1,1299.99,1299.99,980.0,0
+TXN1179,2023-12-28,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,989.99,1979.98,1500.0,0
+TXN1180,2024-01-23,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,499.99,499.99,380.0,0
+TXN1181,2024-04-10,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,3,499.99,1499.97,1140.0,0
+TXN1182,2023-03-24,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,899.99,1799.98,1300.0,0
+TXN1183,2023-05-10,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,499.99,1349.97,1140.0,10
+TXN1184,2023-07-31,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Magasin,3,989.99,2524.47,2250.0,15
+TXN1185,2023-03-08,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,2,899.99,1619.98,1300.0,10
+TXN1186,2024-04-13,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,989.99,2969.97,2250.0,0
+TXN1187,2024-02-26,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,989.99,1979.98,1500.0,0
+TXN1188,2023-12-21,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Web,2,699.99,1399.98,1040.0,0
+TXN1189,2024-01-29,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,1299.99,3899.97,2940.0,0
+TXN1190,2023-12-15,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,1299.99,1299.99,980.0,0
+TXN1191,2023-12-26,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,699.99,699.99,520.0,0
+TXN1192,2024-01-10,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,899.99,899.99,650.0,0
+TXN1193,2023-02-26,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,499.99,999.98,760.0,0
+TXN1194,2023-10-15,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Mobile,3,699.99,2099.97,1560.0,0
+TXN1195,2023-10-22,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,499.99,1274.97,1140.0,15
+TXN1196,2023-06-14,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,899.99,1619.98,1300.0,10
+TXN1197,2024-06-28,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Magasin,1,1299.99,1234.99,980.0,5
+TXN1198,2023-06-22,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,899.99,764.99,650.0,15
+TXN1199,2024-02-27,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,1,899.99,809.99,650.0,10
+TXN1200,2023-08-23,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,1,1299.99,1299.99,980.0,0
+TXN1201,2024-01-15,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,1299.99,3704.97,2940.0,5
+TXN1202,2024-04-04,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,1,499.99,499.99,380.0,0
+TXN1203,2024-06-23,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,499.99,424.99,380.0,15
+TXN1204,2023-08-26,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,1,499.99,499.99,380.0,0
+TXN1205,2024-04-16,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,699.99,699.99,520.0,0
+TXN1206,2023-01-18,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,699.99,1784.97,1560.0,15
+TXN1207,2023-10-28,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,1,899.99,899.99,650.0,0
+TXN1208,2023-02-19,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Magasin,1,1299.99,1299.99,980.0,0
+TXN1209,2024-04-30,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,899.99,1799.98,1300.0,0
+TXN1210,2023-09-03,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,1,1299.99,1169.99,980.0,10
+TXN1211,2023-03-13,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,1,499.99,499.99,380.0,0
+TXN1212,2023-04-15,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,699.99,699.99,520.0,0
+TXN1213,2024-02-07,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,1,699.99,664.99,520.0,5
+TXN1214,2023-04-28,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,989.99,2969.97,2250.0,0
+TXN1215,2024-02-12,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,1,899.99,809.99,650.0,10
+TXN1216,2023-03-07,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,2,989.99,1979.98,1500.0,0
+TXN1217,2024-06-29,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,2,899.99,1799.98,1300.0,0
+TXN1218,2024-06-01,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,499.99,999.98,760.0,0
+TXN1219,2023-03-21,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,699.99,1784.97,1560.0,15
+TXN1220,2023-12-31,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,499.99,1424.97,1140.0,5
+TXN1221,2023-08-14,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,989.99,2969.97,2250.0,0
+TXN1222,2023-10-28,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,499.99,1424.97,1140.0,5
+TXN1223,2023-04-27,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,699.99,699.99,520.0,0
+TXN1224,2023-12-08,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,3,1299.99,3314.97,2940.0,15
+TXN1225,2024-01-09,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,2,499.99,999.98,760.0,0
+TXN1226,2024-03-17,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,1,499.99,449.99,380.0,10
+TXN1227,2023-05-22,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,1,1299.99,1299.99,980.0,0
+TXN1228,2023-10-13,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,699.99,1259.98,1040.0,10
+TXN1229,2023-08-08,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,499.99,999.98,760.0,0
+TXN1230,2023-02-04,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,2,699.99,1189.98,1040.0,15
+TXN1231,2023-08-31,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,2,1299.99,2339.98,1960.0,10
+TXN1232,2023-12-21,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,699.99,1189.98,1040.0,15
+TXN1233,2023-01-27,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Magasin,3,1299.99,3899.97,2940.0,0
+TXN1234,2024-05-27,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Web,1,1299.99,1169.99,980.0,10
+TXN1235,2023-08-17,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,699.99,1189.98,1040.0,15
+TXN1236,2023-10-09,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,1,1299.99,1299.99,980.0,0
+TXN1237,2023-05-18,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,1,899.99,899.99,650.0,0
+TXN1238,2023-09-12,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,899.99,899.99,650.0,0
+TXN1239,2023-09-14,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,1299.99,2599.98,1960.0,0
+TXN1240,2023-06-25,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,499.99,849.98,760.0,15
+TXN1241,2023-12-23,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,699.99,1889.97,1560.0,10
+TXN1242,2023-09-02,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,1299.99,2339.98,1960.0,10
+TXN1243,2024-02-10,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Web,2,989.99,1979.98,1500.0,0
+TXN1244,2023-01-30,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,1299.99,3509.97,2940.0,10
+TXN1245,2023-05-29,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,1299.99,3509.97,2940.0,10
+TXN1246,2024-03-22,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,899.99,2699.97,1950.0,0
+TXN1247,2023-12-15,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,1299.99,2469.98,1960.0,5
+TXN1248,2023-02-22,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,699.99,1399.98,1040.0,0
+TXN1249,2023-11-28,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Magasin,2,1299.99,2339.98,1960.0,10
+TXN1250,2024-01-20,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,899.99,2294.97,1950.0,15
+TXN1251,2024-03-12,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,1299.99,1169.99,980.0,10
+TXN1252,2024-06-15,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,3,699.99,1889.97,1560.0,10
+TXN1253,2024-04-08,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Magasin,1,989.99,989.99,750.0,0
+TXN1254,2023-03-16,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,899.99,899.99,650.0,0
+TXN1255,2024-02-20,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Magasin,3,699.99,2099.97,1560.0,0
+TXN1256,2023-02-20,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,499.99,1274.97,1140.0,15
+TXN1257,2024-05-23,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,3,899.99,2429.97,1950.0,10
+TXN1258,2023-12-10,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,1,989.99,989.99,750.0,0
+TXN1259,2023-11-15,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,899.99,899.99,650.0,0
+TXN1260,2024-04-17,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,899.99,2699.97,1950.0,0
+TXN1261,2023-03-22,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,499.99,1274.97,1140.0,15
+TXN1262,2023-11-13,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,499.99,499.99,380.0,0
+TXN1263,2024-06-04,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Mobile,2,699.99,1329.98,1040.0,5
+TXN1264,2023-12-31,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,1299.99,2599.98,1960.0,0
+TXN1265,2023-05-17,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,1,899.99,899.99,650.0,0
+TXN1266,2023-12-13,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,3,899.99,2294.97,1950.0,15
+TXN1267,2023-05-27,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,899.99,2699.97,1950.0,0
+TXN1268,2023-09-27,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,899.99,1799.98,1300.0,0
+TXN1269,2023-12-09,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,1299.99,1169.99,980.0,10
+TXN1270,2023-07-04,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,499.99,849.98,760.0,15
+TXN1271,2023-07-02,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,499.99,999.98,760.0,0
+TXN1272,2023-06-13,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,989.99,1979.98,1500.0,0
+TXN1273,2023-09-06,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Mobile,3,989.99,2969.97,2250.0,0
+TXN1274,2023-03-12,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,2,899.99,1709.98,1300.0,5
+TXN1275,2024-04-25,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,1299.99,3899.97,2940.0,0
+TXN1276,2024-06-23,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,3,699.99,2099.97,1560.0,0
+TXN1277,2023-04-17,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,499.99,1499.97,1140.0,0
+TXN1278,2024-02-07,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,699.99,2099.97,1560.0,0
+TXN1279,2023-03-16,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Magasin,3,699.99,2099.97,1560.0,0
+TXN1280,2023-01-13,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Web,1,1299.99,1299.99,980.0,0
+TXN1281,2023-05-26,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,699.99,629.99,520.0,10
+TXN1282,2023-06-20,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,899.99,1799.98,1300.0,0
+TXN1283,2023-09-09,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Web,3,989.99,2969.97,2250.0,0
+TXN1284,2023-04-17,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Magasin,2,1299.99,2339.98,1960.0,10
+TXN1285,2024-05-05,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,899.99,854.99,650.0,5
+TXN1286,2023-01-27,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,989.99,1979.98,1500.0,0
+TXN1287,2023-09-28,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Magasin,2,989.99,1979.98,1500.0,0
+TXN1288,2023-05-08,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,899.99,2699.97,1950.0,0
+TXN1289,2023-10-22,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,3,899.99,2294.97,1950.0,15
+TXN1290,2023-09-29,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,499.99,999.98,760.0,0
+TXN1291,2023-11-11,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,1,1299.99,1299.99,980.0,0
+TXN1292,2024-06-02,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,989.99,1880.98,1500.0,5
+TXN1293,2024-05-12,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,699.99,1189.98,1040.0,15
+TXN1294,2024-06-12,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,1299.99,2339.98,1960.0,10
+TXN1295,2023-09-25,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,699.99,2099.97,1560.0,0
+TXN1296,2023-05-29,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,499.99,1499.97,1140.0,0
+TXN1297,2024-06-17,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,499.99,1499.97,1140.0,0
+TXN1298,2024-02-22,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,3,899.99,2699.97,1950.0,0
+TXN1299,2023-11-12,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,699.99,1399.98,1040.0,0
+TXN1300,2024-04-06,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,3,899.99,2564.97,1950.0,5
+TXN1301,2023-03-07,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,989.99,2672.97,2250.0,10
+TXN1302,2023-12-07,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,1299.99,3899.97,2940.0,0
+TXN1303,2023-02-02,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,1,899.99,854.99,650.0,5
+TXN1304,2023-03-23,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,499.99,999.98,760.0,0
+TXN1305,2024-02-08,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,1299.99,3899.97,2940.0,0
+TXN1306,2023-07-16,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,899.99,2294.97,1950.0,15
+TXN1307,2024-03-21,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,899.99,899.99,650.0,0
+TXN1308,2024-03-15,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,989.99,841.49,750.0,15
+TXN1309,2023-06-26,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,899.99,1799.98,1300.0,0
+TXN1310,2024-05-27,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,699.99,1329.98,1040.0,5
+TXN1311,2024-05-09,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,1299.99,1299.99,980.0,0
+TXN1312,2023-11-26,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,699.99,1189.98,1040.0,15
+TXN1313,2023-01-30,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,499.99,424.99,380.0,15
+TXN1314,2023-07-03,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Mobile,1,699.99,699.99,520.0,0
+TXN1315,2024-02-16,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,1,499.99,499.99,380.0,0
+TXN1316,2024-03-21,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,1,499.99,474.99,380.0,5
+TXN1317,2023-10-21,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,989.99,1979.98,1500.0,0
+TXN1318,2023-03-05,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,899.99,2699.97,1950.0,0
+TXN1319,2024-05-06,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,3,499.99,1499.97,1140.0,0
+TXN1320,2023-07-26,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,499.99,474.99,380.0,5
+TXN1321,2023-03-24,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,499.99,474.99,380.0,5
+TXN1322,2023-02-16,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,1299.99,2339.98,1960.0,10
+TXN1323,2023-08-30,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,899.99,1619.98,1300.0,10
+TXN1324,2024-05-08,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,989.99,940.49,750.0,5
+TXN1325,2023-12-27,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Web,2,989.99,1979.98,1500.0,0
+TXN1326,2023-07-09,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,499.99,849.98,760.0,15
+TXN1327,2024-01-23,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,2,989.99,1781.98,1500.0,10
+TXN1328,2024-03-04,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,1,699.99,629.99,520.0,10
+TXN1329,2023-02-14,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,499.99,999.98,760.0,0
+TXN1330,2023-04-14,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,2,699.99,1259.98,1040.0,10
+TXN1331,2023-11-26,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,1,499.99,424.99,380.0,15
+TXN1332,2023-12-06,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,699.99,1994.97,1560.0,5
+TXN1333,2023-12-13,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,699.99,699.99,520.0,0
+TXN1334,2023-03-06,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,989.99,890.99,750.0,10
+TXN1335,2023-06-28,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,699.99,699.99,520.0,0
+TXN1336,2023-07-25,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,699.99,699.99,520.0,0
+TXN1337,2023-04-10,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,989.99,1880.98,1500.0,5
+TXN1338,2024-06-05,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,3,989.99,2969.97,2250.0,0
+TXN1339,2023-12-19,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,699.99,699.99,520.0,0
+TXN1340,2023-02-19,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,699.99,1889.97,1560.0,10
+TXN1341,2023-05-25,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,699.99,699.99,520.0,0
+TXN1342,2023-11-17,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Web,1,699.99,664.99,520.0,5
+TXN1343,2023-03-01,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,699.99,2099.97,1560.0,0
+TXN1344,2024-06-15,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,1299.99,2599.98,1960.0,0
+TXN1345,2023-10-08,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,1,499.99,499.99,380.0,0
+TXN1346,2024-06-29,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,499.99,474.99,380.0,5
+TXN1347,2024-06-03,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Magasin,1,699.99,664.99,520.0,5
+TXN1348,2024-01-04,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,989.99,989.99,750.0,0
+TXN1349,2024-03-07,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,1299.99,2599.98,1960.0,0
+TXN1350,2023-11-21,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,989.99,1682.98,1500.0,15
+TXN1351,2023-08-22,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,989.99,1880.98,1500.0,5
+TXN1352,2023-11-05,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,989.99,989.99,750.0,0
+TXN1353,2023-12-30,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,989.99,1781.98,1500.0,10
+TXN1354,2024-06-25,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,499.99,1274.97,1140.0,15
+TXN1355,2023-12-12,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,1,499.99,499.99,380.0,0
+TXN1356,2024-01-04,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,699.99,664.99,520.0,5
+TXN1357,2023-10-30,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,699.99,1994.97,1560.0,5
+TXN1358,2023-12-25,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,2,899.99,1619.98,1300.0,10
+TXN1359,2023-12-26,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,699.99,699.99,520.0,0
+TXN1360,2023-11-24,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,699.99,699.99,520.0,0
+TXN1361,2024-04-04,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,899.99,2699.97,1950.0,0
+TXN1362,2023-03-18,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,1299.99,2599.98,1960.0,0
+TXN1363,2024-03-30,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,1,499.99,499.99,380.0,0
+TXN1364,2023-08-10,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,989.99,989.99,750.0,0
+TXN1365,2023-03-19,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,899.99,1799.98,1300.0,0
+TXN1366,2024-03-05,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,989.99,1979.98,1500.0,0
+TXN1367,2024-04-18,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,1,699.99,594.99,520.0,15
+TXN1368,2024-02-20,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,1,499.99,499.99,380.0,0
+TXN1369,2023-01-23,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,2,899.99,1619.98,1300.0,10
+TXN1370,2023-05-11,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Web,1,989.99,841.49,750.0,15
+TXN1371,2024-01-23,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,499.99,474.99,380.0,5
+TXN1372,2023-09-14,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,3,499.99,1499.97,1140.0,0
+TXN1373,2024-03-22,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Web,2,989.99,1781.98,1500.0,10
+TXN1374,2024-02-20,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,1299.99,2599.98,1960.0,0
+TXN1375,2024-02-10,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,499.99,499.99,380.0,0
+TXN1376,2023-08-24,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,1299.99,2469.98,1960.0,5
+TXN1377,2024-06-08,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,1,1299.99,1299.99,980.0,0
+TXN1378,2023-07-22,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,3,899.99,2699.97,1950.0,0
+TXN1379,2024-01-02,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,899.99,1799.98,1300.0,0
+TXN1380,2023-03-27,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,3,989.99,2524.47,2250.0,15
+TXN1381,2024-04-13,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,989.99,989.99,750.0,0
+TXN1382,2023-04-29,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,2,899.99,1799.98,1300.0,0
+TXN1383,2023-08-28,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,899.99,1619.98,1300.0,10
+TXN1384,2023-04-19,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Web,2,699.99,1399.98,1040.0,0
+TXN1385,2023-07-21,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Mobile,2,699.99,1189.98,1040.0,15
+TXN1386,2023-08-10,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Web,1,989.99,989.99,750.0,0
+TXN1387,2024-04-20,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,1299.99,3509.97,2940.0,10
+TXN1388,2023-12-27,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Mobile,2,989.99,1880.98,1500.0,5
+TXN1389,2023-11-13,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,1,499.99,499.99,380.0,0
+TXN1390,2023-11-10,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,1,899.99,899.99,650.0,0
+TXN1391,2023-04-02,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,1,989.99,890.99,750.0,10
+TXN1392,2023-01-25,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,989.99,1880.98,1500.0,5
+TXN1393,2023-04-14,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,899.99,899.99,650.0,0
+TXN1394,2023-05-20,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Mobile,1,989.99,940.49,750.0,5
+TXN1395,2023-10-30,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,699.99,1189.98,1040.0,15
+TXN1396,2023-06-26,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,989.99,1979.98,1500.0,0
+TXN1397,2023-04-25,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,1299.99,2469.98,1960.0,5
+TXN1398,2024-02-11,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,989.99,989.99,750.0,0
+TXN1399,2023-12-27,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,3,1299.99,3899.97,2940.0,0
+TXN1400,2023-10-10,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,699.99,1399.98,1040.0,0
+TXN1401,2023-05-31,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,2,899.99,1799.98,1300.0,0
+TXN1402,2023-06-12,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,699.99,664.99,520.0,5
+TXN1403,2023-09-17,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,899.99,809.99,650.0,10
+TXN1404,2024-01-15,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,989.99,2672.97,2250.0,10
+TXN1405,2023-03-25,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,899.99,764.99,650.0,15
+TXN1406,2024-03-14,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,1299.99,2599.98,1960.0,0
+TXN1407,2023-08-20,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,499.99,1274.97,1140.0,15
+TXN1408,2023-12-11,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,3,699.99,1994.97,1560.0,5
+TXN1409,2024-03-16,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,2,499.99,999.98,760.0,0
+TXN1410,2023-05-03,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,1299.99,2599.98,1960.0,0
+TXN1411,2023-11-20,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,2,1299.99,2339.98,1960.0,10
+TXN1412,2023-12-04,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Mobile,3,989.99,2524.47,2250.0,15
+TXN1413,2023-01-05,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,499.99,999.98,760.0,0
+TXN1414,2023-10-28,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Mobile,1,1299.99,1234.99,980.0,5
+TXN1415,2023-06-23,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,699.99,1259.98,1040.0,10
+TXN1416,2023-06-11,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Web,2,989.99,1979.98,1500.0,0
+TXN1417,2023-12-30,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,899.99,1799.98,1300.0,0
+TXN1418,2023-07-26,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,699.99,1259.98,1040.0,10
+TXN1419,2023-05-06,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,699.99,1889.97,1560.0,10
+TXN1420,2024-05-01,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,1299.99,3314.97,2940.0,15
+TXN1421,2024-03-22,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,3,989.99,2821.47,2250.0,5
+TXN1422,2023-10-30,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Web,1,699.99,699.99,520.0,0
+TXN1423,2023-09-13,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,499.99,474.99,380.0,5
+TXN1424,2023-11-02,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,989.99,1979.98,1500.0,0
+TXN1425,2023-09-06,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,499.99,1274.97,1140.0,15
+TXN1426,2023-09-27,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,2,1299.99,2599.98,1960.0,0
+TXN1427,2023-07-25,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Web,1,989.99,989.99,750.0,0
+TXN1428,2023-05-19,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Mobile,2,1299.99,2339.98,1960.0,10
+TXN1429,2023-12-01,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,699.99,1399.98,1040.0,0
+TXN1430,2023-03-03,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,899.99,1799.98,1300.0,0
+TXN1431,2023-08-01,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,989.99,2969.97,2250.0,0
+TXN1432,2024-06-13,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,1299.99,3899.97,2940.0,0
+TXN1433,2023-10-28,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,499.99,499.99,380.0,0
+TXN1434,2023-02-09,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,699.99,2099.97,1560.0,0
+TXN1435,2023-03-05,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,699.99,2099.97,1560.0,0
+TXN1436,2024-06-04,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Web,3,699.99,2099.97,1560.0,0
+TXN1437,2023-11-27,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,1299.99,3509.97,2940.0,10
+TXN1438,2023-09-03,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,2,899.99,1799.98,1300.0,0
+TXN1439,2024-03-09,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,499.99,949.98,760.0,5
+TXN1440,2023-02-03,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,989.99,2969.97,2250.0,0
+TXN1441,2023-12-20,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Web,3,989.99,2969.97,2250.0,0
+TXN1442,2023-09-19,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,989.99,2672.97,2250.0,10
+TXN1443,2023-01-04,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,989.99,1979.98,1500.0,0
+TXN1444,2024-04-01,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,2,1299.99,2599.98,1960.0,0
+TXN1445,2023-07-05,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,3,989.99,2672.97,2250.0,10
+TXN1446,2024-03-01,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,899.99,899.99,650.0,0
+TXN1447,2024-06-11,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,499.99,1424.97,1140.0,5
+TXN1448,2023-10-13,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,3,499.99,1499.97,1140.0,0
+TXN1449,2023-10-09,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,989.99,890.99,750.0,10
+TXN1450,2023-05-13,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,1299.99,3899.97,2940.0,0
+TXN1451,2024-06-17,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Web,3,989.99,2969.97,2250.0,0
+TXN1452,2023-07-11,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,699.99,1994.97,1560.0,5
+TXN1453,2023-02-21,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,1299.99,2469.98,1960.0,5
+TXN1454,2024-03-11,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,899.99,1709.98,1300.0,5
+TXN1455,2023-05-26,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,499.99,1499.97,1140.0,0
+TXN1456,2024-01-25,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,1299.99,2599.98,1960.0,0
+TXN1457,2024-04-28,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,989.99,989.99,750.0,0
+TXN1458,2023-10-09,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,1,899.99,899.99,650.0,0
+TXN1459,2023-09-02,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,699.99,664.99,520.0,5
+TXN1460,2024-01-04,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Magasin,1,699.99,664.99,520.0,5
+TXN1461,2024-04-26,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Web,2,989.99,1979.98,1500.0,0
+TXN1462,2023-02-05,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,899.99,854.99,650.0,5
+TXN1463,2023-07-07,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,699.99,2099.97,1560.0,0
+TXN1464,2023-06-07,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,989.99,2821.47,2250.0,5
+TXN1465,2024-01-08,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,3,899.99,2699.97,1950.0,0
+TXN1466,2024-06-10,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,1,699.99,699.99,520.0,0
+TXN1467,2023-05-11,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,1,699.99,699.99,520.0,0
+TXN1468,2023-12-18,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,1,499.99,499.99,380.0,0
+TXN1469,2024-04-27,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,499.99,449.99,380.0,10
+TXN1470,2024-01-22,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,3,899.99,2699.97,1950.0,0
+TXN1471,2024-05-25,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,989.99,2672.97,2250.0,10
+TXN1472,2024-04-09,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,899.99,1619.98,1300.0,10
+TXN1473,2024-02-11,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,1299.99,1299.99,980.0,0
+TXN1474,2024-03-19,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,3,499.99,1499.97,1140.0,0
+TXN1475,2023-07-11,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,1,899.99,899.99,650.0,0
+TXN1476,2023-01-15,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,1,699.99,699.99,520.0,0
+TXN1477,2024-02-14,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,699.99,2099.97,1560.0,0
+TXN1478,2023-11-19,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,899.99,764.99,650.0,15
+TXN1479,2023-02-17,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,499.99,1349.97,1140.0,10
+TXN1480,2024-02-25,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,989.99,989.99,750.0,0
+TXN1481,2024-04-07,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,899.99,2294.97,1950.0,15
+TXN1482,2023-11-10,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,3,499.99,1499.97,1140.0,0
+TXN1483,2023-04-13,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,699.99,2099.97,1560.0,0
+TXN1484,2023-05-08,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,899.99,1529.98,1300.0,15
+TXN1485,2023-04-29,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Mobile,1,989.99,940.49,750.0,5
+TXN1486,2023-10-04,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,899.99,2429.97,1950.0,10
+TXN1487,2023-07-11,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,1299.99,2599.98,1960.0,0
+TXN1488,2023-12-09,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,899.99,1619.98,1300.0,10
+TXN1489,2023-09-21,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,989.99,2821.47,2250.0,5
+TXN1490,2023-06-20,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,1299.99,3899.97,2940.0,0
+TXN1491,2024-01-10,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,699.99,1889.97,1560.0,10
+TXN1492,2023-03-01,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,1299.99,1234.99,980.0,5
+TXN1493,2023-05-20,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,899.99,1529.98,1300.0,15
+TXN1494,2024-05-22,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,2,989.99,1880.98,1500.0,5
+TXN1495,2024-01-04,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,899.99,2429.97,1950.0,10
+TXN1496,2023-06-16,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,989.99,1979.98,1500.0,0
+TXN1497,2023-05-31,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Mobile,1,989.99,841.49,750.0,15
+TXN1498,2023-08-16,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,699.99,664.99,520.0,5
+TXN1499,2023-05-06,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,699.99,1889.97,1560.0,10
+TXN1500,2023-01-08,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,499.99,899.98,760.0,10
+TXN1501,2023-04-30,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,3,899.99,2429.97,1950.0,10
+TXN1502,2023-10-31,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,2,499.99,999.98,760.0,0
+TXN1503,2024-05-24,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,3,989.99,2969.97,2250.0,0
+TXN1504,2023-08-13,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Web,2,1299.99,2469.98,1960.0,5
+TXN1505,2023-09-09,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,1299.99,2599.98,1960.0,0
+TXN1506,2023-06-12,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,1299.99,2469.98,1960.0,5
+TXN1507,2023-05-02,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,699.99,629.99,520.0,10
+TXN1508,2023-12-07,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Magasin,3,699.99,1784.97,1560.0,15
+TXN1509,2024-03-08,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,989.99,890.99,750.0,10
+TXN1510,2023-01-10,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,2,699.99,1259.98,1040.0,10
+TXN1511,2023-03-06,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,1299.99,2209.98,1960.0,15
+TXN1512,2024-03-18,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,699.99,1399.98,1040.0,0
+TXN1513,2023-10-30,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,989.99,1979.98,1500.0,0
+TXN1514,2023-02-05,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,699.99,2099.97,1560.0,0
+TXN1515,2023-05-11,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,3,699.99,1994.97,1560.0,5
+TXN1516,2023-05-30,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,699.99,1399.98,1040.0,0
+TXN1517,2023-05-02,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Magasin,3,699.99,2099.97,1560.0,0
+TXN1518,2024-05-24,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,2,899.99,1799.98,1300.0,0
+TXN1519,2024-03-23,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,899.99,2699.97,1950.0,0
+TXN1520,2023-03-17,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,499.99,849.98,760.0,15
+TXN1521,2023-06-03,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,989.99,1979.98,1500.0,0
+TXN1522,2023-10-27,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,499.99,449.99,380.0,10
+TXN1523,2023-09-08,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,2,899.99,1709.98,1300.0,5
+TXN1524,2023-10-31,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,499.99,999.98,760.0,0
+TXN1525,2023-06-22,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,499.99,999.98,760.0,0
+TXN1526,2023-02-04,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,899.99,899.99,650.0,0
+TXN1527,2023-06-16,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,989.99,1880.98,1500.0,5
+TXN1528,2023-09-07,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,2,499.99,849.98,760.0,15
+TXN1529,2023-10-14,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,989.99,989.99,750.0,0
+TXN1530,2023-08-23,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,2,499.99,849.98,760.0,15
+TXN1531,2023-10-28,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,989.99,989.99,750.0,0
+TXN1532,2024-05-24,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,899.99,1799.98,1300.0,0
+TXN1533,2023-03-12,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,3,499.99,1499.97,1140.0,0
+TXN1534,2023-06-22,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,899.99,2699.97,1950.0,0
+TXN1535,2023-10-26,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,899.99,2429.97,1950.0,10
+TXN1536,2023-11-10,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,499.99,999.98,760.0,0
+TXN1537,2023-10-22,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,1,499.99,499.99,380.0,0
+TXN1538,2023-03-27,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,699.99,1994.97,1560.0,5
+TXN1539,2023-05-27,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,899.99,854.99,650.0,5
+TXN1540,2023-12-10,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,3,499.99,1349.97,1140.0,10
+TXN1541,2024-03-14,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,3,499.99,1499.97,1140.0,0
+TXN1542,2023-10-31,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,989.99,2524.47,2250.0,15
+TXN1543,2023-09-02,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,1,499.99,499.99,380.0,0
+TXN1544,2023-06-30,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,3,499.99,1499.97,1140.0,0
+TXN1545,2023-04-20,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,3,499.99,1499.97,1140.0,0
+TXN1546,2024-05-10,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,699.99,699.99,520.0,0
+TXN1547,2023-09-22,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,699.99,629.99,520.0,10
+TXN1548,2023-03-05,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,989.99,1979.98,1500.0,0
+TXN1549,2023-11-23,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,989.99,841.49,750.0,15
+TXN1550,2023-02-12,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,989.99,1880.98,1500.0,5
+TXN1551,2023-06-23,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,1,1299.99,1299.99,980.0,0
+TXN1552,2023-05-03,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,899.99,899.99,650.0,0
+TXN1553,2023-12-20,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,1,899.99,899.99,650.0,0
+TXN1554,2023-11-29,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,899.99,764.99,650.0,15
+TXN1555,2023-07-28,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,3,499.99,1424.97,1140.0,5
+TXN1556,2023-04-27,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,1299.99,2339.98,1960.0,10
+TXN1557,2024-01-28,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,499.99,499.99,380.0,0
+TXN1558,2023-11-10,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,1,1299.99,1169.99,980.0,10
+TXN1559,2024-05-23,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,699.99,699.99,520.0,0
+TXN1560,2023-07-26,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,699.99,2099.97,1560.0,0
+TXN1561,2023-04-22,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,1299.99,2339.98,1960.0,10
+TXN1562,2023-09-25,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,899.99,2564.97,1950.0,5
+TXN1563,2024-04-15,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,1299.99,2469.98,1960.0,5
+TXN1564,2023-07-01,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,699.99,1189.98,1040.0,15
+TXN1565,2023-10-22,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,699.99,2099.97,1560.0,0
+TXN1566,2023-11-29,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Web,2,989.99,1781.98,1500.0,10
+TXN1567,2024-06-06,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,899.99,1799.98,1300.0,0
+TXN1568,2024-03-19,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,1,899.99,899.99,650.0,0
+TXN1569,2023-09-29,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,499.99,1424.97,1140.0,5
+TXN1570,2023-07-06,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,499.99,1424.97,1140.0,5
+TXN1571,2024-04-15,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Web,3,699.99,2099.97,1560.0,0
+TXN1572,2023-09-10,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,1,499.99,499.99,380.0,0
+TXN1573,2024-04-08,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,1299.99,3899.97,2940.0,0
+TXN1574,2023-02-22,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,989.99,2969.97,2250.0,0
+TXN1575,2023-04-24,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,1,499.99,474.99,380.0,5
+TXN1576,2023-04-16,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,989.99,890.99,750.0,10
+TXN1577,2023-04-18,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,1,499.99,499.99,380.0,0
+TXN1578,2023-05-04,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,1299.99,1234.99,980.0,5
+TXN1579,2023-03-29,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,499.99,1424.97,1140.0,5
+TXN1580,2024-01-31,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,699.99,699.99,520.0,0
+TXN1581,2024-04-02,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,499.99,449.99,380.0,10
+TXN1582,2024-02-03,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Mobile,2,699.99,1399.98,1040.0,0
+TXN1583,2023-12-28,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,3,499.99,1499.97,1140.0,0
+TXN1584,2023-04-18,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,899.99,1799.98,1300.0,0
+TXN1585,2024-03-28,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,989.99,989.99,750.0,0
+TXN1586,2024-04-19,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Web,2,1299.99,2599.98,1960.0,0
+TXN1587,2023-03-08,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,1299.99,2599.98,1960.0,0
+TXN1588,2024-04-08,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,699.99,664.99,520.0,5
+TXN1589,2023-09-03,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,3,989.99,2524.47,2250.0,15
+TXN1590,2023-12-07,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,499.99,1499.97,1140.0,0
+TXN1591,2023-05-04,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,1,499.99,499.99,380.0,0
+TXN1592,2023-09-10,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Web,3,699.99,2099.97,1560.0,0
+TXN1593,2023-09-03,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,3,1299.99,3899.97,2940.0,0
+TXN1594,2023-11-18,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Mobile,1,989.99,989.99,750.0,0
+TXN1595,2024-05-31,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,1299.99,2599.98,1960.0,0
+TXN1596,2023-05-17,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Mobile,2,1299.99,2599.98,1960.0,0
+TXN1597,2023-01-15,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Mobile,1,699.99,699.99,520.0,0
+TXN1598,2024-01-13,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,1,499.99,474.99,380.0,5
+TXN1599,2023-05-11,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,499.99,474.99,380.0,5
+TXN1600,2023-02-26,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,699.99,699.99,520.0,0
+TXN1601,2023-08-13,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,989.99,1979.98,1500.0,0
+TXN1602,2023-08-05,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,3,899.99,2699.97,1950.0,0
+TXN1603,2023-05-23,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Magasin,2,1299.99,2599.98,1960.0,0
+TXN1604,2023-12-20,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,899.99,1619.98,1300.0,10
+TXN1605,2024-02-20,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,699.99,629.99,520.0,10
+TXN1606,2023-08-03,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Mobile,2,699.99,1399.98,1040.0,0
+TXN1607,2024-02-11,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,989.99,2969.97,2250.0,0
+TXN1608,2023-04-17,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,699.99,629.99,520.0,10
+TXN1609,2023-10-12,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,1299.99,3314.97,2940.0,15
+TXN1610,2023-12-23,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,989.99,2672.97,2250.0,10
+TXN1611,2023-01-17,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,2,1299.99,2599.98,1960.0,0
+TXN1612,2024-04-20,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,499.99,999.98,760.0,0
+TXN1613,2023-02-18,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,3,1299.99,3899.97,2940.0,0
+TXN1614,2023-04-06,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,699.99,699.99,520.0,0
+TXN1615,2023-10-10,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,699.99,1889.97,1560.0,10
+TXN1616,2024-04-03,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,2,989.99,1781.98,1500.0,10
+TXN1617,2023-04-11,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,1299.99,3509.97,2940.0,10
+TXN1618,2024-06-21,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,699.99,1784.97,1560.0,15
+TXN1619,2023-03-24,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,699.99,699.99,520.0,0
+TXN1620,2023-07-15,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,1,499.99,499.99,380.0,0
+TXN1621,2023-03-07,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Magasin,3,989.99,2524.47,2250.0,15
+TXN1622,2024-04-07,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,2,899.99,1529.98,1300.0,15
+TXN1623,2023-07-09,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,899.99,1799.98,1300.0,0
+TXN1624,2023-10-25,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,699.99,699.99,520.0,0
+TXN1625,2023-07-28,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,899.99,2564.97,1950.0,5
+TXN1626,2024-01-14,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,1,989.99,989.99,750.0,0
+TXN1627,2023-01-03,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,1,699.99,629.99,520.0,10
+TXN1628,2023-11-16,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,2,699.99,1259.98,1040.0,10
+TXN1629,2023-04-14,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,1,899.99,899.99,650.0,0
+TXN1630,2023-01-12,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Web,2,989.99,1682.98,1500.0,15
+TXN1631,2023-05-27,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,1299.99,2599.98,1960.0,0
+TXN1632,2024-02-22,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Magasin,1,699.99,699.99,520.0,0
+TXN1633,2023-05-13,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,699.99,2099.97,1560.0,0
+TXN1634,2023-02-15,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,699.99,1889.97,1560.0,10
+TXN1635,2023-04-17,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,499.99,999.98,760.0,0
+TXN1636,2023-09-11,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,1299.99,1169.99,980.0,10
+TXN1637,2023-12-21,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,699.99,2099.97,1560.0,0
+TXN1638,2024-03-18,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,899.99,809.99,650.0,10
+TXN1639,2023-01-28,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,499.99,1499.97,1140.0,0
+TXN1640,2023-03-29,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,989.99,2821.47,2250.0,5
+TXN1641,2023-12-05,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,1299.99,2599.98,1960.0,0
+TXN1642,2023-12-14,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,2,989.99,1979.98,1500.0,0
+TXN1643,2023-01-02,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,2,989.99,1880.98,1500.0,5
+TXN1644,2023-10-27,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,1,1299.99,1299.99,980.0,0
+TXN1645,2023-01-04,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,3,699.99,2099.97,1560.0,0
+TXN1646,2023-01-16,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,1,1299.99,1299.99,980.0,0
+TXN1647,2024-06-19,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,1299.99,1299.99,980.0,0
+TXN1648,2024-06-30,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,1299.99,2339.98,1960.0,10
+TXN1649,2024-05-06,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Magasin,3,699.99,1889.97,1560.0,10
+TXN1650,2023-09-11,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Magasin,3,699.99,1784.97,1560.0,15
+TXN1651,2023-04-10,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Magasin,3,1299.99,3509.97,2940.0,10
+TXN1652,2024-06-18,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,699.99,1399.98,1040.0,0
+TXN1653,2023-04-05,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,989.99,940.49,750.0,5
+TXN1654,2023-12-08,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,699.99,664.99,520.0,5
+TXN1655,2023-09-18,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,989.99,2821.47,2250.0,5
+TXN1656,2023-09-29,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,1299.99,2469.98,1960.0,5
+TXN1657,2023-04-07,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,1,989.99,940.49,750.0,5
+TXN1658,2023-02-11,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,1,1299.99,1299.99,980.0,0
+TXN1659,2023-04-21,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,1299.99,3899.97,2940.0,0
+TXN1660,2024-05-18,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,1,699.99,699.99,520.0,0
+TXN1661,2024-01-09,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Web,3,1299.99,3899.97,2940.0,0
+TXN1662,2023-09-16,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,2,899.99,1529.98,1300.0,15
+TXN1663,2024-06-12,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,1,899.99,899.99,650.0,0
+TXN1664,2024-06-06,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Mobile,2,989.99,1979.98,1500.0,0
+TXN1665,2024-04-26,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,899.99,1619.98,1300.0,10
+TXN1666,2023-01-19,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,899.99,1709.98,1300.0,5
+TXN1667,2023-10-29,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Magasin,3,989.99,2672.97,2250.0,10
+TXN1668,2023-11-07,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,899.99,1799.98,1300.0,0
+TXN1669,2023-04-27,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Web,3,1299.99,3704.97,2940.0,5
+TXN1670,2023-12-09,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,3,899.99,2699.97,1950.0,0
+TXN1671,2023-11-16,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,2,699.99,1399.98,1040.0,0
+TXN1672,2024-05-28,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,1,899.99,899.99,650.0,0
+TXN1673,2023-06-20,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,989.99,2969.97,2250.0,0
+TXN1674,2023-06-06,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,899.99,1619.98,1300.0,10
+TXN1675,2023-12-14,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,989.99,890.99,750.0,10
+TXN1676,2023-09-18,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,699.99,594.99,520.0,15
+TXN1677,2024-06-27,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,499.99,999.98,760.0,0
+TXN1678,2024-01-10,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,2,899.99,1799.98,1300.0,0
+TXN1679,2023-09-20,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,1,499.99,424.99,380.0,15
+TXN1680,2023-11-14,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,699.99,2099.97,1560.0,0
+TXN1681,2024-05-01,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,1299.99,1169.99,980.0,10
+TXN1682,2023-10-21,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,3,899.99,2429.97,1950.0,10
+TXN1683,2024-06-29,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,499.99,999.98,760.0,0
+TXN1684,2023-01-07,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,989.99,2821.47,2250.0,5
+TXN1685,2023-07-26,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,899.99,1799.98,1300.0,0
+TXN1686,2023-02-25,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,1,899.99,764.99,650.0,15
+TXN1687,2024-03-18,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,899.99,2699.97,1950.0,0
+TXN1688,2023-04-14,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,899.99,1799.98,1300.0,0
+TXN1689,2023-06-09,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,1,499.99,499.99,380.0,0
+TXN1690,2023-10-04,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,699.99,1189.98,1040.0,15
+TXN1691,2023-02-15,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,499.99,499.99,380.0,0
+TXN1692,2023-10-08,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,2,899.99,1799.98,1300.0,0
+TXN1693,2023-04-14,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,699.99,1784.97,1560.0,15
+TXN1694,2023-10-09,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,899.99,2699.97,1950.0,0
+TXN1695,2023-05-13,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Mobile,1,989.99,989.99,750.0,0
+TXN1696,2023-02-18,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,499.99,1274.97,1140.0,15
+TXN1697,2023-08-31,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Web,2,989.99,1979.98,1500.0,0
+TXN1698,2023-12-08,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,2,499.99,849.98,760.0,15
+TXN1699,2023-05-15,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,989.99,1979.98,1500.0,0
+TXN1700,2023-02-03,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,1,899.99,899.99,650.0,0
+TXN1701,2023-02-17,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,1,899.99,899.99,650.0,0
+TXN1702,2023-03-04,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,499.99,1274.97,1140.0,15
+TXN1703,2023-11-20,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,1299.99,3899.97,2940.0,0
+TXN1704,2023-04-01,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,1299.99,3899.97,2940.0,0
+TXN1705,2023-02-06,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,1,899.99,899.99,650.0,0
+TXN1706,2023-03-07,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,1,1299.99,1169.99,980.0,10
+TXN1707,2023-02-09,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,499.99,899.98,760.0,10
+TXN1708,2023-01-24,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,699.99,2099.97,1560.0,0
+TXN1709,2023-01-16,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,989.99,1682.98,1500.0,15
+TXN1710,2024-01-16,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Mobile,2,1299.99,2209.98,1960.0,15
+TXN1711,2023-07-11,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,699.99,1399.98,1040.0,0
+TXN1712,2024-06-29,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Magasin,1,989.99,989.99,750.0,0
+TXN1713,2024-02-06,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,3,899.99,2294.97,1950.0,15
+TXN1714,2024-04-05,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,499.99,1274.97,1140.0,15
+TXN1715,2024-06-03,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,699.99,699.99,520.0,0
+TXN1716,2024-03-23,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,2,1299.99,2339.98,1960.0,10
+TXN1717,2023-11-25,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,499.99,999.98,760.0,0
+TXN1718,2024-03-25,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,499.99,1499.97,1140.0,0
+TXN1719,2023-02-02,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,899.99,809.99,650.0,10
+TXN1720,2023-09-10,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,499.99,1499.97,1140.0,0
+TXN1721,2023-03-03,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Web,1,699.99,699.99,520.0,0
+TXN1722,2023-02-01,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,2,989.99,1880.98,1500.0,5
+TXN1723,2023-05-23,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,989.99,2969.97,2250.0,0
+TXN1724,2024-01-17,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,499.99,999.98,760.0,0
+TXN1725,2023-12-20,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,499.99,849.98,760.0,15
+TXN1726,2023-10-11,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,899.99,899.99,650.0,0
+TXN1727,2023-10-12,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,2,899.99,1529.98,1300.0,15
+TXN1728,2023-11-07,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,989.99,2969.97,2250.0,0
+TXN1729,2024-03-29,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,989.99,989.99,750.0,0
+TXN1730,2023-01-19,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,699.99,2099.97,1560.0,0
+TXN1731,2023-11-21,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,1299.99,2339.98,1960.0,10
+TXN1732,2024-04-08,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,499.99,999.98,760.0,0
+TXN1733,2023-05-29,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,899.99,1709.98,1300.0,5
+TXN1734,2024-04-20,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,499.99,499.99,380.0,0
+TXN1735,2023-08-21,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,699.99,2099.97,1560.0,0
+TXN1736,2023-06-07,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,499.99,424.99,380.0,15
+TXN1737,2023-11-19,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,1,699.99,629.99,520.0,10
+TXN1738,2024-02-24,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,1299.99,3704.97,2940.0,5
+TXN1739,2023-05-12,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,699.99,1399.98,1040.0,0
+TXN1740,2024-05-03,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,699.99,629.99,520.0,10
+TXN1741,2023-05-01,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,3,499.99,1499.97,1140.0,0
+TXN1742,2023-11-02,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,1299.99,3314.97,2940.0,15
+TXN1743,2023-03-14,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,1299.99,1299.99,980.0,0
+TXN1744,2024-05-15,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,1299.99,3899.97,2940.0,0
+TXN1745,2024-06-10,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,3,499.99,1499.97,1140.0,0
+TXN1746,2023-06-14,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,899.99,2294.97,1950.0,15
+TXN1747,2023-12-17,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,989.99,989.99,750.0,0
+TXN1748,2023-01-28,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,2,899.99,1619.98,1300.0,10
+TXN1749,2023-08-12,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,699.99,1889.97,1560.0,10
+TXN1750,2024-06-03,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,989.99,1979.98,1500.0,0
+TXN1751,2023-03-10,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,699.99,664.99,520.0,5
+TXN1752,2023-01-07,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,1299.99,3899.97,2940.0,0
+TXN1753,2024-05-24,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,899.99,899.99,650.0,0
+TXN1754,2023-05-10,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,989.99,1781.98,1500.0,10
+TXN1755,2023-01-12,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,1299.99,2209.98,1960.0,15
+TXN1756,2024-05-13,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,989.99,989.99,750.0,0
+TXN1757,2024-04-02,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,1,989.99,890.99,750.0,10
+TXN1758,2023-04-15,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,699.99,1329.98,1040.0,5
+TXN1759,2023-10-29,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Web,2,989.99,1880.98,1500.0,5
+TXN1760,2023-11-14,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,1299.99,2599.98,1960.0,0
+TXN1761,2023-05-20,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Magasin,3,989.99,2672.97,2250.0,10
+TXN1762,2023-04-30,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,1,499.99,474.99,380.0,5
+TXN1763,2023-02-04,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Mobile,3,1299.99,3509.97,2940.0,10
+TXN1764,2023-07-18,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Mobile,3,989.99,2969.97,2250.0,0
+TXN1765,2023-11-28,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,1,499.99,499.99,380.0,0
+TXN1766,2023-09-03,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,3,989.99,2672.97,2250.0,10
+TXN1767,2024-05-23,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,1299.99,3899.97,2940.0,0
+TXN1768,2023-11-21,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Magasin,2,1299.99,2209.98,1960.0,15
+TXN1769,2023-02-17,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,899.99,1709.98,1300.0,5
+TXN1770,2023-02-10,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,899.99,1619.98,1300.0,10
+TXN1771,2023-02-12,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,2,899.99,1709.98,1300.0,5
+TXN1772,2023-01-18,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,1299.99,3509.97,2940.0,10
+TXN1773,2023-09-16,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,899.99,2699.97,1950.0,0
+TXN1774,2024-04-21,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,499.99,999.98,760.0,0
+TXN1775,2023-11-19,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,2,989.99,1979.98,1500.0,0
+TXN1776,2023-03-20,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Magasin,1,1299.99,1104.99,980.0,15
+TXN1777,2023-10-10,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,1299.99,3899.97,2940.0,0
+TXN1778,2023-02-01,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,699.99,629.99,520.0,10
+TXN1779,2023-01-18,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,1299.99,3314.97,2940.0,15
+TXN1780,2023-10-12,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Web,1,989.99,841.49,750.0,15
+TXN1781,2023-01-10,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,2,899.99,1709.98,1300.0,5
+TXN1782,2023-07-12,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,899.99,899.99,650.0,0
+TXN1783,2023-09-27,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,1299.99,1299.99,980.0,0
+TXN1784,2023-01-28,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,899.99,899.99,650.0,0
+TXN1785,2023-01-15,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,1,899.99,899.99,650.0,0
+TXN1786,2024-05-29,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,989.99,2524.47,2250.0,15
+TXN1787,2023-01-24,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,1299.99,2599.98,1960.0,0
+TXN1788,2023-10-16,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,499.99,1274.97,1140.0,15
+TXN1789,2024-02-01,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,699.99,1994.97,1560.0,5
+TXN1790,2024-05-09,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,899.99,2699.97,1950.0,0
+TXN1791,2023-07-30,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,989.99,2524.47,2250.0,15
+TXN1792,2023-01-21,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,899.99,2699.97,1950.0,0
+TXN1793,2023-04-23,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,499.99,1499.97,1140.0,0
+TXN1794,2023-03-31,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,699.99,1259.98,1040.0,10
+TXN1795,2023-01-12,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Web,2,989.99,1979.98,1500.0,0
+TXN1796,2024-04-18,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,699.99,699.99,520.0,0
+TXN1797,2024-04-23,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,699.99,594.99,520.0,15
+TXN1798,2024-06-25,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,499.99,949.98,760.0,5
+TXN1799,2023-11-30,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,2,499.99,999.98,760.0,0
+TXN1800,2023-03-10,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,1,899.99,899.99,650.0,0
+TXN1801,2024-05-28,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,1,699.99,699.99,520.0,0
+TXN1802,2023-01-31,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Magasin,2,1299.99,2469.98,1960.0,5
+TXN1803,2023-12-27,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Web,1,699.99,699.99,520.0,0
+TXN1804,2023-06-16,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,3,499.99,1274.97,1140.0,15
+TXN1805,2024-03-14,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,499.99,1499.97,1140.0,0
+TXN1806,2023-08-25,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,699.99,1889.97,1560.0,10
+TXN1807,2023-07-08,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,1299.99,3899.97,2940.0,0
+TXN1808,2023-07-17,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Mobile,1,699.99,629.99,520.0,10
+TXN1809,2023-12-18,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,2,499.99,999.98,760.0,0
+TXN1810,2024-05-30,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,899.99,2699.97,1950.0,0
+TXN1811,2023-06-25,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,2,499.99,949.98,760.0,5
+TXN1812,2024-04-17,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,499.99,1349.97,1140.0,10
+TXN1813,2024-03-29,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,1,499.99,499.99,380.0,0
+TXN1814,2023-01-07,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,499.99,1499.97,1140.0,0
+TXN1815,2023-10-26,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,2,899.99,1709.98,1300.0,5
+TXN1816,2023-05-24,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,989.99,2969.97,2250.0,0
+TXN1817,2024-06-02,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Magasin,2,1299.99,2599.98,1960.0,0
+TXN1818,2024-03-11,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Web,2,1299.99,2469.98,1960.0,5
+TXN1819,2023-07-17,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,499.99,1349.97,1140.0,10
+TXN1820,2023-11-18,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,699.99,1889.97,1560.0,10
+TXN1821,2023-11-18,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,899.99,2699.97,1950.0,0
+TXN1822,2023-03-09,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,3,1299.99,3899.97,2940.0,0
+TXN1823,2024-01-25,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,1,1299.99,1104.99,980.0,15
+TXN1824,2023-08-04,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Web,2,989.99,1781.98,1500.0,10
+TXN1825,2023-05-29,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,899.99,764.99,650.0,15
+TXN1826,2023-10-26,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,1299.99,1299.99,980.0,0
+TXN1827,2023-06-04,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,1299.99,2209.98,1960.0,15
+TXN1828,2023-02-05,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,2,499.99,999.98,760.0,0
+TXN1829,2023-07-06,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Web,1,699.99,664.99,520.0,5
+TXN1830,2024-05-17,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,2,499.99,899.98,760.0,10
+TXN1831,2023-10-07,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,989.99,2969.97,2250.0,0
+TXN1832,2023-06-07,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,1299.99,2209.98,1960.0,15
+TXN1833,2023-03-04,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,1,989.99,989.99,750.0,0
+TXN1834,2023-08-15,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,1299.99,2599.98,1960.0,0
+TXN1835,2023-03-30,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,3,899.99,2699.97,1950.0,0
+TXN1836,2024-05-30,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,699.99,699.99,520.0,0
+TXN1837,2023-06-25,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,989.99,1880.98,1500.0,5
+TXN1838,2023-01-21,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,3,989.99,2524.47,2250.0,15
+TXN1839,2024-02-05,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,1299.99,3314.97,2940.0,15
+TXN1840,2023-06-12,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,989.99,2672.97,2250.0,10
+TXN1841,2023-06-03,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,2,899.99,1619.98,1300.0,10
+TXN1842,2023-06-28,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,2,989.99,1979.98,1500.0,0
+TXN1843,2023-01-07,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Magasin,3,699.99,2099.97,1560.0,0
+TXN1844,2023-08-09,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,499.99,1349.97,1140.0,10
+TXN1845,2024-06-13,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Magasin,1,989.99,989.99,750.0,0
+TXN1846,2023-08-26,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,899.99,1799.98,1300.0,0
+TXN1847,2023-04-25,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,2,899.99,1799.98,1300.0,0
+TXN1848,2023-02-15,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,899.99,2699.97,1950.0,0
+TXN1849,2024-03-18,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Web,3,1299.99,3314.97,2940.0,15
+TXN1850,2023-05-07,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Web,2,1299.99,2599.98,1960.0,0
+TXN1851,2023-10-08,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,989.99,989.99,750.0,0
+TXN1852,2024-02-23,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,989.99,989.99,750.0,0
+TXN1853,2024-05-11,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,989.99,1979.98,1500.0,0
+TXN1854,2023-07-04,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,699.99,2099.97,1560.0,0
+TXN1855,2023-04-06,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,699.99,699.99,520.0,0
+TXN1856,2023-07-12,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,1299.99,2599.98,1960.0,0
+TXN1857,2024-03-14,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,3,499.99,1274.97,1140.0,15
+TXN1858,2024-06-12,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,1299.99,3704.97,2940.0,5
+TXN1859,2023-08-07,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,899.99,1799.98,1300.0,0
+TXN1860,2024-06-05,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Web,2,989.99,1682.98,1500.0,15
+TXN1861,2023-11-08,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,2,499.99,949.98,760.0,5
+TXN1862,2023-04-22,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,2,899.99,1799.98,1300.0,0
+TXN1863,2023-07-09,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,499.99,449.99,380.0,10
+TXN1864,2023-09-22,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,1299.99,3899.97,2940.0,0
+TXN1865,2023-10-15,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,1,1299.99,1169.99,980.0,10
+TXN1866,2023-04-01,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,1299.99,1234.99,980.0,5
+TXN1867,2023-02-11,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,989.99,1781.98,1500.0,10
+TXN1868,2023-02-18,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,499.99,999.98,760.0,0
+TXN1869,2024-06-01,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,989.99,1880.98,1500.0,5
+TXN1870,2023-09-19,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,1,989.99,989.99,750.0,0
+TXN1871,2023-11-25,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,2,899.99,1709.98,1300.0,5
+TXN1872,2023-10-27,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,899.99,2699.97,1950.0,0
+TXN1873,2024-01-13,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,989.99,890.99,750.0,10
+TXN1874,2023-02-03,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,1299.99,3899.97,2940.0,0
+TXN1875,2023-01-25,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,699.99,2099.97,1560.0,0
+TXN1876,2023-07-20,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,989.99,2969.97,2250.0,0
+TXN1877,2023-10-23,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,499.99,1499.97,1140.0,0
+TXN1878,2024-03-23,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,1299.99,3509.97,2940.0,10
+TXN1879,2024-03-06,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Web,1,989.99,890.99,750.0,10
+TXN1880,2023-06-15,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,499.99,999.98,760.0,0
+TXN1881,2023-11-24,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,989.99,2969.97,2250.0,0
+TXN1882,2023-12-14,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,1,499.99,499.99,380.0,0
+TXN1883,2023-02-11,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,3,899.99,2294.97,1950.0,15
+TXN1884,2023-01-27,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,899.99,809.99,650.0,10
+TXN1885,2023-02-13,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,1,699.99,699.99,520.0,0
+TXN1886,2023-01-02,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,3,989.99,2969.97,2250.0,0
+TXN1887,2023-02-03,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,699.99,629.99,520.0,10
+TXN1888,2023-07-15,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,1299.99,3314.97,2940.0,15
+TXN1889,2023-03-31,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,2,499.99,949.98,760.0,5
+TXN1890,2023-10-29,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,3,1299.99,3509.97,2940.0,10
+TXN1891,2023-07-25,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,899.99,1709.98,1300.0,5
+TXN1892,2024-03-03,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,1,899.99,899.99,650.0,0
+TXN1893,2024-02-12,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,499.99,474.99,380.0,5
+TXN1894,2023-02-04,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,1299.99,3314.97,2940.0,15
+TXN1895,2024-01-23,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,699.99,1399.98,1040.0,0
+TXN1896,2024-04-16,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,1299.99,1104.99,980.0,15
+TXN1897,2023-04-27,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,3,699.99,2099.97,1560.0,0
+TXN1898,2024-06-27,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,899.99,1799.98,1300.0,0
+TXN1899,2023-06-05,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Web,1,699.99,594.99,520.0,15
+TXN1900,2023-03-27,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,899.99,1799.98,1300.0,0
+TXN1901,2023-01-07,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,989.99,841.49,750.0,15
+TXN1902,2024-02-16,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,699.99,1189.98,1040.0,15
+TXN1903,2023-10-23,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,989.99,1979.98,1500.0,0
+TXN1904,2024-06-25,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,899.99,1799.98,1300.0,0
+TXN1905,2023-04-03,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,989.99,2524.47,2250.0,15
+TXN1906,2024-04-11,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,1,699.99,699.99,520.0,0
+TXN1907,2023-08-12,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,3,899.99,2699.97,1950.0,0
+TXN1908,2024-05-02,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,2,499.99,899.98,760.0,10
+TXN1909,2023-05-10,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,1299.99,1104.99,980.0,15
+TXN1910,2024-05-31,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,699.99,2099.97,1560.0,0
+TXN1911,2023-06-29,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,699.99,1189.98,1040.0,15
+TXN1912,2023-02-18,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,1299.99,1169.99,980.0,10
+TXN1913,2023-10-16,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,3,989.99,2969.97,2250.0,0
+TXN1914,2024-03-05,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,2,499.99,999.98,760.0,0
+TXN1915,2023-05-05,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,3,499.99,1424.97,1140.0,5
+TXN1916,2023-04-20,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,499.99,949.98,760.0,5
+TXN1917,2024-01-02,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,2,699.99,1189.98,1040.0,15
+TXN1918,2024-03-25,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,989.99,2969.97,2250.0,0
+TXN1919,2023-09-20,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,899.99,764.99,650.0,15
+TXN1920,2024-01-08,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,989.99,940.49,750.0,5
+TXN1921,2023-01-19,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Web,3,699.99,1994.97,1560.0,5
+TXN1922,2024-06-24,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,989.99,989.99,750.0,0
+TXN1923,2023-01-14,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,899.99,899.99,650.0,0
+TXN1924,2023-11-24,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,899.99,899.99,650.0,0
+TXN1925,2024-02-20,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,989.99,1781.98,1500.0,10
+TXN1926,2023-03-28,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,PAR01,Paris Centre,Île-de-France,Mobile,2,1299.99,2209.98,1960.0,15
+TXN1927,2024-03-29,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,989.99,2524.47,2250.0,15
+TXN1928,2024-04-27,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,989.99,1781.98,1500.0,10
+TXN1929,2024-02-21,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Mobile,1,989.99,989.99,750.0,0
+TXN1930,2024-05-22,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,699.99,699.99,520.0,0
+TXN1931,2023-01-14,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,499.99,474.99,380.0,5
+TXN1932,2023-11-14,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,499.99,899.98,760.0,10
+TXN1933,2024-03-03,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Magasin,1,699.99,699.99,520.0,0
+TXN1934,2023-09-15,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,499.99,499.99,380.0,0
+TXN1935,2023-11-14,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,989.99,1781.98,1500.0,10
+TXN1936,2024-03-05,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Web,1,499.99,499.99,380.0,0
+TXN1937,2023-07-02,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,499.99,899.98,760.0,10
+TXN1938,2023-02-11,IP-14-128,iPhone 14 128GB,Électronique,Apple,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,2,989.99,1880.98,1500.0,5
+TXN1939,2023-03-28,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,3,499.99,1499.97,1140.0,0
+TXN1940,2024-01-01,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Magasin,1,989.99,989.99,750.0,0
+TXN1941,2023-02-19,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,499.99,899.98,760.0,10
+TXN1942,2023-11-29,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,699.99,2099.97,1560.0,0
+TXN1943,2024-01-12,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,3,699.99,1889.97,1560.0,10
+TXN1944,2024-06-05,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,499.99,1499.97,1140.0,0
+TXN1945,2023-06-10,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,2,1299.99,2209.98,1960.0,15
+TXN1946,2024-01-01,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,3,499.99,1499.97,1140.0,0
+TXN1947,2023-02-27,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,1299.99,1299.99,980.0,0
+TXN1948,2023-10-07,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,699.99,699.99,520.0,0
+TXN1949,2023-01-29,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,899.99,764.99,650.0,15
+TXN1950,2024-06-18,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,899.99,899.99,650.0,0
+TXN1951,2023-04-03,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,1299.99,1234.99,980.0,5
+TXN1952,2023-07-21,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Magasin,1,699.99,699.99,520.0,0
+TXN1953,2024-05-12,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,2,899.99,1799.98,1300.0,0
+TXN1954,2023-01-13,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,989.99,1682.98,1500.0,15
+TXN1955,2023-11-30,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,699.99,1329.98,1040.0,5
+TXN1956,2023-12-13,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Mobile,3,989.99,2524.47,2250.0,15
+TXN1957,2024-01-14,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,699.99,1329.98,1040.0,5
+TXN1958,2024-04-22,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,499.99,1424.97,1140.0,5
+TXN1959,2023-07-02,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,2,1299.99,2209.98,1960.0,15
+TXN1960,2023-12-09,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,499.99,1274.97,1140.0,15
+TXN1961,2023-04-02,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,3,899.99,2429.97,1950.0,10
+TXN1962,2024-02-08,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,1,499.99,499.99,380.0,0
+TXN1963,2023-04-15,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,499.99,449.99,380.0,10
+TXN1964,2023-01-26,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Magasin,2,699.99,1189.98,1040.0,15
+TXN1965,2024-01-18,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,499.99,499.99,380.0,0
+TXN1966,2023-07-23,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,1299.99,3899.97,2940.0,0
+TXN1967,2024-05-02,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,989.99,1781.98,1500.0,10
+TXN1968,2023-12-05,TAB-S7,Tablette S7,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,1,499.99,499.99,380.0,0
+TXN1969,2023-10-30,SM-G990,Smartphone Galaxy,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,899.99,1619.98,1300.0,10
+TXN1970,2023-11-14,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,1,899.99,764.99,650.0,15
+TXN1971,2023-08-09,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,1299.99,3899.97,2940.0,0
+TXN1972,2024-05-21,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,PAR01,Paris Centre,Île-de-France,Magasin,2,699.99,1329.98,1040.0,5
+TXN1973,2023-09-13,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,1,499.99,499.99,380.0,0
+TXN1974,2024-06-16,IP-14-128,iPhone 14 128GB,Électronique,Apple,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,989.99,2524.47,2250.0,15
+TXN1975,2023-06-29,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,3,699.99,1889.97,1560.0,10
+TXN1976,2024-04-15,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,1,989.99,841.49,750.0,15
+TXN1977,2023-05-06,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,989.99,1682.98,1500.0,15
+TXN1978,2024-03-03,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,989.99,1880.98,1500.0,5
+TXN1979,2023-09-02,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,499.99,1349.97,1140.0,10
+TXN1980,2023-06-23,SM-G990,Smartphone Galaxy,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,3,899.99,2699.97,1950.0,0
+TXN1981,2024-04-05,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Web,2,899.99,1799.98,1300.0,0
+TXN1982,2023-04-23,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,3,1299.99,3314.97,2940.0,15
+TXN1983,2023-11-27,TAB-S7,Tablette S7,Électronique,Samsung,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Web,1,499.99,449.99,380.0,10
+TXN1984,2023-09-15,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,1299.99,1104.99,980.0,15
+TXN1985,2023-03-07,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,699.99,1259.98,1040.0,10
+TXN1986,2023-05-05,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,3,1299.99,3899.97,2940.0,0
+TXN1987,2023-07-04,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Magasin,1,989.99,841.49,750.0,15
+TXN1988,2023-05-19,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Mobile,2,699.99,1329.98,1040.0,5
+TXN1989,2023-02-24,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Magasin,2,699.99,1329.98,1040.0,5
+TXN1990,2023-11-21,TV-LG-55,"TV LG 55"" 4K",Électronique,LG,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,699.99,699.99,520.0,0
+TXN1991,2023-07-25,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,2,499.99,999.98,760.0,0
+TXN1992,2023-06-02,IP-14-128,iPhone 14 128GB,Électronique,Apple,PAR01,Paris Centre,Île-de-France,Mobile,1,989.99,989.99,750.0,0
+TXN1993,2023-05-17,LAP-DEL-XPS,Laptop Dell XPS,Informatique,Dell,MAR01,Marseille Vieux Port,Provence-Alpes-Côte d'Azur,Mobile,1,1299.99,1299.99,980.0,0
+TXN1994,2023-09-21,TAB-S7,Tablette S7,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Mobile,3,499.99,1274.97,1140.0,15
+TXN1995,2024-05-02,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,989.99,1979.98,1500.0,0
+TXN1996,2024-03-14,IP-14-128,iPhone 14 128GB,Électronique,Apple,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Magasin,1,989.99,989.99,750.0,0
+TXN1997,2023-06-19,SM-G990,Smartphone Galaxy,Électronique,Samsung,PAR01,Paris Centre,Île-de-France,Magasin,2,899.99,1799.98,1300.0,0
+TXN1998,2023-11-08,SM-G990,Smartphone Galaxy,Électronique,Samsung,LYO01,Lyon Part-Dieu,Auvergne-Rhône-Alpes,Mobile,2,899.99,1799.98,1300.0,0
+TXN1999,2024-02-10,TAB-S7,Tablette S7,Électronique,Samsung,BOR01,Bordeaux Centre,Nouvelle-Aquitaine,Web,1,499.99,474.99,380.0,5

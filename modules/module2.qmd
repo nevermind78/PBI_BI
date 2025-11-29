@@ -1,0 +1,1137 @@
+---
+title: "Module 2 : Modélisation des Données"
+toc: true
+toc-depth: 3
+number-sections: false
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+**Durée : 5 heures** | **Objectif : Concevoir des modèles décisionnels performants et maîtriser le SQL analytique**
+
+---
+
+## 2.1 Introduction à la Modélisation Dimensionnelle
+
+### 2.1.1 Pourquoi Modéliser les Données ?
+
+La modélisation dimensionnelle est une technique de conception de bases de données optimisée pour l'interrogation et l'analyse de données. Contrairement aux modèles transactionnels (OLTP), les modèles décisionnels (OLAP) privilégient :
+
+**Objectifs de la Modélisation Dimensionnelle :**
+
+| Objectif | Bénéfice | Impact Métier |
+|----------|----------|---------------|
+| **Simplicité** | Schéma intuitif, requêtes faciles | Adoption par les utilisateurs métier |
+| **Performance** | Lectures rapides, agrégations optimisées | Dashboards temps réel |
+| **Flexibilité** | Ajout facile de dimensions | Évolutivité du système |
+| **Historisation** | Conservation de l'historique complet | Analyses de tendances |
+
+### 2.1.2 Concepts Fondamentaux
+
+#### **Faits vs Dimensions**
+
+**Les FAITS (Facts)** représentent les événements mesurables de l'entreprise :
+
+| Caractéristique | Description | Exemple |
+|----------------|-------------|---------|
+| **Nature** | Événements quantifiables | Vente, Achat, Paiement, Livraison |
+| **Contenu** | Métriques numériques | Montant, Quantité, Coût, Durée |
+| **Granularité** | Niveau de détail | Par transaction, par ligne de commande |
+| **Volumétrie** | Forte (millions de lignes) | Table de faits = 80-90% du volume |
+
+**Les DIMENSIONS (Dimensions)** fournissent le contexte pour analyser les faits :
+
+| Caractéristique | Description | Exemple |
+|----------------|-------------|---------|
+| **Nature** | Qui, Quoi, Où, Quand, Comment | Client, Produit, Magasin, Temps |
+| **Contenu** | Attributs descriptifs | Nom, Catégorie, Adresse, Hiérarchies |
+| **Granularité** | Niveau le plus fin | Client individuel, Produit SKU |
+| **Volumétrie** | Faible (milliers de lignes) | Tables légères |
+
+**Visualisation Conceptuelle :**
+
+```{mermaid}
+graph LR
+    D1[Dimension<br/>Temps] --> F[Table de Faits<br/>VENTES]
+    D2[Dimension<br/>Produit] --> F
+    D3[Dimension<br/>Client] --> F
+    D4[Dimension<br/>Magasin] --> F
+    
+    F --> M1[Mesure:<br/>Montant_Vente]
+    F --> M2[Mesure:<br/>Quantité]
+    F --> M3[Mesure:<br/>Coût]
+    
+    style F fill:#2E86AB
+    style D1 fill:#F18F01
+    style D2 fill:#F18F01
+    style D3 fill:#F18F01
+    style D4 fill:#F18F01
+```
+
+#### **Clés et Relations**
+
+**Clés Primaires et Étrangères :**
+
+```{mermaid}
+erDiagram
+    DIM_TEMPS {
+        int Date_Key PK
+        date Date_Complete
+        int Année
+        int Mois
+        string Nom_Mois
+    }
+    
+    DIM_PRODUIT {
+        int Produit_Key PK
+        string SKU
+        string Nom_Produit
+        string Catégorie
+    }
+    
+    FACT_VENTES {
+        int Vente_Key PK
+        int Date_Key FK
+        int Produit_Key FK
+        int Client_Key FK
+        decimal Montant_HT
+        int Quantité
+    }
+    
+    DIM_CLIENT {
+        int Client_Key PK
+        string Code_Client
+        string Nom
+        string Ville
+    }
+    
+    DIM_TEMPS ||--o{ FACT_VENTES : ""
+    DIM_PRODUIT ||--o{ FACT_VENTES : ""
+    DIM_CLIENT ||--o{ FACT_VENTES : ""
+```
+
+**Types de Clés :**
+
+| Type de Clé | Rôle | Exemple |
+|-------------|------|---------|
+| **Clé Naturelle** | Identifiant métier d'origine | SKU produit, Code client |
+| **Clé de Substitution (Surrogate Key)** | Clé technique générée (entier auto-incrémenté) | Produit_Key (1, 2, 3...) |
+| **Clé Étrangère** | Référence vers une dimension | Date_Key dans la table de faits |
+| **Clé Composite** | Combinaison de plusieurs colonnes | (Date, Magasin, Produit) |
+
+**Pourquoi utiliser des clés de substitution ?**
+
+✅ Performance : entiers plus rapides que des strings  
+✅ Stabilité : indépendant des changements métier  
+✅ Historisation : gérer les évolutions (SCD Type 2)  
+✅ Simplicité : pas de clés composites complexes
+
+---
+
+## 2.2 Les Modèles Dimensionnels
+
+### 2.2.1 Le Modèle en Étoile (Star Schema)
+
+Le modèle en étoile est le plus répandu en Business Intelligence. Il tire son nom de sa forme : une table de faits centrale entourée de tables de dimensions.
+
+**Caractéristiques :**
+
+| Aspect | Description |
+|--------|-------------|
+| **Structure** | 1 table de faits au centre + N dimensions dénormalisées |
+| **Normalisation** | Dimensions dénormalisées (redondance acceptée) |
+| **Requêtes** | Simples (1-2 jointures maximum) |
+| **Performance** | Excellente (peu de jointures) |
+| **Maintenance** | Facile à comprendre et maintenir |
+
+**Exemple Concret : Modèle Ventes**
+
+```{mermaid}
+erDiagram
+    FACT_VENTES {
+        bigint Vente_Key PK
+        int Date_Key FK
+        int Produit_Key FK
+        int Client_Key FK
+        int Magasin_Key FK
+        int Vendeur_Key FK
+        decimal Montant_HT
+        decimal Montant_TTC
+        decimal Coût
+        int Quantité
+        decimal Remise_Pourcent
+    }
+    
+    DIM_DATE {
+        int Date_Key PK
+        date Date_Complete
+        int Année
+        int Trimestre
+        int Mois
+        int Semaine
+        string Nom_Mois
+        string Jour_Semaine
+        boolean Est_Weekend
+        boolean Est_Férié
+    }
+    
+    DIM_PRODUIT {
+        int Produit_Key PK
+        string SKU
+        string Nom_Produit
+        string Catégorie
+        string Sous_Catégorie
+        string Marque
+        decimal Prix_Catalogue
+        string Fournisseur
+    }
+    
+    DIM_CLIENT {
+        int Client_Key PK
+        string Code_Client
+        string Nom
+        string Prénom
+        string Email
+        string Téléphone
+        string Adresse
+        string Code_Postal
+        string Ville
+        string Pays
+        string Segment
+        date Date_Première_Commande
+    }
+    
+    DIM_MAGASIN {
+        int Magasin_Key PK
+        string Code_Magasin
+        string Nom_Magasin
+        string Adresse
+        string Ville
+        string Région
+        int Surface_M2
+        date Date_Ouverture
+        string Type_Magasin
+    }
+    
+    DIM_VENDEUR {
+        int Vendeur_Key PK
+        string Matricule
+        string Nom
+        string Prénom
+        int Magasin_Key FK
+        date Date_Embauche
+        string Statut
+    }
+    
+    DIM_DATE ||--o{ FACT_VENTES : "se produit le"
+    DIM_PRODUIT ||--o{ FACT_VENTES : "concerne"
+    DIM_CLIENT ||--o{ FACT_VENTES : "est acheté par"
+    DIM_MAGASIN ||--o{ FACT_VENTES : "a lieu dans"
+    DIM_VENDEUR ||--o{ FACT_VENTES : "est réalisée par"
+```
+
+**Script SQL de Création :**
+
+```sql
+-- Table de Faits VENTES
+CREATE TABLE FACT_Ventes (
+    Vente_Key BIGINT PRIMARY KEY IDENTITY(1,1),
+    Date_Key INT NOT NULL,
+    Produit_Key INT NOT NULL,
+    Client_Key INT NOT NULL,
+    Magasin_Key INT NOT NULL,
+    Vendeur_Key INT NOT NULL,
+    Montant_HT DECIMAL(10,2) NOT NULL,
+    Montant_TTC DECIMAL(10,2) NOT NULL,
+    Coût DECIMAL(10,2),
+    Quantité INT NOT NULL,
+    Remise_Pourcent DECIMAL(5,2) DEFAULT 0,
+    
+    -- Clés étrangères
+    CONSTRAINT FK_Ventes_Date FOREIGN KEY (Date_Key) 
+        REFERENCES DIM_Date(Date_Key),
+    CONSTRAINT FK_Ventes_Produit FOREIGN KEY (Produit_Key) 
+        REFERENCES DIM_Produit(Produit_Key),
+    CONSTRAINT FK_Ventes_Client FOREIGN KEY (Client_Key) 
+        REFERENCES DIM_Client(Client_Key),
+    CONSTRAINT FK_Ventes_Magasin FOREIGN KEY (Magasin_Key) 
+        REFERENCES DIM_Magasin(Magasin_Key),
+    CONSTRAINT FK_Ventes_Vendeur FOREIGN KEY (Vendeur_Key) 
+        REFERENCES DIM_Vendeur(Vendeur_Key)
+);
+
+-- Index pour améliorer les performances
+CREATE INDEX IX_Ventes_Date ON FACT_Ventes(Date_Key);
+CREATE INDEX IX_Ventes_Produit ON FACT_Ventes(Produit_Key);
+CREATE INDEX IX_Ventes_Client ON FACT_Ventes(Client_Key);
+CREATE INDEX IX_Ventes_Magasin ON FACT_Ventes(Magasin_Key);
+
+-- Table Dimension DATE
+CREATE TABLE DIM_Date (
+    Date_Key INT PRIMARY KEY,
+    Date_Complete DATE NOT NULL UNIQUE,
+    Année INT NOT NULL,
+    Trimestre INT NOT NULL,
+    Mois INT NOT NULL,
+    Semaine INT NOT NULL,
+    Nom_Mois VARCHAR(20) NOT NULL,
+    Jour_Semaine VARCHAR(20) NOT NULL,
+    Numéro_Jour_Semaine INT NOT NULL,
+    Est_Weekend BIT NOT NULL DEFAULT 0,
+    Est_Férié BIT NOT NULL DEFAULT 0,
+    Nom_Férié VARCHAR(50) NULL
+);
+
+-- Exemple de remplissage dimension Date
+INSERT INTO DIM_Date (Date_Key, Date_Complete, Année, Trimestre, Mois, Semaine, 
+                      Nom_Mois, Jour_Semaine, Numéro_Jour_Semaine, Est_Weekend)
+SELECT 
+    CAST(CONVERT(VARCHAR, d, 112) AS INT) AS Date_Key,
+    d AS Date_Complete,
+    YEAR(d) AS Année,
+    DATEPART(QUARTER, d) AS Trimestre,
+    MONTH(d) AS Mois,
+    DATEPART(WEEK, d) AS Semaine,
+    DATENAME(MONTH, d) AS Nom_Mois,
+    DATENAME(WEEKDAY, d) AS Jour_Semaine,
+    DATEPART(WEEKDAY, d) AS Numéro_Jour_Semaine,
+    CASE WHEN DATEPART(WEEKDAY, d) IN (1,7) THEN 1 ELSE 0 END AS Est_Weekend
+FROM (
+    SELECT DATEADD(DAY, number, '2020-01-01') AS d
+    FROM master..spt_values
+    WHERE type = 'P' AND number < DATEDIFF(DAY, '2020-01-01', '2030-12-31')
+) AS Dates;
+```
+
+### 2.2.2 Le Modèle en Flocon (Snowflake Schema)
+
+Le modèle en flocon est une extension du modèle en étoile où les dimensions sont normalisées (décomposées en sous-dimensions).
+
+**Comparaison Étoile vs Flocon :**
+
+| Critère | Étoile (Star) | Flocon (Snowflake) |
+|---------|---------------|---------------------|
+| **Normalisation** | Dénormalisé | Normalisé (3NF) |
+| **Redondance** | Oui (attributs répétés) | Non (tables séparées) |
+| **Nombre de tables** | Moins de tables | Plus de tables |
+| **Requêtes** | Simples (peu de JOIN) | Complexes (nombreux JOIN) |
+| **Performance lecture** | Très rapide | Plus lente |
+| **Stockage** | Plus d'espace | Moins d'espace |
+| **Maintenance** | Facile | Plus complexe |
+| **Usage recommandé** | BI classique, Power BI | Très gros volumes, économie stockage |
+
+**Exemple : Dimension Produit Normalisée**
+
+**Modèle Étoile (Dénormalisé) :**
+```
+DIM_PRODUIT
+├── Produit_Key
+├── SKU
+├── Nom_Produit
+├── Catégorie          ← Redondance
+├── Sous_Catégorie     ← Redondance
+├── Marque             ← Redondance
+└── Fournisseur        ← Redondance
+```
+
+**Modèle Flocon (Normalisé) :**
+```{mermaid}
+erDiagram
+    DIM_PRODUIT {
+        int Produit_Key PK
+        string SKU
+        string Nom_Produit
+        int Catégorie_Key FK
+        int Marque_Key FK
+        int Fournisseur_Key FK
+    }
+    
+    DIM_CATEGORIE {
+        int Catégorie_Key PK
+        string Nom_Catégorie
+        string Nom_Sous_Catégorie
+        int Département_Key FK
+    }
+    
+    DIM_DEPARTEMENT {
+        int Département_Key PK
+        string Nom_Département
+        string Code_Département
+    }
+    
+    DIM_MARQUE {
+        int Marque_Key PK
+        string Nom_Marque
+        string Pays_Origine
+    }
+    
+    DIM_FOURNISSEUR {
+        int Fournisseur_Key PK
+        string Nom_Fournisseur
+        string Pays
+        string Contact
+    }
+    
+    DIM_PRODUIT }o--|| DIM_CATEGORIE : "appartient à"
+    DIM_CATEGORIE }o--|| DIM_DEPARTEMENT : "fait partie de"
+    DIM_PRODUIT }o--|| DIM_MARQUE : "possède"
+    DIM_PRODUIT }o--|| DIM_FOURNISSEUR : "fourni par"
+```
+
+**Quand utiliser le Flocon ?**
+
+✅ Très gros volumes de dimensions (> 10 millions de lignes)  
+✅ Contraintes de stockage importantes  
+✅ Nécessité de maintenir des référentiels séparés  
+✅ Complexité analytique justifiée
+
+❌ Pour la plupart des projets BI : **privilégier l'Étoile** pour sa simplicité
+
+### 2.2.3 Le Modèle en Constellation (Galaxy Schema)
+
+Le modèle en constellation combine plusieurs modèles en étoile partageant des dimensions communes.
+
+**Cas d'Usage :**
+- Plusieurs processus métier analysés simultanément
+- Dimensions partagées (Temps, Client, Produit)
+- Analyses cross-processus
+
+**Exemple : Ventes + Achats + Stocks**
+
+```{mermaid}
+erDiagram
+    FACT_VENTES {
+        bigint Vente_Key PK
+        int Date_Key FK
+        int Produit_Key FK
+        int Client_Key FK
+        decimal Montant_HT
+        int Quantité_Vendue
+    }
+    
+    FACT_ACHATS {
+        bigint Achat_Key PK
+        int Date_Key FK
+        int Produit_Key FK
+        int Fournisseur_Key FK
+        decimal Coût_Unitaire
+        int Quantité_Achetée
+    }
+    
+    FACT_STOCKS {
+        bigint Stock_Key PK
+        int Date_Key FK
+        int Produit_Key FK
+        int Magasin_Key FK
+        int Quantité_Stock
+        decimal Valeur_Stock
+    }
+    
+    DIM_DATE {
+        int Date_Key PK
+        date Date_Complete
+    }
+    
+    DIM_PRODUIT {
+        int Produit_Key PK
+        string Nom_Produit
+    }
+    
+    DIM_CLIENT {
+        int Client_Key PK
+        string Nom_Client
+    }
+    
+    DIM_FOURNISSEUR {
+        int Fournisseur_Key PK
+        string Nom_Fournisseur
+    }
+    
+    DIM_MAGASIN {
+        int Magasin_Key PK
+        string Nom_Magasin
+    }
+    
+    DIM_DATE ||--o{ FACT_VENTES : ""
+    DIM_DATE ||--o{ FACT_ACHATS : ""
+    DIM_DATE ||--o{ FACT_STOCKS : ""
+    
+    DIM_PRODUIT ||--o{ FACT_VENTES : ""
+    DIM_PRODUIT ||--o{ FACT_ACHATS : ""
+    DIM_PRODUIT ||--o{ FACT_STOCKS : ""
+    
+    DIM_CLIENT ||--o{ FACT_VENTES : ""
+    DIM_FOURNISSEUR ||--o{ FACT_ACHATS : ""
+    DIM_MAGASIN ||--o{ FACT_STOCKS : ""
+```
+
+**Avantages :**
+- Réutilisation des dimensions (cohérence)
+- Analyses croisées (ventes vs achats vs stocks)
+- Maintenance simplifiée des référentiels
+
+**Requête d'Analyse Cross-Processus :**
+
+```sql
+-- Analyse de la Marge et de la Rotation des Stocks
+SELECT 
+    p.Nom_Produit,
+    p.Catégorie,
+    SUM(v.Montant_HT) AS CA_Total,
+    SUM(a.Quantité_Achetée * a.Coût_Unitaire) AS Coût_Total,
+    SUM(v.Montant_HT) - SUM(a.Quantité_Achetée * a.Coût_Unitaire) AS Marge_Brute,
+    AVG(s.Quantité_Stock) AS Stock_Moyen,
+    CASE 
+        WHEN AVG(s.Quantité_Stock) > 0 
+        THEN SUM(v.Quantité_Vendue) / AVG(s.Quantité_Stock) 
+        ELSE 0 
+    END AS Taux_Rotation
+FROM DIM_Produit p
+JOIN FACT_Ventes v ON p.Produit_Key = v.Produit_Key
+JOIN FACT_Achats a ON p.Produit_Key = a.Produit_Key
+JOIN FACT_Stocks s ON p.Produit_Key = s.Produit_Key
+JOIN DIM_Date d ON v.Date_Key = d.Date_Key
+WHERE d.Année = 2024
+GROUP BY p.Nom_Produit, p.Catégorie
+ORDER BY Marge_Brute DESC;
+```
+
+---
+
+## 2.3 Techniques d'Historisation (SCD - Slowly Changing Dimensions)
+
+### 2.3.1 Le Défi de l'Historisation
+
+Dans les systèmes décisionnels, il est crucial de conserver l'historique des changements pour analyser les données dans leur contexte temporel.
+
+**Exemple :** Un client change de région → Comment analyser les ventes historiques par région ?
+
+### 2.3.2 Les 6 Types de SCD
+
+```{mermaid}
+graph TB
+    A[SCD Types] --> B[Type 0 : Fixe]
+    A --> C[Type 1 : Écrasement]
+    A --> D[Type 2 : Historisation]
+    A --> E[Type 3 : Colonnes supplémentaires]
+    A --> F[Type 4 : Table d'historique]
+    A --> G[Type 6 : Hybride 1+2+3]
+    
+    style D fill:#2E86AB
+    style G fill:#F18F01
+```
+
+#### **Type 0 : Attribut Fixe**
+- Pas de mise à jour, valeur conservée telle qu'à la création
+- **Usage** : Date de naissance, code postal d'origine
+
+#### **Type 1 : Écrasement (Overwrite)**
+- La nouvelle valeur remplace l'ancienne sans trace
+- **Usage** : Correction d'erreurs, données non historisées
+
+#### **Type 2 : Historisation Complète**
+- Création d'une nouvelle ligne avec nouvelles dates de validité
+- **Usage** : Changements critiques (région client, catégorie produit)
+
+#### **Type 3 : Colonnes Supplémentaires**
+- Conservation de l'ancienne valeur dans une colonne séparée
+- **Usage** : Historisation limitée (seulement la dernière valeur)
+
+#### **Type 4 : Table d'Historique Séparée**
+- Table courante + table d'historique des changements
+- **Usage** : Dimensions très volumineuses
+
+#### **Type 6 : Hybride (1+2+3)**
+- Combinaison des approches pour différents attributs
+
+### 2.3.3 Implémentation SCD Type 2 (Recommandé)
+
+**Structure de Table SCD Type 2 :**
+
+```sql
+CREATE TABLE DIM_Client (
+    Client_Key INT PRIMARY KEY IDENTITY(1,1),
+    Code_Client VARCHAR(20) NOT NULL,          -- Clé naturelle
+    Nom VARCHAR(100) NOT NULL,
+    Prénom VARCHAR(100) NOT NULL,
+    Email VARCHAR(255),
+    Ville VARCHAR(100),
+    Région VARCHAR(100),
+    
+    -- Colonnes de gestion SCD Type 2
+    Date_Début DATE NOT NULL,                  -- Début de validité
+    Date_Fin DATE NOT NULL,                    -- Fin de validité
+    Version_Active BIT NOT NULL DEFAULT 1,     -- Version courante
+    Hash_Attributs BINARY(16)                  -- Pour détection changements
+);
+
+-- Index pour performances
+CREATE INDEX IX_Client_Code ON DIM_Client(Code_Client);
+CREATE INDEX IX_Client_Dates ON DIM_Client(Date_Début, Date_Fin);
+CREATE INDEX IX_Client_Active ON DIM_Client(Version_Active);
+```
+
+**Processus ETL pour SCD Type 2 :**
+
+```sql
+-- Étape 1 : Désactiver les enregistrements modifiés
+UPDATE cible
+SET 
+    Date_Fin = DATEADD(DAY, -1, CAST(GETDATE() AS DATE)),
+    Version_Active = 0
+FROM DIM_Client cible
+INNER JOIN STG_Client source ON cible.Code_Client = source.Code_Client
+WHERE cible.Version_Active = 1
+  AND cible.Hash_Attributs <> source.Hash_Attributs;
+
+-- Étape 2 : Insérer les nouvelles versions
+INSERT INTO DIM_Client (
+    Code_Client, Nom, Prénom, Email, Ville, Région,
+    Date_Début, Date_Fin, Version_Active, Hash_Attributs
+)
+SELECT 
+    source.Code_Client,
+    source.Nom,
+    source.Prénom,
+    source.Email,
+    source.Ville,
+    source.Région,
+    CAST(GETDATE() AS DATE) AS Date_Début,
+    '9999-12-31' AS Date_Fin,
+    1 AS Version_Active,
+    source.Hash_Attributs
+FROM STG_Client source
+WHERE NOT EXISTS (
+    SELECT 1 FROM DIM_Client c 
+    WHERE c.Code_Client = source.Code_Client 
+    AND c.Version_Active = 1
+);
+```
+
+**Requête avec contexte historique :**
+
+```sql
+-- Ventes par région client au moment de la vente
+SELECT 
+    c.Nom,
+    c.Région_Historique,  -- Région au moment de la vente
+    SUM(v.Montant_HT) AS CA_Total
+FROM FACT_Ventes v
+JOIN DIM_Client c ON v.Client_Key = c.Client_Key
+                AND v.Date_Key BETWEEN c.Date_Début_Key AND c.Date_Fin_Key
+JOIN DIM_Date d ON v.Date_Key = d.Date_Key
+WHERE d.Année = 2024
+GROUP BY c.Nom, c.Région_Historique;
+```
+
+---
+
+## 2.4 SQL Analytique pour la BI
+
+### 2.4.1 Fonctions Fenêtrées (Window Functions)
+
+Les fonctions fenêtrées permettent des calculs avancés sans regrouper les lignes.
+
+#### **RANK, DENSE_RANK, ROW_NUMBER**
+
+```sql
+-- Classement des produits par CA
+SELECT
+    p.Nom_Produit,
+    p.Catégorie,
+    SUM(v.Montant_HT) AS CA_Total,
+    RANK() OVER (ORDER BY SUM(v.Montant_HT) DESC) AS Classement_Rank,
+    DENSE_RANK() OVER (ORDER BY SUM(v.Montant_HT) DESC) AS Classement_Dense_Rank,
+    ROW_NUMBER() OVER (ORDER BY SUM(v.Montant_HT) DESC) AS Classement_Row_Number,
+    -- Classement par catégorie
+    RANK() OVER (PARTITION BY p.Catégorie ORDER BY SUM(v.Montant_HT) DESC) AS Classement_Catégorie
+FROM FACT_Ventes v
+JOIN DIM_Produit p ON v.Produit_Key = p.Produit_Key
+JOIN DIM_Date d ON v.Date_Key = d.Date_Key
+WHERE d.Année = 2024
+GROUP BY p.Nom_Produit, p.Catégorie;
+```
+
+#### **LAG, LEAD pour Analyse Temporelle**
+
+```sql
+-- Analyse de l'évolution mensuelle du CA
+WITH CA_Mensuel AS (
+    SELECT
+        d.Année,
+        d.Mois,
+        SUM(v.Montant_HT) AS CA_Mois,
+        LAG(SUM(v.Montant_HT)) OVER (ORDER BY d.Année, d.Mois) AS CA_Mois_Precedent,
+        LEAD(SUM(v.Montant_HT)) OVER (ORDER BY d.Année, d.Mois) AS CA_Mois_Suivant
+    FROM FACT_Ventes v
+    JOIN DIM_Date d ON v.Date_Key = d.Date_Key
+    GROUP BY d.Année, d.Mois
+)
+SELECT
+    Année,
+    Mois,
+    CA_Mois,
+    CA_Mois_Precedent,
+    CASE 
+        WHEN CA_Mois_Precedent > 0 
+        THEN (CA_Mois - CA_Mois_Precedent) / CA_Mois_Precedent * 100 
+        ELSE NULL 
+    END AS Evolution_Pourcent,
+    CA_Mois_Suivant
+FROM CA_Mensuel
+ORDER BY Année, Mois;
+```
+
+### 2.4.2 Agrégations Avancées
+
+#### **ROLLUP et CUBE**
+
+```sql
+-- Agrégations hiérarchiques avec ROLLUP
+SELECT
+    COALESCE(p.Catégorie, 'TOTAL') AS Catégorie,
+    COALESCE(p.Sous_Catégorie, 'SOUS-TOTAL') AS Sous_Catégorie,
+    SUM(v.Montant_HT) AS CA_Total,
+    SUM(v.Quantité) AS Quantité_Total
+FROM FACT_Ventes v
+JOIN DIM_Produit p ON v.Produit_Key = p.Produit_Key
+JOIN DIM_Date d ON v.Date_Key = d.Date_Key
+WHERE d.Année = 2024
+GROUP BY ROLLUP(p.Catégorie, p.Sous_Catégorie)
+ORDER BY p.Catégorie, p.Sous_Catégorie;
+
+-- Agrégations multidimensionnelles avec CUBE
+SELECT
+    COALESCE(p.Catégorie, 'TOUTES CATÉGORIES') AS Catégorie,
+    COALESCE(m.Région, 'TOUTES RÉGIONS') AS Région,
+    SUM(v.Montant_HT) AS CA_Total
+FROM FACT_Ventes v
+JOIN DIM_Produit p ON v.Produit_Key = p.Produit_Key
+JOIN DIM_Magasin m ON v.Magasin_Key = m.Magasin_Key
+JOIN DIM_Date d ON v.Date_Key = d.Date_Key
+WHERE d.Trimestre = 1 AND d.Année = 2024
+GROUP BY CUBE(p.Catégorie, m.Région);
+```
+
+#### **Fonctions d'agrégation conditionnelle**
+
+```sql
+-- Analyse des ventes par tranche horaire
+SELECT
+    p.Catégorie,
+    -- Ventes en semaine
+    SUM(CASE WHEN d.Est_Weekend = 0 THEN v.Montant_HT ELSE 0 END) AS CA_Semaine,
+    -- Ventes weekend
+    SUM(CASE WHEN d.Est_Weekend = 1 THEN v.Montant_HT ELSE 0 END) AS CA_Weekend,
+    -- Pourcentage weekend
+    CASE 
+        WHEN SUM(v.Montant_HT) > 0 
+        THEN SUM(CASE WHEN d.Est_Weekend = 1 THEN v.Montant_HT ELSE 0 END) / 
+             SUM(v.Montant_HT) * 100 
+        ELSE 0 
+    END AS Pourcentage_Weekend,
+    -- Top client par catégorie
+    MAX(CASE WHEN r.Classement = 1 THEN c.Nom END) AS Top_Client
+FROM FACT_Ventes v
+JOIN DIM_Produit p ON v.Produit_Key = p.Produit_Key
+JOIN DIM_Date d ON v.Date_Key = d.Date_Key
+JOIN DIM_Client c ON v.Client_Key = c.Client_Key
+JOIN (
+    SELECT 
+        p.Produit_Key,
+        c.Client_Key,
+        RANK() OVER (PARTITION BY p.Catégorie ORDER BY SUM(v.Montant_HT) DESC) AS Classement
+    FROM FACT_Ventes v
+    JOIN DIM_Produit p ON v.Produit_Key = p.Produit_Key
+    JOIN DIM_Client c ON v.Client_Key = c.Client_Key
+    GROUP BY p.Produit_Key, c.Client_Key, p.Catégorie
+) r ON v.Produit_Key = r.Produit_Key AND v.Client_Key = r.Client_Key
+WHERE d.Année = 2024
+GROUP BY p.Catégorie;
+```
+
+---
+
+## 2.5 Atelier Pratique : Conception d'un Modèle Ventes
+
+### 2.5.1 Cas d'Étude : RetailCorp
+
+**Contexte :**
+- Chaîne de distribution spécialisée
+- 100 magasins en Europe
+- E-commerce multi-canal
+- 1 million de clients actifs
+
+**Besoins Analytiques :**
+1. Analyse des ventes par région, magasin, catégorie produit
+2. Suivi de la performance des vendeurs
+3. Analyse du comportement client (RFM)
+4. Prévision des ventes et optimisation des stocks
+
+### 2.5.2 Conception du Modèle Dimensionnel
+
+**Exercice 1 : Identifier les Dimensions et Faits (20 min)**
+
+```sql
+-- Schéma conceptuel à concevoir
+-- Dimensions identifiées :
+-- ✓ DIM_Date (déjà conçue)
+-- ✓ DIM_Produit (avec hiérarchie Catégorie > Sous-catégorie > Produit)
+-- ✓ DIM_Client (avec segmentation RFM)
+-- ✓ DIM_Magasin (avec hiérarchie Pays > Région > Ville > Magasin)
+-- ✓ DIM_Vendeur (avec rattachement magasin)
+-- ✓ DIM_Temps (heure de la journée)
+
+-- Table de faits :
+-- ✓ FACT_Ventes (granularité : ligne de ticket de caisse)
+```
+
+**Exercice 2 : Créer le Script de Déploiement (30 min)**
+
+```sql
+-- Dimension Client avec SCD Type 2
+CREATE TABLE DIM_Client (
+    Client_Key INT PRIMARY KEY IDENTITY(1,1),
+    Code_Client VARCHAR(20) NOT NULL,
+    Nom VARCHAR(100) NOT NULL,
+    Prénom VARCHAR(100) NOT NULL,
+    Email VARCHAR(255),
+    Téléphone VARCHAR(20),
+    Adresse VARCHAR(255),
+    Code_Postal VARCHAR(10),
+    Ville VARCHAR(100),
+    Pays VARCHAR(50),
+    
+    -- Scores RFM
+    Score_Récence INT,
+    Score_Fréquence INT,
+    Score_Montant INT,
+    Segment_RFM VARCHAR(20),
+    
+    -- SCD Type 2
+    Date_Début DATE NOT NULL,
+    Date_Fin DATE NOT NULL,
+    Version_Active BIT NOT NULL DEFAULT 1,
+    Hash_Attributs BINARY(16)
+);
+
+-- Dimension Produit avec hiérarchie
+CREATE TABLE DIM_Produit (
+    Produit_Key INT PRIMARY KEY IDENTITY(1,1),
+    SKU VARCHAR(50) NOT NULL UNIQUE,
+    Nom_Produit VARCHAR(200) NOT NULL,
+    Description TEXT,
+    Catégorie VARCHAR(100) NOT NULL,
+    Sous_Catégorie VARCHAR(100) NOT NULL,
+    Marque VARCHAR(100),
+    Prix_Unitaire DECIMAL(10,2),
+    Coût_Unitaire DECIMAL(10,2),
+    Unité_Mesure VARCHAR(20),
+    Code_EAN VARCHAR(13),
+    
+    -- SCD Type 2 pour les changements de catégorie/prix
+    Date_Début DATE NOT NULL,
+    Date_Fin DATE NOT NULL,
+    Version_Active BIT NOT NULL DEFAULT 1
+);
+
+-- Table de faits Ventes
+CREATE TABLE FACT_Ventes (
+    Vente_Key BIGINT PRIMARY KEY IDENTITY(1,1),
+    -- Clés étrangères
+    Date_Key INT NOT NULL,
+    Temps_Key INT NOT NULL,
+    Produit_Key INT NOT NULL,
+    Client_Key INT NOT NULL,
+    Magasin_Key INT NOT NULL,
+    Vendeur_Key INT NOT NULL,
+    Promotion_Key INT,
+    
+    -- Mesures
+    Quantité INT NOT NULL,
+    Prix_Unitaire DECIMAL(10,2) NOT NULL,
+    Montant_HT DECIMAL(10,2) NOT NULL,
+    Montant_TTC DECIMAL(10,2) NOT NULL,
+    Coût_Unitaire DECIMAL(10,2),
+    Marge_Unitaire DECIMAL(10,2),
+    Remise_Pourcent DECIMAL(5,2),
+    Remise_Montant DECIMAL(10,2),
+    
+    -- Clés naturelles pour audit
+    Numéro_Ticket VARCHAR(50),
+    Ligne_Ticket INT,
+    
+    -- Contraintes
+    CONSTRAINT FK_Ventes_Date FOREIGN KEY (Date_Key) REFERENCES DIM_Date(Date_Key),
+    CONSTRAINT FK_Ventes_Produit FOREIGN KEY (Produit_Key) REFERENCES DIM_Produit(Produit_Key),
+    CONSTRAINT FK_Ventes_Client FOREIGN KEY (Client_Key) REFERENCES DIM_Client(Client_Key),
+    CONSTRAINT FK_Ventes_Magasin FOREIGN KEY (Magasin_Key) REFERENCES DIM_Magasin(Magasin_Key),
+    CONSTRAINT FK_Ventes_Vendeur FOREIGN KEY (Vendeur_Key) REFERENCES DIM_Vendeur(Vendeur_Key)
+);
+
+-- Index pour performances
+CREATE INDEX IX_Ventes_Date ON FACT_Ventes(Date_Key);
+CREATE INDEX IX_Ventes_Produit ON FACT_Ventes(Produit_Key);
+CREATE INDEX IX_Ventes_Client ON FACT_Ventes(Client_Key);
+CREATE INDEX IX_Ventes_Magasin ON FACT_Ventes(Magasin_Key);
+CREATE INDEX IX_Ventes_Date_Produit ON FACT_Ventes(Date_Key, Produit_Key);
+```
+
+### 2.5.3 Requêtes Analytiques Avancées
+
+**Exercice 3 : Développer les KPI Métier (40 min)**
+
+```sql
+-- 1. Analyse RFM des clients
+WITH RFM_Base AS (
+    SELECT
+        c.Client_Key,
+        c.Nom,
+        c.Prénom,
+        -- Récence (jours depuis dernière achat)
+        DATEDIFF(DAY, MAX(d.Date_Complete), GETDATE()) AS Récence,
+        -- Fréquence (nombre d'achats sur 12 mois)
+        COUNT(DISTINCT v.Date_Key) AS Fréquence,
+        -- Montant (CA total sur 12 mois)
+        SUM(v.Montant_HT) AS Montant
+    FROM FACT_Ventes v
+    JOIN DIM_Client c ON v.Client_Key = c.Client_Key
+    JOIN DIM_Date d ON v.Date_Key = d.Date_Key
+    WHERE d.Date_Complete >= DATEADD(MONTH, -12, GETDATE())
+    GROUP BY c.Client_Key, c.Nom, c.Prénom
+),
+RFM_Scores AS (
+    SELECT
+        *,
+        -- Scores de 1 à 5 (1=meilleur pour récence, 5=meilleur pour fréquence/montant)
+        NTILE(5) OVER (ORDER BY Récence DESC) AS Score_Récence,
+        NTILE(5) OVER (ORDER BY Fréquence ASC) AS Score_Fréquence,
+        NTILE(5) OVER (ORDER BY Montant ASC) AS Score_Montant
+    FROM RFM_Base
+)
+SELECT
+    Client_Key,
+    Nom,
+    Prénom,
+    Récence,
+    Fréquence,
+    Montant,
+    Score_Récence,
+    Score_Fréquence,
+    Score_Montant,
+    -- Score RFM combiné
+    CONCAT(Score_Récence, Score_Fréquence, Score_Montant) AS Score_RFM,
+    -- Segmentation RFM
+    CASE 
+        WHEN CONCAT(Score_Récence, Score_Fréquence, Score_Montant) IN ('111','112','121','122','211','212','221','222') 
+            THEN 'Champions'
+        WHEN Score_Récence IN (1,2) AND Score_Fréquence IN (3,4,5) AND Score_Montant IN (3,4,5)
+            THEN 'Clients Fidèles'
+        WHEN Score_Récence = 1 AND Score_Fréquence IN (1,2) AND Score_Montant IN (1,2)
+            THEN 'Nouveaux Clients'
+        WHEN Score_Récence IN (3,4) AND Score_Fréquence IN (1,2) AND Score_Montant IN (1,2)
+            THEN 'Clients à Risque'
+        WHEN Score_Récence = 5 
+            THEN 'Clients Perdus'
+        ELSE 'Clients Réguliers'
+    END AS Segment_RFM
+FROM RFM_Scores;
+
+-- 2. Analyse de la performance des magasins
+WITH Performance_Magasins AS (
+    SELECT
+        m.Nom_Magasin,
+        m.Ville,
+        m.Région,
+        COUNT(DISTINCT v.Client_Key) AS Clients_Uniques,
+        COUNT(DISTINCT v.Date_Key) AS Jours_Activité,
+        SUM(v.Montant_HT) AS CA_Total,
+        SUM(v.Quantité) AS Quantité_Total,
+        SUM(v.Montant_HT - (v.Quantité * v.Coût_Unitaire)) AS Marge_Brute,
+        COUNT(DISTINCT v.Vente_Key) AS Nombre_Ventes,
+        -- CA par m²
+        CASE 
+            WHEN m.Surface_M2 > 0 
+            THEN SUM(v.Montant_HT) / m.Surface_M2 
+            ELSE 0 
+        END AS CA_Par_M2,
+        -- Panier moyen
+        CASE 
+            WHEN COUNT(DISTINCT v.Vente_Key) > 0 
+            THEN SUM(v.Montant_HT) / COUNT(DISTINCT v.Vente_Key) 
+            ELSE 0 
+        END AS Panier_Moyen
+    FROM FACT_Ventes v
+    JOIN DIM_Magasin m ON v.Magasin_Key = m.Magasin_Key
+    JOIN DIM_Date d ON v.Date_Key = d.Date_Key
+    WHERE d.Année = 2024
+    GROUP BY m.Magasin_Key, m.Nom_Magasin, m.Ville, m.Région, m.Surface_M2
+)
+SELECT
+    *,
+    RANK() OVER (ORDER BY CA_Total DESC) AS Classement_CA,
+    RANK() OVER (ORDER BY Marge_Brute DESC) AS Classement_Marge,
+    RANK() OVER (ORDER CA_Par_M2 DESC) AS Classement_Rentabilité
+FROM Performance_Magasins
+ORDER BY CA_Total DESC;
+
+-- 3. Analyse des ventes croisées (Market Basket Analysis)
+WITH Produits_Achetés AS (
+    SELECT
+        v.Numéro_Ticket,
+        p.Produit_Key,
+        p.Nom_Produit,
+        p.Catégorie
+    FROM FACT_Ventes v
+    JOIN DIM_Produit p ON v.Produit_Key = p.Produit_Key
+    WHERE v.Date_Key BETWEEN 20240101 AND 20241231
+),
+Combinaisons_Produits AS (
+    SELECT
+        p1.Nom_Produit AS Produit_A,
+        p2.Nom_Produit AS Produit_B,
+        COUNT(DISTINCT p1.Numéro_Ticket) AS Occurrences_Conjointes,
+        COUNT(DISTINCT p1.Numéro_Ticket) * 1.0 / (
+            SELECT COUNT(DISTINCT Numéro_Ticket) 
+            FROM Produits_Achetés 
+            WHERE Nom_Produit = p1.Nom_Produit
+        ) AS Confiance
+    FROM Produits_Achetés p1
+    JOIN Produits_Achetés p2 ON p1.Numéro_Ticket = p2.Numéro_Ticket
+    WHERE p1.Produit_Key <> p2.Produit_Key
+    GROUP BY p1.Nom_Produit, p2.Nom_Produit
+)
+SELECT
+    Produit_A,
+    Produit_B,
+    Occurrences_Conjointes,
+    Confiance
+FROM Combinaisons_Produits
+WHERE Occurrences_Conjointes >= 10
+  AND Confiance >= 0.1
+ORDER BY Occurrences_Conjointes DESC, Confiance DESC;
+```
+
+---
+
+## 2.6 Optimisation des Performances
+
+### 2.6.1 Stratégies d'Indexation
+
+**Index Clustered vs Non-Clustered :**
+
+```sql
+-- Index clustered sur la table de faits (généralement sur la clé primaire)
+CREATE CLUSTERED INDEX IX_FACT_Ventes_Key ON FACT_Ventes(Vente_Key);
+
+-- Index non-clustered sur les clés étrangères
+CREATE NONCLUSTERED INDEX IX_FACT_Ventes_Date ON FACT_Ventes(Date_Key);
+CREATE NONCLUSTERED INDEX IX_FACT_Ventes_Produit ON FACT_Ventes(Produit_Key);
+CREATE NONCLUSTERED INDEX IX_FACT_Ventes_Client ON FACT_Ventes(Client_Key);
+
+-- Index couvrant pour requêtes fréquentes
+CREATE NONCLUSTERED INDEX IX_FACT_Ventes_Couvert 
+ON FACT_Ventes (Date_Key, Produit_Key)
+INCLUDE (Montant_HT, Quantité, Client_Key);
+
+-- Index sur colonnes calculées pour la recherche
+CREATE NONCLUSTERED INDEX IX_DIM_Client_Recherche 
+ON DIM_Client (Nom, Prénom, Ville)
+INCLUDE (Email, Téléphone);
+```
+
+### 2.6.2 Partitionnement des Tables
+
+**Partitionnement par Date :**
+
+```sql
+-- Création de la fonction de partitionnement
+CREATE PARTITION FUNCTION pf_Ventes_Par_Mois (INT)
+AS RANGE RIGHT FOR VALUES (
+    20240101, 20240201, 20240301, 20240401,
+    20240501, 20240601, 20240701, 20240801,
+    20240901, 20241001, 20241101, 20241201
+);
+
+-- Création du schéma de partitionnement
+CREATE PARTITION SCHEME ps_Ventes_Par_Mois
+AS PARTITION pf_Ventes_Par_Mois
+ALL TO ([PRIMARY]);
+
+-- Recréation de la table de faits partitionnée
+CREATE TABLE FACT_Ventes_Partitionnée (
+    Vente_Key BIGINT IDENTITY(1,1),
+    Date_Key INT NOT NULL,
+    -- ... autres colonnes
+    CONSTRAINT PK_FACT_Ventes_Part PRIMARY KEY (Date_Key, Vente_Key)
+) ON ps_Ventes_Par_Mois(Date_Key);
+```
+
+### 2.6.3 Stratégies de Compression
+
+```sql
+-- Activation de la compression de page
+ALTER TABLE FACT_Ventes REBUILD PARTITION = ALL
+WITH (DATA_COMPRESSION = PAGE);
+
+-- Pour les archives, compression plus agressive
+ALTER TABLE FACT_Ventes_Archive 
+REBUILD WITH (DATA_COMPRESSION = ROW);
+
+-- Vérification des gains de compression
+SELECT 
+    t.name AS TableName,
+    i.name AS IndexName,
+    p.partition_number,
+    p.data_compression_desc,
+    p.rows
+FROM sys.partitions p
+JOIN sys.tables t ON p.object_id = t.object_id
+JOIN sys.indexes i ON p.object_id = i.object_id AND p.index_id = i.index_id
+WHERE t.name = 'FACT_Ventes';
+```
+
+---
+
+## 2.7 Synthèse du Module 2 et Points Clés
+
+### 2.7.1 Récapitulatif des Concepts
+
+À l'issue de ce module, les participants maîtrisent :
+
+✅ **La modélisation dimensionnelle** : faits, dimensions, modèles en étoile/flocon/constellation  
+✅ **Les techniques d'historisation** : SCD Type 2 pour le suivi des changements  
+✅ **Le SQL analytique avancé** : fonctions fenêtrées, agrégations, requêtes complexes  
+✅ **L'optimisation des performances** : indexation, partitionnement, compression  
+✅ **La conception de modèles robustes** : bonnes pratiques et pièges à éviter  
+
+### 2.7.2 Checklist de Fin de Module
+
+**Auto-évaluation des Acquis :**
+
+- [ ] Je peux concevoir un modèle en étoile pour un processus métier
+- [ ] Je comprends la différence entre SCD Type 1, 2 et 3
+- [ ] Je maîtrise les fonctions fenêtrées (RANK, LAG, LEAD)
+- [ ] Je sais optimiser les performances d'un modèle dimensionnel
+- [ ] Je peux écrire des requêtes analytiques complexes
+- [ ] Je comprends les stratégies d'indexation et de partitionnement
+
+### 2.7.3 Projet Pratique Final
+
+**Mission :** Concevoir et implémenter un modèle dimensionnel complet pour un cas de vente au détail, incluant :
+
+1. Modèle conceptuel et logique
+2. Scripts de création des tables
+3. Requêtes analytiques pour 5 KPI métier
+4. Stratégie d'optimisation des performances
+5. Documentation technique
+
+**Livrables :**
+- Schémas de base de données
+- Scripts SQL complets
+- Documentation des règles de gestion
+- Plan de tests de performance
+
+---

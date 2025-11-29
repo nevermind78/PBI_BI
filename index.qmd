@@ -1,0 +1,36 @@
+---
+title: "Formation Business Intelligence & Power BI"
+subtitle: "Modules 1 & 2 - Fondamentaux et Modélisation"
+---
+
+# Bienvenue dans la Formation BI
+
+## Présentation des Modules
+
+### Module 1 : Fondamentaux de la Business Intelligence
+**Durée : 5 heures** | **Objectif : Maîtriser les concepts fondamentaux de la BI**
+
+- Architecture décisionnelle
+- Cycle de vie d'un projet BI  
+- Panorama des outils BI
+- Gouvernance et culture data-driven
+
+[Accéder au Module 1 →](modules/module1.html)
+
+### Module 2 : Conception & Modélisation des Données
+**Durée : 5 heures** | **Objectif : Concevoir des modèles décisionnels performants**
+
+- Modélisation dimensionnelle
+- Modèles en étoile, flocon et constellation
+- Techniques d'historisation (SCD)
+- SQL analytique et optimisation
+
+[Accéder au Module 2 →](modules/module2.html)
+
+## Public Visé
+
+- Analystes données
+- Consultants BI
+- Chefs de projet
+- Développeurs
+- Responsables métier

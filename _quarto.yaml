@@ -1,0 +1,41 @@
+project:
+  type: website
+
+website:
+  title: "Formation Business Intelligence & Power BI"
+  description: "Modules 1 & 2 - Fondamentaux et Modélisation"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Accueil
+      - href: modules/module1.qmd
+        text: "Module 1 - Fondamentaux"
+      - href: modules/module2.qmd
+        text: "Module 2 - Modélisation"
+  
+  sidebar:
+    style: "docked"
+    contents:
+      - href: index.qmd
+        text: "Accueil"
+      - section: "Modules"
+        contents:
+          - href: modules/module1.qmd
+            text: "Module 1"
+          - href: modules/module2.qmd
+            text: "Module 2"
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    number-sections: false
+    css: styles.css
+    mermaid:
+      theme: default
+
+execute:
+  echo: false
+  warning: false
+  message: false
