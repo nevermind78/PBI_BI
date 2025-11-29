@@ -1,23 +1,41 @@
-name: "Deploy Quarto Site"
+name: Deploy Quarto Site
 
 on:
   push:
-    branches: ["main"]
+    branches: [main]
+
+# Permissions pour le GITHUB_TOKEN
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Autoriser un seul déploiement concurrent
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  deploy:
-    runs-on: "ubuntu-latest"
-    permissions:
-      contents: write
+  build:
+    runs-on: ubuntu-latest
     steps:
-      - uses: "actions/checkout@v4"
-      - name: "Setup Quarto"
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-      - name: "Build site"
-        run: "quarto render"
-      - name: "Deploy"
-        uses: "peaceiris/actions-gh-pages@v3"
+        
+      - name: Build site
+        run: quarto render
+        
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          github_token: "${{ secrets.GITHUB_TOKEN }}"
-          publish_dir: "./docs"
-          force_orphan: true
+          path: ./docs
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
