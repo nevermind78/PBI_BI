@@ -4,9 +4,6 @@ toc: true
 toc-depth: 3
 number-sections: false
 ---
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 **Durée : 5 heures** | **Objectif : Maîtriser les concepts fondamentaux de la BI et comprendre l'architecture décisionnelle**
 

@@ -4,9 +4,7 @@ toc: true
 toc-depth: 3
 number-sections: false
 ---
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+
 
 
 **Durée : 5 heures** | **Objectif : Concevoir des modèles décisionnels performants et maîtriser le SQL analytique**
