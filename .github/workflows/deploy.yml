@@ -7,17 +7,17 @@ on:
 jobs:
   deploy:
     runs-on: "ubuntu-latest"
+    permissions:
+      contents: write
     steps:
       - uses: "actions/checkout@v4"
-      - name: "Install Quarto"
-        run: |
-          wget -q https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.553/quarto-1.4.553-linux-amd64.deb
-          sudo dpkg -i quarto-1.4.553-linux-amd64.deb
+      - name: "Setup Quarto"
+        uses: quarto-dev/quarto-actions/setup@v2
       - name: "Build site"
         run: "quarto render"
       - name: "Deploy"
         uses: "peaceiris/actions-gh-pages@v3"
         with:
           github_token: "${{ secrets.GITHUB_TOKEN }}"
-          publish_dir: "./_site"
+          publish_dir: "./docs"
           force_orphan: true
