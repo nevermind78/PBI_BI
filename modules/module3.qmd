@@ -236,7 +236,7 @@ in
 
 ### 3.4.3 Exercice : Agrégation de Fichiers Mensuels (Append)
 
-**Scénario :** 12 fichiers Excel `Ventes_MM_2024.xlsx` à consolider.
+**Scénario :** 12 fichiers Excel `Ventes_MM_2024.xlsx` à consolider. [Fichiers source disponibles ici](https://github.com/nevermind78/PBI_BI/tree/main/LAB_MODULE3/Ventes%202024)
 
 ```powerquery
 let

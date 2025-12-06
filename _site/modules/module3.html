@@ -357,11 +357,11 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li><p><strong>Télécharger les fichiers sources :</strong></p>
 <ul>
-<li><a href="https://example.com/Ventes_2024.xlsx">Ventes_2024.xlsx</a> - Données de vente mensuelles<br>
+<li><a href="LAB_MODULE3/Ventes_2024.xlsx">Ventes_2024.xlsx</a> - Données de vente mensuelles<br>
 </li>
-<li><a href="https://example.com/Clients.csv">Clients.csv</a> - Référentiel clients<br>
+<li><a href="LAB_MODULE3/Clients_sales.csv">Clients_sales.csv</a> - Référentiel clients<br>
 </li>
-<li><a href="https://example.com/Produits.json">Produits.json</a> - Catalogue produits</li>
+<li><a href="LAB_MODULE3/Produits.json">Produits.json</a> - Catalogue produits</li>
 </ul></li>
 <li><p><strong>Instructions Power Query :</strong></p></li>
 </ol>
@@ -383,10 +383,13 @@ in
 // Étape 3 : Connexion à JSON
 let
     Source = Json.Document(File.Contents("C:\Data\Produits.json")),
-    #"Converti en tableau" = Table.FromList(Source, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
-    #"JSON développé" = Table.ExpandRecordColumn(#"Converti en tableau", "Column1", {"id", "nom", "categorie", "prix"}, {"id", "nom", "categorie", "prix"})
+    Produits = Source[produits],
+    #"Converti en tableau" = Table.FromList(Produits, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 développé" = Table.ExpandRecordColumn(#"Converti en tableau", "Column1", 
+                            {"id", "nom", "categorie", "sous_categorie", "prix", "stock", "fournisseur"},
+                            {"id", "nom", "categorie", "sous_categorie", "prix", "stock", "fournisseur"})
 in
-    #"JSON développé"</code></pre>
+    #"Column1 développé"</code></pre>
 <p><strong>Correction :</strong></p>
 <ul>
 <li>Vérifier les chemins d’accès aux fichiers<br>
@@ -572,7 +575,7 @@ in
 </section>
 <section id="exercice-agrégation-de-fichiers-mensuels-append" class="level3">
 <h3 class="anchored" data-anchor-id="exercice-agrégation-de-fichiers-mensuels-append">3.4.3 Exercice : Agrégation de Fichiers Mensuels (Append)</h3>
-<p><strong>Scénario :</strong> 12 fichiers Excel <code>Ventes_MM_2024.xlsx</code> à consolider.</p>
+<p><strong>Scénario :</strong> 12 fichiers Excel <code>Ventes_MM_2024.xlsx</code> à consolider. <a href="https://github.com/nevermind78/PBI_BI/tree/main/LAB_MODULE3/Ventes%202024">Fichiers source disponibles ici</a></p>
 <pre class="powerquery"><code>let
     // Étape 1 : Se connecter au dossier
     Source = Folder.Files("C:\Data\Ventes 2024"),
@@ -592,7 +595,7 @@ in
     EnTetesPromus = Table.PromoteHeaders(DonneesCombinees, [PromoteAllScalars=true]),
     TypesCorriges = Table.TransformColumnTypes(EnTetesPromus,{
         {"Date", type date},
-        {"Montant", Currency.Type},
+        {"Prix", Currency.Type},
         {"Quantite", Int64.Type}
     })
 in
