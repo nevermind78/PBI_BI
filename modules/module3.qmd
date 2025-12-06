@@ -104,10 +104,13 @@ in
 // Étape 3 : Connexion à JSON
 let
     Source = Json.Document(File.Contents("C:\Data\Produits.json")),
-    #"Converti en tableau" = Table.FromList(Source, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
-    #"JSON développé" = Table.ExpandRecordColumn(#"Converti en tableau", "Column1", {"id", "nom", "categorie", "prix"}, {"id", "nom", "categorie", "prix"})
+    Produits = Source[produits],
+    #"Converti en tableau" = Table.FromList(Produits, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 développé" = Table.ExpandRecordColumn(#"Converti en tableau", "Column1", 
+                            {"id", "nom", "categorie", "sous_categorie", "prix", "stock", "fournisseur"},
+                            {"id", "nom", "categorie", "sous_categorie", "prix", "stock", "fournisseur"})
 in
-    #"JSON développé"
+    #"Column1 développé"
 ```
 
 **Correction :**
