@@ -79,9 +79,9 @@ graph TD
 1. **Télécharger les fichiers sources :**
    
    
-   - [Ventes_2024.xlsx](https://example.com/Ventes_2024.xlsx) - Données de vente mensuelles  
-   - [Clients.csv](https://example.com/Clients.csv) - Référentiel clients  
-   - [Produits.json](https://example.com/Produits.json) - Catalogue produits
+   - [Ventes_2024.xlsx](LAB_MODULE3/Ventes_2024.xlsx) - Données de vente mensuelles  
+   - [Clients_sales.csv](LAB_MODULE3/Clients_sales.csv) - Référentiel clients  
+   - [Produits.json](LAB_MODULE3/Produits.json) - Catalogue produits
 
 2. **Instructions Power Query :**
    
