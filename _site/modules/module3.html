@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Formation Business Intelligence &amp; Power BI</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-43081d808c96cc46af55a3a816ae9eed.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="mermaid-theme" content="default">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Formation Business Intelligence &amp; Power BI</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../modules/module1.html"> 
+<span class="menu-text">Module 1 - Fondamentaux</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../modules/module2.html"> 
+<span class="menu-text">Module 2 - Modélisation</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../modules/module3.html"> 
+<span class="menu-text">Module 3 - ETL &amp; Qualité des Données</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../modules/module4.html"> 
+<span class="menu-text">Module 4 - Data Warehouse &amp; OLAP</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/module1.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/module3.html">Module 3</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Accueil</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Modules</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/module1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/module2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/module3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Module 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/module4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 4</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction-à-etl-et-power-query" id="toc-introduction-à-etl-et-power-query" class="nav-link active" data-scroll-target="#introduction-à-etl-et-power-query">3.1 Introduction à ETL et Power Query</a>
+  <ul class="collapse">
+  <li><a href="#quest-ce-que-letl" id="toc-quest-ce-que-letl" class="nav-link" data-scroll-target="#quest-ce-que-letl">3.1.1 Qu’est-ce que l’ETL ?</a></li>
+  <li><a href="#architecture-de-power-query" id="toc-architecture-de-power-query" class="nav-link" data-scroll-target="#architecture-de-power-query">3.1.2 Architecture de Power Query</a></li>
+  </ul></li>
+  <li><a href="#connexions-multi-sources" id="toc-connexions-multi-sources" class="nav-link" data-scroll-target="#connexions-multi-sources">3.2 Connexions Multi-Sources</a>
+  <ul class="collapse">
+  <li><a href="#types-de-sources-prises-en-charge" id="toc-types-de-sources-prises-en-charge" class="nav-link" data-scroll-target="#types-de-sources-prises-en-charge">3.2.1 Types de Sources Prises en Charge</a></li>
+  <li><a href="#exercice-pratique-connexion-à-des-sources-multiples" id="toc-exercice-pratique-connexion-à-des-sources-multiples" class="nav-link" data-scroll-target="#exercice-pratique-connexion-à-des-sources-multiples">3.2.2 Exercice Pratique : Connexion à des Sources Multiples</a></li>
+  </ul></li>
+  <li><a href="#nettoyage-et-transformation-des-données" id="toc-nettoyage-et-transformation-des-données" class="nav-link" data-scroll-target="#nettoyage-et-transformation-des-données">3.3 Nettoyage et Transformation des Données</a>
+  <ul class="collapse">
+  <li><a href="#techniques-de-nettoyage" id="toc-techniques-de-nettoyage" class="nav-link" data-scroll-target="#techniques-de-nettoyage">3.3.1 Techniques de Nettoyage</a></li>
+  <li><a href="#exercice-nettoyage-dun-jeu-de-données-clients" id="toc-exercice-nettoyage-dun-jeu-de-données-clients" class="nav-link" data-scroll-target="#exercice-nettoyage-dun-jeu-de-données-clients">3.3.2 Exercice : Nettoyage d’un Jeu de Données Clients</a></li>
+  </ul></li>
+  <li><a href="#fusion-et-agrégation-merge-append" id="toc-fusion-et-agrégation-merge-append" class="nav-link" data-scroll-target="#fusion-et-agrégation-merge-append">3.4 Fusion et Agrégation (Merge / Append)</a>
+  <ul class="collapse">
+  <li><a href="#types-de-jointures-merge" id="toc-types-de-jointures-merge" class="nav-link" data-scroll-target="#types-de-jointures-merge">3.4.1 Types de Jointures (Merge)</a></li>
+  <li><a href="#exercice-fusion-de-tables-ventes-et-produits" id="toc-exercice-fusion-de-tables-ventes-et-produits" class="nav-link" data-scroll-target="#exercice-fusion-de-tables-ventes-et-produits">3.4.2 Exercice : Fusion de Tables Ventes et Produits</a></li>
+  <li><a href="#exercice-agrégation-de-fichiers-mensuels-append" id="toc-exercice-agrégation-de-fichiers-mensuels-append" class="nav-link" data-scroll-target="#exercice-agrégation-de-fichiers-mensuels-append">3.4.3 Exercice : Agrégation de Fichiers Mensuels (Append)</a></li>
+  </ul></li>
+  <li><a href="#transformation-pivotunpivot" id="toc-transformation-pivotunpivot" class="nav-link" data-scroll-target="#transformation-pivotunpivot">3.5 Transformation Pivot/Unpivot</a>
+  <ul class="collapse">
+  <li><a href="#quand-utiliser-unpivot" id="toc-quand-utiliser-unpivot" class="nav-link" data-scroll-target="#quand-utiliser-unpivot">3.5.1 Quand utiliser Unpivot ?</a></li>
+  <li><a href="#exercice-transformation-unpivot" id="toc-exercice-transformation-unpivot" class="nav-link" data-scroll-target="#exercice-transformation-unpivot">3.5.2 Exercice : Transformation Unpivot</a></li>
+  <li><a href="#exercice-inverse-transformation-pivot" id="toc-exercice-inverse-transformation-pivot" class="nav-link" data-scroll-target="#exercice-inverse-transformation-pivot">3.5.3 Exercice Inverse : Transformation Pivot</a></li>
+  </ul></li>
+  <li><a href="#introduction-aux-outils-etl-professionnels" id="toc-introduction-aux-outils-etl-professionnels" class="nav-link" data-scroll-target="#introduction-aux-outils-etl-professionnels">3.6 Introduction aux Outils ETL Professionnels</a>
+  <ul class="collapse">
+  <li><a href="#ssis-sql-server-integration-services" id="toc-ssis-sql-server-integration-services" class="nav-link" data-scroll-target="#ssis-sql-server-integration-services">3.6.1 SSIS (SQL Server Integration Services)</a></li>
+  <li><a href="#talend-open-studio" id="toc-talend-open-studio" class="nav-link" data-scroll-target="#talend-open-studio">3.6.2 Talend Open Studio</a></li>
+  </ul></li>
+  <li><a href="#contrôle-qualité-et-documentation" id="toc-contrôle-qualité-et-documentation" class="nav-link" data-scroll-target="#contrôle-qualité-et-documentation">3.7 Contrôle Qualité et Documentation</a>
+  <ul class="collapse">
+  <li><a href="#métriques-de-qualité-des-données" id="toc-métriques-de-qualité-des-données" class="nav-link" data-scroll-target="#métriques-de-qualité-des-données">3.7.1 Métriques de Qualité des Données</a></li>
+  <li><a href="#exercice-audit-de-qualité-des-données" id="toc-exercice-audit-de-qualité-des-données" class="nav-link" data-scroll-target="#exercice-audit-de-qualité-des-données">3.7.2 Exercice : Audit de Qualité des Données</a></li>
+  <li><a href="#documentation-des-flux" id="toc-documentation-des-flux" class="nav-link" data-scroll-target="#documentation-des-flux">3.7.3 Documentation des Flux</a></li>
+  </ul></li>
+  <li><a href="#atelier-pratique-pipeline-etl-complet" id="toc-atelier-pratique-pipeline-etl-complet" class="nav-link" data-scroll-target="#atelier-pratique-pipeline-etl-complet">3.8 Atelier Pratique : Pipeline ETL Complet</a>
+  <ul class="collapse">
+  <li><a href="#cas-détude-retailcorp-data-pipeline" id="toc-cas-détude-retailcorp-data-pipeline" class="nav-link" data-scroll-target="#cas-détude-retailcorp-data-pipeline">3.8.1 Cas d’Étude : RetailCorp Data Pipeline</a></li>
+  <li><a href="#documentation-du-pipeline" id="toc-documentation-du-pipeline" class="nav-link" data-scroll-target="#documentation-du-pipeline">3.8.2 Documentation du Pipeline</a></li>
+  </ul></li>
+  <li><a href="#synthèse-du-module-3" id="toc-synthèse-du-module-3" class="nav-link" data-scroll-target="#synthèse-du-module-3">3.9 Synthèse du Module 3</a>
+  <ul class="collapse">
+  <li><a href="#points-clés-à-retenir" id="toc-points-clés-à-retenir" class="nav-link" data-scroll-target="#points-clés-à-retenir">3.9.1 Points Clés à Retenir</a></li>
+  <li><a href="#checklist-dauto-évaluation" id="toc-checklist-dauto-évaluation" class="nav-link" data-scroll-target="#checklist-dauto-évaluation">3.9.2 Checklist d’Auto-évaluation</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/module1.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/module3.html">Module 3</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Formation Business Intelligence &amp; Power BI</h1>
+<p class="subtitle lead">Module 3 : ETL &amp; Qualité des Données (Power Query)</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Durée : 5 heures</strong> | <strong>Objectif : Maîtriser l’intégration, la transformation et le nettoyage des données avec Power Query pour construire des pipelines robustes et documentés.</strong></p>
+<hr>
+<section id="introduction-à-etl-et-power-query" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-à-etl-et-power-query">3.1 Introduction à ETL et Power Query</h2>
+<section id="quest-ce-que-letl" class="level3">
+<h3 class="anchored" data-anchor-id="quest-ce-que-letl">3.1.1 Qu’est-ce que l’ETL ?</h3>
+<p><strong>ETL</strong> (Extract, Transform, Load) est un processus fondamental en BI qui consiste à :</p>
+<ul>
+<li><strong>Extraire</strong> les données de sources hétérogènes<br>
+</li>
+<li><strong>Transformer</strong> les données (nettoyage, enrichissement, restructuration)<br>
+</li>
+<li><strong>Charger</strong> les données dans un entrepôt ou un modèle analytique</li>
+</ul>
+<p><strong>Pourquoi Power Query ?</strong></p>
+<ul>
+<li>Outil ETL intégré à Power BI, Excel et SSIS<br>
+</li>
+<li>Interface visuelle “low-code” avec enregistrement des étapes<br>
+</li>
+<li>Reproductibilité et maintenance facilitée<br>
+</li>
+<li>Compatibilité avec de nombreuses sources</li>
+</ul>
+</section>
+<section id="architecture-de-power-query" class="level3">
+<h3 class="anchored" data-anchor-id="architecture-de-power-query">3.1.2 Architecture de Power Query</h3>
+<p><strong>Composants clés :</strong></p>
+<ol type="1">
+<li><strong>Connecteurs</strong> : +100 sources de données<br>
+</li>
+<li><strong>Éditeur Power Query (M)</strong> : langage de transformation<br>
+</li>
+<li><strong>Gestionnaire de requêtes</strong> : organisation des flux<br>
+</li>
+<li><strong>Paramètres et fonctions</strong> : réutilisabilité</li>
+</ol>
+<p><strong>Visualisation du flux ETL :</strong></p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TD
+    A[Sources&lt;br/&gt;Excel, CSV, DB, API] --&gt; B{Power Query&lt;br/&gt;Éditeur}
+    B --&gt; C[Nettoyage&lt;br/&gt;Filtres, Types]
+    B --&gt; D[Transformation&lt;br/&gt;Pivot, Fusion]
+    B --&gt; E[Enrichissement&lt;br/&gt;Colonnes calculées]
+    C --&gt; F{Contrôle Qualité}
+    D --&gt; F
+    E --&gt; F
+    F --&gt; G[Chargement&lt;br/&gt;Power BI / Data Model]
+    G --&gt; H[Dashboard&lt;br/&gt;Reporting]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="connexions-multi-sources" class="level2">
+<h2 class="anchored" data-anchor-id="connexions-multi-sources">3.2 Connexions Multi-Sources</h2>
+<section id="types-de-sources-prises-en-charge" class="level3">
+<h3 class="anchored" data-anchor-id="types-de-sources-prises-en-charge">3.2.1 Types de Sources Prises en Charge</h3>
+<p><strong>Sources structurées :</strong></p>
+<ul>
+<li>Fichiers : Excel, CSV, XML, JSON, PDF (limité)</li>
+<li>Bases de données : SQL Server, Oracle, MySQL, PostgreSQL<br>
+</li>
+<li>Services cloud : Azure SQL, SharePoint, Salesforce</li>
+</ul>
+<p><strong>Sources semi-structurées :</strong></p>
+<ul>
+<li>API REST, SOAP web services<br>
+</li>
+<li>Web scraping (pages HTML)<br>
+</li>
+<li>Dossiers avec multiples fichiers</li>
+</ul>
+</section>
+<section id="exercice-pratique-connexion-à-des-sources-multiples" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-pratique-connexion-à-des-sources-multiples">3.2.2 Exercice Pratique : Connexion à des Sources Multiples</h3>
+<p><strong>Objectif :</strong> Importer des données depuis 3 sources différentes et les combiner.</p>
+<p><strong>Étapes :</strong></p>
+<ol type="1">
+<li><p><strong>Télécharger les fichiers sources :</strong></p>
+<ul>
+<li><a href="https://example.com/Ventes_2024.xlsx">Ventes_2024.xlsx</a> - Données de vente mensuelles<br>
+</li>
+<li><a href="https://example.com/Clients.csv">Clients.csv</a> - Référentiel clients<br>
+</li>
+<li><a href="https://example.com/Produits.json">Produits.json</a> - Catalogue produits</li>
+</ul></li>
+<li><p><strong>Instructions Power Query :</strong></p></li>
+</ol>
+<pre class="powerquery"><code>// Étape 1 : Connexion à Excel
+let
+    Source = Excel.Workbook(File.Contents("C:\Data\Ventes_2024.xlsx"), null, true),
+    Feuille1_Sheet = Source{[Item="Feuille1",Kind="Sheet"]}[Data],
+    #"En-têtes promus" = Table.PromoteHeaders(Feuille1_Sheet, [PromoteAllScalars=true])
+in
+    #"En-têtes promus"
+
+// Étape 2 : Connexion à CSV
+let
+    Source = Csv.Document(File.Contents("C:\Data\Clients.csv"),[Delimiter=";", Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"En-têtes promus" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+in
+    #"En-têtes promus"
+
+// Étape 3 : Connexion à JSON
+let
+    Source = Json.Document(File.Contents("C:\Data\Produits.json")),
+    #"Converti en tableau" = Table.FromList(Source, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"JSON développé" = Table.ExpandRecordColumn(#"Converti en tableau", "Column1", {"id", "nom", "categorie", "prix"}, {"id", "nom", "categorie", "prix"})
+in
+    #"JSON développé"</code></pre>
+<p><strong>Correction :</strong></p>
+<ul>
+<li>Vérifier les chemins d’accès aux fichiers<br>
+</li>
+<li>Ajuster l’encodage selon le fichier (UTF-8, 1252)<br>
+</li>
+<li>Pour JSON, adapter la structure selon le schéma réel</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="nettoyage-et-transformation-des-données" class="level2">
+<h2 class="anchored" data-anchor-id="nettoyage-et-transformation-des-données">3.3 Nettoyage et Transformation des Données</h2>
+<section id="techniques-de-nettoyage" class="level3">
+<h3 class="anchored" data-anchor-id="techniques-de-nettoyage">3.3.1 Techniques de Nettoyage</h3>
+<p><strong>Problèmes courants et solutions :</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 24%">
+<col style="width: 51%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Problème</th>
+<th>Symptôme</th>
+<th>Solution Power Query</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Valeurs manquantes</strong></td>
+<td>Null, vide, “N/A”</td>
+<td><code>Table.ReplaceValue</code>, <code>Table.FillDown</code></td>
+</tr>
+<tr class="even">
+<td><strong>Incohérences de format</strong></td>
+<td>Dates texte, nombres texte</td>
+<td><code>Table.TransformColumnTypes</code></td>
+</tr>
+<tr class="odd">
+<td><strong>Doublons</strong></td>
+<td>Lignes identiques</td>
+<td><code>Table.Distinct</code></td>
+</tr>
+<tr class="even">
+<td><strong>Erreurs de saisie</strong></td>
+<td>Typos, majuscules</td>
+<td><code>Text.Proper</code>, <code>Text.Trim</code></td>
+</tr>
+<tr class="odd">
+<td><strong>Colonnes inutiles</strong></td>
+<td>Données non pertinentes</td>
+<td><code>Table.RemoveColumns</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="exercice-nettoyage-dun-jeu-de-données-clients" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-nettoyage-dun-jeu-de-données-clients">3.3.2 Exercice : Nettoyage d’un Jeu de Données Clients</h3>
+<p><strong>Jeu de données problématique :</strong></p>
+<pre class="csv"><code>ID;Nom;Prenom;Email;Telephone;Ville;CodePostal;DateInscription
+1;DUPONT;Jean;jean.dupont@mail.com;0123456789;Paris;75001;2023-01-15
+2;MARTIN;;martin@mail.com;06 12 34 56 78;Lyon;69000;2023-02-20
+3;durand;Marie;MARIE.DURAND@MAIL.COM;+33123456789;Marseille;13000;23-03-10
+4;LEFEBVRE;Pierre;lefebvre@mail;01.23.45.67.89;Lille;59000;2023/04/05
+5;ROBERT;Sophie;;;Paris;75015;2023-05-12</code></pre>
+<p><strong>Tâches à accomplir :</strong></p>
+<ol type="1">
+<li>Standardiser les formats (noms propres, email lowercase)<br>
+</li>
+<li>Nettoyer les numéros de téléphone<br>
+</li>
+<li>Corriger les formats de date<br>
+</li>
+<li>Gérer les valeurs manquantes</li>
+</ol>
+<p><strong>Solution Power Query :</strong></p>
+<pre class="powerquery"><code>let
+    Source = Csv.Document(File.Contents("C:\Data\Clients_Sale.csv"),[Delimiter=";", Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"En-têtes promus" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+    
+    // Standardisation des noms et prénoms
+    #"Nom en forme propre" = Table.TransformColumns(#"En-têtes promus",{{"Nom", Text.Proper, type text}}),
+    #"Prenom en forme propre" = Table.TransformColumns(#"Nom en forme propre",{{"Prenom", Text.Proper, type text}}),
+    
+    // Nettoyage des emails
+    #"Email en minuscules" = Table.TransformColumns(#"Prenom en forme propre",{{"Email", Text.Lower, type text}}),
+    #"Email valide" = Table.AddColumn(#"Email en minuscules", "EmailValide", each Text.Contains([Email], "@") and Text.Contains([Email], ".")),
+    
+    // Nettoyage téléphone
+    #"Telephone nettoye" = Table.TransformColumns(#"Email valide",{{"Telephone", 
+        each if _ = null then null
+        else Text.Remove(_, {" ", ".", "-", "+", "(", ")"}), type text}}),
+    
+    // Correction dates
+    #"Date transformee" = Table.TransformColumns(#"Telephone nettoye",{{"DateInscription", 
+        each if Text.Contains(_, "/") then Date.FromText(_, "fr-FR")
+        else if Text.Contains(_, "-") and Text.Length(_) = 8 then Date.FromText("20" &amp; _)
+        else Date.FromText(_, "fr-FR"), type date}}),
+    
+    // Gestion valeurs manquantes
+    #"Villes par defaut" = Table.ReplaceValue(#"Date transformee",null,"Non renseigné",Replacer.ReplaceValue,{"Ville"}),
+    #"Filtre lignes completes" = Table.SelectRows(#"Villes par defaut", each [Nom] &lt;&gt; null and [Prenom] &lt;&gt; null)
+in
+    #"Filtre lignes completes"</code></pre>
+<hr>
+</section>
+</section>
+<section id="fusion-et-agrégation-merge-append" class="level2">
+<h2 class="anchored" data-anchor-id="fusion-et-agrégation-merge-append">3.4 Fusion et Agrégation (Merge / Append)</h2>
+<section id="types-de-jointures-merge" class="level3">
+<h3 class="anchored" data-anchor-id="types-de-jointures-merge">3.4.1 Types de Jointures (Merge)</h3>
+<p><strong>Comparaison des jointures :</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 40%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Description</th>
+<th>Cas d’usage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Inner Join</strong></td>
+<td>Seulement les correspondances</td>
+<td>Analyse complète</td>
+</tr>
+<tr class="even">
+<td><strong>Left Outer</strong></td>
+<td>Tous de gauche + correspondances</td>
+<td>Conservation source principale</td>
+</tr>
+<tr class="odd">
+<td><strong>Right Outer</strong></td>
+<td>Tous de droite + correspondances</td>
+<td>Rare en Power Query</td>
+</tr>
+<tr class="even">
+<td><strong>Full Outer</strong></td>
+<td>Toutes les lignes</td>
+<td>Consolidation</td>
+</tr>
+<tr class="odd">
+<td><strong>Anti Join</strong></td>
+<td>Lignes sans correspondance</td>
+<td>Détection anomalies</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="exercice-fusion-de-tables-ventes-et-produits" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-fusion-de-tables-ventes-et-produits">3.4.2 Exercice : Fusion de Tables Ventes et Produits</h3>
+<p><strong>Données :</strong></p>
+<ul>
+<li><strong>Table Ventes</strong> : <code>VenteID, ProduitID, Quantite, DateVente</code></li>
+<li><strong>Table Produits</strong> : <code>ProduitID, NomProduit, Categorie, PrixUnitaire</code></li>
+</ul>
+<p><strong>Objectif :</strong> Créer une vue enrichie avec les informations produits.</p>
+<pre class="powerquery"><code>// Étape 1 : Charger les tables
+let
+    Ventes = Excel.CurrentWorkbook(){[Name="Ventes"]}[Content],
+    Produits = Excel.CurrentWorkbook(){[Name="Produits"]}[Content],
+    
+    // Étape 2 : Fusionner (Left Join)
+    Fusion = Table.NestedJoin(Ventes, {"ProduitID"}, Produits, {"ProduitID"}, "Produits", JoinKind.LeftOuter),
+    
+    // Étape 3 : Développer les colonnes nécessaires
+    ColonnesDeveloppees = Table.ExpandTableColumn(Fusion, "Produits", 
+        {"NomProduit", "Categorie", "PrixUnitaire"}, 
+        {"NomProduit", "Categorie", "PrixUnitaire"}),
+    
+    // Étape 4 : Calculer le montant total
+    MontantCalcule = Table.AddColumn(ColonnesDeveloppees, "MontantTotal", 
+        each [Quantite] * [PrixUnitaire], type number)
+in
+    MontantCalcule</code></pre>
+</section>
+<section id="exercice-agrégation-de-fichiers-mensuels-append" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-agrégation-de-fichiers-mensuels-append">3.4.3 Exercice : Agrégation de Fichiers Mensuels (Append)</h3>
+<p><strong>Scénario :</strong> 12 fichiers Excel <code>Ventes_MM_2024.xlsx</code> à consolider.</p>
+<pre class="powerquery"><code>let
+    // Étape 1 : Se connecter au dossier
+    Source = Folder.Files("C:\Data\Ventes 2024"),
+    
+    // Étape 2 : Filtrer les fichiers Excel
+    FichiersExcel = Table.SelectRows(Source, each Text.EndsWith([Name], ".xlsx")),
+    
+    // Étape 3 : Combiner les fichiers
+    DonneesCombinees = Table.Combine(
+        List.Transform(
+            FichiersExcel[Content],
+            each Excel.Workbook(_, null, true){0}[Data]
+        )
+    ),
+    
+    // Étape 4 : Nettoyer et standardiser
+    EnTetesPromus = Table.PromoteHeaders(DonneesCombinees, [PromoteAllScalars=true]),
+    TypesCorriges = Table.TransformColumnTypes(EnTetesPromus,{
+        {"Date", type date},
+        {"Montant", Currency.Type},
+        {"Quantite", Int64.Type}
+    })
+in
+    TypesCorriges</code></pre>
+<hr>
+</section>
+</section>
+<section id="transformation-pivotunpivot" class="level2">
+<h2 class="anchored" data-anchor-id="transformation-pivotunpivot">3.5 Transformation Pivot/Unpivot</h2>
+<section id="quand-utiliser-unpivot" class="level3">
+<h3 class="anchored" data-anchor-id="quand-utiliser-unpivot">3.5.1 Quand utiliser Unpivot ?</h3>
+<p><strong>Format large (pivoté) :</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Produit</th>
+<th>Jan</th>
+<th>Fév</th>
+<th>Mar</th>
+<th>Avr</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>100</td>
+<td>150</td>
+<td>200</td>
+<td>180</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>80</td>
+<td>90</td>
+<td>110</td>
+<td>95</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Format long (normalisé) :</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Produit</th>
+<th>Mois</th>
+<th>Ventes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>Jan</td>
+<td>100</td>
+</tr>
+<tr class="even">
+<td>A</td>
+<td>Fév</td>
+<td>150</td>
+</tr>
+<tr class="odd">
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="exercice-transformation-unpivot" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-transformation-unpivot">3.5.2 Exercice : Transformation Unpivot</h3>
+<pre class="powerquery"><code>let
+    Source = Table.FromRows({
+        {"A", 100, 150, 200, 180},
+        {"B", 80, 90, 110, 95}
+    }, {"Produit", "Jan", "Fév", "Mar", "Avr"}),
+    
+    // Sélectionner les colonnes à unpivoter
+    ColonnesAVirer = {"Jan", "Fév", "Mar", "Avr"},
+    
+    // Appliquer Unpivot
+    DonneesLongues = Table.UnpivotOtherColumns(Source, {"Produit"}, "Mois", "Ventes"),
+    
+    // Optionnel : trier les données
+    TrieParProduit = Table.Sort(DonneesLongues,{{"Produit", Order.Ascending}, {"Mois", Order.Ascending}})
+in
+    TrieParProduit</code></pre>
+</section>
+<section id="exercice-inverse-transformation-pivot" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-inverse-transformation-pivot">3.5.3 Exercice Inverse : Transformation Pivot</h3>
+<pre class="powerquery"><code>let
+    Source = Table.FromRows({
+        {"A", "Jan", 100},
+        {"A", "Fév", 150},
+        {"B", "Jan", 80},
+        {"B", "Fév", 90}
+    }, {"Produit", "Mois", "Ventes"}),
+    
+    // Appliquer Pivot
+    DonneesLarges = Table.Pivot(Source, 
+        List.Distinct(Source[Mois]), 
+        "Mois", 
+        "Ventes", 
+        List.Sum)
+in
+    DonneesLarges</code></pre>
+<hr>
+</section>
+</section>
+<section id="introduction-aux-outils-etl-professionnels" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-aux-outils-etl-professionnels">3.6 Introduction aux Outils ETL Professionnels</h2>
+<section id="ssis-sql-server-integration-services" class="level3">
+<h3 class="anchored" data-anchor-id="ssis-sql-server-integration-services">3.6.1 SSIS (SQL Server Integration Services)</h3>
+<p><strong>Avantages :</strong></p>
+<ul>
+<li>Intégration avec l’écosystème Microsoft</li>
+<li>Performances élevées pour gros volumes</li>
+<li>Orchestration complexe de packages</li>
+<li>Gestion avancée des erreurs</li>
+</ul>
+<p><strong>Comparaison avec Power Query :</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Critère</th>
+<th>Power Query</th>
+<th>SSIS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Complexité</strong></td>
+<td>Basse à moyenne</td>
+<td>Élevée</td>
+</tr>
+<tr class="even">
+<td><strong>Performance</strong></td>
+<td>Bonne</td>
+<td>Excellente</td>
+</tr>
+<tr class="odd">
+<td><strong>Orchestration</strong></td>
+<td>Limitée</td>
+<td>Avancée</td>
+</tr>
+<tr class="even">
+<td><strong>Maintenance</strong></td>
+<td>Facile</td>
+<td>Complexe</td>
+</tr>
+<tr class="odd">
+<td><strong>Coût</strong></td>
+<td>Inclus dans Office/BI</td>
+<td>Licence SQL Server</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="talend-open-studio" class="level3">
+<h3 class="anchored" data-anchor-id="talend-open-studio">3.6.2 Talend Open Studio</h3>
+<p><strong>Caractéristiques :</strong></p>
+<ul>
+<li>Solution open source</li>
+<li>Interface graphique similaire</li>
+<li>Connecteurs nombreux</li>
+<li>Génération de code Java</li>
+</ul>
+<p><strong>Exercice conceptuel :</strong> Concevoir un flux ETL simple dans Talend</p>
+<ol type="1">
+<li>Extraction depuis CSV</li>
+<li>Transformation (nettoyage)</li>
+<li>Chargement vers base de données</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="contrôle-qualité-et-documentation" class="level2">
+<h2 class="anchored" data-anchor-id="contrôle-qualité-et-documentation">3.7 Contrôle Qualité et Documentation</h2>
+<section id="métriques-de-qualité-des-données" class="level3">
+<h3 class="anchored" data-anchor-id="métriques-de-qualité-des-données">3.7.1 Métriques de Qualité des Données</h3>
+<p><strong>Indicateurs à suivre :</strong></p>
+<ol type="1">
+<li><strong>Complétude</strong> : % de valeurs non nulles</li>
+<li><strong>Exactitude</strong> : Conformité aux règles métier</li>
+<li><strong>Cohérence</strong> : Uniformité des formats</li>
+<li><strong>Actualité</strong> : Fraîcheur des données</li>
+<li><strong>Unicité</strong> : Absence de doublons</li>
+</ol>
+</section>
+<section id="exercice-audit-de-qualité-des-données" class="level3">
+<h3 class="anchored" data-anchor-id="exercice-audit-de-qualité-des-données">3.7.2 Exercice : Audit de Qualité des Données</h3>
+<p><strong>Script d’audit Power Query :</strong></p>
+<pre class="powerquery"><code>let
+    Source = ... // Chargement des données
+    
+    // Métriques de qualité
+    TotalLignes = Table.RowCount(Source),
+    Colonnes = Table.ColumnNames(Source),
+    
+    // Calcul par colonne
+    MetriquesParColonne = List.Transform(Colonnes, (colonne) =&gt;
+        let
+            Valeurs = Table.Column(Source, colonne),
+            NonNull = List.NonNullCount(Valeurs),
+            Distinct = List.Distinct(Valeurs),
+            PourcentageNonNull = NonNull / TotalLignes * 100
+        in
+            [
+                Colonne = colonne,
+                Type = Value.Type(Valeurs{0}),
+                Completeness = PourcentageNonNull,
+                DistinctCount = List.Count(Distinct),
+                ExempleValeur = if NonNull &gt; 0 then Text.From(Valeurs{0}) else "N/A"
+            ]
+    ),
+    
+    // Conversion en tableau
+    TableauMetriques = Table.FromRecords(MetriquesParColonne)
+in
+    TableauMetriques</code></pre>
+</section>
+<section id="documentation-des-flux" class="level3">
+<h3 class="anchored" data-anchor-id="documentation-des-flux">3.7.3 Documentation des Flux</h3>
+<p><strong>Template de documentation :</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Section</th>
+<th>Contenu</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1. Description</strong></td>
+<td>Objectif du flux, fréquence d’exécution</td>
+</tr>
+<tr class="even">
+<td><strong>2. Sources</strong></td>
+<td>Liste des sources avec connexions</td>
+</tr>
+<tr class="odd">
+<td><strong>3. Transformations</strong></td>
+<td>Étapes appliquées (liste)</td>
+</tr>
+<tr class="even">
+<td><strong>4. Règles métier</strong></td>
+<td>Règles de validation appliquées</td>
+</tr>
+<tr class="odd">
+<td><strong>5. Métriques qualité</strong></td>
+<td>Résultats du contrôle qualité</td>
+</tr>
+<tr class="even">
+<td><strong>6. Dépendances</strong></td>
+<td>Flux en amont/aval</td>
+</tr>
+<tr class="odd">
+<td><strong>7. Contacts</strong></td>
+<td>Responsables technique et métier</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="atelier-pratique-pipeline-etl-complet" class="level2">
+<h2 class="anchored" data-anchor-id="atelier-pratique-pipeline-etl-complet">3.8 Atelier Pratique : Pipeline ETL Complet</h2>
+<section id="cas-détude-retailcorp-data-pipeline" class="level3">
+<h3 class="anchored" data-anchor-id="cas-détude-retailcorp-data-pipeline">3.8.1 Cas d’Étude : RetailCorp Data Pipeline</h3>
+<p><strong>Objectif :</strong> Construire un pipeline ETL complet pour analyser les ventes.</p>
+<p><strong>Sources disponibles :</strong></p>
+<ol type="1">
+<li><a href="https://example.com/VentesJournalieres.csv">VentesJournalieres.csv</a></li>
+<li><a href="https://example.com/CatalogueProduits.xlsx">CatalogueProduits.xlsx</a></li>
+<li><a href="https://example.com/api/clients">ClientsAPI.json</a> (simulé)</li>
+</ol>
+<p><strong>Étapes du pipeline :</strong></p>
+<pre class="powerquery"><code>// Fichier principal - pipeline complet
+let
+    // ========== EXTRACTION ==========
+    // 1. Ventes journalières
+    VentesCSV = Csv.Document(File.Contents("C:\Data\VentesJournalieres.csv"), 
+        [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+    VentesAvecHeaders = Table.PromoteHeaders(VentesCSV, [PromoteAllScalars=true]),
+    
+    // 2. Catalogue produits
+    ProduitsExcel = Excel.Workbook(File.Contents("C:\Data\CatalogueProduits.xlsx"), null, true),
+    ProduitsSheet = ProduitsExcel{[Item="Produits",Kind="Sheet"]}[Data],
+    ProduitsAvecHeaders = Table.PromoteHeaders(ProduitsSheet, [PromoteAllScalars=true]),
+    
+    // 3. Clients via API (simulation)
+    ClientsAPI = Json.Document("{""clients"": [{""id"":1,""nom"":""Dupont"",""ville"":""Paris""}]}"),
+    ClientsTable = Table.FromRecords(ClientsAPI[clients]),
+    
+    // ========== TRANSFORMATION ==========
+    // Nettoyage ventes
+    VentesNettoyees = Table.TransformColumnTypes(VentesAvecHeaders,{
+        {"Date", type date},
+        {"ProduitID", Int64.Type},
+        {"Quantite", Int64.Type},
+        {"PrixUnitaire", Currency.Type}
+    }),
+    
+    // Calcul montant
+    VentesAvecMontant = Table.AddColumn(VentesNettoyees, "Montant", 
+        each [Quantite] * [PrixUnitaire], Currency.Type),
+    
+    // Nettoyage produits
+    ProduitsNettoyes = Table.TransformColumnTypes(ProduitsAvecHeaders,{
+        {"ProduitID", Int64.Type},
+        {"Nom", type text},
+        {"Categorie", type text},
+        {"PrixReference", Currency.Type}
+    }),
+    
+    // ========== ENRICHISSEMENT ==========
+    // Fusion ventes + produits
+    FusionProduits = Table.NestedJoin(VentesAvecMontant, {"ProduitID"}, 
+        ProduitsNettoyes, {"ProduitID"}, "DetailsProduit", JoinKind.LeftOuter),
+    
+    DetailsProduitsDeveloppes = Table.ExpandTableColumn(FusionProduits, "DetailsProduit", 
+        {"Nom", "Categorie"}, {"NomProduit", "CategorieProduit"}),
+    
+    // Fusion avec clients
+    FusionComplete = Table.NestedJoin(DetailsProduitsDeveloppes, {"ClientID"}, 
+        ClientsTable, {"id"}, "DetailsClient", JoinKind.LeftOuter),
+    
+    DetailsClientsDeveloppes = Table.ExpandTableColumn(FusionComplete, "DetailsClient", 
+        {"nom", "ville"}, {"NomClient", "VilleClient"}),
+    
+    // ========== AGREGATION ==========
+    // Pour dashboard quotidien
+    AgregationJournaliere = Table.Group(DetailsClientsDeveloppes, {"Date", "CategorieProduit"}, {
+        {"CA_Total", each List.Sum([Montant]), Currency.Type},
+        {"Quantite_Total", each List.Sum([Quantite]), Int64.Type},
+        {"NbTransactions", each Table.RowCount(_), Int64.Type}
+    }),
+    
+    // ========== QUALITE ==========
+    // Vérification intégrité
+    LignesAvant = Table.RowCount(VentesAvecMontant),
+    LignesApres = Table.RowCount(DetailsClientsDeveloppes),
+    TauxCompletude = LignesApres / LignesAvant * 100,
+    
+    // Log de qualité
+    LogQualite = #table({"Metric", "Valeur"}, {
+        {"Lignes sources", LignesAvant},
+        {"Lignes finales", LignesApres},
+        {"Taux completude", TauxCompletude &amp; "%"},
+        {"Date traitement", DateTime.LocalNow()}
+    })
+    
+in
+    // Retourner les données transformées ET le log
+    [
+        DonneesVentes = DetailsClientsDeveloppes,
+        Agregations = AgregationJournaliere,
+        AuditQualite = LogQualite
+    ]</code></pre>
+</section>
+<section id="documentation-du-pipeline" class="level3">
+<h3 class="anchored" data-anchor-id="documentation-du-pipeline">3.8.2 Documentation du Pipeline</h3>
+<p><strong>Fiche technique :</strong></p>
+<pre><code>NOM DU PIPELINE: RetailCorp_Sales_ETL
+VERSION: 1.0
+FREQUENCE: Quotidienne (06:00)
+
+SOURCES:
+1. VentesJournalieres.csv - FTP serveur
+2. CatalogueProduits.xlsx - SharePoint
+3. API Clients - endpoint REST
+
+TRANSFORMATIONS APPLIQUEES:
+✓ Conversion types de données
+✓ Calcul montant de vente
+✓ Fusion avec référentiels
+✓ Nettoyage valeurs aberrantes
+✓ Agrégation journalière
+
+REGLES METIER:
+- Prix &gt; 0
+- Quantité &gt; 0
+- Dates dans plage valide
+- Clients actifs uniquement
+
+CONTACTS:
+- Technique: admin@retailcorp.com
+- Métier: sales.analysis@retailcorp.com</code></pre>
+<hr>
+</section>
+</section>
+<section id="synthèse-du-module-3" class="level2">
+<h2 class="anchored" data-anchor-id="synthèse-du-module-3">3.9 Synthèse du Module 3</h2>
+<section id="points-clés-à-retenir" class="level3">
+<h3 class="anchored" data-anchor-id="points-clés-à-retenir">3.9.1 Points Clés à Retenir</h3>
+<p>✅ <strong>Connecteurs multiples</strong> : Savoir se connecter à diverses sources<br>
+✅ <strong>Nettoyage efficace</strong> : Techniques pour données “sales”<br>
+✅ <strong>Transformations avancées</strong> : Merge, Append, Pivot/Unpivot<br>
+✅ <strong>Qualité des données</strong> : Métriques et contrôles<br>
+✅ <strong>Documentation</strong> : Bonnes pratiques pour maintenabilité</p>
+</section>
+<section id="checklist-dauto-évaluation" class="level3">
+<h3 class="anchored" data-anchor-id="checklist-dauto-évaluation">3.9.2 Checklist d’Auto-évaluation</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Je peux connecter Power Query à 3 types de sources différents</label></li>
+<li><label><input type="checkbox">Je maîtrise les techniques de nettoyage de base</label></li>
+<li><label><input type="checkbox">Je comprends la différence entre Merge et Append</label></li>
+<li><label><input type="checkbox">Je sais transformer des données pivots en format long</label></li>
+<li><label><input type="checkbox">Je peux créer un pipeline ETL simple et documenté</label></li>
+<li><label><input type="checkbox">Je comprends les principes de qualité des données</label></li>
+</ul>
+<hr>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/nevermind78\.github\.io\/PBI_BI\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

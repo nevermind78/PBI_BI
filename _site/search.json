@@ -1,0 +1,954 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "",
+    "text": "Durée : 5 heures | Objectif : Maîtriser les concepts fondamentaux de la BI\n\nArchitecture décisionnelle et écosystème BI\nCycle de vie d’un projet BI (CRISP-DM)\nPanorama des outils BI (Power BI, Tableau, Qlik)\nGouvernance, qualité et culture data-driven\nAtelier : Cahier des charges d’un projet BI\n\nAccéder au Module 1 →\n\n\n\nDurée : 5 heures | Objectif : Concevoir des modèles décisionnels performants\n\nModélisation dimensionnelle (faits, dimensions, hiérarchies)\nModèles en étoile, flocon et constellation\nTechniques d’historisation (SCD Types 0-6)\nSQL analytique avancé (fonctions fenêtrées, agrégations)\nOptimisation des performances (indexation, partitionnement)\nAtelier : Conception d’un modèle vente au détail\n\nAccéder au Module 2 →\n\n\n\nDurée : 5 heures | Objectif : Maîtriser l’intégration, transformation et nettoyage des données\n\nConnexions multi-sources : Excel, CSV, bases de données, API REST\nNettoyage et transformation : valeurs manquantes, normalisation, filtrage\nFusion et agrégation : Merge (jointures), Append (consolidation)\nTransformations avancées : Pivot/Unpivot, colonnes conditionnelles\nOutils ETL professionnels : SSIS, Talend - panorama comparatif\nContrôle qualité et documentation : métriques qualité, traçabilité, documentation des flux\nAtelier pratique : Construction d’un pipeline Power Query complet pour RetailCorp\n\nAccéder au Module 3 → 📁 Fichiers fournis : Ventes_2024.xlsx, Clients_Sale.csv, Produits.json, VentesJournalieres.csv, CatalogueProduits.xlsx\n\n\n\nDurée : 5 heures | Objectif : Comprendre l’organisation d’un entrepôt de données et maîtriser l’analyse multidimensionnelle\n\nData Warehouse : caractéristiques (intégré, historisé, non volatile), architecture en couches\nConcepts OLAP : cubes, dimensions, mesures, agrégations, hiérarchies\nComparaison OLTP vs OLAP : modèles, usages, performances\nModélisation temporelle : dimension date complète, analyses YTD/YoY\nSlowly Changing Dimensions (SCD) : implémentation Type 2 avec historique complet\nAnalyses avancées : drill-down, roll-up, slicing, dicing\nOptimisation : agrégations pré-calculées, partitionnement, compression\nAtelier pratique : Création de 3 hiérarchies (Date, Produit, Région) et réalisation d’analyses YTD/YoY\n\nAccéder au Module 4 → 💻 Scripts fournis : Dim_Date.sql, SCD_Type2.sql, Hiérarchies.sql, YTD_YoY.sql\n\n\n\n\n\n\nAnalystes données : pour structurer et analyser efficacement les données\nConsultants BI : pour maîtriser l’ensemble de la chaîne de valeur BI\nChefs de projet : pour piloter des projets décisionnels de bout en bout\nDéveloppeurs : pour implémenter des solutions ETL et data warehouses robustes\nResponsables métier : pour comprendre et exploiter les capacités analytiques\nData Scientists : pour disposer de données fiables et bien structurées\n\n\n\n\n\n\nModule 1 : Aucun prérequis technique\nModule 2 : Notions de bases de données et SQL de base\nModule 3 : Connaissance de Power BI ou Excel (niveau débutant)\nModule 4 : SQL intermédiaire, compréhension des concepts de modélisation\n\n\n\n\n\n✅ Théorie illustrée : Concepts expliqués avec des schémas et exemples concrets\n✅ Exercices guidés : Mise en pratique progressive avec assistance\n✅ Cas réels : Études de cas inspirées de situations professionnelles\n✅ Outils fournis : Scripts SQL, modèles Power Query, jeux de données\n✅ Auto-évaluation : Quiz et checklists pour valider les acquis\n\n\n\n\nÀ l’issue des 4 modules (20 heures), vous serez capable de :\n\n\n\nCompétence\nModule 1\nModule 2\nModule 3\nModule 4\n\n\n\n\nConcevoir un modèle décisionnel\n⭐\n⭐⭐⭐\n⭐⭐\n⭐⭐\n\n\nImplémenter un pipeline ETL\n⭐\n⭐\n⭐⭐⭐\n⭐⭐\n\n\nConstruire un data warehouse\n\n⭐⭐\n⭐⭐\n⭐⭐⭐\n\n\nAnalyser avec SQL avancé\n\n⭐⭐⭐\n⭐\n⭐⭐\n\n\nDévelopper des dashboards\n⭐⭐\n⭐⭐\n⭐⭐⭐\n⭐⭐\n\n\nDocumenter et maintenir\n⭐⭐\n⭐⭐\n⭐⭐⭐\n⭐⭐\n\n\n\n\n\n\n\n\n\n📂 Fichiers d’exercice : - Ventes_2024.xlsx - Clients_Sale.csv - Produits.json - Template Documentation ETL\n\n\n\n💾 Scripts SQL : - Script_Dim_Date.sql - Script_SCD_Type2.sql - Script_Hierarchies.sql - Script_YTD_YoY.sql\n\nresources",
+    "crumbs": [
+      "Accueil"
+    ]
+  },
+  {
+    "objectID": "index.html#présentation-des-modules",
+    "href": "index.html#présentation-des-modules",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "",
+    "text": "Durée : 5 heures | Objectif : Maîtriser les concepts fondamentaux de la BI\n\nArchitecture décisionnelle et écosystème BI\nCycle de vie d’un projet BI (CRISP-DM)\nPanorama des outils BI (Power BI, Tableau, Qlik)\nGouvernance, qualité et culture data-driven\nAtelier : Cahier des charges d’un projet BI\n\nAccéder au Module 1 →\n\n\n\nDurée : 5 heures | Objectif : Concevoir des modèles décisionnels performants\n\nModélisation dimensionnelle (faits, dimensions, hiérarchies)\nModèles en étoile, flocon et constellation\nTechniques d’historisation (SCD Types 0-6)\nSQL analytique avancé (fonctions fenêtrées, agrégations)\nOptimisation des performances (indexation, partitionnement)\nAtelier : Conception d’un modèle vente au détail\n\nAccéder au Module 2 →\n\n\n\nDurée : 5 heures | Objectif : Maîtriser l’intégration, transformation et nettoyage des données\n\nConnexions multi-sources : Excel, CSV, bases de données, API REST\nNettoyage et transformation : valeurs manquantes, normalisation, filtrage\nFusion et agrégation : Merge (jointures), Append (consolidation)\nTransformations avancées : Pivot/Unpivot, colonnes conditionnelles\nOutils ETL professionnels : SSIS, Talend - panorama comparatif\nContrôle qualité et documentation : métriques qualité, traçabilité, documentation des flux\nAtelier pratique : Construction d’un pipeline Power Query complet pour RetailCorp\n\nAccéder au Module 3 → 📁 Fichiers fournis : Ventes_2024.xlsx, Clients_Sale.csv, Produits.json, VentesJournalieres.csv, CatalogueProduits.xlsx\n\n\n\nDurée : 5 heures | Objectif : Comprendre l’organisation d’un entrepôt de données et maîtriser l’analyse multidimensionnelle\n\nData Warehouse : caractéristiques (intégré, historisé, non volatile), architecture en couches\nConcepts OLAP : cubes, dimensions, mesures, agrégations, hiérarchies\nComparaison OLTP vs OLAP : modèles, usages, performances\nModélisation temporelle : dimension date complète, analyses YTD/YoY\nSlowly Changing Dimensions (SCD) : implémentation Type 2 avec historique complet\nAnalyses avancées : drill-down, roll-up, slicing, dicing\nOptimisation : agrégations pré-calculées, partitionnement, compression\nAtelier pratique : Création de 3 hiérarchies (Date, Produit, Région) et réalisation d’analyses YTD/YoY\n\nAccéder au Module 4 → 💻 Scripts fournis : Dim_Date.sql, SCD_Type2.sql, Hiérarchies.sql, YTD_YoY.sql",
+    "crumbs": [
+      "Accueil"
+    ]
+  },
+  {
+    "objectID": "index.html#public-visé",
+    "href": "index.html#public-visé",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "",
+    "text": "Analystes données : pour structurer et analyser efficacement les données\nConsultants BI : pour maîtriser l’ensemble de la chaîne de valeur BI\nChefs de projet : pour piloter des projets décisionnels de bout en bout\nDéveloppeurs : pour implémenter des solutions ETL et data warehouses robustes\nResponsables métier : pour comprendre et exploiter les capacités analytiques\nData Scientists : pour disposer de données fiables et bien structurées",
+    "crumbs": [
+      "Accueil"
+    ]
+  },
+  {
+    "objectID": "index.html#prérequis",
+    "href": "index.html#prérequis",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "",
+    "text": "Module 1 : Aucun prérequis technique\nModule 2 : Notions de bases de données et SQL de base\nModule 3 : Connaissance de Power BI ou Excel (niveau débutant)\nModule 4 : SQL intermédiaire, compréhension des concepts de modélisation",
+    "crumbs": [
+      "Accueil"
+    ]
+  },
+  {
+    "objectID": "index.html#approche-pédagogique",
+    "href": "index.html#approche-pédagogique",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "",
+    "text": "✅ Théorie illustrée : Concepts expliqués avec des schémas et exemples concrets\n✅ Exercices guidés : Mise en pratique progressive avec assistance\n✅ Cas réels : Études de cas inspirées de situations professionnelles\n✅ Outils fournis : Scripts SQL, modèles Power Query, jeux de données\n✅ Auto-évaluation : Quiz et checklists pour valider les acquis",
+    "crumbs": [
+      "Accueil"
+    ]
+  },
+  {
+    "objectID": "index.html#compétences-acquises",
+    "href": "index.html#compétences-acquises",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "",
+    "text": "À l’issue des 4 modules (20 heures), vous serez capable de :\n\n\n\nCompétence\nModule 1\nModule 2\nModule 3\nModule 4\n\n\n\n\nConcevoir un modèle décisionnel\n⭐\n⭐⭐⭐\n⭐⭐\n⭐⭐\n\n\nImplémenter un pipeline ETL\n⭐\n⭐\n⭐⭐⭐\n⭐⭐\n\n\nConstruire un data warehouse\n\n⭐⭐\n⭐⭐\n⭐⭐⭐\n\n\nAnalyser avec SQL avancé\n\n⭐⭐⭐\n⭐\n⭐⭐\n\n\nDévelopper des dashboards\n⭐⭐\n⭐⭐\n⭐⭐⭐\n⭐⭐\n\n\nDocumenter et maintenir\n⭐⭐\n⭐⭐\n⭐⭐⭐\n⭐⭐",
+    "crumbs": [
+      "Accueil"
+    ]
+  },
+  {
+    "objectID": "index.html#ressources-complémentaires",
+    "href": "index.html#ressources-complémentaires",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "",
+    "text": "📂 Fichiers d’exercice : - Ventes_2024.xlsx - Clients_Sale.csv - Produits.json - Template Documentation ETL\n\n\n\n💾 Scripts SQL : - Script_Dim_Date.sql - Script_SCD_Type2.sql - Script_Hierarchies.sql - Script_YTD_YoY.sql\n\nresources",
+    "crumbs": [
+      "Accueil"
+    ]
+  },
+  {
+    "objectID": "modules/slides1.html",
+    "href": "modules/slides1.html",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "",
+    "text": "1.1 Introduction à la BI\n1.2 Architecture Décisionnelle\n\n1.3 Cycle de Vie Projet BI\n1.4 Panorama des Outils BI\n\n\n\n\n\n1.5 Gouvernance Data-Driven\n1.6 Atelier Pratique\n1.7 Synthèse du Module"
+  },
+  {
+    "objectID": "modules/slides1.html#table-des-matières",
+    "href": "modules/slides1.html#table-des-matières",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "",
+    "text": "1.1 Introduction à la BI\n1.2 Architecture Décisionnelle\n\n1.3 Cycle de Vie Projet BI\n1.4 Panorama des Outils BI\n\n\n\n\n\n1.5 Gouvernance Data-Driven\n1.6 Atelier Pratique\n1.7 Synthèse du Module"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-1-introduction",
+    "href": "modules/slides1.html#slide-1-introduction",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 1: Introduction",
+    "text": "Slide 1: Introduction\nDurée : 5 heures | Objectif : Maîtriser les concepts fondamentaux de la BI et comprendre l’architecture décisionnelle"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-2-1.1-introduction-à-la-business-intelligence",
+    "href": "modules/slides1.html#slide-2-1.1-introduction-à-la-business-intelligence",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 2: 1.1 Introduction à la Business Intelligence",
+    "text": "Slide 2: 1.1 Introduction à la Business Intelligence\n\n1.1.1 Définition et Contexte\nLa Business Intelligence (BI) représente l’ensemble des technologies, processus et pratiques permettant de collecter, intégrer, analyser et présenter les données d’entreprise pour faciliter la prise de décision stratégique.\nDans un contexte où les organisations génèrent des volumes massifs de données, la BI transforme cette complexité en opportunités concrètes :\n\nVisibilité opérationnelle : comprendre ce qui se passe réellement dans l’entreprise\nAnticipation stratégique : détecter les tendances et prédire les évolutions\nOptimisation des ressources : identifier les inefficacités et les leviers d’amélioration\nAvantage concurrentiel : exploiter la donnée comme actif stratégique différenciant"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-3-1.1.2-les-trois-piliers-de-la-bi-moderne",
+    "href": "modules/slides1.html#slide-3-1.1.2-les-trois-piliers-de-la-bi-moderne",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 3: 1.1.2 Les Trois Piliers de la BI Moderne",
+    "text": "Slide 3: 1.1.2 Les Trois Piliers de la BI Moderne\n\n\n\n\n\ngraph TB\n    A[Business Intelligence] --&gt; B[Descriptive Analytics]\n    A --&gt; C[Predictive Analytics]\n    A --&gt; D[Prescriptive Analytics]\n    \n    B --&gt; B1[\"Que s'est-il passé ?&lt;br/&gt;Tableaux de bord, Rapports\"]\n    C --&gt; C1[\"Que va-t-il se passer ?&lt;br/&gt;Modèles prédictifs, Forecasting\"]\n    D --&gt; D1[\"Que doit-on faire ?&lt;br/&gt;Recommandations, Optimisation\"]\n    \n    style A fill:#2E86AB\n    style B fill:#A23B72\n    style C fill:#F18F01\n    style D fill:#C73E1D"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-4-tableau-comparatif-des-analytics",
+    "href": "modules/slides1.html#slide-4-tableau-comparatif-des-analytics",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 4: Tableau Comparatif des Analytics",
+    "text": "Slide 4: Tableau Comparatif des Analytics\n\n\n\n\n\n\n\n\n\nType d’Analytics\nObjectif\nExemples d’Usage\nOutils Typiques\n\n\n\n\nDescriptive\nComprendre le passé\nRapports de ventes mensuels, analyses de performance\nPower BI, Tableau, Excel\n\n\nDiagnostic\nExpliquer les causes\nAnalyse des écarts budgétaires, root cause analysis\nSQL, Python, DAX\n\n\nPredictive\nAnticiper l’avenir\nPrévision des ventes, churn prediction\nPython (scikit-learn), R, Azure ML\n\n\nPrescriptive\nRecommander des actions\nOptimisation des prix, allocation de ressources\nAlgorithmes d’optimisation, IA"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-5-1.1.3-cas-dusage-concrets-par-département",
+    "href": "modules/slides1.html#slide-5-1.1.3-cas-dusage-concrets-par-département",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 5: 1.1.3 Cas d’Usage Concrets par Département",
+    "text": "Slide 5: 1.1.3 Cas d’Usage Concrets par Département\nFinance & Contrôle de Gestion\n\nSuivi budgétaire et analyse des écarts en temps réel\nConsolidation financière multi-entités\nPrévisions de trésorerie et cash-flow forecasting\n\nCommercial & Marketing\n\nAnalyse de la performance des ventes par segment/produit/région\nScoring clients et segmentation RFM (Récence, Fréquence, Montant)\nROI des campagnes marketing et attribution multi-touch"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-6-suite-des-cas-dusage",
+    "href": "modules/slides1.html#slide-6-suite-des-cas-dusage",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 6: Suite des Cas d’Usage",
+    "text": "Slide 6: Suite des Cas d’Usage\nOpérations & Supply Chain\n\nOptimisation des stocks et prévision de la demande\nAnalyse de la performance logistique (taux de service, lead times)\nSuivi de la qualité et détection des anomalies\n\nRessources Humaines\n\nTableaux de bord RH : turnover, absentéisme, productivité\nAnalyse prédictive du départ des talents\nPlanification des effectifs et gestion des compétences"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-7-1.2-architecture-décisionnelle",
+    "href": "modules/slides1.html#slide-7-1.2-architecture-décisionnelle",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 7: 1.2 Architecture Décisionnelle",
+    "text": "Slide 7: 1.2 Architecture Décisionnelle\n\n1.2.1 Vue d’Ensemble de l’Architecture BI\n\n\n\n\n\nflowchart LR\n    A[Sources de Données] --&gt; B[ETL/ELT]\n    B --&gt; C[Data Warehouse]\n    C --&gt; D[Cube OLAP]\n    D --&gt; E[Couche Sémantique]\n    E --&gt; F[Reporting & Dashboards]\n    \n    A1[ERP&lt;br/&gt;SAP, Oracle] --&gt; A\n    A2[CRM&lt;br/&gt;Salesforce] --&gt; A\n    A3[Fichiers&lt;br/&gt;Excel, CSV] --&gt; A\n    A4[APIs&lt;br/&gt;Web Services] --&gt; A\n    A5[Bases de Données&lt;br/&gt;PostgreSQL, MySQL] --&gt; A\n    \n    F --&gt; F1[Power BI]\n    F --&gt; F2[Tableau]\n    F --&gt; F3[Excel]\n    \n    style C fill:#2E86AB\n    style D fill:#A23B72\n    style F fill:#F18F01"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-8-1.2.2-les-composants-de-larchitecture",
+    "href": "modules/slides1.html#slide-8-1.2.2-les-composants-de-larchitecture",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 8: 1.2.2 Les Composants de l’Architecture",
+    "text": "Slide 8: 1.2.2 Les Composants de l’Architecture\n\n1. Sources de Données (Data Sources)\n\n\n\n\n\n\n\n\n\nType de Source\nCaractéristiques\nExemples\nChallenges\n\n\n\n\nSystèmes transactionnels\nDonnées opérationnelles en temps réel\nERP (SAP, Oracle), CRM (Salesforce)\nVolume élevé, structure complexe\n\n\nFichiers plats\nDonnées semi-structurées\nExcel, CSV, JSON, XML\nQualité variable, formats inconsistants\n\n\nBases de données\nDonnées structurées\nPostgreSQL, MySQL, SQL Server\nSchémas différents, silos de données"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-9-suite-des-sources-de-données",
+    "href": "modules/slides1.html#slide-9-suite-des-sources-de-données",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 9: Suite des Sources de Données",
+    "text": "Slide 9: Suite des Sources de Données\n\n\n\n\n\n\n\n\n\nType de Source\nCaractéristiques\nExemples\nChallenges\n\n\n\n\nAPIs & Web Services\nDonnées externes\nREST APIs, réseaux sociaux, Open Data\nLimitation de débit, authentification\n\n\nIoT & Capteurs\nDonnées streaming\nCapteurs industriels, logs applicatifs\nVolume massif, traitement temps réel"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-10-processus-etlelt",
+    "href": "modules/slides1.html#slide-10-processus-etlelt",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 10: Processus ETL/ELT",
+    "text": "Slide 10: Processus ETL/ELT\nETL (Approche Traditionnelle)\n\n\n\n\n\ngraph LR\n    A[Extract&lt;br/&gt;Extraction] --&gt; B[Transform&lt;br/&gt;Transformation]\n    B --&gt; C[Load&lt;br/&gt;Chargement]\n    \n    A1[Sources&lt;br/&gt;Hétérogènes] --&gt; A\n    C --&gt; C1[Data&lt;br/&gt;Warehouse]\n    \n    style B fill:#F18F01\n\n\n\n\n\n\nOpérations de Transformation :\n\nNettoyage : suppression des doublons, gestion des valeurs manquantes\nNormalisation : uniformisation des formats (dates, devises, codes)\nEnrichissement : calcul de métriques dérivées, géocodage"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-11-data-warehouse",
+    "href": "modules/slides1.html#slide-11-data-warehouse",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 11: Data Warehouse",
+    "text": "Slide 11: Data Warehouse\nCaractéristiques Clés :\n\n\n\n\n\n\n\n\nCritère\nOLTP (Transactionnel)\nOLAP (Analytique)\n\n\n\n\nObjectif\nGérer les opérations quotidiennes\nAnalyser et décider\n\n\nType de requêtes\nINSERT, UPDATE, DELETE\nSELECT avec agrégations\n\n\nVolume de données\nDonnées courantes\nHistorique complet\n\n\nNormalisation\nFortement normalisé (3NF)\nDénormalisé (modèle étoile)"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-12-architectures-data-warehouse",
+    "href": "modules/slides1.html#slide-12-architectures-data-warehouse",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 12: Architectures Data Warehouse",
+    "text": "Slide 12: Architectures Data Warehouse\n\n\n\n\n\ngraph TB\n    subgraph \"Architecture Traditionnelle\"\n    A1[Sources] --&gt; B1[Staging Area]\n    B1 --&gt; C1[Data Warehouse]\n    C1 --&gt; D1[Data Marts]\n    end\n    \n    subgraph \"Architecture Lakehouse Moderne\"\n    A2[Sources] --&gt; B2[Data Lake&lt;br/&gt;Données brutes]\n    B2 --&gt; C2[Data Warehouse&lt;br/&gt;Données structurées]\n    C2 --&gt; D2[Couche Analytique]\n    end\n    \n    style C1 fill:#2E86AB\n    style C2 fill:#2E86AB"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-13-cubes-olap",
+    "href": "modules/slides1.html#slide-13-cubes-olap",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 13: Cubes OLAP",
+    "text": "Slide 13: Cubes OLAP\nOpérations OLAP Fondamentales :\n\n\n\n\n\ngraph LR\n    A[Cube OLAP] --&gt; B[Slice&lt;br/&gt;Découpage]\n    A --&gt; C[Dice&lt;br/&gt;Sous-cube]\n    A --&gt; D[Drill-Down&lt;br/&gt;Descente]\n    A --&gt; E[Drill-Up&lt;br/&gt;Montée]\n    A --&gt; F[Pivot&lt;br/&gt;Rotation]\n    \n    style A fill:#A23B72"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-14-tableau-des-opérations-olap",
+    "href": "modules/slides1.html#slide-14-tableau-des-opérations-olap",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 14: Tableau des Opérations OLAP",
+    "text": "Slide 14: Tableau des Opérations OLAP\n\n\n\n\n\n\n\n\nOpération\nDescription\nExemple\n\n\n\n\nSlice\nSélectionner une tranche du cube\nVentes pour l’année 2024 uniquement\n\n\nDice\nExtraire un sous-cube\nVentes 2024 pour la France et l’Allemagne\n\n\nDrill-Down\nDescendre dans la hiérarchie\nDe l’année → trimestre → mois → jour\n\n\nDrill-Up\nRemonter dans la hiérarchie\nDu produit → catégorie → division\n\n\nPivot\nFaire pivoter les axes d’analyse\nPermuter lignes et colonnes"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-15-1.3-cycle-de-vie-dun-projet-bi",
+    "href": "modules/slides1.html#slide-15-1.3-cycle-de-vie-dun-projet-bi",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 15: 1.3 Cycle de Vie d’un Projet BI",
+    "text": "Slide 15: 1.3 Cycle de Vie d’un Projet BI\n\n1.3.1 Les Phases du Projet BI\n\n\n\n\n\ngantt\n    title Cycle de Vie Projet BI (6-9 mois)\n    dateFormat  YYYY-MM-DD\n    section Cadrage\n    Expression des besoins      :a1, 2024-01-01, 30d\n    Audit de l'existant         :a2, after a1, 15d\n    \n    section Conception\n    Modélisation conceptuelle   :b1, after a2, 20d\n    Architecture technique      :b2, after b1, 15d\n    \n    section Développement\n    Développement ETL           :c1, after b2, 45d\n    Création des cubes OLAP     :c2, after c1, 30d\n    Développement dashboards    :c3, after c2, 30d\n    \n    section Déploiement\n    Tests & Recette             :d1, after c3, 20d\n    Formation utilisateurs      :d2, after d1, 10d\n    Mise en production          :d3, after d2, 5d\n    \n    section Exploitation\n    Support & Maintenance       :e1, after d3, 60d"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-16-1.3.2-détail-des-phases",
+    "href": "modules/slides1.html#slide-16-1.3.2-détail-des-phases",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 16: 1.3.2 Détail des Phases",
+    "text": "Slide 16: 1.3.2 Détail des Phases\n\nPhase 1 : Cadrage et Expression des Besoins (4-6 semaines)\nObjectifs :\n\nDéfinir le périmètre fonctionnel et les objectifs métier\nIdentifier les parties prenantes et leurs besoins analytiques\nÉvaluer la maturité BI de l’organisation\n\nLivrables :\n\nCahier des charges fonctionnel\nMatrice des KPI prioritaires\nRoadmap projet avec jalons\nBudget et planning prévisionnel"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-17-ateliers-métier",
+    "href": "modules/slides1.html#slide-17-ateliers-métier",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 17: Ateliers Métier",
+    "text": "Slide 17: Ateliers Métier\n\n\n\n\n\n\n\n\n\nAtelier\nParticipants\nDurée\nObjectif\n\n\n\n\nKickoff\nSponsors, chef de projet\n2h\nAligner la vision et les enjeux\n\n\nExpression besoins\nUtilisateurs clés, métier\n3h x 3\nRecueillir les besoins analytiques détaillés\n\n\nPriorisation KPI\nComité de pilotage\n2h\nDéfinir les 15-20 KPI critiques\n\n\nValidation périmètre\nDirection, métier\n2h\nValider le scope et le planning"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-18-phase-2-conception-4-5-semaines",
+    "href": "modules/slides1.html#slide-18-phase-2-conception-4-5-semaines",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 18: Phase 2 : Conception (4-5 semaines)",
+    "text": "Slide 18: Phase 2 : Conception (4-5 semaines)\nModélisation Conceptuelle :\n\nIdentification des processus métier (ventes, achats, finance, etc.)\nDéfinition des dimensions et des faits\nCréation du modèle logique de données (MLD)\nDocumentation des règles de gestion\n\nArchitecture Technique :\n\nChoix des technologies (Power BI, Azure, SQL Server, etc.)\nDesign de l’architecture ETL/ELT\nStratégie de sécurité et gouvernance\nPlan de sauvegarde et de reprise d’activité"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-19-phase-3-développement-10-14-semaines",
+    "href": "modules/slides1.html#slide-19-phase-3-développement-10-14-semaines",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 19: Phase 3 : Développement (10-14 semaines)",
+    "text": "Slide 19: Phase 3 : Développement (10-14 semaines)\nDéveloppement ETL (5-6 semaines) :\n\nExtraction des données sources\nImplémentation des transformations\nChargement dans le Data Warehouse\nTests unitaires de chaque flux\n\nCréation des Cubes OLAP (3-4 semaines) :\n\nImplémentation du modèle en étoile\nCréation des dimensions et hiérarchies\nConfiguration des mesures et calculs\nOptimisation des agrégations"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-20-suite-développement",
+    "href": "modules/slides1.html#slide-20-suite-développement",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 20: Suite Développement",
+    "text": "Slide 20: Suite Développement\nDéveloppement des Dashboards (4-5 semaines) :\n\nCréation des rapports Power BI / Tableau\nDéveloppement des mesures DAX\nDesign UX/UI des tableaux de bord\nImplémentation de la sécurité au niveau ligne (RLS)"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-21-phases-4-5-6",
+    "href": "modules/slides1.html#slide-21-phases-4-5-6",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 21: Phases 4-5-6",
+    "text": "Slide 21: Phases 4-5-6\nPhase 4 : Tests et Recette (3-4 semaines)\n\nTests unitaires des flux ETL\nTests d’intégration end-to-end\nTests de performance et de charge\nValidation fonctionnelle par les utilisateurs\n\nPhase 5 : Déploiement et Formation (2-3 semaines)\n\nFormation utilisateurs finaux et power users\nDéploiement de l’environnement de production\nMigration des données historiques\n\nPhase 6 : Exploitation et Amélioration Continue\n\nSupport niveau 1-2-3\nAnalyse de l’usage et collecte de feedback\nOptimisation des performances\nPriorisation des évolutions"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-22-1.4-panorama-des-outils-bi",
+    "href": "modules/slides1.html#slide-22-1.4-panorama-des-outils-bi",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 22: 1.4 Panorama des Outils BI",
+    "text": "Slide 22: 1.4 Panorama des Outils BI\n\n1.4.1 Comparatif des Principales Plateformes\n\n\n\n\n\n\n\n\n\n\nCritère\nPower BI\nTableau\nQlik Sense\nLooker Studio\n\n\n\n\nÉditeur\nMicrosoft\nSalesforce\nQlik\nGoogle\n\n\nCourbe d’apprentissage\n⭐⭐⭐ Modérée\n⭐⭐⭐⭐ Facile\n⭐⭐ Complexe\n⭐⭐⭐⭐⭐ Très facile\n\n\nPuissance analytique\n⭐⭐⭐⭐⭐\n⭐⭐⭐⭐\n⭐⭐⭐⭐⭐\n⭐⭐⭐\n\n\nIntégration écosystème\nExcellent (Microsoft)\nBon (Salesforce)\nBon\nExcellent (Google)\n\n\nPrix (par utilisateur/mois)\n10-20€ (Pro/Premium)\n70-140$\n30-100$\nGratuit - 10€"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-23-suite-comparatif-outils",
+    "href": "modules/slides1.html#slide-23-suite-comparatif-outils",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 23: Suite Comparatif Outils",
+    "text": "Slide 23: Suite Comparatif Outils\n\n\n\n\n\n\n\n\n\n\nCritère\nPower BI\nTableau\nQlik Sense\nLooker Studio\n\n\n\n\nDéploiement\nCloud ou On-premise\nCloud ou On-premise\nCloud ou On-premise\nCloud uniquement\n\n\nLangage de calcul\nDAX\nCalculs Tableau\nQlik Script\nSQL-like\n\n\nConnecteurs natifs\n200+\n100+\n150+\n800+ (via Google)\n\n\nMobile\n⭐⭐⭐⭐\n⭐⭐⭐⭐⭐\n⭐⭐⭐\n⭐⭐⭐\n\n\nCollaboration\n⭐⭐⭐⭐\n⭐⭐⭐⭐\n⭐⭐⭐\n⭐⭐⭐⭐⭐"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-24-microsoft-power-bi-ecosystem",
+    "href": "modules/slides1.html#slide-24-microsoft-power-bi-ecosystem",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 24: Microsoft Power BI Ecosystem",
+    "text": "Slide 24: Microsoft Power BI Ecosystem\n\n\n\n\n\ngraph TB\n    A[Power BI Ecosystem] --&gt; B[Power BI Desktop]\n    A --&gt; C[Power BI Service]\n    A --&gt; D[Power BI Mobile]\n    A --&gt; E[Power BI Embedded]\n    A --&gt; F[Power BI Report Server]\n    \n    B --&gt; B1[\"Développement de rapports&lt;br/&gt;Modélisation de données&lt;br/&gt;DAX & Power Query\"]\n    C --&gt; C1[\"Publication & Partage&lt;br/&gt;Collaboration&lt;br/&gt;Planification de rafraîchissement\"]\n    D --&gt; D1[\"Consultation mobile&lt;br/&gt;Notifications&lt;br/&gt;Mode offline\"]\n    E --&gt; E1[\"Intégration dans&lt;br/&gt;applications tierces&lt;br/&gt;White-labeling\"]\n    F --&gt; F1[\"Déploiement&lt;br/&gt;on-premise&lt;br/&gt;Pour organisations isolées\"]\n    \n    style A fill:#2E86AB\n    style B fill:#F18F01\n    style C fill:#A23B72"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-25-avantages-et-limitations-power-bi",
+    "href": "modules/slides1.html#slide-25-avantages-et-limitations-power-bi",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 25: Avantages et Limitations Power BI",
+    "text": "Slide 25: Avantages et Limitations Power BI\nAvantages Power BI :\n\n✅ Intégration transparente avec l’écosystème Microsoft (Excel, Azure, Office 365)\n✅ Rapport qualité/prix exceptionnel\n✅ DAX : langage puissant pour les calculs complexes\n✅ Mises à jour mensuelles avec nouvelles fonctionnalités\n✅ Large communauté et nombreuses ressources de formation\n\nLimitations :\n\n❌ Dépendance à l’écosystème Microsoft\n❌ Personnalisation visuelle limitée comparée à Tableau\n❌ Performance sur très gros volumes (&gt; 10 Go)"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-26-autres-outils-bi",
+    "href": "modules/slides1.html#slide-26-autres-outils-bi",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 26: Autres Outils BI",
+    "text": "Slide 26: Autres Outils BI\nTableau : L’Excellence de la Visualisation\n\n✅ Interface intuitive et ergonomique\n✅ Capacités de visualisation avancées et flexibles\n✅ Excellente gestion des données spatiales (cartographie)\n✅ Communauté très active (Tableau Public)\n\nQlik Sense : Le Moteur Associatif\n\n✅ Exploration libre et découverte de relations cachées\n✅ Performance élevée même sur gros volumes\n✅ Sécurité granulaire et gouvernance robuste\n\nLooker Studio : L’Outil Accessible de Google\n\n✅ Gratuit pour usage de base\n✅ Intégration native avec Google Analytics, Ads, BigQuery\n✅ Collaboration en temps réel (comme Google Docs)"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-27-1.5-gouvernance-et-culture-data-driven",
+    "href": "modules/slides1.html#slide-27-1.5-gouvernance-et-culture-data-driven",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 27: 1.5 Gouvernance et Culture Data-Driven",
+    "text": "Slide 27: 1.5 Gouvernance et Culture Data-Driven\n\n1.5.1 Les Piliers de la Gouvernance des Données\n\n\n\n\n\ngraph TB\n    A[Gouvernance des Données] --&gt; B[Qualité des Données]\n    A --&gt; C[Sécurité & Confidentialité]\n    A --&gt; D[Métadonnées & Documentation]\n    A --&gt; E[Rôles & Responsabilités]\n    A --&gt; F[Processus & Standards]\n    \n    B --&gt; B1[\"Exactitude&lt;br/&gt;Complétude&lt;br/&gt;Cohérence&lt;br/&gt;Actualité\"]\n    C --&gt; C1[\"RGPD&lt;br/&gt;Contrôle d'accès&lt;br/&gt;Chiffrement&lt;br/&gt;Audit\"]\n    D --&gt; D1[\"Dictionnaire de données&lt;br/&gt;Lignage&lt;br/&gt;Catalogue de données\"]\n    E --&gt; E1[\"Data Owners&lt;br/&gt;Data Stewards&lt;br/&gt;Data Architects\"]\n    F --&gt; F1[\"Conventions de nommage&lt;br/&gt;Processus ETL&lt;br/&gt;Cycle de vie\"]\n    \n    style A fill:#2E86AB"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-28-1.5.2-framework-de-qualité-des-données",
+    "href": "modules/slides1.html#slide-28-1.5.2-framework-de-qualité-des-données",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 28: 1.5.2 Framework de Qualité des Données",
+    "text": "Slide 28: 1.5.2 Framework de Qualité des Données\nLes 6 Dimensions de la Qualité :\n\n\n\n\n\n\n\n\n\nDimension\nDéfinition\nMesure\nExemple d’Anomalie\n\n\n\n\nExactitude\nLes données reflètent la réalité\n% de conformité aux règles\nAdresse email invalide\n\n\nComplétude\nAbsence de valeurs manquantes\n% de champs remplis\nCode postal manquant\n\n\nCohérence\nUniformité entre sources\n% de concordance\nClient avec 2 dates de naissance différentes"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-29-suite-dimensions-qualité",
+    "href": "modules/slides1.html#slide-29-suite-dimensions-qualité",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 29: Suite Dimensions Qualité",
+    "text": "Slide 29: Suite Dimensions Qualité\n\n\n\n\n\n\n\n\n\nDimension\nDéfinition\nMesure\nExemple d’Anomalie\n\n\n\n\nActualité\nFraîcheur des données\nDélai de mise à jour\nStock non actualisé depuis 3 jours\n\n\nUnicité\nAbsence de doublons\n% de doublons détectés\n3 comptes pour le même client\n\n\nValidité\nRespect des formats et contraintes\n% de valeurs valides\nDate future dans un champ historique"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-30-processus-data-quality-management",
+    "href": "modules/slides1.html#slide-30-processus-data-quality-management",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 30: Processus Data Quality Management",
+    "text": "Slide 30: Processus Data Quality Management\n\n\n\n\n\nflowchart LR\n    A[Profiling&lt;br/&gt;Analyse initiale] --&gt; B[Validation&lt;br/&gt;Règles de qualité]\n    B --&gt; C[Nettoyage&lt;br/&gt;Correction]\n    C --&gt; D[Enrichissement&lt;br/&gt;Complétion]\n    D --&gt; E[Monitoring&lt;br/&gt;Surveillance]\n    E --&gt; A\n    \n    style A fill:#F18F01\n    style C fill:#2E86AB\n    style E fill:#A23B72"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-31-1.5.3-sécurité-et-conformité-rgpd",
+    "href": "modules/slides1.html#slide-31-1.5.3-sécurité-et-conformité-rgpd",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 31: 1.5.3 Sécurité et Conformité RGPD",
+    "text": "Slide 31: 1.5.3 Sécurité et Conformité RGPD\nPrincipes de Sécurité BI :\n\nAuthentification : qui accède aux données ?\nAutorisation : qui peut voir quoi ?\nAudit : traçabilité des accès et modifications\nChiffrement : protection des données sensibles\nAnonymisation : masquage des données personnelles\n\nRow-Level Security (RLS) : Exemple Power BI\n-- Exemple de filtre RLS dans Power BI\n[Région] = USERPRINCIPALNAME()\n\n-- Ou plus sophistiqué avec table de mapping\nVAR UserEmail = USERPRINCIPALNAME()\nVAR UserRegion = LOOKUPVALUE(\n    Users[Région],\n    Users[Email], UserEmail\n)\nRETURN [Région] = UserRegion"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-32-checklist-rgpd-bi",
+    "href": "modules/slides1.html#slide-32-checklist-rgpd-bi",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 32: Checklist RGPD BI",
+    "text": "Slide 32: Checklist RGPD BI\nConformité RGPD : Checklist BI\n\nInventaire des données personnelles traitées\nFinalité légitime et transparente\nMinimisation des données collectées\nDurée de conservation définie\nDroit d’accès et de rectification implémenté\nDroit à l’oubli (suppression sur demande)\nChiffrement des données sensibles\nRegistre des traitements tenu à jour\nDPO (Data Protection Officer) désigné\nAnalyse d’impact (PIA Privacy Impact Assessment) réalisée si nécessaire"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-33-1.5.4-culture-data-driven",
+    "href": "modules/slides1.html#slide-33-1.5.4-culture-data-driven",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 33: 1.5.4 Culture Data-Driven",
+    "text": "Slide 33: 1.5.4 Culture Data-Driven\nLes 5 Niveaux de Maturité Data\n\n\n\n\n\ngraph LR\n    A[Niveau 1&lt;br/&gt;Ad-hoc] --&gt; B[Niveau 2&lt;br/&gt;Réactif]\n    B --&gt; C[Niveau 3&lt;br/&gt;Défini]\n    C --&gt; D[Niveau 4&lt;br/&gt;Géré]\n    D --&gt; E[Niveau 5&lt;br/&gt;Optimisé]\n    \n    style A fill:#C73E1D\n    style C fill:#F18F01\n    style E fill:#06A77D"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-34-tableau-des-niveaux-de-maturité",
+    "href": "modules/slides1.html#slide-34-tableau-des-niveaux-de-maturité",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 34: Tableau des Niveaux de Maturité",
+    "text": "Slide 34: Tableau des Niveaux de Maturité\n\n\n\n\n\n\n\n\nNiveau\nCaractéristiques\nActions Clés\n\n\n\n\n1. Ad-hoc\nDonnées en silos, décisions intuitives\nSensibiliser la direction\n\n\n2. Réactif\nRapports manuels, analyses ponctuelles\nLancer premiers projets BI\n\n\n3. Défini\nProcessus standardisés, BI centralisée\nFormer les équipes, gouvernance\n\n\n4. Géré\nMesure de la performance, dashboards temps réel\nSelf-service BI, culture data\n\n\n5. Optimisé\nIA/ML intégrés, amélioration continue\nInnovation data, data products"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-35-facteurs-clés-de-succès",
+    "href": "modules/slides1.html#slide-35-facteurs-clés-de-succès",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 35: Facteurs Clés de Succès",
+    "text": "Slide 35: Facteurs Clés de Succès\nFacteurs Clés de Succès :\n\nSponsorship exécutif : engagement visible de la direction\nQuick wins : projets pilotes rapides pour démontrer la valeur\nFormation continue : montée en compétence des équipes\nDémocratisation : self-service BI pour les métiers\nMesure de l’impact : ROI des initiatives data"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-36-1.6-atelier-pratique",
+    "href": "modules/slides1.html#slide-36-1.6-atelier-pratique",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 36: 1.6 Atelier Pratique",
+    "text": "Slide 36: 1.6 Atelier Pratique\n\n1.6.1 Objectifs de l’Atelier\nCet atelier de 90 minutes permet aux participants de :\n\nCartographier l’architecture data d’une entreprise fictive\nIdentifier les sources de données et leurs flux\nDéfinir 5 KPI stratégiques prioritaires\nProposer une roadmap BI simplifiée"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-37-cas-détude-technoretail-sa",
+    "href": "modules/slides1.html#slide-37-cas-détude-technoretail-sa",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 37: Cas d’Étude : TechnoRetail SA",
+    "text": "Slide 37: Cas d’Étude : TechnoRetail SA\nContexte Entreprise :\nTechnoRetail est une chaîne de magasins d’électronique avec :\n\n50 points de vente en France\n200M€ de CA annuel\nE-commerce représentant 30% du CA\n500 000 clients actifs\n\nProblématiques Métier :\n\nVisibilité limitée sur la performance magasin vs web\nRuptures de stock fréquentes\nDifficulté à analyser le comportement client omnicanal\nReporting financier manuel et chronophage"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-38-exercice-1-sources-de-données",
+    "href": "modules/slides1.html#slide-38-exercice-1-sources-de-données",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 38: Exercice 1 : Sources de Données",
+    "text": "Slide 38: Exercice 1 : Sources de Données\nExercice 1 : Identifier les sources (15 min)\n\n\n\n\n\n\n\n\n\nSystème\nType\nDonnées Clés\nFréquence de Mise à Jour\n\n\n\n\nSAP ECC\nERP\nVentes, achats, stocks, comptabilité\nTemps réel\n\n\nSalesforce\nCRM\nClients, contacts, opportunités\nTemps réel\n\n\nMagento\nE-commerce\nCommandes web, paniers abandonnés\nTemps réel\n\n\nGoogle Analytics\nWeb analytics\nTrafic, conversions, parcours\nBatch quotidien"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-39-exercice-2-architecture-cible",
+    "href": "modules/slides1.html#slide-39-exercice-2-architecture-cible",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 39: Exercice 2 : Architecture Cible",
+    "text": "Slide 39: Exercice 2 : Architecture Cible\nExercice 2 : Dessiner l’architecture cible (20 min)\n\n\n\n\n\ngraph TB\n    subgraph Sources\n        A1[SAP ECC]\n        A2[Salesforce]\n        A3[Magento]\n        A4[Google Analytics]\n        A5[Fichiers Excel]\n    end\n    \n    subgraph ETL\n        B[Azure Data Factory]\n    end\n    \n    subgraph Storage\n        C1[Data Lake&lt;br/&gt;Azure Data Lake]\n        C2[Data Warehouse&lt;br/&gt;Azure Synapse]\n    end\n    \n    subgraph Semantic\n        D[Modèle Power BI&lt;br/&gt;Étoile Ventes]\n    end\n    \n    subgraph Reporting\n        E1[Dashboards Ventes]\n        E2[Rapports Financiers]\n        E3[Analytics Clients]\n    end\n    \n    A1 --&gt; B\n    A2 --&gt; B\n    A3 --&gt; B\n    A4 --&gt; B\n    A5 --&gt; B\n    \n    B --&gt; C1\n    C1 --&gt; C2\n    C2 --&gt; D\n    D --&gt; E1\n    D --&gt; E2\n    D --&gt; E3\n    \n    style C2 fill:#2E86AB\n    style D fill:#F18F01"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-40-exercice-3-kpi-stratégiques",
+    "href": "modules/slides1.html#slide-40-exercice-3-kpi-stratégiques",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 40: Exercice 3 : KPI Stratégiques",
+    "text": "Slide 40: Exercice 3 : KPI Stratégiques\nExercice 3 : Identifier 5 KPI prioritaires (25 min)\nMéthodologie SMART pour définir des KPI efficaces :\n\nSpécifique : clairement défini et compréhensible\nMesurable : quantifiable avec une unité de mesure\nAtteignable : réaliste et actionnable\nRelevant : aligné avec les objectifs stratégiques\nTemporel : avec une fréquence de mise à jour définie"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-41-template-fiche-kpi",
+    "href": "modules/slides1.html#slide-41-template-fiche-kpi",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 41: Template Fiche KPI",
+    "text": "Slide 41: Template Fiche KPI\nTemplate de Fiche KPI :\n\n\n\n\n\n\n\nÉlément\nDescription\n\n\n\n\nNom du KPI\nNom explicite\n\n\nDéfinition\nFormule de calcul détaillée\n\n\nObjectif métier\nPourquoi mesurer ce KPI ?\n\n\nSource de données\nSystème(s) source(s)\n\n\nFréquence de mise à jour\nTemps réel, quotidien, hebdomadaire, mensuel\n\n\nPropriétaire\nResponsable métier\n\n\nSeuil d’alerte\nValeurs limites (min/max)\n\n\nVisualisation recommandée\nType de graphique"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-42-exemple-kpi-1-ca-consolidé",
+    "href": "modules/slides1.html#slide-42-exemple-kpi-1-ca-consolidé",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 42: Exemple KPI 1 : CA Consolidé",
+    "text": "Slide 42: Exemple KPI 1 : CA Consolidé\n\nKPI 1 : Chiffre d’Affaires Consolidé\nTotal Sales = \nSUM(FACT_Sales[SalesAmount])\n\nSales YoY % = \nIF(\n    HASONEVALUE('DIM_Date'[Year]),\n    VAR CurrentSales = [Total Sales]\n    VAR CurrentYear = MAX('DIM_Date'[Year])\n    VAR PreviousYearSales =\n        CALCULATE(\n            [Total Sales],\n            FILTER(\n                ALL('DIM_Date'),\n                'DIM_Date'[Year] = CurrentYear - 1\n            )\n        )\n    RETURN\n        IF(\n            ISBLANK(PreviousYearSales) || PreviousYearSales = 0,\n            0,\n            DIVIDE(CurrentSales - PreviousYearSales, PreviousYearSales)\n        ),\n    BLANK()\n)"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-43-détail-kpi-1",
+    "href": "modules/slides1.html#slide-43-détail-kpi-1",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 43: Détail KPI 1",
+    "text": "Slide 43: Détail KPI 1\n\n\n\nCritère\nDétail\n\n\n\n\nFormule\nSomme des montants HT de toutes les ventes\n\n\nObjectif\nSuivre la performance commerciale globale\n\n\nSource\nSAP ECC + Magento\n\n\nFréquence\nTemps réel\n\n\nSeuil\nObjectif annuel : 220M€ (+10% vs N-1)\n\n\nVisualisation\nCarte KPI + Line chart avec tendance"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-44-exemple-kpi-2-rupture-de-stock",
+    "href": "modules/slides1.html#slide-44-exemple-kpi-2-rupture-de-stock",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 44: Exemple KPI 2 : Rupture de Stock",
+    "text": "Slide 44: Exemple KPI 2 : Rupture de Stock\n\nKPI 2 : Taux de Rupture de Stock\nStock Out Rate = \nVAR OutOfStockDays = \n    CALCULATE(\n        COUNTROWS('FACT_Stock'),\n        'FACT_Stock'[QuantityInStock] = 0\n    )\nVAR TotalDays = \n    COUNTROWS('FACT_Stock')\nRETURN\n    DIVIDE(OutOfStockDays, TotalDays, 0)\n\n\n\nCritère\nDétail\n\n\n\n\nFormule\n(Nb jours en rupture / Nb jours total) × 100\n\n\nObjectif\nOptimiser la disponibilité produits\n\n\nSource\nSAP ECC (module MM)\n\n\nFréquence\nQuotidien\n\n\nSeuil\n&lt; 5% (alerte si &gt; 8%)\n\n\nVisualisation\nGauge + Table des produits critiques"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-45-exercice-4-dashboard-de-synthèse",
+    "href": "modules/slides1.html#slide-45-exercice-4-dashboard-de-synthèse",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 45: Exercice 4 : Dashboard de Synthèse",
+    "text": "Slide 45: Exercice 4 : Dashboard de Synthèse\nExercice 4 : Esquisser le dashboard exécutif (30 min)\nPrincipes de Design :\n\n\n\n\n\n\n\nPrincipe\nApplication\n\n\n\n\nHiérarchie visuelle\nLes KPI critiques en haut, détails en bas\n\n\nRègle des 5 secondes\nLe message clé doit être compris en 5 secondes\n\n\nConsistance\nMême palette de couleurs, même format de chiffres\n\n\nInteractivité\nFiltres dynamiques (période, région, canal)\n\n\nContexte\nToujours comparer (vs objectif, vs N-1, vs benchmark)"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-46-structure-dashboard",
+    "href": "modules/slides1.html#slide-46-structure-dashboard",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 46: Structure Dashboard",
+    "text": "Slide 46: Structure Dashboard\nStructure Recommandée :\n\n\n\n\n\ngraph TB\n    A[En-tête : Titre + Filtres] --&gt; B[Zone KPI : 5 Cartes Principales]\n    B --&gt; C[Zone Tendances : Graphiques Temporels]\n    C --&gt; D[Zone Analyse : Détails par Dimension]\n    \n    style A fill:#2E86AB\n    style B fill:#F18F01\n    style C fill:#A23B72\n    style D fill:#06A77D"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-47-1.7-synthèse-du-module-1",
+    "href": "modules/slides1.html#slide-47-1.7-synthèse-du-module-1",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 47: 1.7 Synthèse du Module 1",
+    "text": "Slide 47: 1.7 Synthèse du Module 1\n\n1.7.1 Récapitulatif des Concepts\nÀ l’issue de ce module, les participants maîtrisent :\n✅ Les fondamentaux de la BI : définitions, enjeux, niveaux d’analytics\n✅ L’architecture décisionnelle : de la source au dashboard\n✅ Le cycle de vie projet BI : phases, livrables, parties prenantes\n✅ Le panorama des outils : Power BI, Tableau, Qlik, Looker Studio\n✅ La gouvernance et la qualité des données : RGPD, sécurité, culture data-driven\n✅ La méthodologie de définition des KPI : approche SMART, dashboarding"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-48-checklist-de-fin-de-module",
+    "href": "modules/slides1.html#slide-48-checklist-de-fin-de-module",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 48: Checklist de Fin de Module",
+    "text": "Slide 48: Checklist de Fin de Module\nAuto-évaluation des Acquis :\n\nJe peux expliquer la différence entre OLTP et OLAP\nJe comprends le rôle de chaque composant de l’architecture BI\nJe sais définir un KPI selon la méthodologie SMART\nJe peux comparer les avantages de Power BI vs Tableau\nJe connais les 6 dimensions de la qualité des données\nJe peux identifier les phases d’un projet BI\nJe comprends les enjeux de la gouvernance et du RGPD"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-49-ressources-complémentaires",
+    "href": "modules/slides1.html#slide-49-ressources-complémentaires",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 49: Ressources Complémentaires",
+    "text": "Slide 49: Ressources Complémentaires\nLectures Recommandées :\n\nLivres :\n\n“The Data Warehouse Toolkit” - Ralph Kimball\n“Building a Data-Driven Organization” - Carl Anderson\n“Storytelling with Data” - Cole Nussbaumer Knaflic\n\n\nSites Web & Communautés :\n\nMicrosoft Learn - Power BI\nTableau Community Forums\nDAMA International - Data Management Body of Knowledge"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-50-certifications",
+    "href": "modules/slides1.html#slide-50-certifications",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 50: Certifications",
+    "text": "Slide 50: Certifications\nCertifications :\n\nMicrosoft Certified: Power BI Data Analyst Associate (PL-300)\nTableau Desktop Specialist\nAWS Certified Data Analytics - Specialty"
+  },
+  {
+    "objectID": "modules/slides1.html#slide-51-questions-réponses",
+    "href": "modules/slides1.html#slide-51-questions-réponses",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "Slide 51: Questions & Réponses",
+    "text": "Slide 51: Questions & Réponses\n\nSession de Questions\nTemps alloué : 15 minutes\nMerci pour votre attention !"
+  },
+  {
+    "objectID": "modules/module3.html",
+    "href": "modules/module3.html",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "",
+    "text": "Durée : 5 heures | Objectif : Maîtriser l’intégration, la transformation et le nettoyage des données avec Power Query pour construire des pipelines robustes et documentés.",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 3"
+    ]
+  },
+  {
+    "objectID": "modules/module3.html#introduction-à-etl-et-power-query",
+    "href": "modules/module3.html#introduction-à-etl-et-power-query",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "3.1 Introduction à ETL et Power Query",
+    "text": "3.1 Introduction à ETL et Power Query\n\n3.1.1 Qu’est-ce que l’ETL ?\nETL (Extract, Transform, Load) est un processus fondamental en BI qui consiste à :\n\nExtraire les données de sources hétérogènes\n\nTransformer les données (nettoyage, enrichissement, restructuration)\n\nCharger les données dans un entrepôt ou un modèle analytique\n\nPourquoi Power Query ?\n\nOutil ETL intégré à Power BI, Excel et SSIS\n\nInterface visuelle “low-code” avec enregistrement des étapes\n\nReproductibilité et maintenance facilitée\n\nCompatibilité avec de nombreuses sources\n\n\n\n3.1.2 Architecture de Power Query\nComposants clés :\n\nConnecteurs : +100 sources de données\n\nÉditeur Power Query (M) : langage de transformation\n\nGestionnaire de requêtes : organisation des flux\n\nParamètres et fonctions : réutilisabilité\n\nVisualisation du flux ETL :\n\n\n\n\n\ngraph TD\n    A[Sources&lt;br/&gt;Excel, CSV, DB, API] --&gt; B{Power Query&lt;br/&gt;Éditeur}\n    B --&gt; C[Nettoyage&lt;br/&gt;Filtres, Types]\n    B --&gt; D[Transformation&lt;br/&gt;Pivot, Fusion]\n    B --&gt; E[Enrichissement&lt;br/&gt;Colonnes calculées]\n    C --&gt; F{Contrôle Qualité}\n    D --&gt; F\n    E --&gt; F\n    F --&gt; G[Chargement&lt;br/&gt;Power BI / Data Model]\n    G --&gt; H[Dashboard&lt;br/&gt;Reporting]",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 3"
+    ]
+  },
+  {
+    "objectID": "modules/module3.html#connexions-multi-sources",
+    "href": "modules/module3.html#connexions-multi-sources",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "3.2 Connexions Multi-Sources",
+    "text": "3.2 Connexions Multi-Sources\n\n3.2.1 Types de Sources Prises en Charge\nSources structurées :\n\nFichiers : Excel, CSV, XML, JSON, PDF (limité)\nBases de données : SQL Server, Oracle, MySQL, PostgreSQL\n\nServices cloud : Azure SQL, SharePoint, Salesforce\n\nSources semi-structurées :\n\nAPI REST, SOAP web services\n\nWeb scraping (pages HTML)\n\nDossiers avec multiples fichiers\n\n\n\n3.2.2 Exercice Pratique : Connexion à des Sources Multiples\nObjectif : Importer des données depuis 3 sources différentes et les combiner.\nÉtapes :\n\nTélécharger les fichiers sources :\n\nVentes_2024.xlsx - Données de vente mensuelles\n\nClients.csv - Référentiel clients\n\nProduits.json - Catalogue produits\n\nInstructions Power Query :\n\n// Étape 1 : Connexion à Excel\nlet\n    Source = Excel.Workbook(File.Contents(\"C:\\Data\\Ventes_2024.xlsx\"), null, true),\n    Feuille1_Sheet = Source{[Item=\"Feuille1\",Kind=\"Sheet\"]}[Data],\n    #\"En-têtes promus\" = Table.PromoteHeaders(Feuille1_Sheet, [PromoteAllScalars=true])\nin\n    #\"En-têtes promus\"\n\n// Étape 2 : Connexion à CSV\nlet\n    Source = Csv.Document(File.Contents(\"C:\\Data\\Clients.csv\"),[Delimiter=\";\", Encoding=1252, QuoteStyle=QuoteStyle.None]),\n    #\"En-têtes promus\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])\nin\n    #\"En-têtes promus\"\n\n// Étape 3 : Connexion à JSON\nlet\n    Source = Json.Document(File.Contents(\"C:\\Data\\Produits.json\")),\n    #\"Converti en tableau\" = Table.FromList(Source, Splitter.SplitByNothing(), null, null, ExtraValues.Error),\n    #\"JSON développé\" = Table.ExpandRecordColumn(#\"Converti en tableau\", \"Column1\", {\"id\", \"nom\", \"categorie\", \"prix\"}, {\"id\", \"nom\", \"categorie\", \"prix\"})\nin\n    #\"JSON développé\"\nCorrection :\n\nVérifier les chemins d’accès aux fichiers\n\nAjuster l’encodage selon le fichier (UTF-8, 1252)\n\nPour JSON, adapter la structure selon le schéma réel",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 3"
+    ]
+  },
+  {
+    "objectID": "modules/module3.html#nettoyage-et-transformation-des-données",
+    "href": "modules/module3.html#nettoyage-et-transformation-des-données",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "3.3 Nettoyage et Transformation des Données",
+    "text": "3.3 Nettoyage et Transformation des Données\n\n3.3.1 Techniques de Nettoyage\nProblèmes courants et solutions :\n\n\n\n\n\n\n\n\nProblème\nSymptôme\nSolution Power Query\n\n\n\n\nValeurs manquantes\nNull, vide, “N/A”\nTable.ReplaceValue, Table.FillDown\n\n\nIncohérences de format\nDates texte, nombres texte\nTable.TransformColumnTypes\n\n\nDoublons\nLignes identiques\nTable.Distinct\n\n\nErreurs de saisie\nTypos, majuscules\nText.Proper, Text.Trim\n\n\nColonnes inutiles\nDonnées non pertinentes\nTable.RemoveColumns\n\n\n\n\n\n3.3.2 Exercice : Nettoyage d’un Jeu de Données Clients\nJeu de données problématique :\nID;Nom;Prenom;Email;Telephone;Ville;CodePostal;DateInscription\n1;DUPONT;Jean;jean.dupont@mail.com;0123456789;Paris;75001;2023-01-15\n2;MARTIN;;martin@mail.com;06 12 34 56 78;Lyon;69000;2023-02-20\n3;durand;Marie;MARIE.DURAND@MAIL.COM;+33123456789;Marseille;13000;23-03-10\n4;LEFEBVRE;Pierre;lefebvre@mail;01.23.45.67.89;Lille;59000;2023/04/05\n5;ROBERT;Sophie;;;Paris;75015;2023-05-12\nTâches à accomplir :\n\nStandardiser les formats (noms propres, email lowercase)\n\nNettoyer les numéros de téléphone\n\nCorriger les formats de date\n\nGérer les valeurs manquantes\n\nSolution Power Query :\nlet\n    Source = Csv.Document(File.Contents(\"C:\\Data\\Clients_Sale.csv\"),[Delimiter=\";\", Encoding=1252, QuoteStyle=QuoteStyle.None]),\n    #\"En-têtes promus\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),\n    \n    // Standardisation des noms et prénoms\n    #\"Nom en forme propre\" = Table.TransformColumns(#\"En-têtes promus\",{{\"Nom\", Text.Proper, type text}}),\n    #\"Prenom en forme propre\" = Table.TransformColumns(#\"Nom en forme propre\",{{\"Prenom\", Text.Proper, type text}}),\n    \n    // Nettoyage des emails\n    #\"Email en minuscules\" = Table.TransformColumns(#\"Prenom en forme propre\",{{\"Email\", Text.Lower, type text}}),\n    #\"Email valide\" = Table.AddColumn(#\"Email en minuscules\", \"EmailValide\", each Text.Contains([Email], \"@\") and Text.Contains([Email], \".\")),\n    \n    // Nettoyage téléphone\n    #\"Telephone nettoye\" = Table.TransformColumns(#\"Email valide\",{{\"Telephone\", \n        each if _ = null then null\n        else Text.Remove(_, {\" \", \".\", \"-\", \"+\", \"(\", \")\"}), type text}}),\n    \n    // Correction dates\n    #\"Date transformee\" = Table.TransformColumns(#\"Telephone nettoye\",{{\"DateInscription\", \n        each if Text.Contains(_, \"/\") then Date.FromText(_, \"fr-FR\")\n        else if Text.Contains(_, \"-\") and Text.Length(_) = 8 then Date.FromText(\"20\" & _)\n        else Date.FromText(_, \"fr-FR\"), type date}}),\n    \n    // Gestion valeurs manquantes\n    #\"Villes par defaut\" = Table.ReplaceValue(#\"Date transformee\",null,\"Non renseigné\",Replacer.ReplaceValue,{\"Ville\"}),\n    #\"Filtre lignes completes\" = Table.SelectRows(#\"Villes par defaut\", each [Nom] &lt;&gt; null and [Prenom] &lt;&gt; null)\nin\n    #\"Filtre lignes completes\"",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 3"
+    ]
+  },
+  {
+    "objectID": "modules/module3.html#fusion-et-agrégation-merge-append",
+    "href": "modules/module3.html#fusion-et-agrégation-merge-append",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "3.4 Fusion et Agrégation (Merge / Append)",
+    "text": "3.4 Fusion et Agrégation (Merge / Append)\n\n3.4.1 Types de Jointures (Merge)\nComparaison des jointures :\n\n\n\n\n\n\n\n\nType\nDescription\nCas d’usage\n\n\n\n\nInner Join\nSeulement les correspondances\nAnalyse complète\n\n\nLeft Outer\nTous de gauche + correspondances\nConservation source principale\n\n\nRight Outer\nTous de droite + correspondances\nRare en Power Query\n\n\nFull Outer\nToutes les lignes\nConsolidation\n\n\nAnti Join\nLignes sans correspondance\nDétection anomalies\n\n\n\n\n\n3.4.2 Exercice : Fusion de Tables Ventes et Produits\nDonnées :\n\nTable Ventes : VenteID, ProduitID, Quantite, DateVente\nTable Produits : ProduitID, NomProduit, Categorie, PrixUnitaire\n\nObjectif : Créer une vue enrichie avec les informations produits.\n// Étape 1 : Charger les tables\nlet\n    Ventes = Excel.CurrentWorkbook(){[Name=\"Ventes\"]}[Content],\n    Produits = Excel.CurrentWorkbook(){[Name=\"Produits\"]}[Content],\n    \n    // Étape 2 : Fusionner (Left Join)\n    Fusion = Table.NestedJoin(Ventes, {\"ProduitID\"}, Produits, {\"ProduitID\"}, \"Produits\", JoinKind.LeftOuter),\n    \n    // Étape 3 : Développer les colonnes nécessaires\n    ColonnesDeveloppees = Table.ExpandTableColumn(Fusion, \"Produits\", \n        {\"NomProduit\", \"Categorie\", \"PrixUnitaire\"}, \n        {\"NomProduit\", \"Categorie\", \"PrixUnitaire\"}),\n    \n    // Étape 4 : Calculer le montant total\n    MontantCalcule = Table.AddColumn(ColonnesDeveloppees, \"MontantTotal\", \n        each [Quantite] * [PrixUnitaire], type number)\nin\n    MontantCalcule\n\n\n3.4.3 Exercice : Agrégation de Fichiers Mensuels (Append)\nScénario : 12 fichiers Excel Ventes_MM_2024.xlsx à consolider.\nlet\n    // Étape 1 : Se connecter au dossier\n    Source = Folder.Files(\"C:\\Data\\Ventes 2024\"),\n    \n    // Étape 2 : Filtrer les fichiers Excel\n    FichiersExcel = Table.SelectRows(Source, each Text.EndsWith([Name], \".xlsx\")),\n    \n    // Étape 3 : Combiner les fichiers\n    DonneesCombinees = Table.Combine(\n        List.Transform(\n            FichiersExcel[Content],\n            each Excel.Workbook(_, null, true){0}[Data]\n        )\n    ),\n    \n    // Étape 4 : Nettoyer et standardiser\n    EnTetesPromus = Table.PromoteHeaders(DonneesCombinees, [PromoteAllScalars=true]),\n    TypesCorriges = Table.TransformColumnTypes(EnTetesPromus,{\n        {\"Date\", type date},\n        {\"Montant\", Currency.Type},\n        {\"Quantite\", Int64.Type}\n    })\nin\n    TypesCorriges",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 3"
+    ]
+  },
+  {
+    "objectID": "modules/module3.html#transformation-pivotunpivot",
+    "href": "modules/module3.html#transformation-pivotunpivot",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "3.5 Transformation Pivot/Unpivot",
+    "text": "3.5 Transformation Pivot/Unpivot\n\n3.5.1 Quand utiliser Unpivot ?\nFormat large (pivoté) :\n\n\n\nProduit\nJan\nFév\nMar\nAvr\n\n\n\n\nA\n100\n150\n200\n180\n\n\nB\n80\n90\n110\n95\n\n\n\nFormat long (normalisé) :\n\n\n\nProduit\nMois\nVentes\n\n\n\n\nA\nJan\n100\n\n\nA\nFév\n150\n\n\n…\n…\n…\n\n\n\n\n\n3.5.2 Exercice : Transformation Unpivot\nlet\n    Source = Table.FromRows({\n        {\"A\", 100, 150, 200, 180},\n        {\"B\", 80, 90, 110, 95}\n    }, {\"Produit\", \"Jan\", \"Fév\", \"Mar\", \"Avr\"}),\n    \n    // Sélectionner les colonnes à unpivoter\n    ColonnesAVirer = {\"Jan\", \"Fév\", \"Mar\", \"Avr\"},\n    \n    // Appliquer Unpivot\n    DonneesLongues = Table.UnpivotOtherColumns(Source, {\"Produit\"}, \"Mois\", \"Ventes\"),\n    \n    // Optionnel : trier les données\n    TrieParProduit = Table.Sort(DonneesLongues,{{\"Produit\", Order.Ascending}, {\"Mois\", Order.Ascending}})\nin\n    TrieParProduit\n\n\n3.5.3 Exercice Inverse : Transformation Pivot\nlet\n    Source = Table.FromRows({\n        {\"A\", \"Jan\", 100},\n        {\"A\", \"Fév\", 150},\n        {\"B\", \"Jan\", 80},\n        {\"B\", \"Fév\", 90}\n    }, {\"Produit\", \"Mois\", \"Ventes\"}),\n    \n    // Appliquer Pivot\n    DonneesLarges = Table.Pivot(Source, \n        List.Distinct(Source[Mois]), \n        \"Mois\", \n        \"Ventes\", \n        List.Sum)\nin\n    DonneesLarges",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 3"
+    ]
+  },
+  {
+    "objectID": "modules/module3.html#introduction-aux-outils-etl-professionnels",
+    "href": "modules/module3.html#introduction-aux-outils-etl-professionnels",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "3.6 Introduction aux Outils ETL Professionnels",
+    "text": "3.6 Introduction aux Outils ETL Professionnels\n\n3.6.1 SSIS (SQL Server Integration Services)\nAvantages :\n\nIntégration avec l’écosystème Microsoft\nPerformances élevées pour gros volumes\nOrchestration complexe de packages\nGestion avancée des erreurs\n\nComparaison avec Power Query :\n\n\n\nCritère\nPower Query\nSSIS\n\n\n\n\nComplexité\nBasse à moyenne\nÉlevée\n\n\nPerformance\nBonne\nExcellente\n\n\nOrchestration\nLimitée\nAvancée\n\n\nMaintenance\nFacile\nComplexe\n\n\nCoût\nInclus dans Office/BI\nLicence SQL Server\n\n\n\n\n\n3.6.2 Talend Open Studio\nCaractéristiques :\n\nSolution open source\nInterface graphique similaire\nConnecteurs nombreux\nGénération de code Java\n\nExercice conceptuel : Concevoir un flux ETL simple dans Talend\n\nExtraction depuis CSV\nTransformation (nettoyage)\nChargement vers base de données",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 3"
+    ]
+  },
+  {
+    "objectID": "modules/module3.html#contrôle-qualité-et-documentation",
+    "href": "modules/module3.html#contrôle-qualité-et-documentation",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "3.7 Contrôle Qualité et Documentation",
+    "text": "3.7 Contrôle Qualité et Documentation\n\n3.7.1 Métriques de Qualité des Données\nIndicateurs à suivre :\n\nComplétude : % de valeurs non nulles\nExactitude : Conformité aux règles métier\nCohérence : Uniformité des formats\nActualité : Fraîcheur des données\nUnicité : Absence de doublons\n\n\n\n3.7.2 Exercice : Audit de Qualité des Données\nScript d’audit Power Query :\nlet\n    Source = ... // Chargement des données\n    \n    // Métriques de qualité\n    TotalLignes = Table.RowCount(Source),\n    Colonnes = Table.ColumnNames(Source),\n    \n    // Calcul par colonne\n    MetriquesParColonne = List.Transform(Colonnes, (colonne) =&gt;\n        let\n            Valeurs = Table.Column(Source, colonne),\n            NonNull = List.NonNullCount(Valeurs),\n            Distinct = List.Distinct(Valeurs),\n            PourcentageNonNull = NonNull / TotalLignes * 100\n        in\n            [\n                Colonne = colonne,\n                Type = Value.Type(Valeurs{0}),\n                Completeness = PourcentageNonNull,\n                DistinctCount = List.Count(Distinct),\n                ExempleValeur = if NonNull &gt; 0 then Text.From(Valeurs{0}) else \"N/A\"\n            ]\n    ),\n    \n    // Conversion en tableau\n    TableauMetriques = Table.FromRecords(MetriquesParColonne)\nin\n    TableauMetriques\n\n\n3.7.3 Documentation des Flux\nTemplate de documentation :\n\n\n\nSection\nContenu\n\n\n\n\n1. Description\nObjectif du flux, fréquence d’exécution\n\n\n2. Sources\nListe des sources avec connexions\n\n\n3. Transformations\nÉtapes appliquées (liste)\n\n\n4. Règles métier\nRègles de validation appliquées\n\n\n5. Métriques qualité\nRésultats du contrôle qualité\n\n\n6. Dépendances\nFlux en amont/aval\n\n\n7. Contacts\nResponsables technique et métier",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 3"
+    ]
+  },
+  {
+    "objectID": "modules/module3.html#atelier-pratique-pipeline-etl-complet",
+    "href": "modules/module3.html#atelier-pratique-pipeline-etl-complet",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "3.8 Atelier Pratique : Pipeline ETL Complet",
+    "text": "3.8 Atelier Pratique : Pipeline ETL Complet\n\n3.8.1 Cas d’Étude : RetailCorp Data Pipeline\nObjectif : Construire un pipeline ETL complet pour analyser les ventes.\nSources disponibles :\n\nVentesJournalieres.csv\nCatalogueProduits.xlsx\nClientsAPI.json (simulé)\n\nÉtapes du pipeline :\n// Fichier principal - pipeline complet\nlet\n    // ========== EXTRACTION ==========\n    // 1. Ventes journalières\n    VentesCSV = Csv.Document(File.Contents(\"C:\\Data\\VentesJournalieres.csv\"), \n        [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    VentesAvecHeaders = Table.PromoteHeaders(VentesCSV, [PromoteAllScalars=true]),\n    \n    // 2. Catalogue produits\n    ProduitsExcel = Excel.Workbook(File.Contents(\"C:\\Data\\CatalogueProduits.xlsx\"), null, true),\n    ProduitsSheet = ProduitsExcel{[Item=\"Produits\",Kind=\"Sheet\"]}[Data],\n    ProduitsAvecHeaders = Table.PromoteHeaders(ProduitsSheet, [PromoteAllScalars=true]),\n    \n    // 3. Clients via API (simulation)\n    ClientsAPI = Json.Document(\"{\"\"clients\"\": [{\"\"id\"\":1,\"\"nom\"\":\"\"Dupont\"\",\"\"ville\"\":\"\"Paris\"\"}]}\"),\n    ClientsTable = Table.FromRecords(ClientsAPI[clients]),\n    \n    // ========== TRANSFORMATION ==========\n    // Nettoyage ventes\n    VentesNettoyees = Table.TransformColumnTypes(VentesAvecHeaders,{\n        {\"Date\", type date},\n        {\"ProduitID\", Int64.Type},\n        {\"Quantite\", Int64.Type},\n        {\"PrixUnitaire\", Currency.Type}\n    }),\n    \n    // Calcul montant\n    VentesAvecMontant = Table.AddColumn(VentesNettoyees, \"Montant\", \n        each [Quantite] * [PrixUnitaire], Currency.Type),\n    \n    // Nettoyage produits\n    ProduitsNettoyes = Table.TransformColumnTypes(ProduitsAvecHeaders,{\n        {\"ProduitID\", Int64.Type},\n        {\"Nom\", type text},\n        {\"Categorie\", type text},\n        {\"PrixReference\", Currency.Type}\n    }),\n    \n    // ========== ENRICHISSEMENT ==========\n    // Fusion ventes + produits\n    FusionProduits = Table.NestedJoin(VentesAvecMontant, {\"ProduitID\"}, \n        ProduitsNettoyes, {\"ProduitID\"}, \"DetailsProduit\", JoinKind.LeftOuter),\n    \n    DetailsProduitsDeveloppes = Table.ExpandTableColumn(FusionProduits, \"DetailsProduit\", \n        {\"Nom\", \"Categorie\"}, {\"NomProduit\", \"CategorieProduit\"}),\n    \n    // Fusion avec clients\n    FusionComplete = Table.NestedJoin(DetailsProduitsDeveloppes, {\"ClientID\"}, \n        ClientsTable, {\"id\"}, \"DetailsClient\", JoinKind.LeftOuter),\n    \n    DetailsClientsDeveloppes = Table.ExpandTableColumn(FusionComplete, \"DetailsClient\", \n        {\"nom\", \"ville\"}, {\"NomClient\", \"VilleClient\"}),\n    \n    // ========== AGREGATION ==========\n    // Pour dashboard quotidien\n    AgregationJournaliere = Table.Group(DetailsClientsDeveloppes, {\"Date\", \"CategorieProduit\"}, {\n        {\"CA_Total\", each List.Sum([Montant]), Currency.Type},\n        {\"Quantite_Total\", each List.Sum([Quantite]), Int64.Type},\n        {\"NbTransactions\", each Table.RowCount(_), Int64.Type}\n    }),\n    \n    // ========== QUALITE ==========\n    // Vérification intégrité\n    LignesAvant = Table.RowCount(VentesAvecMontant),\n    LignesApres = Table.RowCount(DetailsClientsDeveloppes),\n    TauxCompletude = LignesApres / LignesAvant * 100,\n    \n    // Log de qualité\n    LogQualite = #table({\"Metric\", \"Valeur\"}, {\n        {\"Lignes sources\", LignesAvant},\n        {\"Lignes finales\", LignesApres},\n        {\"Taux completude\", TauxCompletude & \"%\"},\n        {\"Date traitement\", DateTime.LocalNow()}\n    })\n    \nin\n    // Retourner les données transformées ET le log\n    [\n        DonneesVentes = DetailsClientsDeveloppes,\n        Agregations = AgregationJournaliere,\n        AuditQualite = LogQualite\n    ]\n\n\n3.8.2 Documentation du Pipeline\nFiche technique :\nNOM DU PIPELINE: RetailCorp_Sales_ETL\nVERSION: 1.0\nFREQUENCE: Quotidienne (06:00)\n\nSOURCES:\n1. VentesJournalieres.csv - FTP serveur\n2. CatalogueProduits.xlsx - SharePoint\n3. API Clients - endpoint REST\n\nTRANSFORMATIONS APPLIQUEES:\n✓ Conversion types de données\n✓ Calcul montant de vente\n✓ Fusion avec référentiels\n✓ Nettoyage valeurs aberrantes\n✓ Agrégation journalière\n\nREGLES METIER:\n- Prix &gt; 0\n- Quantité &gt; 0\n- Dates dans plage valide\n- Clients actifs uniquement\n\nCONTACTS:\n- Technique: admin@retailcorp.com\n- Métier: sales.analysis@retailcorp.com",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 3"
+    ]
+  },
+  {
+    "objectID": "modules/module3.html#synthèse-du-module-3",
+    "href": "modules/module3.html#synthèse-du-module-3",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "3.9 Synthèse du Module 3",
+    "text": "3.9 Synthèse du Module 3\n\n3.9.1 Points Clés à Retenir\n✅ Connecteurs multiples : Savoir se connecter à diverses sources\n✅ Nettoyage efficace : Techniques pour données “sales”\n✅ Transformations avancées : Merge, Append, Pivot/Unpivot\n✅ Qualité des données : Métriques et contrôles\n✅ Documentation : Bonnes pratiques pour maintenabilité\n\n\n3.9.2 Checklist d’Auto-évaluation\n\nJe peux connecter Power Query à 3 types de sources différents\nJe maîtrise les techniques de nettoyage de base\nJe comprends la différence entre Merge et Append\nJe sais transformer des données pivots en format long\nJe peux créer un pipeline ETL simple et documenté\nJe comprends les principes de qualité des données",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 3"
+    ]
+  },
+  {
+    "objectID": "modules/module1.html",
+    "href": "modules/module1.html",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "",
+    "text": "Durée : 5 heures | Objectif : Maîtriser les concepts fondamentaux de la BI et comprendre l’architecture décisionnelle",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 1"
+    ]
+  },
+  {
+    "objectID": "modules/module1.html#introduction-à-la-business-intelligence-enjeux-et-définitions",
+    "href": "modules/module1.html#introduction-à-la-business-intelligence-enjeux-et-définitions",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "1.1 Introduction à la Business Intelligence : Enjeux et Définitions",
+    "text": "1.1 Introduction à la Business Intelligence : Enjeux et Définitions\n\n1.1.1 Définition et Contexte\nLa Business Intelligence (BI) représente l’ensemble des technologies, processus et pratiques permettant de collecter, intégrer, analyser et présenter les données d’entreprise pour faciliter la prise de décision stratégique.\nDans un contexte où les organisations génèrent des volumes massifs de données, la BI transforme cette complexité en opportunités concrètes :\n\nVisibilité opérationnelle : comprendre ce qui se passe réellement dans l’entreprise\nAnticipation stratégique : détecter les tendances et prédire les évolutions\nOptimisation des ressources : identifier les inefficacités et les leviers d’amélioration\nAvantage concurrentiel : exploiter la donnée comme actif stratégique différenciant\n\n\n\n1.1.2 Les Trois Piliers de la BI Moderne\n\n\n\n\n\ngraph TB\n    A[Business Intelligence] --&gt; B[Descriptive Analytics]\n    A --&gt; C[Predictive Analytics]\n    A --&gt; D[Prescriptive Analytics]\n    \n    B --&gt; B1[\"Que s'est-il passé ?&lt;br/&gt;Tableaux de bord, Rapports\"]\n    C --&gt; C1[\"Que va-t-il se passer ?&lt;br/&gt;Modèles prédictifs, Forecasting\"]\n    D --&gt; D1[\"Que doit-on faire ?&lt;br/&gt;Recommandations, Optimisation\"]\n    \n    style A fill:#2E86AB\n    style B fill:#A23B72\n    style C fill:#F18F01\n    style D fill:#C73E1D\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nType d’Analytics\nObjectif\nExemples d’Usage\nOutils Typiques\n\n\n\n\nDescriptive\nComprendre le passé\nRapports de ventes mensuels, analyses de performance\nPower BI, Tableau, Excel\n\n\nDiagnostic\nExpliquer les causes\nAnalyse des écarts budgétaires, root cause analysis\nSQL, Python, DAX\n\n\nPredictive\nAnticiper l’avenir\nPrévision des ventes, churn prediction\nPython (scikit-learn), R, Azure ML\n\n\nPrescriptive\nRecommander des actions\nOptimisation des prix, allocation de ressources\nAlgorithmes d’optimisation, IA\n\n\n\n\n\n1.1.3 Cas d’Usage Concrets par Département\nFinance & Contrôle de Gestion\n\nSuivi budgétaire et analyse des écarts en temps réel\nConsolidation financière multi-entités\nPrévisions de trésorerie et cash-flow forecasting\n\nCommercial & Marketing\n\nAnalyse de la performance des ventes par segment/produit/région\nScoring clients et segmentation RFM (Récence, Fréquence, Montant)\nROI des campagnes marketing et attribution multi-touch\n\nOpérations & Supply Chain\n\nOptimisation des stocks et prévision de la demande\nAnalyse de la performance logistique (taux de service, lead times)\nSuivi de la qualité et détection des anomalies\n\nRessources Humaines\n\nTableaux de bord RH : turnover, absentéisme, productivité\nAnalyse prédictive du départ des talents\nPlanification des effectifs et gestion des compétences",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 1"
+    ]
+  },
+  {
+    "objectID": "modules/module1.html#architecture-décisionnelle-de-la-donnée-à-linsight",
+    "href": "modules/module1.html#architecture-décisionnelle-de-la-donnée-à-linsight",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "1.2 Architecture Décisionnelle : De la Donnée à l’Insight",
+    "text": "1.2 Architecture Décisionnelle : De la Donnée à l’Insight\n\n1.2.1 Vue d’Ensemble de l’Architecture BI\n\n\n\n\n\nflowchart LR\n    A[Sources de Données] --&gt; B[ETL/ELT]\n    B --&gt; C[Data Warehouse]\n    C --&gt; D[Cube OLAP]\n    D --&gt; E[Couche Sémantique]\n    E --&gt; F[Reporting & Dashboards]\n    \n    A1[ERP&lt;br/&gt;SAP, Oracle] --&gt; A\n    A2[CRM&lt;br/&gt;Salesforce] --&gt; A\n    A3[Fichiers&lt;br/&gt;Excel, CSV] --&gt; A\n    A4[APIs&lt;br/&gt;Web Services] --&gt; A\n    A5[Bases de Données&lt;br/&gt;PostgreSQL, MySQL] --&gt; A\n    \n    F --&gt; F1[Power BI]\n    F --&gt; F2[Tableau]\n    F --&gt; F3[Excel]\n    \n    style C fill:#2E86AB\n    style D fill:#A23B72\n    style F fill:#F18F01\n\n\n\n\n\n\n\n\n1.2.2 Les Composants de l’Architecture\n\n1. Sources de Données (Data Sources)\nLes données proviennent de multiples systèmes hétérogènes :\n\n\n\n\n\n\n\n\n\nType de Source\nCaractéristiques\nExemples\nChallenges\n\n\n\n\nSystèmes transactionnels\nDonnées opérationnelles en temps réel\nERP (SAP, Oracle), CRM (Salesforce)\nVolume élevé, structure complexe\n\n\nFichiers plats\nDonnées semi-structurées\nExcel, CSV, JSON, XML\nQualité variable, formats inconsistants\n\n\nBases de données\nDonnées structurées\nPostgreSQL, MySQL, SQL Server\nSchémas différents, silos de données\n\n\nAPIs & Web Services\nDonnées externes\nREST APIs, réseaux sociaux, Open Data\nLimitation de débit, authentification\n\n\nIoT & Capteurs\nDonnées streaming\nCapteurs industriels, logs applicatifs\nVolume massif, traitement temps réel\n\n\n\n\n\n2. ETL/ELT : Extract, Transform, Load\nLe processus ETL constitue le cœur de l’intégration des données :\nETL (Approche Traditionnelle)\n\n\n\n\n\ngraph LR\n    A[Extract&lt;br/&gt;Extraction] --&gt; B[Transform&lt;br/&gt;Transformation]\n    B --&gt; C[Load&lt;br/&gt;Chargement]\n    \n    A1[Sources&lt;br/&gt;Hétérogènes] --&gt; A\n    C --&gt; C1[Data&lt;br/&gt;Warehouse]\n    \n    style B fill:#F18F01\n\n\n\n\n\n\nOpérations de Transformation :\n\nNettoyage : suppression des doublons, gestion des valeurs manquantes\nNormalisation : uniformisation des formats (dates, devises, codes)\nEnrichissement : calcul de métriques dérivées, géocodage\nAgrégation : consolidation de données granulaires\nValidation : contrôles de cohérence et règles métier\n\nELT (Approche Cloud Moderne)\n\nChargement des données brutes d’abord\nTransformation effectuée dans le Data Warehouse (utilise sa puissance de calcul)\nPlus adapté aux environnements Big Data et Cloud\n\nOutils ETL/ELT Populaires :\n\nMicrosoft : Azure Data Factory, SSIS (SQL Server Integration Services)\nOpen Source : Talend, Apache NiFi, Airflow\nCloud : AWS Glue, Google Dataflow, Fivetran\n\n\n\n3. Data Warehouse (Entrepôt de Données)\nLe Data Warehouse est le référentiel central optimisé pour l’analyse :\nCaractéristiques Clés :\n\n\n\n\n\n\n\n\nCritère\nOLTP (Transactionnel)\nOLAP (Analytique)\n\n\n\n\nObjectif\nGérer les opérations quotidiennes\nAnalyser et décider\n\n\nType de requêtes\nINSERT, UPDATE, DELETE\nSELECT avec agrégations\n\n\nVolume de données\nDonnées courantes\nHistorique complet\n\n\nNormalisation\nFortement normalisé (3NF)\nDénormalisé (modèle étoile)\n\n\nPerformance\nOptimisé pour les transactions\nOptimisé pour les lectures\n\n\nUtilisateurs\nMilliers d’opérateurs\nDizaines d’analystes\n\n\n\nArchitectures Data Warehouse :\n\n\n\n\n\ngraph TB\n    subgraph \"Architecture Traditionnelle\"\n    A1[Sources] --&gt; B1[Staging Area]\n    B1 --&gt; C1[Data Warehouse]\n    C1 --&gt; D1[Data Marts]\n    end\n    \n    subgraph \"Architecture Lakehouse Moderne\"\n    A2[Sources] --&gt; B2[Data Lake&lt;br/&gt;Données brutes]\n    B2 --&gt; C2[Data Warehouse&lt;br/&gt;Données structurées]\n    C2 --&gt; D2[Couche Analytique]\n    end\n    \n    style C1 fill:#2E86AB\n    style C2 fill:#2E86AB\n\n\n\n\n\n\n\n\n4. Cubes OLAP (Online Analytical Processing)\nLes cubes OLAP permettent une analyse multidimensionnelle rapide :\nOpérations OLAP Fondamentales :\n\n\n\n\n\ngraph LR\n    A[Cube OLAP] --&gt; B[Slice&lt;br/&gt;Découpage]\n    A --&gt; C[Dice&lt;br/&gt;Sous-cube]\n    A --&gt; D[Drill-Down&lt;br/&gt;Descente]\n    A --&gt; E[Drill-Up&lt;br/&gt;Montée]\n    A --&gt; F[Pivot&lt;br/&gt;Rotation]\n    \n    style A fill:#A23B72\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOpération\nDescription\nExemple\n\n\n\n\nSlice\nSélectionner une tranche du cube\nVentes pour l’année 2024 uniquement\n\n\nDice\nExtraire un sous-cube\nVentes 2024 pour la France et l’Allemagne\n\n\nDrill-Down\nDescendre dans la hiérarchie\nDe l’année → trimestre → mois → jour\n\n\nDrill-Up\nRemonter dans la hiérarchie\nDu produit → catégorie → division\n\n\nPivot\nFaire pivoter les axes d’analyse\nPermuter lignes et colonnes\n\n\n\nTypes de Cubes OLAP :\n\nMOLAP (Multidimensional) : stockage optimisé, très performant\nROLAP (Relational) : basé sur des tables relationnelles\nHOLAP (Hybrid) : combinaison des deux approches\n\n\n\n5. Couche de Reporting & Visualisation\nLa dernière couche transforme les données en insights visuels actionnables.",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 1"
+    ]
+  },
+  {
+    "objectID": "modules/module1.html#cycle-de-vie-dun-projet-bi",
+    "href": "modules/module1.html#cycle-de-vie-dun-projet-bi",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "1.3 Cycle de Vie d’un Projet BI",
+    "text": "1.3 Cycle de Vie d’un Projet BI\n\n1.3.1 Les Phases du Projet BI\n\n\n\n\n\ngantt\n    title Cycle de Vie Projet BI (6-9 mois)\n    dateFormat  YYYY-MM-DD\n    section Cadrage\n    Expression des besoins      :a1, 2024-01-01, 30d\n    Audit de l'existant         :a2, after a1, 15d\n    \n    section Conception\n    Modélisation conceptuelle   :b1, after a2, 20d\n    Architecture technique      :b2, after b1, 15d\n    \n    section Développement\n    Développement ETL           :c1, after b2, 45d\n    Création des cubes OLAP     :c2, after c1, 30d\n    Développement dashboards    :c3, after c2, 30d\n    \n    section Déploiement\n    Tests & Recette             :d1, after c3, 20d\n    Formation utilisateurs      :d2, after d1, 10d\n    Mise en production          :d3, after d2, 5d\n    \n    section Exploitation\n    Support & Maintenance       :e1, after d3, 60d\n\n\n\n\n\n\n\n\n1.3.2 Détail des Phases\n\nPhase 1 : Cadrage et Expression des Besoins (4-6 semaines)\nObjectifs :\n\nDéfinir le périmètre fonctionnel et les objectifs métier\nIdentifier les parties prenantes et leurs besoins analytiques\nÉvaluer la maturité BI de l’organisation\n\nLivrables :\n\nCahier des charges fonctionnel\nMatrice des KPI prioritaires\nRoadmap projet avec jalons\nBudget et planning prévisionnel\n\nAteliers Métier :\n\n\n\n\n\n\n\n\n\nAtelier\nParticipants\nDurée\nObjectif\n\n\n\n\nKickoff\nSponsors, chef de projet\n2h\nAligner la vision et les enjeux\n\n\nExpression besoins\nUtilisateurs clés, métier\n3h x 3\nRecueillir les besoins analytiques détaillés\n\n\nPriorisation KPI\nComité de pilotage\n2h\nDéfinir les 15-20 KPI critiques\n\n\nValidation périmètre\nDirection, métier\n2h\nValider le scope et le planning\n\n\n\n\n\nPhase 2 : Conception de l’Architecture (4-5 semaines)\nModélisation Conceptuelle :\n\nIdentification des processus métier (ventes, achats, finance, etc.)\nDéfinition des dimensions et des faits\nCréation du modèle logique de données (MLD)\nDocumentation des règles de gestion\n\nArchitecture Technique :\n\nChoix des technologies (Power BI, Azure, SQL Server, etc.)\nDesign de l’architecture ETL/ELT\nStratégie de sécurité et gouvernance\nPlan de sauvegarde et de reprise d’activité\n\nLivrables :\n\nSchémas d’architecture (conceptuel, logique, physique)\nDictionnaire de données\nDossier d’architecture technique (DAT)\nMatrice de traçabilité besoins/solutions\n\n\n\nPhase 3 : Développement (10-14 semaines)\nDéveloppement ETL (5-6 semaines) :\n\nExtraction des données sources\nImplémentation des transformations\nChargement dans le Data Warehouse\nTests unitaires de chaque flux\n\nCréation des Cubes OLAP (3-4 semaines) :\n\nImplémentation du modèle en étoile\nCréation des dimensions et hiérarchies\nConfiguration des mesures et calculs\nOptimisation des agrégations\n\nDéveloppement des Dashboards (4-5 semaines) :\n\nCréation des rapports Power BI / Tableau\nDéveloppement des mesures DAX\nDesign UX/UI des tableaux de bord\nImplémentation de la sécurité au niveau ligne (RLS)\n\n\n\nPhase 4 : Tests et Recette (3-4 semaines)\nTests Techniques :\n\nTests unitaires des flux ETL\nTests d’intégration end-to-end\nTests de performance et de charge\nTests de sécurité et de conformité\n\nRecette Métier :\n\nValidation fonctionnelle par les utilisateurs clés\nContrôle de la cohérence des chiffres avec les systèmes sources\nValidation des règles de gestion\nAcceptation formelle des livrables\n\n\n\nPhase 5 : Déploiement et Formation (2-3 semaines)\nFormation Utilisateurs :\n\n\n\n\n\n\n\n\n\nPublic\nContenu\nDurée\nFormat\n\n\n\n\nUtilisateurs finaux\nNavigation, filtres, exports\n2h\nWebinaire + documentation\n\n\nPower Users\nCréation de rapports, DAX basique\n1 jour\nFormation présentielle\n\n\nAdministrateurs\nGestion des modèles, sécurité\n2 jours\nFormation technique\n\n\n\nMise en Production :\n\nDéploiement de l’environnement de production\nMigration des données historiques\nActivation des flux automatisés\nSurveillance post-déploiement\n\n\n\nPhase 6 : Exploitation et Amélioration Continue\nSupport & Maintenance :\n\nSupport niveau 1 : assistance utilisateurs\nSupport niveau 2 : correction d’anomalies\nSupport niveau 3 : évolutions techniques\n\nAmélioration Continue :\n\nAnalyse de l’usage (nombre d’utilisateurs actifs, rapports consultés)\nCollecte du feedback utilisateurs\nPriorisation des évolutions\nOptimisation des performances",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 1"
+    ]
+  },
+  {
+    "objectID": "modules/module1.html#panorama-des-outils-bi-du-marché",
+    "href": "modules/module1.html#panorama-des-outils-bi-du-marché",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "1.4 Panorama des Outils BI du Marché",
+    "text": "1.4 Panorama des Outils BI du Marché\n\n1.4.1 Comparatif des Principales Plateformes\n\n\n\n\n\n\n\n\n\n\nCritère\nPower BI\nTableau\nQlik Sense\nLooker Studio\n\n\n\n\nÉditeur\nMicrosoft\nSalesforce\nQlik\nGoogle\n\n\nCourbe d’apprentissage\n⭐⭐⭐ Modérée\n⭐⭐⭐⭐ Facile\n⭐⭐ Complexe\n⭐⭐⭐⭐⭐ Très facile\n\n\nPuissance analytique\n⭐⭐⭐⭐⭐\n⭐⭐⭐⭐\n⭐⭐⭐⭐⭐\n⭐⭐⭐\n\n\nIntégration écosystème\nExcellent (Microsoft)\nBon (Salesforce)\nBon\nExcellent (Google)\n\n\nPrix (par utilisateur/mois)\n10-20€ (Pro/Premium)\n70-140$\n30-100$\nGratuit - 10€\n\n\nDéploiement\nCloud ou On-premise\nCloud ou On-premise\nCloud ou On-premise\nCloud uniquement\n\n\nLangage de calcul\nDAX\nCalculs Tableau\nQlik Script\nSQL-like\n\n\nConnecteurs natifs\n200+\n100+\n150+\n800+ (via Google)\n\n\nMobile\n⭐⭐⭐⭐\n⭐⭐⭐⭐⭐\n⭐⭐⭐\n⭐⭐⭐\n\n\nCollaboration\n⭐⭐⭐⭐\n⭐⭐⭐⭐\n⭐⭐⭐\n⭐⭐⭐⭐⭐\n\n\n\n\n\n1.4.2 Microsoft Power BI : L’Écosystème Complet\n\n\n\n\n\ngraph TB\n    A[Power BI Ecosystem] --&gt; B[Power BI Desktop]\n    A --&gt; C[Power BI Service]\n    A --&gt; D[Power BI Mobile]\n    A --&gt; E[Power BI Embedded]\n    A --&gt; F[Power BI Report Server]\n    \n    B --&gt; B1[\"Développement de rapports&lt;br/&gt;Modélisation de données&lt;br/&gt;DAX & Power Query\"]\n    C --&gt; C1[\"Publication & Partage&lt;br/&gt;Collaboration&lt;br/&gt;Planification de rafraîchissement\"]\n    D --&gt; D1[\"Consultation mobile&lt;br/&gt;Notifications&lt;br/&gt;Mode offline\"]\n    E --&gt; E1[\"Intégration dans&lt;br/&gt;applications tierces&lt;br/&gt;White-labeling\"]\n    F --&gt; F1[\"Déploiement&lt;br/&gt;on-premise&lt;br/&gt;Pour organisations isolées\"]\n    \n    style A fill:#2E86AB\n    style B fill:#F18F01\n    style C fill:#A23B72\n\n\n\n\n\n\nAvantages Power BI :\n\n✅ Intégration transparente avec l’écosystème Microsoft (Excel, Azure, Office 365)\n✅ Rapport qualité/prix exceptionnel\n✅ DAX : langage puissant pour les calculs complexes\n✅ Mises à jour mensuelles avec nouvelles fonctionnalités\n✅ Large communauté et nombreuses ressources de formation\n\nLimitations :\n\n❌ Dépendance à l’écosystème Microsoft\n❌ Personnalisation visuelle limitée comparée à Tableau\n❌ Performance sur très gros volumes (&gt; 10 Go)\n\n\n\n1.4.3 Tableau : L’Excellence de la Visualisation\nPoints Forts :\n\n✅ Interface intuitive et ergonomique\n✅ Capacités de visualisation avancées et flexibles\n✅ Excellente gestion des données spatiales (cartographie)\n✅ Communauté très active (Tableau Public)\n\nCas d’Usage Privilégiés :\n\nDashboards marketing et sales\nAnalyses géospatiales\nStorytelling avec données\nExplorations ad-hoc\n\n\n\n1.4.4 Qlik Sense : Le Moteur Associatif\nInnovation Clé : Moteur Associatif\nContrairement aux autres outils, Qlik ne filtre pas les données mais maintient les associations entre toutes les valeurs, permettant une exploration plus intuitive.\nAvantages :\n\n✅ Exploration libre et découverte de relations cachées\n✅ Performance élevée même sur gros volumes\n✅ Sécurité granulaire et gouvernance robuste\n\n\n\n1.4.5 Looker Studio : L’Outil Accessible de Google\nAvantages :\n\n✅ Gratuit pour usage de base\n✅ Intégration native avec Google Analytics, Ads, BigQuery\n✅ Collaboration en temps réel (comme Google Docs)\n✅ Aucune installation requise\n\nLimitations :\n\n❌ Capacités analytiques limitées\n❌ Performance sur gros volumes\n❌ Moins de connecteurs vers systèmes d’entreprise",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 1"
+    ]
+  },
+  {
+    "objectID": "modules/module1.html#gouvernance-et-culture-data-driven",
+    "href": "modules/module1.html#gouvernance-et-culture-data-driven",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "1.5 Gouvernance et Culture Data-Driven",
+    "text": "1.5 Gouvernance et Culture Data-Driven\n\n1.5.1 Les Piliers de la Gouvernance des Données\n\n\n\n\n\ngraph TB\n    A[Gouvernance des Données] --&gt; B[Qualité des Données]\n    A --&gt; C[Sécurité & Confidentialité]\n    A --&gt; D[Métadonnées & Documentation]\n    A --&gt; E[Rôles & Responsabilités]\n    A --&gt; F[Processus & Standards]\n    \n    B --&gt; B1[\"Exactitude&lt;br/&gt;Complétude&lt;br/&gt;Cohérence&lt;br/&gt;Actualité\"]\n    C --&gt; C1[\"RGPD&lt;br/&gt;Contrôle d'accès&lt;br/&gt;Chiffrement&lt;br/&gt;Audit\"]\n    D --&gt; D1[\"Dictionnaire de données&lt;br/&gt;Lignage&lt;br/&gt;Catalogue de données\"]\n    E --&gt; E1[\"Data Owners&lt;br/&gt;Data Stewards&lt;br/&gt;Data Architects\"]\n    F --&gt; F1[\"Conventions de nommage&lt;br/&gt;Processus ETL&lt;br/&gt;Cycle de vie\"]\n    \n    style A fill:#2E86AB\n\n\n\n\n\n\n\n\n1.5.2 Le Framework de Qualité des Données\nLes 6 Dimensions de la Qualité :\n\n\n\n\n\n\n\n\n\nDimension\nDéfinition\nMesure\nExemple d’Anomalie\n\n\n\n\nExactitude\nLes données reflètent la réalité\n% de conformité aux règles\nAdresse email invalide\n\n\nComplétude\nAbsence de valeurs manquantes\n% de champs remplis\nCode postal manquant\n\n\nCohérence\nUniformité entre sources\n% de concordance\nClient avec 2 dates de naissance différentes\n\n\nActualité\nFraîcheur des données\nDélai de mise à jour\nStock non actualisé depuis 3 jours\n\n\nUnicité\nAbsence de doublons\n% de doublons détectés\n3 comptes pour le même client\n\n\nValidité\nRespect des formats et contraintes\n% de valeurs valides\nDate future dans un champ historique\n\n\n\nProcessus de Data Quality Management :\n\n\n\n\n\nflowchart LR\n    A[Profiling&lt;br/&gt;Analyse initiale] --&gt; B[Validation&lt;br/&gt;Règles de qualité]\n    B --&gt; C[Nettoyage&lt;br/&gt;Correction]\n    C --&gt; D[Enrichissement&lt;br/&gt;Complétion]\n    D --&gt; E[Monitoring&lt;br/&gt;Surveillance]\n    E --&gt; A\n    \n    style A fill:#F18F01\n    style C fill:#2E86AB\n    style E fill:#A23B72\n\n\n\n\n\n\n\n\n1.5.3 Sécurité et Conformité RGPD\nPrincipes de Sécurité BI :\n\nAuthentification : qui accède aux données ?\nAutorisation : qui peut voir quoi ?\nAudit : traçabilité des accès et modifications\nChiffrement : protection des données sensibles\nAnonymisation : masquage des données personnelles\n\nRow-Level Security (RLS) : Exemple Power BI\nScénario : Les directeurs régionaux ne doivent voir que les données de leur région.\n-- Exemple de filtre RLS dans Power BI\n[Région] = USERPRINCIPALNAME()\n\n-- Ou plus sophistiqué avec table de mapping\nVAR UserEmail = USERPRINCIPALNAME()\nVAR UserRegion = LOOKUPVALUE(\n    Users[Région],\n    Users[Email], UserEmail\n)\nRETURN [Région] = UserRegion\nConformité RGPD : Checklist BI\n\nInventaire des données personnelles traitées\nFinalité légitime et transparente\nMinimisation des données collectées\nDurée de conservation définie\nDroit d’accès et de rectification implémenté\nDroit à l’oubli (suppression sur demande)\nChiffrement des données sensibles\nRegistre des traitements tenu à jour\nDPO (Data Protection Officer) désigné\nAnalyse d’impact (PIA) réalisée si nécessaire\n\n\n\n1.5.4 Construire une Culture Data-Driven\nLes 5 Niveaux de Maturité Data\n\n\n\n\n\ngraph LR\n    A[Niveau 1&lt;br/&gt;Ad-hoc] --&gt; B[Niveau 2&lt;br/&gt;Réactif]\n    B --&gt; C[Niveau 3&lt;br/&gt;Défini]\n    C --&gt; D[Niveau 4&lt;br/&gt;Géré]\n    D --&gt; E[Niveau 5&lt;br/&gt;Optimisé]\n    \n    style A fill:#C73E1D\n    style C fill:#F18F01\n    style E fill:#06A77D\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNiveau\nCaractéristiques\nActions Clés\n\n\n\n\n1. Ad-hoc\nDonnées en silos, décisions intuitives\nSensibiliser la direction\n\n\n2. Réactif\nRapports manuels, analyses ponctuelles\nLancer premiers projets BI\n\n\n3. Défini\nProcessus standardisés, BI centralisée\nFormer les équipes, gouvernance\n\n\n4. Géré\nMesure de la performance, dashboards temps réel\nSelf-service BI, culture data\n\n\n5. Optimisé\nIA/ML intégrés, amélioration continue\nInnovation data, data products\n\n\n\nFacteurs Clés de Succès :\n\nSponsorship exécutif : engagement visible de la direction\nQuick wins : projets pilotes rapides pour démontrer la valeur\nFormation continue : montée en compétence des équipes\nDémocratisation : self-service BI pour les métiers\nMesure de l’impact : ROI des initiatives data",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 1"
+    ]
+  },
+  {
+    "objectID": "modules/module1.html#atelier-pratique-cartographie-de-lécosystème-data",
+    "href": "modules/module1.html#atelier-pratique-cartographie-de-lécosystème-data",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "1.6 Atelier Pratique : Cartographie de l’Écosystème Data",
+    "text": "1.6 Atelier Pratique : Cartographie de l’Écosystème Data\n\n1.6.1 Objectifs de l’Atelier\nCet atelier de 90 minutes permet aux participants de :\n\nCartographier l’architecture data d’une entreprise fictive\nIdentifier les sources de données et leurs flux\nDéfinir 5 KPI stratégiques prioritaires\nProposer une roadmap BI simplifiée\n\n\n\n1.6.2 Cas d’Étude : TechnoRetail SA\nContexte Entreprise :\nTechnoRetail est une chaîne de magasins d’électronique avec :\n\n50 points de vente en France\n200M€ de CA annuel\nE-commerce représentant 30% du CA\n500 000 clients actifs\n\nProblématiques Métier :\n\nVisibilité limitée sur la performance magasin vs web\nRuptures de stock fréquentes\nDifficulté à analyser le comportement client omnicanal\nReporting financier manuel et chronophage\n\n\n\n1.6.3 Cartographie des Sources de Données\nExercice 1 : Identifier les sources (15 min)\nLes participants doivent lister et catégoriser les sources de données :\n\n\n\n\n\n\n\n\n\nSystème\nType\nDonnées Clés\nFréquence de Mise à Jour\n\n\n\n\nSAP ECC\nERP\nVentes, achats, stocks, comptabilité\nTemps réel\n\n\nSalesforce\nCRM\nClients, contacts, opportunités\nTemps réel\n\n\nMagento\nE-commerce\nCommandes web, paniers abandonnés\nTemps réel\n\n\nGoogle Analytics\nWeb analytics\nTrafic, conversions, parcours\nBatch quotidien\n\n\nSage Paie\nRH\nEffectifs, salaires, absences\nMensuel\n\n\nFichiers Excel\nFichiers\nBudgets, prévisions\nMensuel\n\n\n\nExercice 2 : Dessiner l’architecture cible (20 min)\n\n\n\n\n\ngraph TB\n    subgraph Sources\n        A1[SAP ECC]\n        A2[Salesforce]\n        A3[Magento]\n        A4[Google Analytics]\n        A5[Fichiers Excel]\n    end\n    \n    subgraph ETL\n        B[Azure Data Factory]\n    end\n    \n    subgraph Storage\n        C1[Data Lake&lt;br/&gt;Azure Data Lake]\n        C2[Data Warehouse&lt;br/&gt;Azure Synapse]\n    end\n    \n    subgraph Semantic\n        D[Modèle Power BI&lt;br/&gt;Étoile Ventes]\n    end\n    \n    subgraph Reporting\n        E1[Dashboards Ventes]\n        E2[Rapports Financiers]\n        E3[Analytics Clients]\n    end\n    \n    A1 --&gt; B\n    A2 --&gt; B\n    A3 --&gt; B\n    A4 --&gt; B\n    A5 --&gt; B\n    \n    B --&gt; C1\n    C1 --&gt; C2\n    C2 --&gt; D\n    D --&gt; E1\n    D --&gt; E2\n    D --&gt; E3\n    \n    style C2 fill:#2E86AB\n    style D fill:#F18F01\n\n\n\n\n\n\n\n\n1.6.4 Définition des KPI Stratégiques\nExercice 3 : Identifier 5 KPI prioritaires (25 min)\nMéthodologie SMART pour définir des KPI efficaces :\n\nSpécifique : clairement défini et compréhensible\nMesurable : quantifiable avec une unité de mesure\nAtteignable : réaliste et actionnable\nRelevant : aligné avec les objectifs stratégiques\nTemporel : avec une fréquence de mise à jour définie\n\nTemplate de Fiche KPI :\n\n\n\n\n\n\n\nÉlément\nDescription\n\n\n\n\nNom du KPI\nNom explicite\n\n\nDéfinition\nFormule de calcul détaillée\n\n\nObjectif métier\nPourquoi mesurer ce KPI ?\n\n\nSource de données\nSystème(s) source(s)\n\n\nFréquence de mise à jour\nTemps réel, quotidien, hebdomadaire, mensuel\n\n\nPropriétaire\nResponsable métier\n\n\nSeuil d’alerte\nValeurs limites (min/max)\n\n\nVisualisation recommandée\nType de graphique\n\n\n\nExemple de 5 KPI Stratégiques pour TechnoRetail :\n\nKPI 1 : Chiffre d’Affaires Consolidé\n-- ===== SALES REVENUE KPIs =====\n\nTotal Sales = \nSUM(FACT_Sales[SalesAmount])\n\nStore Sales = \nCALCULATE(\n    [Total Sales],\n    'DIM_Channel'[ChannelName] = \"Store\"\n)\n\nWeb Sales = \nCALCULATE(\n    [Total Sales],\n    'DIM_Channel'[ChannelName] = \"Web\"\n)\n\nMobile Sales = \nCALCULATE(\n    [Total Sales],\n    'DIM_Channel'[ChannelName] = \"Mobile\"\n)\n\nSales YoY % = \nIF(\n    HASONEVALUE('DIM_Date'[Year]),\n    VAR CurrentSales = [Total Sales]\n    VAR CurrentYear = MAX('DIM_Date'[Year])\n    VAR PreviousYearSales =\n        CALCULATE(\n            [Total Sales],\n            FILTER(\n                ALL('DIM_Date'),\n                'DIM_Date'[Year] = CurrentYear - 1\n            )\n        )\n    RETURN\n        IF(\n            ISBLANK(PreviousYearSales) || PreviousYearSales = 0,\n            0,\n            DIVIDE(CurrentSales - PreviousYearSales, PreviousYearSales)\n        ),\n    BLANK()  -- Retourne vide pour le total\n)\n\n\n\nCritère\nDétail\n\n\n\n\nFormule\nSomme des montants HT de toutes les ventes\n\n\nObjectif\nSuivre la performance commerciale globale\n\n\nSource\nSAP ECC + Magento\n\n\nFréquence\nTemps réel\n\n\nSeuil\nObjectif annuel : 220M€ (+10% vs N-1)\n\n\nVisualisation\nCarte KPI + Line chart avec tendance\n\n\n\n\n\nKPI 2 : Taux de Rupture de Stock\nStock Out Rate = \nVAR OutOfStockDays = \n    CALCULATE(\n        COUNTROWS('FACT_Stock'),\n        'FACT_Stock'[QuantityInStock] = 0\n    )\nVAR TotalDays = \n    COUNTROWS('FACT_Stock')\nRETURN\n    DIVIDE(OutOfStockDays, TotalDays, 0)\n\nOut of Stock Products = \nCALCULATE(\n    DISTINCTCOUNT('FACT_Stock'[ProductKey]),\n    'FACT_Stock'[QuantityInStock] = 0\n)\n\n\n\nCritère\nDétail\n\n\n\n\nFormule\n(Nb jours en rupture / Nb jours total) × 100\n\n\nObjectif\nOptimiser la disponibilité produits\n\n\nSource\nSAP ECC (module MM)\n\n\nFréquence\nQuotidien\n\n\nSeuil\n&lt; 5% (alerte si &gt; 8%)\n\n\nVisualisation\nGauge + Table des produits critiques\n\n\n\n\n\nKPI 3 : Panier Moyen Omnicanal\n-- ===== AVERAGE BASKET KPIs =====\n\nAverage Basket = \nDIVIDE(\n    [Total Sales],\n    DISTINCTCOUNT('FACT_Sales'[TransactionID]),\n    0\n)\n\nStore Basket = \nCALCULATE(\n    [Average Basket],\n    'DIM_Channel'[ChannelName] = \"Store\"\n)\n\nWeb Basket = \nCALCULATE(\n    [Average Basket],\n    'DIM_Channel'[ChannelName] = \"Web\"\n)\n\nMobile Basket = \nCALCULATE(\n    [Average Basket],\n    'DIM_Channel'[ChannelName] = \"Mobile\"\n)\n\nBasket Evolution = \n[Average Basket] - CALCULATE([Average Basket], PREVIOUSMONTH('DIM_Date'[FullDate]))\n\n\n\nCritère\nDétail\n\n\n\n\nFormule\nCA total / Nombre de transactions\n\n\nObjectif\nMesurer l’efficacité commerciale\n\n\nSource\nSAP ECC + Magento\n\n\nFréquence\nHebdomadaire\n\n\nSeuil\nObjectif : 85€ (actuellement 78€)\n\n\nVisualisation\nKPI Card + Comparaison Web vs Magasin\n\n\n\n\n\nKPI 4 : Taux de Conversion Web\nWeb Conversion Rate = \nVAR Sessions = SUM('FACT_Analytics'[Sessions])\nVAR Transactions = DISTINCTCOUNT('FACT_Sales'[TransactionID])\nRETURN\n    DIVIDE(Transactions, Sessions, 0)\n\nAbandoned Carts = \nCALCULATE(\n    COUNTROWS('FACT_Analytics'),\n    'FACT_Analytics'[Event] = \"Cart Abandonment\"\n)\n\nCart Abandonment Rate = \nDIVIDE([Abandoned Carts], [Abandoned Carts] + [Total Transactions], 0)\n\n\n\nCritère\nDétail\n\n\n\n\nFormule\n(Transactions web / Sessions) × 100\n\n\nObjectif\nOptimiser le tunnel de conversion e-commerce\n\n\nSource\nGoogle Analytics + Magento\n\n\nFréquence\nTemps réel\n\n\nSeuil\nObjectif : 3.5% (actuellement 2.8%)\n\n\nVisualisation\nFunnel chart + Analyse des abandons\n\n\n\n\n\nKPI 5 : Net Promoter Score (NPS)\nNPS = \nVAR Promoters = \n    CALCULATE(\n        COUNTROWS('FACT_Satisfaction'),\n        'FACT_Satisfaction'[Rating] &gt;= 9\n    )\nVAR Detractors = \n    CALCULATE(\n        COUNTROWS('FACT_Satisfaction'),\n        'FACT_Satisfaction'[Rating] &lt;= 6\n    )\nVAR Total = COUNTROWS('FACT_Satisfaction')\nRETURN\n    DIVIDE(Promoters - Detractors, Total, 0) * 100\n\nNPS by Channel = \nCALCULATE(\n    [NPS],\n    ALLEXCEPT('FACT_Satisfaction', 'FACT_Satisfaction'[Channel])\n)\n\n\n\nCritère\nDétail\n\n\n\n\nFormule\n% Promoteurs (9-10) - % Détracteurs (0-6)\n\n\nObjectif\nMesurer la satisfaction et fidélité client\n\n\nSource\nSalesforce (enquêtes post-achat)\n\n\nFréquence\nMensuel\n\n\nSeuil\nObjectif : +40 (actuellement +28)\n\n\nVisualisation\nGauge + Distribution des notes\n\n\n\n\n\n\n1.6.5 Dashboard de Synthèse : Mockup\nExercice 4 : Esquisser le dashboard exécutif (30 min)\nLes participants travaillent en groupe pour concevoir un dashboard de synthèse intégrant les 5 KPI.\nPrincipes de Design :\n\n\n\n\n\n\n\nPrincipe\nApplication\n\n\n\n\nHiérarchie visuelle\nLes KPI critiques en haut, détails en bas\n\n\nRègle des 5 secondes\nLe message clé doit être compris en 5 secondes\n\n\nConsistance\nMême palette de couleurs, même format de chiffres\n\n\nInteractivité\nFiltres dynamiques (période, région, canal)\n\n\nContexte\nToujours comparer (vs objectif, vs N-1, vs benchmark)\n\n\n\nStructure Recommandée :\n\n\n\n\n\ngraph TB\n    A[En-tête : Titre + Filtres] --&gt; B[Zone KPI : 5 Cartes Principales]\n    B --&gt; C[Zone Tendances : Graphiques Temporels]\n    C --&gt; D[Zone Analyse : Détails par Dimension]\n    \n    style A fill:#2E86AB\n    style B fill:#F18F01\n    style C fill:#A23B72\n    style D fill:#06A77D",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 1"
+    ]
+  },
+  {
+    "objectID": "modules/module1.html#synthèse-du-module-1-et-points-clés",
+    "href": "modules/module1.html#synthèse-du-module-1-et-points-clés",
+    "title": "Module 1 : Fondamentaux Business Intelligence",
+    "section": "1.7 Synthèse du Module 1 et Points Clés",
+    "text": "1.7 Synthèse du Module 1 et Points Clés\n\n1.7.1 Récapitulatif des Concepts\nÀ l’issue de ce module, les participants maîtrisent :\n✅ Les fondamentaux de la BI : définitions, enjeux, niveaux d’analytics\n✅ L’architecture décisionnelle : de la source au dashboard\n✅ Le cycle de vie projet BI : phases, livrables, parties prenantes\n✅ Le panorama des outils : Power BI, Tableau, Qlik, Looker Studio\n✅ La gouvernance et la qualité des données : RGPD, sécurité, culture data-driven\n✅ La méthodologie de définition des KPI : approche SMART, dashboarding\n\n\n1.7.2 Checklist de Fin de Module\nAuto-évaluation des Acquis :\n\nJe peux expliquer la différence entre OLTP et OLAP\nJe comprends le rôle de chaque composant de l’architecture BI\nJe sais définir un KPI selon la méthodologie SMART\nJe peux comparer les avantages de Power BI vs Tableau\nJe connais les 6 dimensions de la qualité des données\nJe peux identifier les phases d’un projet BI\nJe comprends les enjeux de la gouvernance et du RGPD\n\n\n\n1.7.3 Ressources Complémentaires\nLectures Recommandées :\n\nLivres :\n\n“The Data Warehouse Toolkit” - Ralph Kimball\n“Building a Data-Driven Organization” - Carl Anderson\n“Storytelling with Data” - Cole Nussbaumer Knaflic\n\n\nSites Web & Communautés :\n\nMicrosoft Learn - Power BI\nTableau Community Forums\nDAMA International - Data Management Body of Knowledge\n\nCertifications :\n\nMicrosoft Certified: Power BI Data Analyst Associate (PL-300)\nTableau Desktop Specialist\nAWS Certified Data Analytics - Specialty",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 1"
+    ]
+  },
+  {
+    "objectID": "LAB_MODULE3/Pipeline.html",
+    "href": "LAB_MODULE3/Pipeline.html",
+    "title": "DOCUMENTATION DE PIPELINE ETL",
+    "section": "",
+    "text": "Nom du Pipeline: Version: 1.0 Responsable Technique: Responsable Métier: Fréquence d’exécution: Date de création: Dernière modification:\n\n\n\n[Décrire l’objectif métier du pipeline]\n\n\n\n\n\n\nType:\nEmplacement:\nFréquence de mise à jour:\nStructure:\nChamps clés:\n\n\n\n\n\nType:\nEmplacement:\nFréquence de mise à jour:\nStructure:\nChamps clés:\n\n\n\n\n\n\n\n\nConnexion établie\nAuthentification validée\nSchéma détecté\n\n\n\n\n\nGestion des valeurs nulles\nCorrection des formats\nStandardisation des textes\nValidation des types\n\n\n\n\n\nCalculs de colonnes\nFusions de tables\nAgrégations\nJointures\n\n\n\n\n\nVérification complétude\nVérification cohérence\nDétection anomalies\nLogs d’erreurs\n\n\n\n\n\n\n\n\nRègle\nDescription\nAction en cas d’erreur\n\n\n\n\nR1\nPrix &gt; 0\nRejet de la ligne\n\n\nR2\nDate dans plage valide\nValeur par défaut\n\n\nR3\nEmail format valide\nCorrection si possible\n\n\n\n\n\n\nDate d’exécution: Statut:\n\n\n\nMétrique\nValeur\nSeuil\nStatut\n\n\n\n\nTaux de complétude\n%\n&gt; 95%\n✅/❌\n\n\nTaux de validité\n%\n&gt; 98%\n✅/❌\n\n\nTaux de doublons\n%\n&lt; 1%\n✅/❌\n\n\nVolume traité\nlignes\n-\n-\n\n\nTemps d’exécution\nminutes\n&lt; 30 min\n✅/❌\n\n\n\n\n\n\nFlux en amont: - [ ] Flux en aval: - [ ]\n\n\n\n\n\n\nDate\nVersion\nModifications\nAuteur\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSupport technique:\nSupport métier:\nUrgences:"
+  },
+  {
+    "objectID": "LAB_MODULE3/Pipeline.html#informations-générales",
+    "href": "LAB_MODULE3/Pipeline.html#informations-générales",
+    "title": "DOCUMENTATION DE PIPELINE ETL",
+    "section": "",
+    "text": "Nom du Pipeline: Version: 1.0 Responsable Technique: Responsable Métier: Fréquence d’exécution: Date de création: Dernière modification:"
+  },
+  {
+    "objectID": "LAB_MODULE3/Pipeline.html#objectif",
+    "href": "LAB_MODULE3/Pipeline.html#objectif",
+    "title": "DOCUMENTATION DE PIPELINE ETL",
+    "section": "",
+    "text": "[Décrire l’objectif métier du pipeline]"
+  },
+  {
+    "objectID": "LAB_MODULE3/Pipeline.html#sources-de-données",
+    "href": "LAB_MODULE3/Pipeline.html#sources-de-données",
+    "title": "DOCUMENTATION DE PIPELINE ETL",
+    "section": "",
+    "text": "Type:\nEmplacement:\nFréquence de mise à jour:\nStructure:\nChamps clés:\n\n\n\n\n\nType:\nEmplacement:\nFréquence de mise à jour:\nStructure:\nChamps clés:"
+  },
+  {
+    "objectID": "LAB_MODULE3/Pipeline.html#transformations-appliquées",
+    "href": "LAB_MODULE3/Pipeline.html#transformations-appliquées",
+    "title": "DOCUMENTATION DE PIPELINE ETL",
+    "section": "",
+    "text": "Connexion établie\nAuthentification validée\nSchéma détecté\n\n\n\n\n\nGestion des valeurs nulles\nCorrection des formats\nStandardisation des textes\nValidation des types\n\n\n\n\n\nCalculs de colonnes\nFusions de tables\nAgrégations\nJointures\n\n\n\n\n\nVérification complétude\nVérification cohérence\nDétection anomalies\nLogs d’erreurs"
+  },
+  {
+    "objectID": "LAB_MODULE3/Pipeline.html#règles-métier",
+    "href": "LAB_MODULE3/Pipeline.html#règles-métier",
+    "title": "DOCUMENTATION DE PIPELINE ETL",
+    "section": "",
+    "text": "Règle\nDescription\nAction en cas d’erreur\n\n\n\n\nR1\nPrix &gt; 0\nRejet de la ligne\n\n\nR2\nDate dans plage valide\nValeur par défaut\n\n\nR3\nEmail format valide\nCorrection si possible"
+  },
+  {
+    "objectID": "LAB_MODULE3/Pipeline.html#métriques-de-qualité",
+    "href": "LAB_MODULE3/Pipeline.html#métriques-de-qualité",
+    "title": "DOCUMENTATION DE PIPELINE ETL",
+    "section": "",
+    "text": "Date d’exécution: Statut:\n\n\n\nMétrique\nValeur\nSeuil\nStatut\n\n\n\n\nTaux de complétude\n%\n&gt; 95%\n✅/❌\n\n\nTaux de validité\n%\n&gt; 98%\n✅/❌\n\n\nTaux de doublons\n%\n&lt; 1%\n✅/❌\n\n\nVolume traité\nlignes\n-\n-\n\n\nTemps d’exécution\nminutes\n&lt; 30 min\n✅/❌"
+  },
+  {
+    "objectID": "LAB_MODULE3/Pipeline.html#dépendances",
+    "href": "LAB_MODULE3/Pipeline.html#dépendances",
+    "title": "DOCUMENTATION DE PIPELINE ETL",
+    "section": "",
+    "text": "Flux en amont: - [ ] Flux en aval: - [ ]"
+  },
+  {
+    "objectID": "LAB_MODULE3/Pipeline.html#journal-des-modifications",
+    "href": "LAB_MODULE3/Pipeline.html#journal-des-modifications",
+    "title": "DOCUMENTATION DE PIPELINE ETL",
+    "section": "",
+    "text": "Date\nVersion\nModifications\nAuteur"
+  },
+  {
+    "objectID": "LAB_MODULE3/Pipeline.html#contacts",
+    "href": "LAB_MODULE3/Pipeline.html#contacts",
+    "title": "DOCUMENTATION DE PIPELINE ETL",
+    "section": "",
+    "text": "Support technique:\nSupport métier:\nUrgences:"
+  },
+  {
+    "objectID": "LAB_MODULE3/file.html",
+    "href": "LAB_MODULE3/file.html",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "",
+    "text": "Date\nProduitID\nClientID\nQuantite\nPrixUnitaire\nMagasin\n\n\n\n\n2024-01-15\nP001\nC1001\n2\n29.99\nM01\n\n\n2024-01-15\nP002\nC1001\n1\n49.99\nM01\n\n\n2024-01-16\nP003\nC1002\n3\n15.50\nM02\n\n\n2024-01-16\nP001\nC1003\n1\n29.99\nM03\n\n\n2024-01-17\nP002\nC1004\n2\n49.99\nM01\n\n\n2024-01-18\nP004\nC1005\n4\n9.99\nM02\n\n\n2024-01-18\nP003\nC1006\n2\n15.50\nM03"
+  },
+  {
+    "objectID": "LAB_MODULE3/file2.html",
+    "href": "LAB_MODULE3/file2.html",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "",
+    "text": "ProduitID\nNomProduit\nCategorie\nSousCategorie\nMarque\nPrixUnitaire\nStock\nFournisseur\n\n\n\n\nP001\nSmartphone X200\nÉlectronique\nTéléphones\nTechCorp\n299.99\n45\nTechCorp\n\n\nP002\nTablette Pro 10\nÉlectronique\nTablettes\nTechCorp\n499.99\n22\nTechCorp\n\n\nP003\nCasque Audio BT\nÉlectronique\nAccessoires\nSoundTech\n79.99\n120\nSoundTech\n\n\nP004\nSouris Gaming RGB\nInformatique\nPériphériques\nGameGear\n49.99\n85\nGameGear\n\n\nP005\nClavier Mécanique\nInformatique\nPériphériques\nGameGear\n89.99\n60\nGameGear\n\n\nP006\nÉcran 24” 4K\nInformatique\nMoniteurs\nDisplayPro\n249.99\n30\nDisplayPro\n\n\nP007\nDisque SSD 1TB\nInformatique\nStockage\nDataFast\n89.99\n150\nDataFast"
+  },
+  {
+    "objectID": "LAB_MODULE4/file3.html",
+    "href": "LAB_MODULE4/file3.html",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "",
+    "text": "ProduitID\nNomProduit\nDepartement\nCategorie\nSousCategorie\nMarque\nPrixUnitaire\nCoutUnitaire\nStatut\n\n\n\n\nP001\nSmartphone X200\nÉlectronique\nTéléphones\nSmartphones\nTechCorp\n299.99\n180.00\nActif\n\n\nP002\nTablette Pro 10\nÉlectronique\nTablettes\nTablettes 10”\nTechCorp\n499.99\n320.00\nActif\n\n\nP003\nCasque Audio BT\nÉlectronique\nAccessoires\nCasques Audio\nSoundTech\n79.99\n45.00\nActif\n\n\nP004\nSouris Gaming RGB\nInformatique\nPériphériques\nSouris\nGameGear\n49.99\n25.00\nActif\n\n\nP005\nClavier Mécanique\nInformatique\nPériphériques\nClaviers\nGameGear\n89.99\n50.00\nActif\n\n\nP006\nÉcran 24” 4K\nInformatique\nMoniteurs\n24 pouces\nDisplayPro\n249.99\n150.00\nActif\n\n\nP007\nMachine à café\nÉlectroménager\nCuisine\nMachine à café\nHomeTech\n199.99\n120.00\nActif\n\n\nP008\nAspirateur Robot\nÉlectroménager\nNettoyage\nAspirateurs\nCleanBot\n299.99\n180.00\nActif\n\n\nP009\nTV LED 55” 4K\nÉlectronique\nTélévisions\n55 pouces\nVisionPlus\n599.99\n400.00\nActif\n\n\nP010\nEnceinte Bluetooth\nÉlectronique\nAudio\nEnceintes\nSoundTech\n129.99\n75.00\nActif"
+  },
+  {
+    "objectID": "modules/module2.html",
+    "href": "modules/module2.html",
+    "title": "Module 2 : Modélisation des Données",
+    "section": "",
+    "text": "Durée : 5 heures | Objectif : Concevoir des modèles décisionnels performants et maîtriser le SQL analytique",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 2"
+    ]
+  },
+  {
+    "objectID": "modules/module2.html#introduction-à-la-modélisation-dimensionnelle",
+    "href": "modules/module2.html#introduction-à-la-modélisation-dimensionnelle",
+    "title": "Module 2 : Modélisation des Données",
+    "section": "2.1 Introduction à la Modélisation Dimensionnelle",
+    "text": "2.1 Introduction à la Modélisation Dimensionnelle\n\n2.1.1 Pourquoi Modéliser les Données ?\nLa modélisation dimensionnelle est une technique de conception de bases de données optimisée pour l’interrogation et l’analyse de données. Contrairement aux modèles transactionnels (OLTP), les modèles décisionnels (OLAP) privilégient :\nObjectifs de la Modélisation Dimensionnelle :\n\n\n\n\n\n\n\n\nObjectif\nBénéfice\nImpact Métier\n\n\n\n\nSimplicité\nSchéma intuitif, requêtes faciles\nAdoption par les utilisateurs métier\n\n\nPerformance\nLectures rapides, agrégations optimisées\nDashboards temps réel\n\n\nFlexibilité\nAjout facile de dimensions\nÉvolutivité du système\n\n\nHistorisation\nConservation de l’historique complet\nAnalyses de tendances\n\n\n\n\n\n2.1.2 Concepts Fondamentaux\n\nFaits vs Dimensions\nLes FAITS (Facts) représentent les événements mesurables de l’entreprise :\n\n\n\n\n\n\n\n\nCaractéristique\nDescription\nExemple\n\n\n\n\nNature\nÉvénements quantifiables\nVente, Achat, Paiement, Livraison\n\n\nContenu\nMétriques numériques\nMontant, Quantité, Coût, Durée\n\n\nGranularité\nNiveau de détail\nPar transaction, par ligne de commande\n\n\nVolumétrie\nForte (millions de lignes)\nTable de faits = 80-90% du volume\n\n\n\nLes DIMENSIONS (Dimensions) fournissent le contexte pour analyser les faits :\n\n\n\n\n\n\n\n\nCaractéristique\nDescription\nExemple\n\n\n\n\nNature\nQui, Quoi, Où, Quand, Comment\nClient, Produit, Magasin, Temps\n\n\nContenu\nAttributs descriptifs\nNom, Catégorie, Adresse, Hiérarchies\n\n\nGranularité\nNiveau le plus fin\nClient individuel, Produit SKU\n\n\nVolumétrie\nFaible (milliers de lignes)\nTables légères\n\n\n\nVisualisation Conceptuelle :\n\n\n\n\n\ngraph LR\n    D1[Dimension&lt;br/&gt;Temps] --&gt; F[Table de Faits&lt;br/&gt;VENTES]\n    D2[Dimension&lt;br/&gt;Produit] --&gt; F\n    D3[Dimension&lt;br/&gt;Client] --&gt; F\n    D4[Dimension&lt;br/&gt;Magasin] --&gt; F\n    \n    F --&gt; M1[Mesure:&lt;br/&gt;Montant_Vente]\n    F --&gt; M2[Mesure:&lt;br/&gt;Quantité]\n    F --&gt; M3[Mesure:&lt;br/&gt;Coût]\n    \n    style F fill:#2E86AB\n    style D1 fill:#F18F01\n    style D2 fill:#F18F01\n    style D3 fill:#F18F01\n    style D4 fill:#F18F01\n\n\n\n\n\n\n\n\nClés et Relations\nClés Primaires et Étrangères :\n\n\n\n\n\nerDiagram\n    DIM_TEMPS {\n        int Date_Key PK\n        date Date_Complete\n        int Année\n        int Mois\n        string Nom_Mois\n    }\n    \n    DIM_PRODUIT {\n        int Produit_Key PK\n        string SKU\n        string Nom_Produit\n        string Catégorie\n    }\n    \n    FACT_VENTES {\n        int Vente_Key PK\n        int Date_Key FK\n        int Produit_Key FK\n        int Client_Key FK\n        decimal Montant_HT\n        int Quantité\n    }\n    \n    DIM_CLIENT {\n        int Client_Key PK\n        string Code_Client\n        string Nom\n        string Ville\n    }\n    \n    DIM_TEMPS ||--o{ FACT_VENTES : \"\"\n    DIM_PRODUIT ||--o{ FACT_VENTES : \"\"\n    DIM_CLIENT ||--o{ FACT_VENTES : \"\"\n\n\n\n\n\n\nTypes de Clés :\n\n\n\n\n\n\n\n\nType de Clé\nRôle\nExemple\n\n\n\n\nClé Naturelle\nIdentifiant métier d’origine\nSKU produit, Code client\n\n\nClé de Substitution (Surrogate Key)\nClé technique générée (entier auto-incrémenté)\nProduit_Key (1, 2, 3…)\n\n\nClé Étrangère\nRéférence vers une dimension\nDate_Key dans la table de faits\n\n\nClé Composite\nCombinaison de plusieurs colonnes\n(Date, Magasin, Produit)\n\n\n\nPourquoi utiliser des clés de substitution ?\n✅ Performance : entiers plus rapides que des strings\n✅ Stabilité : indépendant des changements métier\n✅ Historisation : gérer les évolutions (SCD Type 2)\n✅ Simplicité : pas de clés composites complexes",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 2"
+    ]
+  },
+  {
+    "objectID": "modules/module2.html#les-modèles-dimensionnels",
+    "href": "modules/module2.html#les-modèles-dimensionnels",
+    "title": "Module 2 : Modélisation des Données",
+    "section": "2.2 Les Modèles Dimensionnels",
+    "text": "2.2 Les Modèles Dimensionnels\n\n2.2.1 Le Modèle en Étoile (Star Schema)\nLe modèle en étoile est le plus répandu en Business Intelligence. Il tire son nom de sa forme : une table de faits centrale entourée de tables de dimensions.\nCaractéristiques :\n\n\n\n\n\n\n\nAspect\nDescription\n\n\n\n\nStructure\n1 table de faits au centre + N dimensions dénormalisées\n\n\nNormalisation\nDimensions dénormalisées (redondance acceptée)\n\n\nRequêtes\nSimples (1-2 jointures maximum)\n\n\nPerformance\nExcellente (peu de jointures)\n\n\nMaintenance\nFacile à comprendre et maintenir\n\n\n\nExemple Concret : Modèle Ventes\n\n\n\n\n\nerDiagram\n    FACT_VENTES {\n        bigint Vente_Key PK\n        int Date_Key FK\n        int Produit_Key FK\n        int Client_Key FK\n        int Magasin_Key FK\n        int Vendeur_Key FK\n        decimal Montant_HT\n        decimal Montant_TTC\n        decimal Coût\n        int Quantité\n        decimal Remise_Pourcent\n    }\n    \n    DIM_DATE {\n        int Date_Key PK\n        date Date_Complete\n        int Année\n        int Trimestre\n        int Mois\n        int Semaine\n        string Nom_Mois\n        string Jour_Semaine\n        boolean Est_Weekend\n        boolean Est_Férié\n    }\n    \n    DIM_PRODUIT {\n        int Produit_Key PK\n        string SKU\n        string Nom_Produit\n        string Catégorie\n        string Sous_Catégorie\n        string Marque\n        decimal Prix_Catalogue\n        string Fournisseur\n    }\n    \n    DIM_CLIENT {\n        int Client_Key PK\n        string Code_Client\n        string Nom\n        string Prénom\n        string Email\n        string Téléphone\n        string Adresse\n        string Code_Postal\n        string Ville\n        string Pays\n        string Segment\n        date Date_Première_Commande\n    }\n    \n    DIM_MAGASIN {\n        int Magasin_Key PK\n        string Code_Magasin\n        string Nom_Magasin\n        string Adresse\n        string Ville\n        string Région\n        int Surface_M2\n        date Date_Ouverture\n        string Type_Magasin\n    }\n    \n    DIM_VENDEUR {\n        int Vendeur_Key PK\n        string Matricule\n        string Nom\n        string Prénom\n        int Magasin_Key FK\n        date Date_Embauche\n        string Statut\n    }\n    \n    DIM_DATE ||--o{ FACT_VENTES : \"se produit le\"\n    DIM_PRODUIT ||--o{ FACT_VENTES : \"concerne\"\n    DIM_CLIENT ||--o{ FACT_VENTES : \"est acheté par\"\n    DIM_MAGASIN ||--o{ FACT_VENTES : \"a lieu dans\"\n    DIM_VENDEUR ||--o{ FACT_VENTES : \"est réalisée par\"\n\n\n\n\n\n\nScript SQL de Création :\n-- Table de Faits VENTES\nCREATE TABLE FACT_Ventes (\n    Vente_Key BIGINT PRIMARY KEY IDENTITY(1,1),\n    Date_Key INT NOT NULL,\n    Produit_Key INT NOT NULL,\n    Client_Key INT NOT NULL,\n    Magasin_Key INT NOT NULL,\n    Vendeur_Key INT NOT NULL,\n    Montant_HT DECIMAL(10,2) NOT NULL,\n    Montant_TTC DECIMAL(10,2) NOT NULL,\n    Coût DECIMAL(10,2),\n    Quantité INT NOT NULL,\n    Remise_Pourcent DECIMAL(5,2) DEFAULT 0,\n    \n    -- Clés étrangères\n    CONSTRAINT FK_Ventes_Date FOREIGN KEY (Date_Key) \n        REFERENCES DIM_Date(Date_Key),\n    CONSTRAINT FK_Ventes_Produit FOREIGN KEY (Produit_Key) \n        REFERENCES DIM_Produit(Produit_Key),\n    CONSTRAINT FK_Ventes_Client FOREIGN KEY (Client_Key) \n        REFERENCES DIM_Client(Client_Key),\n    CONSTRAINT FK_Ventes_Magasin FOREIGN KEY (Magasin_Key) \n        REFERENCES DIM_Magasin(Magasin_Key),\n    CONSTRAINT FK_Ventes_Vendeur FOREIGN KEY (Vendeur_Key) \n        REFERENCES DIM_Vendeur(Vendeur_Key)\n);\n\n-- Index pour améliorer les performances\nCREATE INDEX IX_Ventes_Date ON FACT_Ventes(Date_Key);\nCREATE INDEX IX_Ventes_Produit ON FACT_Ventes(Produit_Key);\nCREATE INDEX IX_Ventes_Client ON FACT_Ventes(Client_Key);\nCREATE INDEX IX_Ventes_Magasin ON FACT_Ventes(Magasin_Key);\n\n-- Table Dimension DATE\nCREATE TABLE DIM_Date (\n    Date_Key INT PRIMARY KEY,\n    Date_Complete DATE NOT NULL UNIQUE,\n    Année INT NOT NULL,\n    Trimestre INT NOT NULL,\n    Mois INT NOT NULL,\n    Semaine INT NOT NULL,\n    Nom_Mois VARCHAR(20) NOT NULL,\n    Jour_Semaine VARCHAR(20) NOT NULL,\n    Numéro_Jour_Semaine INT NOT NULL,\n    Est_Weekend BIT NOT NULL DEFAULT 0,\n    Est_Férié BIT NOT NULL DEFAULT 0,\n    Nom_Férié VARCHAR(50) NULL\n);\n\n-- Exemple de remplissage dimension Date\nINSERT INTO DIM_Date (Date_Key, Date_Complete, Année, Trimestre, Mois, Semaine, \n                      Nom_Mois, Jour_Semaine, Numéro_Jour_Semaine, Est_Weekend)\nSELECT \n    CAST(CONVERT(VARCHAR, d, 112) AS INT) AS Date_Key,\n    d AS Date_Complete,\n    YEAR(d) AS Année,\n    DATEPART(QUARTER, d) AS Trimestre,\n    MONTH(d) AS Mois,\n    DATEPART(WEEK, d) AS Semaine,\n    DATENAME(MONTH, d) AS Nom_Mois,\n    DATENAME(WEEKDAY, d) AS Jour_Semaine,\n    DATEPART(WEEKDAY, d) AS Numéro_Jour_Semaine,\n    CASE WHEN DATEPART(WEEKDAY, d) IN (1,7) THEN 1 ELSE 0 END AS Est_Weekend\nFROM (\n    SELECT DATEADD(DAY, number, '2020-01-01') AS d\n    FROM master..spt_values\n    WHERE type = 'P' AND number &lt; DATEDIFF(DAY, '2020-01-01', '2030-12-31')\n) AS Dates;\n\n\n2.2.2 Le Modèle en Flocon (Snowflake Schema)\nLe modèle en flocon est une extension du modèle en étoile où les dimensions sont normalisées (décomposées en sous-dimensions).\nComparaison Étoile vs Flocon :\n\n\n\n\n\n\n\n\nCritère\nÉtoile (Star)\nFlocon (Snowflake)\n\n\n\n\nNormalisation\nDénormalisé\nNormalisé (3NF)\n\n\nRedondance\nOui (attributs répétés)\nNon (tables séparées)\n\n\nNombre de tables\nMoins de tables\nPlus de tables\n\n\nRequêtes\nSimples (peu de JOIN)\nComplexes (nombreux JOIN)\n\n\nPerformance lecture\nTrès rapide\nPlus lente\n\n\nStockage\nPlus d’espace\nMoins d’espace\n\n\nMaintenance\nFacile\nPlus complexe\n\n\nUsage recommandé\nBI classique, Power BI\nTrès gros volumes, économie stockage\n\n\n\nExemple : Dimension Produit Normalisée\nModèle Étoile (Dénormalisé) :\nDIM_PRODUIT\n├── Produit_Key\n├── SKU\n├── Nom_Produit\n├── Catégorie          ← Redondance\n├── Sous_Catégorie     ← Redondance\n├── Marque             ← Redondance\n└── Fournisseur        ← Redondance\nModèle Flocon (Normalisé) :\n\n\n\n\n\nerDiagram\n    DIM_PRODUIT {\n        int Produit_Key PK\n        string SKU\n        string Nom_Produit\n        int Catégorie_Key FK\n        int Marque_Key FK\n        int Fournisseur_Key FK\n    }\n    \n    DIM_CATEGORIE {\n        int Catégorie_Key PK\n        string Nom_Catégorie\n        string Nom_Sous_Catégorie\n        int Département_Key FK\n    }\n    \n    DIM_DEPARTEMENT {\n        int Département_Key PK\n        string Nom_Département\n        string Code_Département\n    }\n    \n    DIM_MARQUE {\n        int Marque_Key PK\n        string Nom_Marque\n        string Pays_Origine\n    }\n    \n    DIM_FOURNISSEUR {\n        int Fournisseur_Key PK\n        string Nom_Fournisseur\n        string Pays\n        string Contact\n    }\n    \n    DIM_PRODUIT }o--|| DIM_CATEGORIE : \"appartient à\"\n    DIM_CATEGORIE }o--|| DIM_DEPARTEMENT : \"fait partie de\"\n    DIM_PRODUIT }o--|| DIM_MARQUE : \"possède\"\n    DIM_PRODUIT }o--|| DIM_FOURNISSEUR : \"fourni par\"\n\n\n\n\n\n\nQuand utiliser le Flocon ?\n✅ Très gros volumes de dimensions (&gt; 10 millions de lignes)\n✅ Contraintes de stockage importantes\n✅ Nécessité de maintenir des référentiels séparés\n✅ Complexité analytique justifiée\n❌ Pour la plupart des projets BI : privilégier l’Étoile pour sa simplicité\n\n\n2.2.3 Le Modèle en Constellation (Galaxy Schema)\nLe modèle en constellation combine plusieurs modèles en étoile partageant des dimensions communes.\nCas d’Usage : - Plusieurs processus métier analysés simultanément - Dimensions partagées (Temps, Client, Produit) - Analyses cross-processus\nExemple : Ventes + Achats + Stocks\n\n\n\n\n\nerDiagram\n    FACT_VENTES {\n        bigint Vente_Key PK\n        int Date_Key FK\n        int Produit_Key FK\n        int Client_Key FK\n        decimal Montant_HT\n        int Quantité_Vendue\n    }\n    \n    FACT_ACHATS {\n        bigint Achat_Key PK\n        int Date_Key FK\n        int Produit_Key FK\n        int Fournisseur_Key FK\n        decimal Coût_Unitaire\n        int Quantité_Achetée\n    }\n    \n    FACT_STOCKS {\n        bigint Stock_Key PK\n        int Date_Key FK\n        int Produit_Key FK\n        int Magasin_Key FK\n        int Quantité_Stock\n        decimal Valeur_Stock\n    }\n    \n    DIM_DATE {\n        int Date_Key PK\n        date Date_Complete\n    }\n    \n    DIM_PRODUIT {\n        int Produit_Key PK\n        string Nom_Produit\n    }\n    \n    DIM_CLIENT {\n        int Client_Key PK\n        string Nom_Client\n    }\n    \n    DIM_FOURNISSEUR {\n        int Fournisseur_Key PK\n        string Nom_Fournisseur\n    }\n    \n    DIM_MAGASIN {\n        int Magasin_Key PK\n        string Nom_Magasin\n    }\n    \n    DIM_DATE ||--o{ FACT_VENTES : \"\"\n    DIM_DATE ||--o{ FACT_ACHATS : \"\"\n    DIM_DATE ||--o{ FACT_STOCKS : \"\"\n    \n    DIM_PRODUIT ||--o{ FACT_VENTES : \"\"\n    DIM_PRODUIT ||--o{ FACT_ACHATS : \"\"\n    DIM_PRODUIT ||--o{ FACT_STOCKS : \"\"\n    \n    DIM_CLIENT ||--o{ FACT_VENTES : \"\"\n    DIM_FOURNISSEUR ||--o{ FACT_ACHATS : \"\"\n    DIM_MAGASIN ||--o{ FACT_STOCKS : \"\"\n\n\n\n\n\n\nAvantages : - Réutilisation des dimensions (cohérence) - Analyses croisées (ventes vs achats vs stocks) - Maintenance simplifiée des référentiels\nRequête d’Analyse Cross-Processus :\n-- Analyse de la Marge et de la Rotation des Stocks\nSELECT \n    p.Nom_Produit,\n    p.Catégorie,\n    SUM(v.Montant_HT) AS CA_Total,\n    SUM(a.Quantité_Achetée * a.Coût_Unitaire) AS Coût_Total,\n    SUM(v.Montant_HT) - SUM(a.Quantité_Achetée * a.Coût_Unitaire) AS Marge_Brute,\n    AVG(s.Quantité_Stock) AS Stock_Moyen,\n    CASE \n        WHEN AVG(s.Quantité_Stock) &gt; 0 \n        THEN SUM(v.Quantité_Vendue) / AVG(s.Quantité_Stock) \n        ELSE 0 \n    END AS Taux_Rotation\nFROM DIM_Produit p\nJOIN FACT_Ventes v ON p.Produit_Key = v.Produit_Key\nJOIN FACT_Achats a ON p.Produit_Key = a.Produit_Key\nJOIN FACT_Stocks s ON p.Produit_Key = s.Produit_Key\nJOIN DIM_Date d ON v.Date_Key = d.Date_Key\nWHERE d.Année = 2024\nGROUP BY p.Nom_Produit, p.Catégorie\nORDER BY Marge_Brute DESC;",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 2"
+    ]
+  },
+  {
+    "objectID": "modules/module2.html#techniques-dhistorisation-scd---slowly-changing-dimensions",
+    "href": "modules/module2.html#techniques-dhistorisation-scd---slowly-changing-dimensions",
+    "title": "Module 2 : Modélisation des Données",
+    "section": "2.3 Techniques d’Historisation (SCD - Slowly Changing Dimensions)",
+    "text": "2.3 Techniques d’Historisation (SCD - Slowly Changing Dimensions)\n\n2.3.1 Le Défi de l’Historisation\nDans les systèmes décisionnels, il est crucial de conserver l’historique des changements pour analyser les données dans leur contexte temporel.\nExemple : Un client change de région → Comment analyser les ventes historiques par région ?\n\n\n2.3.2 Les 6 Types de SCD\n\n\n\n\n\ngraph TB\n    A[SCD Types] --&gt; B[Type 0 : Fixe]\n    A --&gt; C[Type 1 : Écrasement]\n    A --&gt; D[Type 2 : Historisation]\n    A --&gt; E[Type 3 : Colonnes supplémentaires]\n    A --&gt; F[Type 4 : Table d'historique]\n    A --&gt; G[Type 6 : Hybride 1+2+3]\n    \n    style D fill:#2E86AB\n    style G fill:#F18F01\n\n\n\n\n\n\n\nType 0 : Attribut Fixe\n\nPas de mise à jour, valeur conservée telle qu’à la création\nUsage : Date de naissance, code postal d’origine\n\n\n\nType 1 : Écrasement (Overwrite)\n\nLa nouvelle valeur remplace l’ancienne sans trace\nUsage : Correction d’erreurs, données non historisées\n\n\n\nType 2 : Historisation Complète\n\nCréation d’une nouvelle ligne avec nouvelles dates de validité\nUsage : Changements critiques (région client, catégorie produit)\n\n\n\nType 3 : Colonnes Supplémentaires\n\nConservation de l’ancienne valeur dans une colonne séparée\nUsage : Historisation limitée (seulement la dernière valeur)\n\n\n\nType 4 : Table d’Historique Séparée\n\nTable courante + table d’historique des changements\nUsage : Dimensions très volumineuses\n\n\n\nType 6 : Hybride (1+2+3)\n\nCombinaison des approches pour différents attributs\n\n\n\n\n2.3.3 Implémentation SCD Type 2 (Recommandé)\nStructure de Table SCD Type 2 :\nCREATE TABLE DIM_Client (\n    Client_Key INT PRIMARY KEY IDENTITY(1,1),\n    Code_Client VARCHAR(20) NOT NULL,          -- Clé naturelle\n    Nom VARCHAR(100) NOT NULL,\n    Prénom VARCHAR(100) NOT NULL,\n    Email VARCHAR(255),\n    Ville VARCHAR(100),\n    Région VARCHAR(100),\n    \n    -- Colonnes de gestion SCD Type 2\n    Date_Début DATE NOT NULL,                  -- Début de validité\n    Date_Fin DATE NOT NULL,                    -- Fin de validité\n    Version_Active BIT NOT NULL DEFAULT 1,     -- Version courante\n    Hash_Attributs BINARY(16)                  -- Pour détection changements\n);\n\n-- Index pour performances\nCREATE INDEX IX_Client_Code ON DIM_Client(Code_Client);\nCREATE INDEX IX_Client_Dates ON DIM_Client(Date_Début, Date_Fin);\nCREATE INDEX IX_Client_Active ON DIM_Client(Version_Active);\nProcessus ETL pour SCD Type 2 :\n-- Étape 1 : Désactiver les enregistrements modifiés\nUPDATE cible\nSET \n    Date_Fin = DATEADD(DAY, -1, CAST(GETDATE() AS DATE)),\n    Version_Active = 0\nFROM DIM_Client cible\nINNER JOIN STG_Client source ON cible.Code_Client = source.Code_Client\nWHERE cible.Version_Active = 1\n  AND cible.Hash_Attributs &lt;&gt; source.Hash_Attributs;\n\n-- Étape 2 : Insérer les nouvelles versions\nINSERT INTO DIM_Client (\n    Code_Client, Nom, Prénom, Email, Ville, Région,\n    Date_Début, Date_Fin, Version_Active, Hash_Attributs\n)\nSELECT \n    source.Code_Client,\n    source.Nom,\n    source.Prénom,\n    source.Email,\n    source.Ville,\n    source.Région,\n    CAST(GETDATE() AS DATE) AS Date_Début,\n    '9999-12-31' AS Date_Fin,\n    1 AS Version_Active,\n    source.Hash_Attributs\nFROM STG_Client source\nWHERE NOT EXISTS (\n    SELECT 1 FROM DIM_Client c \n    WHERE c.Code_Client = source.Code_Client \n    AND c.Version_Active = 1\n);\nRequête avec contexte historique :\n-- Ventes par région client au moment de la vente\nSELECT \n    c.Nom,\n    c.Région_Historique,  -- Région au moment de la vente\n    SUM(v.Montant_HT) AS CA_Total\nFROM FACT_Ventes v\nJOIN DIM_Client c ON v.Client_Key = c.Client_Key\n                AND v.Date_Key BETWEEN c.Date_Début_Key AND c.Date_Fin_Key\nJOIN DIM_Date d ON v.Date_Key = d.Date_Key\nWHERE d.Année = 2024\nGROUP BY c.Nom, c.Région_Historique;",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 2"
+    ]
+  },
+  {
+    "objectID": "modules/module2.html#sql-analytique-pour-la-bi",
+    "href": "modules/module2.html#sql-analytique-pour-la-bi",
+    "title": "Module 2 : Modélisation des Données",
+    "section": "2.4 SQL Analytique pour la BI",
+    "text": "2.4 SQL Analytique pour la BI\n\n2.4.1 Fonctions Fenêtrées (Window Functions)\nLes fonctions fenêtrées permettent des calculs avancés sans regrouper les lignes.\n\nRANK, DENSE_RANK, ROW_NUMBER\n-- Classement des produits par CA\nSELECT\n    p.Nom_Produit,\n    p.Catégorie,\n    SUM(v.Montant_HT) AS CA_Total,\n    RANK() OVER (ORDER BY SUM(v.Montant_HT) DESC) AS Classement_Rank,\n    DENSE_RANK() OVER (ORDER BY SUM(v.Montant_HT) DESC) AS Classement_Dense_Rank,\n    ROW_NUMBER() OVER (ORDER BY SUM(v.Montant_HT) DESC) AS Classement_Row_Number,\n    -- Classement par catégorie\n    RANK() OVER (PARTITION BY p.Catégorie ORDER BY SUM(v.Montant_HT) DESC) AS Classement_Catégorie\nFROM FACT_Ventes v\nJOIN DIM_Produit p ON v.Produit_Key = p.Produit_Key\nJOIN DIM_Date d ON v.Date_Key = d.Date_Key\nWHERE d.Année = 2024\nGROUP BY p.Nom_Produit, p.Catégorie;\n\n\nLAG, LEAD pour Analyse Temporelle\n-- Analyse de l'évolution mensuelle du CA\nWITH CA_Mensuel AS (\n    SELECT\n        d.Année,\n        d.Mois,\n        SUM(v.Montant_HT) AS CA_Mois,\n        LAG(SUM(v.Montant_HT)) OVER (ORDER BY d.Année, d.Mois) AS CA_Mois_Precedent,\n        LEAD(SUM(v.Montant_HT)) OVER (ORDER BY d.Année, d.Mois) AS CA_Mois_Suivant\n    FROM FACT_Ventes v\n    JOIN DIM_Date d ON v.Date_Key = d.Date_Key\n    GROUP BY d.Année, d.Mois\n)\nSELECT\n    Année,\n    Mois,\n    CA_Mois,\n    CA_Mois_Precedent,\n    CASE \n        WHEN CA_Mois_Precedent &gt; 0 \n        THEN (CA_Mois - CA_Mois_Precedent) / CA_Mois_Precedent * 100 \n        ELSE NULL \n    END AS Evolution_Pourcent,\n    CA_Mois_Suivant\nFROM CA_Mensuel\nORDER BY Année, Mois;\n\n\n\n2.4.2 Agrégations Avancées\n\nROLLUP et CUBE\n-- Agrégations hiérarchiques avec ROLLUP\nSELECT\n    COALESCE(p.Catégorie, 'TOTAL') AS Catégorie,\n    COALESCE(p.Sous_Catégorie, 'SOUS-TOTAL') AS Sous_Catégorie,\n    SUM(v.Montant_HT) AS CA_Total,\n    SUM(v.Quantité) AS Quantité_Total\nFROM FACT_Ventes v\nJOIN DIM_Produit p ON v.Produit_Key = p.Produit_Key\nJOIN DIM_Date d ON v.Date_Key = d.Date_Key\nWHERE d.Année = 2024\nGROUP BY ROLLUP(p.Catégorie, p.Sous_Catégorie)\nORDER BY p.Catégorie, p.Sous_Catégorie;\n\n-- Agrégations multidimensionnelles avec CUBE\nSELECT\n    COALESCE(p.Catégorie, 'TOUTES CATÉGORIES') AS Catégorie,\n    COALESCE(m.Région, 'TOUTES RÉGIONS') AS Région,\n    SUM(v.Montant_HT) AS CA_Total\nFROM FACT_Ventes v\nJOIN DIM_Produit p ON v.Produit_Key = p.Produit_Key\nJOIN DIM_Magasin m ON v.Magasin_Key = m.Magasin_Key\nJOIN DIM_Date d ON v.Date_Key = d.Date_Key\nWHERE d.Trimestre = 1 AND d.Année = 2024\nGROUP BY CUBE(p.Catégorie, m.Région);\n\n\nFonctions d’agrégation conditionnelle\n-- Analyse des ventes par tranche horaire\nSELECT\n    p.Catégorie,\n    -- Ventes en semaine\n    SUM(CASE WHEN d.Est_Weekend = 0 THEN v.Montant_HT ELSE 0 END) AS CA_Semaine,\n    -- Ventes weekend\n    SUM(CASE WHEN d.Est_Weekend = 1 THEN v.Montant_HT ELSE 0 END) AS CA_Weekend,\n    -- Pourcentage weekend\n    CASE \n        WHEN SUM(v.Montant_HT) &gt; 0 \n        THEN SUM(CASE WHEN d.Est_Weekend = 1 THEN v.Montant_HT ELSE 0 END) / \n             SUM(v.Montant_HT) * 100 \n        ELSE 0 \n    END AS Pourcentage_Weekend,\n    -- Top client par catégorie\n    MAX(CASE WHEN r.Classement = 1 THEN c.Nom END) AS Top_Client\nFROM FACT_Ventes v\nJOIN DIM_Produit p ON v.Produit_Key = p.Produit_Key\nJOIN DIM_Date d ON v.Date_Key = d.Date_Key\nJOIN DIM_Client c ON v.Client_Key = c.Client_Key\nJOIN (\n    SELECT \n        p.Produit_Key,\n        c.Client_Key,\n        RANK() OVER (PARTITION BY p.Catégorie ORDER BY SUM(v.Montant_HT) DESC) AS Classement\n    FROM FACT_Ventes v\n    JOIN DIM_Produit p ON v.Produit_Key = p.Produit_Key\n    JOIN DIM_Client c ON v.Client_Key = c.Client_Key\n    GROUP BY p.Produit_Key, c.Client_Key, p.Catégorie\n) r ON v.Produit_Key = r.Produit_Key AND v.Client_Key = r.Client_Key\nWHERE d.Année = 2024\nGROUP BY p.Catégorie;",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 2"
+    ]
+  },
+  {
+    "objectID": "modules/module2.html#atelier-pratique-conception-dun-modèle-ventes",
+    "href": "modules/module2.html#atelier-pratique-conception-dun-modèle-ventes",
+    "title": "Module 2 : Modélisation des Données",
+    "section": "2.5 Atelier Pratique : Conception d’un Modèle Ventes",
+    "text": "2.5 Atelier Pratique : Conception d’un Modèle Ventes\n\n2.5.1 Cas d’Étude : RetailCorp\nContexte : - Chaîne de distribution spécialisée - 100 magasins en Europe - E-commerce multi-canal - 1 million de clients actifs\nBesoins Analytiques : 1. Analyse des ventes par région, magasin, catégorie produit 2. Suivi de la performance des vendeurs 3. Analyse du comportement client (RFM) 4. Prévision des ventes et optimisation des stocks\n\n\n2.5.2 Conception du Modèle Dimensionnel\nExercice 1 : Identifier les Dimensions et Faits (20 min)\n-- Schéma conceptuel à concevoir\n-- Dimensions identifiées :\n-- ✓ DIM_Date (déjà conçue)\n-- ✓ DIM_Produit (avec hiérarchie Catégorie &gt; Sous-catégorie &gt; Produit)\n-- ✓ DIM_Client (avec segmentation RFM)\n-- ✓ DIM_Magasin (avec hiérarchie Pays &gt; Région &gt; Ville &gt; Magasin)\n-- ✓ DIM_Vendeur (avec rattachement magasin)\n-- ✓ DIM_Temps (heure de la journée)\n\n-- Table de faits :\n-- ✓ FACT_Ventes (granularité : ligne de ticket de caisse)\nExercice 2 : Créer le Script de Déploiement (30 min)\n-- Dimension Client avec SCD Type 2\nCREATE TABLE DIM_Client (\n    Client_Key INT PRIMARY KEY IDENTITY(1,1),\n    Code_Client VARCHAR(20) NOT NULL,\n    Nom VARCHAR(100) NOT NULL,\n    Prénom VARCHAR(100) NOT NULL,\n    Email VARCHAR(255),\n    Téléphone VARCHAR(20),\n    Adresse VARCHAR(255),\n    Code_Postal VARCHAR(10),\n    Ville VARCHAR(100),\n    Pays VARCHAR(50),\n    \n    -- Scores RFM\n    Score_Récence INT,\n    Score_Fréquence INT,\n    Score_Montant INT,\n    Segment_RFM VARCHAR(20),\n    \n    -- SCD Type 2\n    Date_Début DATE NOT NULL,\n    Date_Fin DATE NOT NULL,\n    Version_Active BIT NOT NULL DEFAULT 1,\n    Hash_Attributs BINARY(16)\n);\n\n-- Dimension Produit avec hiérarchie\nCREATE TABLE DIM_Produit (\n    Produit_Key INT PRIMARY KEY IDENTITY(1,1),\n    SKU VARCHAR(50) NOT NULL UNIQUE,\n    Nom_Produit VARCHAR(200) NOT NULL,\n    Description TEXT,\n    Catégorie VARCHAR(100) NOT NULL,\n    Sous_Catégorie VARCHAR(100) NOT NULL,\n    Marque VARCHAR(100),\n    Prix_Unitaire DECIMAL(10,2),\n    Coût_Unitaire DECIMAL(10,2),\n    Unité_Mesure VARCHAR(20),\n    Code_EAN VARCHAR(13),\n    \n    -- SCD Type 2 pour les changements de catégorie/prix\n    Date_Début DATE NOT NULL,\n    Date_Fin DATE NOT NULL,\n    Version_Active BIT NOT NULL DEFAULT 1\n);\n\n-- Table de faits Ventes\nCREATE TABLE FACT_Ventes (\n    Vente_Key BIGINT PRIMARY KEY IDENTITY(1,1),\n    -- Clés étrangères\n    Date_Key INT NOT NULL,\n    Temps_Key INT NOT NULL,\n    Produit_Key INT NOT NULL,\n    Client_Key INT NOT NULL,\n    Magasin_Key INT NOT NULL,\n    Vendeur_Key INT NOT NULL,\n    Promotion_Key INT,\n    \n    -- Mesures\n    Quantité INT NOT NULL,\n    Prix_Unitaire DECIMAL(10,2) NOT NULL,\n    Montant_HT DECIMAL(10,2) NOT NULL,\n    Montant_TTC DECIMAL(10,2) NOT NULL,\n    Coût_Unitaire DECIMAL(10,2),\n    Marge_Unitaire DECIMAL(10,2),\n    Remise_Pourcent DECIMAL(5,2),\n    Remise_Montant DECIMAL(10,2),\n    \n    -- Clés naturelles pour audit\n    Numéro_Ticket VARCHAR(50),\n    Ligne_Ticket INT,\n    \n    -- Contraintes\n    CONSTRAINT FK_Ventes_Date FOREIGN KEY (Date_Key) REFERENCES DIM_Date(Date_Key),\n    CONSTRAINT FK_Ventes_Produit FOREIGN KEY (Produit_Key) REFERENCES DIM_Produit(Produit_Key),\n    CONSTRAINT FK_Ventes_Client FOREIGN KEY (Client_Key) REFERENCES DIM_Client(Client_Key),\n    CONSTRAINT FK_Ventes_Magasin FOREIGN KEY (Magasin_Key) REFERENCES DIM_Magasin(Magasin_Key),\n    CONSTRAINT FK_Ventes_Vendeur FOREIGN KEY (Vendeur_Key) REFERENCES DIM_Vendeur(Vendeur_Key)\n);\n\n-- Index pour performances\nCREATE INDEX IX_Ventes_Date ON FACT_Ventes(Date_Key);\nCREATE INDEX IX_Ventes_Produit ON FACT_Ventes(Produit_Key);\nCREATE INDEX IX_Ventes_Client ON FACT_Ventes(Client_Key);\nCREATE INDEX IX_Ventes_Magasin ON FACT_Ventes(Magasin_Key);\nCREATE INDEX IX_Ventes_Date_Produit ON FACT_Ventes(Date_Key, Produit_Key);\n\n\n2.5.3 Requêtes Analytiques Avancées\nExercice 3 : Développer les KPI Métier (40 min)\n-- 1. Analyse RFM des clients\nWITH RFM_Base AS (\n    SELECT\n        c.Client_Key,\n        c.Nom,\n        c.Prénom,\n        -- Récence (jours depuis dernière achat)\n        DATEDIFF(DAY, MAX(d.Date_Complete), GETDATE()) AS Récence,\n        -- Fréquence (nombre d'achats sur 12 mois)\n        COUNT(DISTINCT v.Date_Key) AS Fréquence,\n        -- Montant (CA total sur 12 mois)\n        SUM(v.Montant_HT) AS Montant\n    FROM FACT_Ventes v\n    JOIN DIM_Client c ON v.Client_Key = c.Client_Key\n    JOIN DIM_Date d ON v.Date_Key = d.Date_Key\n    WHERE d.Date_Complete &gt;= DATEADD(MONTH, -12, GETDATE())\n    GROUP BY c.Client_Key, c.Nom, c.Prénom\n),\nRFM_Scores AS (\n    SELECT\n        *,\n        -- Scores de 1 à 5 (1=meilleur pour récence, 5=meilleur pour fréquence/montant)\n        NTILE(5) OVER (ORDER BY Récence DESC) AS Score_Récence,\n        NTILE(5) OVER (ORDER BY Fréquence ASC) AS Score_Fréquence,\n        NTILE(5) OVER (ORDER BY Montant ASC) AS Score_Montant\n    FROM RFM_Base\n)\nSELECT\n    Client_Key,\n    Nom,\n    Prénom,\n    Récence,\n    Fréquence,\n    Montant,\n    Score_Récence,\n    Score_Fréquence,\n    Score_Montant,\n    -- Score RFM combiné\n    CONCAT(Score_Récence, Score_Fréquence, Score_Montant) AS Score_RFM,\n    -- Segmentation RFM\n    CASE \n        WHEN CONCAT(Score_Récence, Score_Fréquence, Score_Montant) IN ('111','112','121','122','211','212','221','222') \n            THEN 'Champions'\n        WHEN Score_Récence IN (1,2) AND Score_Fréquence IN (3,4,5) AND Score_Montant IN (3,4,5)\n            THEN 'Clients Fidèles'\n        WHEN Score_Récence = 1 AND Score_Fréquence IN (1,2) AND Score_Montant IN (1,2)\n            THEN 'Nouveaux Clients'\n        WHEN Score_Récence IN (3,4) AND Score_Fréquence IN (1,2) AND Score_Montant IN (1,2)\n            THEN 'Clients à Risque'\n        WHEN Score_Récence = 5 \n            THEN 'Clients Perdus'\n        ELSE 'Clients Réguliers'\n    END AS Segment_RFM\nFROM RFM_Scores;\n\n-- 2. Analyse de la performance des magasins\nWITH Performance_Magasins AS (\n    SELECT\n        m.Nom_Magasin,\n        m.Ville,\n        m.Région,\n        COUNT(DISTINCT v.Client_Key) AS Clients_Uniques,\n        COUNT(DISTINCT v.Date_Key) AS Jours_Activité,\n        SUM(v.Montant_HT) AS CA_Total,\n        SUM(v.Quantité) AS Quantité_Total,\n        SUM(v.Montant_HT - (v.Quantité * v.Coût_Unitaire)) AS Marge_Brute,\n        COUNT(DISTINCT v.Vente_Key) AS Nombre_Ventes,\n        -- CA par m²\n        CASE \n            WHEN m.Surface_M2 &gt; 0 \n            THEN SUM(v.Montant_HT) / m.Surface_M2 \n            ELSE 0 \n        END AS CA_Par_M2,\n        -- Panier moyen\n        CASE \n            WHEN COUNT(DISTINCT v.Vente_Key) &gt; 0 \n            THEN SUM(v.Montant_HT) / COUNT(DISTINCT v.Vente_Key) \n            ELSE 0 \n        END AS Panier_Moyen\n    FROM FACT_Ventes v\n    JOIN DIM_Magasin m ON v.Magasin_Key = m.Magasin_Key\n    JOIN DIM_Date d ON v.Date_Key = d.Date_Key\n    WHERE d.Année = 2024\n    GROUP BY m.Magasin_Key, m.Nom_Magasin, m.Ville, m.Région, m.Surface_M2\n)\nSELECT\n    *,\n    RANK() OVER (ORDER BY CA_Total DESC) AS Classement_CA,\n    RANK() OVER (ORDER BY Marge_Brute DESC) AS Classement_Marge,\n    RANK() OVER (ORDER CA_Par_M2 DESC) AS Classement_Rentabilité\nFROM Performance_Magasins\nORDER BY CA_Total DESC;\n\n-- 3. Analyse des ventes croisées (Market Basket Analysis)\nWITH Produits_Achetés AS (\n    SELECT\n        v.Numéro_Ticket,\n        p.Produit_Key,\n        p.Nom_Produit,\n        p.Catégorie\n    FROM FACT_Ventes v\n    JOIN DIM_Produit p ON v.Produit_Key = p.Produit_Key\n    WHERE v.Date_Key BETWEEN 20240101 AND 20241231\n),\nCombinaisons_Produits AS (\n    SELECT\n        p1.Nom_Produit AS Produit_A,\n        p2.Nom_Produit AS Produit_B,\n        COUNT(DISTINCT p1.Numéro_Ticket) AS Occurrences_Conjointes,\n        COUNT(DISTINCT p1.Numéro_Ticket) * 1.0 / (\n            SELECT COUNT(DISTINCT Numéro_Ticket) \n            FROM Produits_Achetés \n            WHERE Nom_Produit = p1.Nom_Produit\n        ) AS Confiance\n    FROM Produits_Achetés p1\n    JOIN Produits_Achetés p2 ON p1.Numéro_Ticket = p2.Numéro_Ticket\n    WHERE p1.Produit_Key &lt;&gt; p2.Produit_Key\n    GROUP BY p1.Nom_Produit, p2.Nom_Produit\n)\nSELECT\n    Produit_A,\n    Produit_B,\n    Occurrences_Conjointes,\n    Confiance\nFROM Combinaisons_Produits\nWHERE Occurrences_Conjointes &gt;= 10\n  AND Confiance &gt;= 0.1\nORDER BY Occurrences_Conjointes DESC, Confiance DESC;",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 2"
+    ]
+  },
+  {
+    "objectID": "modules/module2.html#optimisation-des-performances",
+    "href": "modules/module2.html#optimisation-des-performances",
+    "title": "Module 2 : Modélisation des Données",
+    "section": "2.6 Optimisation des Performances",
+    "text": "2.6 Optimisation des Performances\n\n2.6.1 Stratégies d’Indexation\nIndex Clustered vs Non-Clustered :\n-- Index clustered sur la table de faits (généralement sur la clé primaire)\nCREATE CLUSTERED INDEX IX_FACT_Ventes_Key ON FACT_Ventes(Vente_Key);\n\n-- Index non-clustered sur les clés étrangères\nCREATE NONCLUSTERED INDEX IX_FACT_Ventes_Date ON FACT_Ventes(Date_Key);\nCREATE NONCLUSTERED INDEX IX_FACT_Ventes_Produit ON FACT_Ventes(Produit_Key);\nCREATE NONCLUSTERED INDEX IX_FACT_Ventes_Client ON FACT_Ventes(Client_Key);\n\n-- Index couvrant pour requêtes fréquentes\nCREATE NONCLUSTERED INDEX IX_FACT_Ventes_Couvert \nON FACT_Ventes (Date_Key, Produit_Key)\nINCLUDE (Montant_HT, Quantité, Client_Key);\n\n-- Index sur colonnes calculées pour la recherche\nCREATE NONCLUSTERED INDEX IX_DIM_Client_Recherche \nON DIM_Client (Nom, Prénom, Ville)\nINCLUDE (Email, Téléphone);\n\n\n2.6.2 Partitionnement des Tables\nPartitionnement par Date :\n-- Création de la fonction de partitionnement\nCREATE PARTITION FUNCTION pf_Ventes_Par_Mois (INT)\nAS RANGE RIGHT FOR VALUES (\n    20240101, 20240201, 20240301, 20240401,\n    20240501, 20240601, 20240701, 20240801,\n    20240901, 20241001, 20241101, 20241201\n);\n\n-- Création du schéma de partitionnement\nCREATE PARTITION SCHEME ps_Ventes_Par_Mois\nAS PARTITION pf_Ventes_Par_Mois\nALL TO ([PRIMARY]);\n\n-- Recréation de la table de faits partitionnée\nCREATE TABLE FACT_Ventes_Partitionnée (\n    Vente_Key BIGINT IDENTITY(1,1),\n    Date_Key INT NOT NULL,\n    -- ... autres colonnes\n    CONSTRAINT PK_FACT_Ventes_Part PRIMARY KEY (Date_Key, Vente_Key)\n) ON ps_Ventes_Par_Mois(Date_Key);\n\n\n2.6.3 Stratégies de Compression\n-- Activation de la compression de page\nALTER TABLE FACT_Ventes REBUILD PARTITION = ALL\nWITH (DATA_COMPRESSION = PAGE);\n\n-- Pour les archives, compression plus agressive\nALTER TABLE FACT_Ventes_Archive \nREBUILD WITH (DATA_COMPRESSION = ROW);\n\n-- Vérification des gains de compression\nSELECT \n    t.name AS TableName,\n    i.name AS IndexName,\n    p.partition_number,\n    p.data_compression_desc,\n    p.rows\nFROM sys.partitions p\nJOIN sys.tables t ON p.object_id = t.object_id\nJOIN sys.indexes i ON p.object_id = i.object_id AND p.index_id = i.index_id\nWHERE t.name = 'FACT_Ventes';",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 2"
+    ]
+  },
+  {
+    "objectID": "modules/module2.html#synthèse-du-module-2-et-points-clés",
+    "href": "modules/module2.html#synthèse-du-module-2-et-points-clés",
+    "title": "Module 2 : Modélisation des Données",
+    "section": "2.7 Synthèse du Module 2 et Points Clés",
+    "text": "2.7 Synthèse du Module 2 et Points Clés\n\n2.7.1 Récapitulatif des Concepts\nÀ l’issue de ce module, les participants maîtrisent :\n✅ La modélisation dimensionnelle : faits, dimensions, modèles en étoile/flocon/constellation\n✅ Les techniques d’historisation : SCD Type 2 pour le suivi des changements\n✅ Le SQL analytique avancé : fonctions fenêtrées, agrégations, requêtes complexes\n✅ L’optimisation des performances : indexation, partitionnement, compression\n✅ La conception de modèles robustes : bonnes pratiques et pièges à éviter\n\n\n2.7.2 Checklist de Fin de Module\nAuto-évaluation des Acquis :\n\nJe peux concevoir un modèle en étoile pour un processus métier\nJe comprends la différence entre SCD Type 1, 2 et 3\nJe maîtrise les fonctions fenêtrées (RANK, LAG, LEAD)\nJe sais optimiser les performances d’un modèle dimensionnel\nJe peux écrire des requêtes analytiques complexes\nJe comprends les stratégies d’indexation et de partitionnement\n\n\n\n2.7.3 Projet Pratique Final\nMission : Concevoir et implémenter un modèle dimensionnel complet pour un cas de vente au détail, incluant :\n\nModèle conceptuel et logique\nScripts de création des tables\nRequêtes analytiques pour 5 KPI métier\nStratégie d’optimisation des performances\nDocumentation technique\n\nLivrables : - Schémas de base de données - Scripts SQL complets - Documentation des règles de gestion - Plan de tests de performance",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 2"
+    ]
+  },
+  {
+    "objectID": "modules/module4.html",
+    "href": "modules/module4.html",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "",
+    "text": "Durée : 5 heures | Objectif : Comprendre l’organisation d’un Data Warehouse et maîtriser les concepts OLAP pour l’analyse multidimensionnelle.",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 4"
+    ]
+  },
+  {
+    "objectID": "modules/module4.html#fondements-du-data-warehouse",
+    "href": "modules/module4.html#fondements-du-data-warehouse",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "4.1 Fondements du Data Warehouse",
+    "text": "4.1 Fondements du Data Warehouse\n\n4.1.1 Définition et Caractéristiques\nData Warehouse (DWH) : Base de données décisionnelle optimisée pour l’analyse, distincte des systèmes transactionnels (OLTP).\nLes 4 caractéristiques fondamentales (Bill Inmon) :\n\n\n\n\n\n\n\n\nCaractéristique\nDescription\nExemple\n\n\n\n\nIntégré\nDonnées unifiées depuis sources multiples\nClientID standardisé\n\n\nNon volatile\nDonnées en lecture seule après chargement\nPas de UPDATE/DELETE\n\n\nHistorisé\nConservation de l’historique complet\nVentes depuis 2010\n\n\nThématique\nOrganisé par sujet, non par application\nDomaine “Ventes”\n\n\n\n\n\n4.1.2 Architecture en Couches\n\n\n\n\n\ngraph TB\n    A[Sources&lt;br/&gt;OLTP, ERP, CRM] --&gt; B{ETL/ELT&lt;br/&gt;Process}\n    B --&gt; C[Data Warehouse&lt;br/&gt;Couche intégration]\n    C --&gt; D[Data Marts&lt;br/&gt;Couche présentation]\n    D --&gt; E[Cubes OLAP&lt;br/&gt;Couche analyse]\n    E --&gt; F[Dashboards&lt;br/&gt;Couche reporting]\n    \n    style C fill:#2E86AB\n    style D fill:#F18F01\n\n\n\n\n\n\nDifférence Data Warehouse vs Data Mart :\n\n\n\nAspect\nData Warehouse\nData Mart\n\n\n\n\nPortée\nEntreprise\nDépartement/BU\n\n\nGranularité\nDétail + agrégats\nPrincipalement agrégats\n\n\nComplexité\nÉlevée\nModérée\n\n\nTemps implémentation\nLong (mois/années)\nCourt (semaines)\n\n\nCoût\nÉlevé\nModéré",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 4"
+    ]
+  },
+  {
+    "objectID": "modules/module4.html#modèles-olap-cubes-dimensions-mesures",
+    "href": "modules/module4.html#modèles-olap-cubes-dimensions-mesures",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "4.2 Modèles OLAP : Cubes, Dimensions, Mesures",
+    "text": "4.2 Modèles OLAP : Cubes, Dimensions, Mesures\n\n4.2.1 Le Concept de Cube OLAP\nCube : Structure multidimensionnelle permettant l’analyse selon plusieurs axes simultanés.\nAnalogie du cube physique :\n\nDimensions : Axes du cube (X, Y, Z)\nMesures : Valeurs à l’intérieur du cube\nCellules : Intersection des membres de dimensions\n\nExemple concret : Cube des Ventes\nDimensions:\n\n\n- Temps (Année &gt; Trimestre &gt; Mois &gt; Jour)\n- Géographie (Pays &gt; Région &gt; Ville &gt; Magasin)\n- Produits (Catégorie &gt; Sous-catégorie &gt; Produit)\n\nMesures:\n\n\n- Chiffre d'affaires\n- Quantité vendue\n- Marge brute\n- Nombre de transactions\n\n\n4.2.2 Exercice : Concevoir un Cube Simple\nScénario : Analyse des performances commerciales.\nInstructions :\n\nIdentifier 3 dimensions pertinentes\nDéfinir 4 mesures clés\nDessiner la structure hiérarchique\n\nCorrection :\n\n\n\n\n\ngraph TB\n    subgraph \"Dimension TEMPS\"\n        A1[Année] --&gt; B1[Trimestre]\n        B1 --&gt; C1[Mois]\n        C1 --&gt; D1[Jour]\n    end\n    \n    subgraph \"Dimension PRODUIT\"\n        A2[Catégorie] --&gt; B2[Sous-catégorie]\n        B2 --&gt; C2[Produit]\n        C2 --&gt; D2[SKU]\n    end\n    \n    subgraph \"Dimension COMMERCIAL\"\n        A3[Région] --&gt; B3[Secteur]\n        B3 --&gt; C3[Commercial]\n    end\n    \n    subgraph \"Cube VENTES\"\n        E{Mesures}\n        E --&gt; F[CA HT]\n        E --&gt; G[Marge]\n        E --&gt; H[Quantité]\n        E --&gt; I[Nb Clients]\n    end\n    \n    A1 --&gt; E\n    A2 --&gt; E\n    A3 --&gt; E",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 4"
+    ]
+  },
+  {
+    "objectID": "modules/module4.html#comparaison-oltp-vs-olap",
+    "href": "modules/module4.html#comparaison-oltp-vs-olap",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "4.3 Comparaison OLTP vs OLAP",
+    "text": "4.3 Comparaison OLTP vs OLAP\n\n4.3.1 Tableau Comparatif\n\n\n\nCritère\nOLTP (Transactionnel)\nOLAP (Décisionnel)\n\n\n\n\nObjectif\nExécution transactions\nAnalyse et reporting\n\n\nUtilisateurs\nOpérationnels (1000+)\nDécisionnels (10-100)\n\n\nOpérations\nINSERT, UPDATE, DELETE\nSELECT (complexes)\n\n\nDonnées\nCourantes, détaillées\nHistoriques, agrégées\n\n\nModèle\nNormalisé (3NF)\nDénormalisé (star schema)\n\n\nPerformance\nOptimisé écriture\nOptimisé lecture\n\n\nTaille\nGo à quelques To\nTo à Po\n\n\nExemple\nCaisse enregistreuse\nDashboard direction\n\n\n\n\n\n4.3.2 Exercice : Identifier les Différences\nAnalyse de deux requêtes :\nRequête OLTP (transactionnelle) :\n-- Mise à jour du stock après vente\nBEGIN TRANSACTION;\nUPDATE Produits \nSET Stock = Stock - 5 \nWHERE ProduitID = 123;\n\nINSERT INTO Ventes (ProduitID, Quantite, DateVente, ClientID)\nVALUES (123, 5, GETDATE(), 456);\n\nCOMMIT;\nRequête OLAP (analytique) :\n-- Analyse des ventes par catégorie\nSELECT \n    p.Categorie,\n    d.Trimestre,\n    d.Annee,\n    SUM(v.Montant) AS CA_Total,\n    AVG(v.Montant) AS Panier_Moyen,\n    COUNT(DISTINCT v.ClientID) AS Clients_Uniques\nFROM Fact_Ventes v\nJOIN Dim_Produit p ON v.ProduitID = p.ProduitID\nJOIN Dim_Date d ON v.DateID = d.DateID\nWHERE d.Annee = 2024\nGROUP BY p.Categorie, d.Trimestre, d.Annee\nORDER BY d.Annee DESC, CA_Total DESC;\nQuestions :\n\nQuelle requête modifie les données ?\nQuelle requête utilise des jointures complexes ?\nQuelle requête est exécutée plus fréquemment ?\nQuelle requête nécessite des index différents ?\n\nRéponses :\n\nOLTP (UPDATE/INSERT) vs OLAP (SELECT uniquement)\nOLAP (multiples jointures pour analyse)\nOLTP (des milliers/jour) vs OLAP (quelques/jour)\nOLTP : index sur clés étrangères ; OLAP : index couvrants, columnstore",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 4"
+    ]
+  },
+  {
+    "objectID": "modules/module4.html#modélisation-temporelle-et-scd",
+    "href": "modules/module4.html#modélisation-temporelle-et-scd",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "4.4 Modélisation Temporelle et SCD",
+    "text": "4.4 Modélisation Temporelle et SCD\n\n4.4.1 La Dimension Temps\nStructure recommandée :\nCREATE TABLE Dim_Date (\n    DateKey INT PRIMARY KEY,           -- Format YYYYMMDD\n    DateFull DATE NOT NULL,\n    DayOfWeek INT,                     -- 1=Dimanche, 7=Samedi\n    DayName VARCHAR(20),\n    DayOfMonth INT,\n    DayOfYear INT,\n    WeekOfYear INT,\n    Month INT,\n    MonthName VARCHAR(20),\n    Quarter INT,\n    QuarterName VARCHAR(10),\n    Year INT,\n    IsWeekend BIT,\n    IsHoliday BIT,\n    HolidayName VARCHAR(50),\n    FiscalMonth INT,\n    FiscalQuarter INT,\n    FiscalYear INT\n);\n\n\n4.4.2 Exercice : Création d’une Dimension Date\nObjectif : Générer une dimension date pour les années 2020-2030.\n-- Script de génération\nDECLARE @StartDate DATE = '2020-01-01';\nDECLARE @EndDate DATE = '2030-12-31';\n\nWITH DateCTE AS (\n    SELECT @StartDate AS DateValue\n    UNION ALL\n    SELECT DATEADD(DAY, 1, DateValue)\n    FROM DateCTE\n    WHERE DateValue &lt; @EndDate\n)\nINSERT INTO Dim_Date (\n    DateKey, DateFull, DayOfWeek, DayName, DayOfMonth, \n    DayOfYear, WeekOfYear, Month, MonthName, Quarter, \n    QuarterName, Year, IsWeekend, IsHoliday\n)\nSELECT\n    -- DateKey au format YYYYMMDD\n    CONVERT(INT, CONVERT(VARCHAR, DateValue, 112)) AS DateKey,\n    DateValue AS DateFull,\n    DATEPART(WEEKDAY, DateValue) AS DayOfWeek,\n    DATENAME(WEEKDAY, DateValue) AS DayName,\n    DATEPART(DAY, DateValue) AS DayOfMonth,\n    DATEPART(DAYOFYEAR, DateValue) AS DayOfYear,\n    DATEPART(WEEK, DateValue) AS WeekOfYear,\n    DATEPART(MONTH, DateValue) AS Month,\n    DATENAME(MONTH, DateValue) as MonthName,\n    DATEPART(QUARTER, DateValue) AS Quarter,\n    'Q' + CAST(DATEPART(QUARTER, DateValue) AS VARCHAR) AS QuarterName,\n    DATEPART(YEAR, DateValue) AS Year,\n    CASE WHEN DATEPART(WEEKDAY, DateValue) IN (1,7) THEN 1 ELSE 0 END AS IsWeekend,\n    0 AS IsHoliday  -- À compléter avec un calendrier de jours fériés\nFROM DateCTE\nOPTION (MAXRECURSION 0);\n\n\n4.4.3 SCD (Slowly Changing Dimensions)\nRappel des types SCD :\n\nType 0 : Attribut fixe (jamais modifié)\nType 1 : Écrasement (pas d’historique)\nType 2 : Nouvelle ligne avec dates de validité\nType 3 : Colonnes supplémentaires pour ancienne valeur\nType 4 : Table historique séparée\nType 6 : Hybride (1+2+3)\n\nExercice : Implémentation SCD Type 2\nTable client avec historique :\nCREATE TABLE Dim_Client_SCD2 (\n    ClientKey INT IDENTITY(1,1) PRIMARY KEY,\n    ClientID VARCHAR(20) NOT NULL,          -- Clé naturelle\n    Nom VARCHAR(100),\n    Prenom VARCHAR(100),\n    Email VARCHAR(255),\n    Ville VARCHAR(100),\n    Region VARCHAR(100),\n    \n    -- Colonnes de gestion SCD Type 2\n    ValidFrom DATE NOT NULL,\n    ValidTo DATE NOT NULL,\n    IsCurrent BIT NOT NULL DEFAULT 1,\n    \n    -- Pour détection des changements\n    HashKey AS CAST(\n        HASHBYTES('MD5', \n            COALESCE(Nom, '') + '|' + \n            COALESCE(Prenom, '') + '|' + \n            COALESCE(Ville, '') + '|' + \n            COALESCE(Region, '')\n        ) AS BINARY(16)\n    ) PERSISTED\n);\n\n-- Index pour performances\nCREATE INDEX IX_Client_SCD2_Current \nON Dim_Client_SCD2(ClientID, IsCurrent);\n\nCREATE INDEX IX_Client_SCD2_Dates \nON Dim_Client_SCD2(ValidFrom, ValidTo);\nProcédure de mise à jour :\nCREATE PROCEDURE Update_Dim_Client_SCD2\nAS\nBEGIN\n    SET NOCOUNT ON;\n    \n    -- Étape 1 : Fermer les enregistrements modifiés\n    UPDATE target\n    SET \n        ValidTo = DATEADD(DAY, -1, CAST(GETDATE() AS DATE)),\n        IsCurrent = 0\n    FROM Dim_Client_SCD2 target\n    INNER JOIN Staging_Client source \n        ON target.ClientID = source.ClientID\n    WHERE target.IsCurrent = 1\n      AND target.HashKey &lt;&gt; source.HashKey;\n    \n    -- Étape 2 : Insérer les nouvelles versions\n    INSERT INTO Dim_Client_SCD2 (\n        ClientID, Nom, Prenom, Email, Ville, Region,\n        ValidFrom, ValidTo, IsCurrent\n    )\n    SELECT \n        source.ClientID,\n        source.Nom,\n        source.Prenom,\n        source.Email,\n        source.Ville,\n        source.Region,\n        CAST(GETDATE() AS DATE) AS ValidFrom,\n        '9999-12-31' AS ValidTo,\n        1 AS IsCurrent\n    FROM Staging_Client source\n    WHERE NOT EXISTS (\n        SELECT 1 \n        FROM Dim_Client_SCD2 target \n        WHERE target.ClientID = source.ClientID \n          AND target.IsCurrent = 1\n    );\n    \n    -- Étape 3 : Insérer les nouveaux clients\n    INSERT INTO Dim_Client_SCD2 (\n        ClientID, Nom, Prenom, Email, Ville, Region,\n        ValidFrom, ValidTo, IsCurrent\n    )\n    SELECT \n        source.ClientID,\n        source.Nom,\n        source.Prenom,\n        source.Email,\n        source.Ville,\n        source.Region,\n        CAST(GETDATE() AS DATE) AS ValidFrom,\n        '9999-12-31' AS ValidTo,\n        1 AS IsCurrent\n    FROM Staging_Client source\n    WHERE NOT EXISTS (\n        SELECT 1 \n        FROM Dim_Client_SCD2 target \n        WHERE target.ClientID = source.ClientID\n    );\nEND;",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 4"
+    ]
+  },
+  {
+    "objectID": "modules/module4.html#atelier-pratique-hiérarchies-et-analyses-temporelles",
+    "href": "modules/module4.html#atelier-pratique-hiérarchies-et-analyses-temporelles",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "4.5 Atelier Pratique : Hiérarchies et Analyses Temporelles",
+    "text": "4.5 Atelier Pratique : Hiérarchies et Analyses Temporelles\n\n4.5.1 Exercice : Créer 3 Hiérarchies\nObjectif : Construire les hiérarchies Date, Produit et Région.\n1. Hiérarchie Date :\n-- Structure déjà vue dans Dim_Date\n-- Hiérarchie : Année &gt; Trimestre &gt; Mois &gt; Jour\n\n-- Requête utilisant la hiérarchie\nSELECT\n    d.Year,\n    d.Quarter,\n    d.MonthName,\n    SUM(v.Montant) AS CA_Total,\n    SUM(v.Quantite) AS Quantite_Total\nFROM Fact_Ventes v\nJOIN Dim_Date d ON v.DateKey = d.DateKey\nGROUP BY \n    ROLLUP(d.Year, d.Quarter, d.MonthName)\nORDER BY \n    d.Year, d.Quarter, d.MonthName;\n2. Hiérarchie Produit :\n-- Table de dimension\nCREATE TABLE Dim_Produit (\n    ProduitKey INT PRIMARY KEY,\n    ProduitID VARCHAR(50),\n    NomProduit VARCHAR(200),\n    SousCategorie VARCHAR(100),\n    Categorie VARCHAR(100),\n    Departement VARCHAR(100),\n    \n    -- Hiérarchie : Département &gt; Catégorie &gt; Sous-catégorie &gt; Produit\n    HierarchieProduit AS \n        Departement + ' &gt; ' + Categorie + ' &gt; ' + SousCategorie + ' &gt; ' + NomProduit\n);\n\n-- Analyse par niveau hiérarchique\nSELECT\n    COALESCE(p.Departement, 'Tous Départements') AS Departement,\n    COALESCE(p.Categorie, 'Toutes Catégories') AS Categorie,\n    COALESCE(p.SousCategorie, 'Toutes Sous-catégories') AS SousCategorie,\n    SUM(v.Montant) AS CA_Total,\n    COUNT(DISTINCT v.VenteID) AS Nb_Ventes\nFROM Fact_Ventes v\nJOIN Dim_Produit p ON v.ProduitKey = p.ProduitKey\nGROUP BY \n    CUBE(p.Departement, p.Categorie, p.SousCategorie)\nORDER BY \n    p.Departement, p.Categorie, p.SousCategorie;\n3. Hiérarchie Région :\nCREATE TABLE Dim_Region (\n    RegionKey INT PRIMARY KEY,\n    MagasinID VARCHAR(20),\n    NomMagasin VARCHAR(100),\n    Ville VARCHAR(100),\n    Region VARCHAR(100),\n    Pays VARCHAR(50),\n    \n    -- Hiérarchie : Pays &gt; Région &gt; Ville &gt; Magasin\n    HierarchieRegion AS \n        Pays + ' &gt; ' + Region + ' &gt; ' + Ville + ' &gt; ' + NomMagasin\n);\n\n-- Analyse géographique avec drill-down\nWITH RegionalSales AS (\n    SELECT\n        r.Pays,\n        r.Region,\n        r.Ville,\n        r.NomMagasin,\n        SUM(v.Montant) AS CA_Total,\n        RANK() OVER (PARTITION BY r.Region ORDER BY SUM(v.Montant) DESC) AS Rang_Magasin\n    FROM Fact_Ventes v\n    JOIN Dim_Region r ON v.RegionKey = r.RegionKey\n    JOIN Dim_Date d ON v.DateKey = d.DateKey\n    WHERE d.Year = 2024\n    GROUP BY r.Pays, r.Region, r.Ville, r.NomMagasin\n)\nSELECT\n    Pays,\n    Region,\n    Ville,\n    NomMagasin,\n    CA_Total,\n    Rang_Magasin,\n    SUM(CA_Total) OVER (PARTITION BY Region) AS CA_Region,\n    CA_Total * 100.0 / SUM(CA_Total) OVER (PARTITION BY Region) AS Pourcentage_Region\nFROM RegionalSales\nORDER BY Pays, Region, CA_Total DESC;\n\n\n4.5.2 Analyse YTD (Year-To-Date) et YoY (Year-Over-Year)\nFormule YTD :\nYTD = Cumul depuis début d'année jusqu'à date donnée\nFormule YoY :\nYoY = (Valeur Année N / Valeur Année N-1) - 1\nExercice : Calculer YTD et YoY\nWITH MonthlySales AS (\n    SELECT\n        d.Year,\n        d.Month,\n        SUM(v.Montant) AS CA_Mensuel,\n        -- YTD: somme cumulative sur l'année\n        SUM(SUM(v.Montant)) OVER (\n            PARTITION BY d.Year \n            ORDER BY d.Month \n            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW\n        ) AS CA_YTD\n    FROM Fact_Ventes v\n    JOIN Dim_Date d ON v.DateKey = d.DateKey\n    GROUP BY d.Year, d.Month\n),\nYoYComparison AS (\n    SELECT\n        Year,\n        Month,\n        CA_Mensuel,\n        CA_YTD,\n        -- CA même mois année précédente\n        LAG(CA_Mensuel, 12) OVER (ORDER BY Year, Month) AS CA_Mensuel_Precedent,\n        -- YTD année précédente (même mois)\n        LAG(CA_YTD, 12) OVER (ORDER BY Year, Month) AS CA_YTD_Precedent\n    FROM MonthlySales\n)\nSELECT\n    Year,\n    Month,\n    CA_Mensuel,\n    CA_YTD,\n    CA_Mensuel_Precedent,\n    CA_YTD_Precedent,\n    -- Evolution mensuelle YoY\n    CASE \n        WHEN CA_Mensuel_Precedent &gt; 0 \n        THEN (CA_Mensuel - CA_Mensuel_Precedent) / CA_Mensuel_Precedent * 100 \n        ELSE NULL \n    END AS Evolution_Mensuelle_YoY_Percent,\n    -- Evolution YTD YoY\n    CASE \n        WHEN CA_YTD_Precedent &gt; 0 \n        THEN (CA_YTD - CA_YTD_Precedent) / CA_YTD_Precedent * 100 \n        ELSE NULL \n    END AS Evolution_YTD_YoY_Percent\nFROM YoYComparison\nWHERE Year &gt;= 2023\nORDER BY Year, Month;\n\n\n4.5.3 Exercice Avancé : Tableaux de Bord OLAP\nObjectif : Créer un ensemble de KPIs avec calculs avancés.\n-- Vue complète des KPIs\nCREATE VIEW vw_KPIs_Commerciaux AS\nWITH BaseData AS (\n    SELECT\n        d.Year,\n        d.Quarter,\n        d.Month,\n        r.Region,\n        r.Ville,\n        p.Categorie,\n        SUM(v.Montant) AS CA_Total,\n        SUM(v.Quantite) AS Quantite_Total,\n        COUNT(DISTINCT v.ClientKey) AS Clients_Uniques,\n        COUNT(DISTINCT v.VenteKey) AS Transactions,\n        SUM(v.Montant - (v.Quantite * v.CoutUnitaire)) AS Marge_Brute\n    FROM Fact_Ventes v\n    JOIN Dim_Date d ON v.DateKey = d.DateKey\n    JOIN Dim_Region r ON v.RegionKey = r.RegionKey\n    JOIN Dim_Produit p ON v.ProduitKey = p.ProduitKey\n    GROUP BY \n        d.Year, d.Quarter, d.Month, \n        r.Region, r.Ville, p.Categorie\n),\nYTDData AS (\n    SELECT\n        Year,\n        Region,\n        Categorie,\n        SUM(CA_Total) AS CA_YTD,\n        SUM(Marge_Brute) AS Marge_YTD\n    FROM BaseData\n    GROUP BY Year, Region, Categorie\n),\nPreviousYear AS (\n    SELECT\n        Year,\n        Region,\n        Categorie,\n        CA_YTD,\n        Marge_YTD,\n        LAG(CA_YTD) OVER (PARTITION BY Region, Categorie ORDER BY Year) AS CA_YTD_Precedent,\n        LAG(Marge_YTD) OVER (PARTITION BY Region, Categorie ORDER BY Year) AS Marge_YTD_Precedent\n    FROM YTDData\n)\nSELECT\n    b.Year,\n    b.Quarter,\n    b.Month,\n    b.Region,\n    b.Ville,\n    b.Categorie,\n    b.CA_Total,\n    b.Quantite_Total,\n    b.Clients_Uniques,\n    b.Transactions,\n    b.Marge_Brute,\n    -- Calculs dérivés\n    b.CA_Total / NULLIF(b.Transactions, 0) AS Panier_Moyen,\n    b.Marge_Brute / NULLIF(b.CA_Total, 0) * 100 AS Taux_Marge,\n    -- Comparaisons temporelles\n    y.CA_YTD,\n    y.Marge_YTD,\n    p.CA_YTD_Precedent,\n    p.Marge_YTD_Precedent,\n    -- Evolutions\n    CASE \n        WHEN p.CA_YTD_Precedent &gt; 0 \n        THEN (y.CA_YTD - p.CA_YTD_Precedent) / p.CA_YTD_Precedent * 100 \n        ELSE NULL \n    END AS Evolution_CA_YoY_Percent,\n    -- Classements\n    RANK() OVER (PARTITION BY b.Year, b.Month ORDER BY b.CA_Total DESC) AS Rang_CA_Mensuel,\n    RANK() OVER (PARTITION BY b.Year, b.Region ORDER BY b.CA_Total DESC) AS Rang_Ville_Region\nFROM BaseData b\nJOIN YTDData y ON b.Year = y.Year \n    AND b.Region = y.Region \n    AND b.Categorie = y.Categorie\nLEFT JOIN PreviousYear p ON b.Year = p.Year \n    AND b.Region = p.Region \n    AND b.Categorie = p.Categorie;",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 4"
+    ]
+  },
+  {
+    "objectID": "modules/module4.html#optimisation-des-cubes-olap",
+    "href": "modules/module4.html#optimisation-des-cubes-olap",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "4.6 Optimisation des Cubes OLAP",
+    "text": "4.6 Optimisation des Cubes OLAP\n\n4.6.1 Stratégies d’Agrégation\nTypes d’agrégations :\n\nPré-calculées : Stockées (performantes mais volumineuses)\nÀ la volée : Calculées (lentes mais économes)\nHybrides : Combinaison optimisée\n\nExemple : Agréger par mois et région pour accélérer les requêtes courantes.\n-- Table d'agrégation\nCREATE TABLE Agg_Ventes_Mensuelles (\n    Year INT,\n    Month INT,\n    RegionKey INT,\n    CategorieKey INT,\n    CA_Total DECIMAL(15,2),\n    Quantite_Total INT,\n    Clients_Uniques INT,\n    Marge_Total DECIMAL(15,2),\n    PRIMARY KEY (Year, Month, RegionKey, CategorieKey)\n);\n\n-- Procédure de remplissage\nCREATE PROCEDURE Refresh_Agg_Ventes_Mensuelles\nAS\nBEGIN\n    TRUNCATE TABLE Agg_Ventes_Mensuelles;\n    \n    INSERT INTO Agg_Ventes_Mensuelles\n    SELECT\n        d.Year,\n        d.Month,\n        v.RegionKey,\n        v.CategorieKey,\n        SUM(v.Montant) AS CA_Total,\n        SUM(v.Quantite) AS Quantite_Total,\n        COUNT(DISTINCT v.ClientKey) AS Clients_Uniques,\n        SUM(v.Marge) AS Marge_Total\n    FROM Fact_Ventes v\n    JOIN Dim_Date d ON v.DateKey = d.DateKey\n    GROUP BY d.Year, d.Month, v.RegionKey, v.CategorieKey;\nEND;\n\n\n4.6.2 Partitionnement pour les Gros Volumes\nPartitionnement par année :\n-- Fonction de partitionnement\nCREATE PARTITION FUNCTION pf_Ventes_By_Year (INT)\nAS RANGE RIGHT FOR VALUES (\n    20200101, 20210101, 20220101, 20230101,\n    20240101, 20250101\n);\n\n-- Schéma de partitionnement\nCREATE PARTITION SCHEME ps_Ventes_By_Year\nAS PARTITION pf_Ventes_By_Year\nTO ([PRIMARY], [FG2020], [FG2021], [FG2022], \n    [FG2023], [FG2024], [FG2025]);\n\n-- Table partitionnée\nCREATE TABLE Fact_Ventes_Partitioned (\n    VenteKey BIGINT IDENTITY(1,1),\n    DateKey INT NOT NULL,\n    -- autres colonnes...\n    CONSTRAINT PK_Fact_Ventes_Part PRIMARY KEY (DateKey, VenteKey)\n) ON ps_Ventes_By_Year(DateKey);",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 4"
+    ]
+  },
+  {
+    "objectID": "modules/module4.html#synthèse-du-module-4",
+    "href": "modules/module4.html#synthèse-du-module-4",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "4.7 Synthèse du Module 4",
+    "text": "4.7 Synthèse du Module 4\n\n4.7.1 Points Clés à Retenir\n✅ Data Warehouse : Caractéristiques et architecture\n✅ Cubes OLAP : Dimensions, mesures, hiérarchies\n✅ Modélisation : Différences OLTP vs OLAP\n✅ Analyses temporelles : YTD, YoY, SCD\n✅ Optimisation : Agrégations, partitionnement\n\n\n4.7.2 Checklist d’Auto-évaluation\n\nJe comprends les 4 caractéristiques d’un Data Warehouse\nJe peux expliquer la différence entre OLTP et OLAP\nJe sais concevoir une hiérarchie à 3 niveaux\nJe maîtrise les calculs YTD et YoY\nJe comprends les différents types SCD\nJe connais les techniques d’optimisation OLAP\n\n\n\n4.7.3 Projet Pratique Final\nMission : Concevoir un mini Data Warehouse avec :\n\n3 dimensions avec hiérarchies\n1 table de faits\nCalculs YTD/YoY\nProcédure SCD Type 2\nVues analytiques\n\nLivrables attendus :\n\nScripts de création des tables\nProcédures ETL de chargement\nRequêtes analytiques démonstratives\nDocumentation technique",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 4"
+    ]
+  },
+  {
+    "objectID": "modules/module4.html#fichiers-sources-à-télécharger",
+    "href": "modules/module4.html#fichiers-sources-à-télécharger",
+    "title": "Formation Business Intelligence & Power BI",
+    "section": "Fichiers Sources à Télécharger",
+    "text": "Fichiers Sources à Télécharger\n\nPour le Module 4 (Data Warehouse & OLAP) :\n\nScripts SQL :\n\nScript_Dim_Date.sql\nScript_SCD_Type2.sql\nScript_Hierarchies.sql\nScript_YTD_YoY.sql\n\nJeux de données d’exemple :\n\nSample_Sales_Data.csv\nProduct_Hierarchy.xlsx\nRegional_Structure.json",
+    "crumbs": [
+      "Accueil",
+      "Modules",
+      "Module 4"
+    ]
+  }
+]
