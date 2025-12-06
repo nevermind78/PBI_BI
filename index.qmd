@@ -1,36 +1,128 @@
----
-title: "Formation Business Intelligence & Power BI"
-subtitle: "Modules 1 & 2 - Fondamentaux et Modélisation"
----
+# Formation Business Intelligence & Power BI
+## Modules 1 à 4 - De la théorie à la pratique
 
-# Bienvenue dans la Formation BI
+---
 
 ## Présentation des Modules
 
 ### Module 1 : Fondamentaux de la Business Intelligence
 **Durée : 5 heures** | **Objectif : Maîtriser les concepts fondamentaux de la BI**
 
-- Architecture décisionnelle
-- Cycle de vie d'un projet BI  
-- Panorama des outils BI
-- Gouvernance et culture data-driven
+- Architecture décisionnelle et écosystème BI
+- Cycle de vie d'un projet BI (CRISP-DM)
+- Panorama des outils BI (Power BI, Tableau, Qlik)
+- Gouvernance, qualité et culture data-driven
+- Atelier : Cahier des charges d'un projet BI
 
 [Accéder au Module 1 →](modules/module1.html)
 
 ### Module 2 : Conception & Modélisation des Données
 **Durée : 5 heures** | **Objectif : Concevoir des modèles décisionnels performants**
 
-- Modélisation dimensionnelle
+- Modélisation dimensionnelle (faits, dimensions, hiérarchies)
 - Modèles en étoile, flocon et constellation
-- Techniques d'historisation (SCD)
-- SQL analytique et optimisation
+- Techniques d'historisation (SCD Types 0-6)
+- SQL analytique avancé (fonctions fenêtrées, agrégations)
+- Optimisation des performances (indexation, partitionnement)
+- Atelier : Conception d'un modèle vente au détail
 
 [Accéder au Module 2 →](modules/module2.html)
 
+### Module 3 : ETL & Qualité des Données avec Power Query
+**Durée : 5 heures** | **Objectif : Maîtriser l'intégration, transformation et nettoyage des données**
+
+- **Connexions multi-sources** : Excel, CSV, bases de données, API REST
+- **Nettoyage et transformation** : valeurs manquantes, normalisation, filtrage
+- **Fusion et agrégation** : Merge (jointures), Append (consolidation)
+- **Transformations avancées** : Pivot/Unpivot, colonnes conditionnelles
+- **Outils ETL professionnels** : SSIS, Talend - panorama comparatif
+- **Contrôle qualité et documentation** : métriques qualité, traçabilité, documentation des flux
+- **Atelier pratique** : Construction d'un pipeline Power Query complet pour RetailCorp
+
+[Accéder au Module 3 →](modules/module3.html)
+📁 **Fichiers fournis** : Ventes_2024.xlsx, Clients_Sale.csv, Produits.json, VentesJournalieres.csv, CatalogueProduits.xlsx
+
+### Module 4 : Data Warehouse & Analyse OLAP
+**Durée : 5 heures** | **Objectif : Comprendre l'organisation d'un entrepôt de données et maîtriser l'analyse multidimensionnelle**
+
+- **Data Warehouse** : caractéristiques (intégré, historisé, non volatile), architecture en couches
+- **Concepts OLAP** : cubes, dimensions, mesures, agrégations, hiérarchies
+- **Comparaison OLTP vs OLAP** : modèles, usages, performances
+- **Modélisation temporelle** : dimension date complète, analyses YTD/YoY
+- **Slowly Changing Dimensions (SCD)** : implémentation Type 2 avec historique complet
+- **Analyses avancées** : drill-down, roll-up, slicing, dicing
+- **Optimisation** : agrégations pré-calculées, partitionnement, compression
+- **Atelier pratique** : Création de 3 hiérarchies (Date, Produit, Région) et réalisation d'analyses YTD/YoY
+
+[Accéder au Module 4 →](modules/module4.html)
+💻 **Scripts fournis** : Dim_Date.sql, SCD_Type2.sql, Hiérarchies.sql, YTD_YoY.sql
+
+---
+
 ## Public Visé
 
-- Analystes données
-- Consultants BI
-- Chefs de projet
-- Développeurs
-- Responsables métier
+- **Analystes données** : pour structurer et analyser efficacement les données
+- **Consultants BI** : pour maîtriser l'ensemble de la chaîne de valeur BI
+- **Chefs de projet** : pour piloter des projets décisionnels de bout en bout
+- **Développeurs** : pour implémenter des solutions ETL et data warehouses robustes
+- **Responsables métier** : pour comprendre et exploiter les capacités analytiques
+- **Data Scientists** : pour disposer de données fiables et bien structurées
+
+---
+
+## Prérequis
+
+- **Module 1** : Aucun prérequis technique
+- **Module 2** : Notions de bases de données et SQL de base
+- **Module 3** : Connaissance de Power BI ou Excel (niveau débutant)
+- **Module 4** : SQL intermédiaire, compréhension des concepts de modélisation
+
+---
+
+## Approche Pédagogique
+
+✅ **Théorie illustrée** : Concepts expliqués avec des schémas et exemples concrets  
+✅ **Exercices guidés** : Mise en pratique progressive avec assistance  
+✅ **Cas réels** : Études de cas inspirées de situations professionnelles  
+✅ **Outils fournis** : Scripts SQL, modèles Power Query, jeux de données  
+✅ **Auto-évaluation** : Quiz et checklists pour valider les acquis  
+
+---
+
+## Compétences Acquises
+
+À l'issue des 4 modules (20 heures), vous serez capable de :
+
+| Compétence | Module 1 | Module 2 | Module 3 | Module 4 |
+|------------|----------|----------|----------|----------|
+| **Concevoir** un modèle décisionnel | ⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐⭐ |
+| **Implémenter** un pipeline ETL | ⭐ | ⭐ | ⭐⭐⭐ | ⭐⭐ |
+| **Construire** un data warehouse | | ⭐⭐ | ⭐⭐ | ⭐⭐⭐ |
+| **Analyser** avec SQL avancé | | ⭐⭐⭐ | ⭐ | ⭐⭐ |
+| **Développer** des dashboards | ⭐⭐ | ⭐⭐ | ⭐⭐⭐ | ⭐⭐ |
+| **Documenter** et maintenir | ⭐⭐ | ⭐⭐ | ⭐⭐⭐ | ⭐⭐ |
+
+---
+
+## Ressources Complémentaires
+
+### Pour le Module 3 (ETL) :
+📂 **Fichiers d'exercice** : 
+- [Ventes_2024.xlsx](LAB_MODULE3/Ventes_2024.xlsx)
+- [Clients_Sale.csv](LAB_MODULE3/Clients_sales.csv) 
+- [Produits.json](LAB_MODULE3/Produits.json)
+- [Template Documentation ETL](LAB_MODULE3/Pipeline.md)
+
+### Pour le Module 4 (Data Warehouse) :
+💾 **Scripts SQL** :
+- [Script_Dim_Date.sql](LAB_MODULE4/script_DIM_date.sql)
+- [Script_SCD_Type2.sql](LAB_MODULE4\script_SCD_type2.sql)
+- [Script_Hierarchies.sql](LAB_MODULE4\script_Hierarchies.sql)
+- [Script_YTD_YoY.sql](LAB_MODULE4\script_YTD_YOY.sql)
+
+
+---
+
+
+
+resources
