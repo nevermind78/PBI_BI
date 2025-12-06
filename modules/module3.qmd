@@ -258,7 +258,7 @@ let
     EnTetesPromus = Table.PromoteHeaders(DonneesCombinees, [PromoteAllScalars=true]),
     TypesCorriges = Table.TransformColumnTypes(EnTetesPromus,{
         {"Date", type date},
-        {"Montant", Currency.Type},
+        {"Prix", Currency.Type},
         {"Quantite", Int64.Type}
     })
 in
