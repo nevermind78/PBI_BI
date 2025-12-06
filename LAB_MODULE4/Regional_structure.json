@@ -1,0 +1,92 @@
+{
+  "regions": [
+    {
+      "region_id": "IDF",
+      "region_name": "Île-de-France",
+      "pays": "France",
+      "magasins": [
+        {
+          "magasin_id": "M01",
+          "magasin_nom": "Paris Centre",
+          "ville": "Paris",
+          "adresse": "123 Rue de Rivoli",
+          "code_postal": "75001",
+          "surface_m2": 350.5,
+          "date_ouverture": "2020-03-15",
+          "statut": "Actif"
+        },
+        {
+          "magasin_id": "M02",
+          "magasin_nom": "Paris Montparnasse",
+          "ville": "Paris",
+          "adresse": "45 Avenue du Maine",
+          "code_postal": "75014",
+          "surface_m2": 280.0,
+          "date_ouverture": "2021-06-10",
+          "statut": "Actif"
+        }
+      ]
+    },
+    {
+      "region_id": "ARA",
+      "region_name": "Auvergne-Rhône-Alpes",
+      "pays": "France",
+      "magasins": [
+        {
+          "magasin_id": "M03",
+          "magasin_nom": "Lyon Part-Dieu",
+          "ville": "Lyon",
+          "adresse": "17 Rue de la République",
+          "code_postal": "69002",
+          "surface_m2": 420.0,
+          "date_ouverture": "2019-11-20",
+          "statut": "Actif"
+        },
+        {
+          "magasin_id": "M04",
+          "magasin_nom": "Lyon Bellecour",
+          "ville": "Lyon",
+          "adresse": "22 Place Bellecour",
+          "code_postal": "69002",
+          "surface_m2": 310.5,
+          "date_ouverture": "2022-02-28",
+          "statut": "Actif"
+        }
+      ]
+    },
+    {
+      "region_id": "PACA",
+      "region_name": "Provence-Alpes-Côte d'Azur",
+      "pays": "France",
+      "magasins": [
+        {
+          "magasin_id": "M05",
+          "magasin_nom": "Marseille Vieux Port",
+          "ville": "Marseille",
+          "adresse": "8 Quai du Port",
+          "code_postal": "13001",
+          "surface_m2": 380.0,
+          "date_ouverture": "2020-09-05",
+          "statut": "Actif"
+        }
+      ]
+    },
+    {
+      "region_id": "OCC",
+      "region_name": "Occitanie",
+      "pays": "France",
+      "magasins": [
+        {
+          "magasin_id": "M06",
+          "magasin_nom": "Toulouse Capitole",
+          "ville": "Toulouse",
+          "adresse": "15 Place du Capitole",
+          "code_postal": "31000",
+          "surface_m2": 295.5,
+          "date_ouverture": "2021-04-12",
+          "statut": "Actif"
+        }
+      ]
+    }
+  ]
+}

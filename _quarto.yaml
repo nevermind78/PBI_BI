@@ -15,6 +15,10 @@ website:
         text: "Module 1 - Fondamentaux"
       - href: modules/module2.qmd
         text: "Module 2 - Modélisation"
+      - href: modules/module3.qmd
+        text: "Module 3 - ETL & Qualité des Données"
+      - href: modules/module4.qmd
+        text: "Module 4 - Data Warehouse & OLAP"
   
   sidebar:
     style: "docked"
@@ -27,6 +31,10 @@ website:
             text: "Module 1"
           - href: modules/module2.qmd
             text: "Module 2"
+          - href: modules/module3.qmd
+            text: "Module 3"
+          - href: modules/module4.qmd
+            text: "Module 4"
 
 format:
   html:

@@ -1,0 +1,49 @@
+{
+  "produits": [
+    {
+      "id": "P001",
+      "nom": "Smartphone X200",
+      "categorie": "Électronique",
+      "sous_categorie": "Téléphones",
+      "prix": 299.99,
+      "stock": 45,
+      "fournisseur": "TechCorp"
+    },
+    {
+      "id": "P002",
+      "nom": "Tablette Pro 10",
+      "categorie": "Électronique",
+      "sous_categorie": "Tablettes",
+      "prix": 499.99,
+      "stock": 22,
+      "fournisseur": "TechCorp"
+    },
+    {
+      "id": "P003",
+      "nom": "Casque Audio Bluetooth",
+      "categorie": "Électronique",
+      "sous_categorie": "Accessoires",
+      "prix": 79.99,
+      "stock": 120,
+      "fournisseur": "SoundTech"
+    },
+    {
+      "id": "P004",
+      "nom": "Souris Gaming RGB",
+      "categorie": "Informatique",
+      "sous_categorie": "Périphériques",
+      "prix": 49.99,
+      "stock": 85,
+      "fournisseur": "GameGear"
+    },
+    {
+      "id": "P005",
+      "nom": "Clavier Mécanique",
+      "categorie": "Informatique",
+      "sous_categorie": "Périphériques",
+      "prix": 89.99,
+      "stock": 60,
+      "fournisseur": "GameGear"
+    }
+  ]
+}

@@ -1,0 +1,590 @@
+---
+title: "Formation Business Intelligence & Power BI"
+subtitle: "Module 3 : ETL & Qualité des Données (Power Query)"
+---
+
+**Durée : 5 heures** | **Objectif : Maîtriser l'intégration, la transformation et le nettoyage des données avec Power Query pour construire des pipelines robustes et documentés.**
+
+---
+
+## 3.1 Introduction à ETL et Power Query
+
+### 3.1.1 Qu'est-ce que l'ETL ?
+
+**ETL** (Extract, Transform, Load) est un processus fondamental en BI qui consiste à :
+
+
+- **Extraire** les données de sources hétérogènes  
+- **Transformer** les données (nettoyage, enrichissement, restructuration)  
+- **Charger** les données dans un entrepôt ou un modèle analytique
+
+**Pourquoi Power Query ?**
+
+
+- Outil ETL intégré à Power BI, Excel et SSIS  
+- Interface visuelle "low-code" avec enregistrement des étapes  
+- Reproductibilité et maintenance facilitée  
+- Compatibilité avec de nombreuses sources
+
+### 3.1.2 Architecture de Power Query
+
+**Composants clés :**
+
+
+1. **Connecteurs** : +100 sources de données   
+2. **Éditeur Power Query (M)** : langage de transformation   
+3. **Gestionnaire de requêtes** : organisation des flux   
+4. **Paramètres et fonctions** : réutilisabilité
+   
+**Visualisation du flux ETL :**
+```{mermaid}
+graph TD
+    A[Sources<br/>Excel, CSV, DB, API] --> B{Power Query<br/>Éditeur}
+    B --> C[Nettoyage<br/>Filtres, Types]
+    B --> D[Transformation<br/>Pivot, Fusion]
+    B --> E[Enrichissement<br/>Colonnes calculées]
+    C --> F{Contrôle Qualité}
+    D --> F
+    E --> F
+    F --> G[Chargement<br/>Power BI / Data Model]
+    G --> H[Dashboard<br/>Reporting]
+```
+
+---
+
+## 3.2 Connexions Multi-Sources
+
+### 3.2.1 Types de Sources Prises en Charge
+
+**Sources structurées :**
+
+
+- Fichiers : Excel, CSV, XML, JSON, PDF (limité) 
+- Bases de données : SQL Server, Oracle, MySQL, PostgreSQL  
+- Services cloud : Azure SQL, SharePoint, Salesforce
+
+**Sources semi-structurées :**
+
+
+- API REST, SOAP web services  
+- Web scraping (pages HTML)  
+- Dossiers avec multiples fichiers
+
+### 3.2.2 Exercice Pratique : Connexion à des Sources Multiples
+
+**Objectif :** Importer des données depuis 3 sources différentes et les combiner.
+
+**Étapes :**
+
+1. **Télécharger les fichiers sources :**
+   
+   
+   - [Ventes_2024.xlsx](https://example.com/Ventes_2024.xlsx) - Données de vente mensuelles  
+   - [Clients.csv](https://example.com/Clients.csv) - Référentiel clients  
+   - [Produits.json](https://example.com/Produits.json) - Catalogue produits
+
+2. **Instructions Power Query :**
+   
+```powerquery
+// Étape 1 : Connexion à Excel
+let
+    Source = Excel.Workbook(File.Contents("C:\Data\Ventes_2024.xlsx"), null, true),
+    Feuille1_Sheet = Source{[Item="Feuille1",Kind="Sheet"]}[Data],
+    #"En-têtes promus" = Table.PromoteHeaders(Feuille1_Sheet, [PromoteAllScalars=true])
+in
+    #"En-têtes promus"
+
+// Étape 2 : Connexion à CSV
+let
+    Source = Csv.Document(File.Contents("C:\Data\Clients.csv"),[Delimiter=";", Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"En-têtes promus" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+in
+    #"En-têtes promus"
+
+// Étape 3 : Connexion à JSON
+let
+    Source = Json.Document(File.Contents("C:\Data\Produits.json")),
+    #"Converti en tableau" = Table.FromList(Source, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"JSON développé" = Table.ExpandRecordColumn(#"Converti en tableau", "Column1", {"id", "nom", "categorie", "prix"}, {"id", "nom", "categorie", "prix"})
+in
+    #"JSON développé"
+```
+
+**Correction :**
+
+
+- Vérifier les chemins d'accès aux fichiers  
+- Ajuster l'encodage selon le fichier (UTF-8, 1252)  
+- Pour JSON, adapter la structure selon le schéma réel
+
+---
+
+## 3.3 Nettoyage et Transformation des Données
+
+### 3.3.1 Techniques de Nettoyage
+
+**Problèmes courants et solutions :**
+
+| Problème | Symptôme | Solution Power Query |
+|----------|----------|---------------------|
+| **Valeurs manquantes** | Null, vide, "N/A" | `Table.ReplaceValue`, `Table.FillDown` |
+| **Incohérences de format** | Dates texte, nombres texte | `Table.TransformColumnTypes` |
+| **Doublons** | Lignes identiques | `Table.Distinct` |
+| **Erreurs de saisie** | Typos, majuscules | `Text.Proper`, `Text.Trim` |
+| **Colonnes inutiles** | Données non pertinentes | `Table.RemoveColumns` |
+
+### 3.3.2 Exercice : Nettoyage d'un Jeu de Données Clients
+
+**Jeu de données problématique :**
+```csv
+ID;Nom;Prenom;Email;Telephone;Ville;CodePostal;DateInscription
+1;DUPONT;Jean;jean.dupont@mail.com;0123456789;Paris;75001;2023-01-15
+2;MARTIN;;martin@mail.com;06 12 34 56 78;Lyon;69000;2023-02-20
+3;durand;Marie;MARIE.DURAND@MAIL.COM;+33123456789;Marseille;13000;23-03-10
+4;LEFEBVRE;Pierre;lefebvre@mail;01.23.45.67.89;Lille;59000;2023/04/05
+5;ROBERT;Sophie;;;Paris;75015;2023-05-12
+```
+
+**Tâches à accomplir :**
+
+
+1. Standardiser les formats (noms propres, email lowercase)   
+2. Nettoyer les numéros de téléphone   
+3. Corriger les formats de date   
+4. Gérer les valeurs manquantes
+
+**Solution Power Query :**
+```powerquery
+let
+    Source = Csv.Document(File.Contents("C:\Data\Clients_Sale.csv"),[Delimiter=";", Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"En-têtes promus" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+    
+    // Standardisation des noms et prénoms
+    #"Nom en forme propre" = Table.TransformColumns(#"En-têtes promus",{{"Nom", Text.Proper, type text}}),
+    #"Prenom en forme propre" = Table.TransformColumns(#"Nom en forme propre",{{"Prenom", Text.Proper, type text}}),
+    
+    // Nettoyage des emails
+    #"Email en minuscules" = Table.TransformColumns(#"Prenom en forme propre",{{"Email", Text.Lower, type text}}),
+    #"Email valide" = Table.AddColumn(#"Email en minuscules", "EmailValide", each Text.Contains([Email], "@") and Text.Contains([Email], ".")),
+    
+    // Nettoyage téléphone
+    #"Telephone nettoye" = Table.TransformColumns(#"Email valide",{{"Telephone", 
+        each if _ = null then null
+        else Text.Remove(_, {" ", ".", "-", "+", "(", ")"}), type text}}),
+    
+    // Correction dates
+    #"Date transformee" = Table.TransformColumns(#"Telephone nettoye",{{"DateInscription", 
+        each if Text.Contains(_, "/") then Date.FromText(_, "fr-FR")
+        else if Text.Contains(_, "-") and Text.Length(_) = 8 then Date.FromText("20" & _)
+        else Date.FromText(_, "fr-FR"), type date}}),
+    
+    // Gestion valeurs manquantes
+    #"Villes par defaut" = Table.ReplaceValue(#"Date transformee",null,"Non renseigné",Replacer.ReplaceValue,{"Ville"}),
+    #"Filtre lignes completes" = Table.SelectRows(#"Villes par defaut", each [Nom] <> null and [Prenom] <> null)
+in
+    #"Filtre lignes completes"
+```
+
+---
+
+## 3.4 Fusion et Agrégation (Merge / Append)
+
+### 3.4.1 Types de Jointures (Merge)
+
+**Comparaison des jointures :**
+
+| Type | Description | Cas d'usage |
+|------|-------------|-------------|
+| **Inner Join** | Seulement les correspondances | Analyse complète |
+| **Left Outer** | Tous de gauche + correspondances | Conservation source principale |
+| **Right Outer** | Tous de droite + correspondances | Rare en Power Query |
+| **Full Outer** | Toutes les lignes | Consolidation |
+| **Anti Join** | Lignes sans correspondance | Détection anomalies |
+
+### 3.4.2 Exercice : Fusion de Tables Ventes et Produits
+
+**Données :**
+
+- **Table Ventes** : `VenteID, ProduitID, Quantite, DateVente`
+- **Table Produits** : `ProduitID, NomProduit, Categorie, PrixUnitaire`
+
+**Objectif :** Créer une vue enrichie avec les informations produits.
+
+```powerquery
+// Étape 1 : Charger les tables
+let
+    Ventes = Excel.CurrentWorkbook(){[Name="Ventes"]}[Content],
+    Produits = Excel.CurrentWorkbook(){[Name="Produits"]}[Content],
+    
+    // Étape 2 : Fusionner (Left Join)
+    Fusion = Table.NestedJoin(Ventes, {"ProduitID"}, Produits, {"ProduitID"}, "Produits", JoinKind.LeftOuter),
+    
+    // Étape 3 : Développer les colonnes nécessaires
+    ColonnesDeveloppees = Table.ExpandTableColumn(Fusion, "Produits", 
+        {"NomProduit", "Categorie", "PrixUnitaire"}, 
+        {"NomProduit", "Categorie", "PrixUnitaire"}),
+    
+    // Étape 4 : Calculer le montant total
+    MontantCalcule = Table.AddColumn(ColonnesDeveloppees, "MontantTotal", 
+        each [Quantite] * [PrixUnitaire], type number)
+in
+    MontantCalcule
+```
+
+### 3.4.3 Exercice : Agrégation de Fichiers Mensuels (Append)
+
+**Scénario :** 12 fichiers Excel `Ventes_MM_2024.xlsx` à consolider.
+
+```powerquery
+let
+    // Étape 1 : Se connecter au dossier
+    Source = Folder.Files("C:\Data\Ventes 2024"),
+    
+    // Étape 2 : Filtrer les fichiers Excel
+    FichiersExcel = Table.SelectRows(Source, each Text.EndsWith([Name], ".xlsx")),
+    
+    // Étape 3 : Combiner les fichiers
+    DonneesCombinees = Table.Combine(
+        List.Transform(
+            FichiersExcel[Content],
+            each Excel.Workbook(_, null, true){0}[Data]
+        )
+    ),
+    
+    // Étape 4 : Nettoyer et standardiser
+    EnTetesPromus = Table.PromoteHeaders(DonneesCombinees, [PromoteAllScalars=true]),
+    TypesCorriges = Table.TransformColumnTypes(EnTetesPromus,{
+        {"Date", type date},
+        {"Montant", Currency.Type},
+        {"Quantite", Int64.Type}
+    })
+in
+    TypesCorriges
+```
+
+---
+
+## 3.5 Transformation Pivot/Unpivot
+
+### 3.5.1 Quand utiliser Unpivot ?
+
+**Format large (pivoté) :**
+
+| Produit | Jan | Fév | Mar | Avr |
+|---------|-----|-----|-----|-----|
+| A | 100 | 150 | 200 | 180 |
+| B | 80 | 90 | 110 | 95 |
+
+**Format long (normalisé) :**
+
+| Produit | Mois | Ventes |
+|---------|------|--------|
+| A | Jan | 100 |
+| A | Fév | 150 |
+| ... | ... | ... |
+
+### 3.5.2 Exercice : Transformation Unpivot
+
+```powerquery
+let
+    Source = Table.FromRows({
+        {"A", 100, 150, 200, 180},
+        {"B", 80, 90, 110, 95}
+    }, {"Produit", "Jan", "Fév", "Mar", "Avr"}),
+    
+    // Sélectionner les colonnes à unpivoter
+    ColonnesAVirer = {"Jan", "Fév", "Mar", "Avr"},
+    
+    // Appliquer Unpivot
+    DonneesLongues = Table.UnpivotOtherColumns(Source, {"Produit"}, "Mois", "Ventes"),
+    
+    // Optionnel : trier les données
+    TrieParProduit = Table.Sort(DonneesLongues,{{"Produit", Order.Ascending}, {"Mois", Order.Ascending}})
+in
+    TrieParProduit
+```
+
+### 3.5.3 Exercice Inverse : Transformation Pivot
+
+```powerquery
+let
+    Source = Table.FromRows({
+        {"A", "Jan", 100},
+        {"A", "Fév", 150},
+        {"B", "Jan", 80},
+        {"B", "Fév", 90}
+    }, {"Produit", "Mois", "Ventes"}),
+    
+    // Appliquer Pivot
+    DonneesLarges = Table.Pivot(Source, 
+        List.Distinct(Source[Mois]), 
+        "Mois", 
+        "Ventes", 
+        List.Sum)
+in
+    DonneesLarges
+```
+
+---
+
+## 3.6 Introduction aux Outils ETL Professionnels
+
+### 3.6.1 SSIS (SQL Server Integration Services)
+
+**Avantages :**
+
+
+- Intégration avec l'écosystème Microsoft
+- Performances élevées pour gros volumes
+- Orchestration complexe de packages
+- Gestion avancée des erreurs
+
+**Comparaison avec Power Query :**
+
+| Critère | Power Query | SSIS |
+|---------|-------------|------|
+| **Complexité** | Basse à moyenne | Élevée |
+| **Performance** | Bonne | Excellente |
+| **Orchestration** | Limitée | Avancée |
+| **Maintenance** | Facile | Complexe |
+| **Coût** | Inclus dans Office/BI | Licence SQL Server |
+
+### 3.6.2 Talend Open Studio
+
+**Caractéristiques :**
+
+
+- Solution open source
+- Interface graphique similaire
+- Connecteurs nombreux
+- Génération de code Java
+
+**Exercice conceptuel :** Concevoir un flux ETL simple dans Talend
+
+
+1. Extraction depuis CSV
+2. Transformation (nettoyage)
+3. Chargement vers base de données
+
+---
+
+## 3.7 Contrôle Qualité et Documentation
+
+### 3.7.1 Métriques de Qualité des Données
+
+**Indicateurs à suivre :**
+
+
+1. **Complétude** : % de valeurs non nulles
+2. **Exactitude** : Conformité aux règles métier
+3. **Cohérence** : Uniformité des formats
+4. **Actualité** : Fraîcheur des données
+5. **Unicité** : Absence de doublons
+
+### 3.7.2 Exercice : Audit de Qualité des Données
+
+**Script d'audit Power Query :**
+```powerquery
+let
+    Source = ... // Chargement des données
+    
+    // Métriques de qualité
+    TotalLignes = Table.RowCount(Source),
+    Colonnes = Table.ColumnNames(Source),
+    
+    // Calcul par colonne
+    MetriquesParColonne = List.Transform(Colonnes, (colonne) =>
+        let
+            Valeurs = Table.Column(Source, colonne),
+            NonNull = List.NonNullCount(Valeurs),
+            Distinct = List.Distinct(Valeurs),
+            PourcentageNonNull = NonNull / TotalLignes * 100
+        in
+            [
+                Colonne = colonne,
+                Type = Value.Type(Valeurs{0}),
+                Completeness = PourcentageNonNull,
+                DistinctCount = List.Count(Distinct),
+                ExempleValeur = if NonNull > 0 then Text.From(Valeurs{0}) else "N/A"
+            ]
+    ),
+    
+    // Conversion en tableau
+    TableauMetriques = Table.FromRecords(MetriquesParColonne)
+in
+    TableauMetriques
+```
+
+### 3.7.3 Documentation des Flux
+
+**Template de documentation :**
+
+| Section | Contenu |
+|---------|---------|
+| **1. Description** | Objectif du flux, fréquence d'exécution |
+| **2. Sources** | Liste des sources avec connexions |
+| **3. Transformations** | Étapes appliquées (liste) |
+| **4. Règles métier** | Règles de validation appliquées |
+| **5. Métriques qualité** | Résultats du contrôle qualité |
+| **6. Dépendances** | Flux en amont/aval |
+| **7. Contacts** | Responsables technique et métier |
+
+---
+
+## 3.8 Atelier Pratique : Pipeline ETL Complet
+
+### 3.8.1 Cas d'Étude : RetailCorp Data Pipeline
+
+**Objectif :** Construire un pipeline ETL complet pour analyser les ventes.
+
+**Sources disponibles :**
+
+
+1. [VentesJournalieres.csv](https://example.com/VentesJournalieres.csv)
+2. [CatalogueProduits.xlsx](https://example.com/CatalogueProduits.xlsx)
+3. [ClientsAPI.json](https://example.com/api/clients) (simulé)
+
+**Étapes du pipeline :**
+
+```powerquery
+// Fichier principal - pipeline complet
+let
+    // ========== EXTRACTION ==========
+    // 1. Ventes journalières
+    VentesCSV = Csv.Document(File.Contents("C:\Data\VentesJournalieres.csv"), 
+        [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+    VentesAvecHeaders = Table.PromoteHeaders(VentesCSV, [PromoteAllScalars=true]),
+    
+    // 2. Catalogue produits
+    ProduitsExcel = Excel.Workbook(File.Contents("C:\Data\CatalogueProduits.xlsx"), null, true),
+    ProduitsSheet = ProduitsExcel{[Item="Produits",Kind="Sheet"]}[Data],
+    ProduitsAvecHeaders = Table.PromoteHeaders(ProduitsSheet, [PromoteAllScalars=true]),
+    
+    // 3. Clients via API (simulation)
+    ClientsAPI = Json.Document("{""clients"": [{""id"":1,""nom"":""Dupont"",""ville"":""Paris""}]}"),
+    ClientsTable = Table.FromRecords(ClientsAPI[clients]),
+    
+    // ========== TRANSFORMATION ==========
+    // Nettoyage ventes
+    VentesNettoyees = Table.TransformColumnTypes(VentesAvecHeaders,{
+        {"Date", type date},
+        {"ProduitID", Int64.Type},
+        {"Quantite", Int64.Type},
+        {"PrixUnitaire", Currency.Type}
+    }),
+    
+    // Calcul montant
+    VentesAvecMontant = Table.AddColumn(VentesNettoyees, "Montant", 
+        each [Quantite] * [PrixUnitaire], Currency.Type),
+    
+    // Nettoyage produits
+    ProduitsNettoyes = Table.TransformColumnTypes(ProduitsAvecHeaders,{
+        {"ProduitID", Int64.Type},
+        {"Nom", type text},
+        {"Categorie", type text},
+        {"PrixReference", Currency.Type}
+    }),
+    
+    // ========== ENRICHISSEMENT ==========
+    // Fusion ventes + produits
+    FusionProduits = Table.NestedJoin(VentesAvecMontant, {"ProduitID"}, 
+        ProduitsNettoyes, {"ProduitID"}, "DetailsProduit", JoinKind.LeftOuter),
+    
+    DetailsProduitsDeveloppes = Table.ExpandTableColumn(FusionProduits, "DetailsProduit", 
+        {"Nom", "Categorie"}, {"NomProduit", "CategorieProduit"}),
+    
+    // Fusion avec clients
+    FusionComplete = Table.NestedJoin(DetailsProduitsDeveloppes, {"ClientID"}, 
+        ClientsTable, {"id"}, "DetailsClient", JoinKind.LeftOuter),
+    
+    DetailsClientsDeveloppes = Table.ExpandTableColumn(FusionComplete, "DetailsClient", 
+        {"nom", "ville"}, {"NomClient", "VilleClient"}),
+    
+    // ========== AGREGATION ==========
+    // Pour dashboard quotidien
+    AgregationJournaliere = Table.Group(DetailsClientsDeveloppes, {"Date", "CategorieProduit"}, {
+        {"CA_Total", each List.Sum([Montant]), Currency.Type},
+        {"Quantite_Total", each List.Sum([Quantite]), Int64.Type},
+        {"NbTransactions", each Table.RowCount(_), Int64.Type}
+    }),
+    
+    // ========== QUALITE ==========
+    // Vérification intégrité
+    LignesAvant = Table.RowCount(VentesAvecMontant),
+    LignesApres = Table.RowCount(DetailsClientsDeveloppes),
+    TauxCompletude = LignesApres / LignesAvant * 100,
+    
+    // Log de qualité
+    LogQualite = #table({"Metric", "Valeur"}, {
+        {"Lignes sources", LignesAvant},
+        {"Lignes finales", LignesApres},
+        {"Taux completude", TauxCompletude & "%"},
+        {"Date traitement", DateTime.LocalNow()}
+    })
+    
+in
+    // Retourner les données transformées ET le log
+    [
+        DonneesVentes = DetailsClientsDeveloppes,
+        Agregations = AgregationJournaliere,
+        AuditQualite = LogQualite
+    ]
+```
+
+### 3.8.2 Documentation du Pipeline
+
+**Fiche technique :**
+```
+NOM DU PIPELINE: RetailCorp_Sales_ETL
+VERSION: 1.0
+FREQUENCE: Quotidienne (06:00)
+
+SOURCES:
+1. VentesJournalieres.csv - FTP serveur
+2. CatalogueProduits.xlsx - SharePoint
+3. API Clients - endpoint REST
+
+TRANSFORMATIONS APPLIQUEES:
+✓ Conversion types de données
+✓ Calcul montant de vente
+✓ Fusion avec référentiels
+✓ Nettoyage valeurs aberrantes
+✓ Agrégation journalière
+
+REGLES METIER:
+- Prix > 0
+- Quantité > 0
+- Dates dans plage valide
+- Clients actifs uniquement
+
+CONTACTS:
+- Technique: admin@retailcorp.com
+- Métier: sales.analysis@retailcorp.com
+```
+
+---
+
+## 3.9 Synthèse du Module 3
+
+### 3.9.1 Points Clés à Retenir
+
+
+✅ **Connecteurs multiples** : Savoir se connecter à diverses sources  
+✅ **Nettoyage efficace** : Techniques pour données "sales"  
+✅ **Transformations avancées** : Merge, Append, Pivot/Unpivot  
+✅ **Qualité des données** : Métriques et contrôles  
+✅ **Documentation** : Bonnes pratiques pour maintenabilité  
+
+### 3.9.2 Checklist d'Auto-évaluation
+
+
+- [ ] Je peux connecter Power Query à 3 types de sources différents
+- [ ] Je maîtrise les techniques de nettoyage de base
+- [ ] Je comprends la différence entre Merge et Append
+- [ ] Je sais transformer des données pivots en format long
+- [ ] Je peux créer un pipeline ETL simple et documenté
+- [ ] Je comprends les principes de qualité des données
+
+---
+
+

@@ -1,0 +1,773 @@
+---
+title: "Formation Business Intelligence & Power BI"
+subtitle: "Module 4 : Data Warehouse & OLAP"
+---
+
+**Durée : 5 heures** | **Objectif : Comprendre l'organisation d'un Data Warehouse et maîtriser les concepts OLAP pour l'analyse multidimensionnelle.**
+
+---
+
+## 4.1 Fondements du Data Warehouse
+
+### 4.1.1 Définition et Caractéristiques
+
+**Data Warehouse (DWH)** : Base de données décisionnelle optimisée pour l'analyse, distincte des systèmes transactionnels (OLTP).
+
+**Les 4 caractéristiques fondamentales (Bill Inmon) :**
+
+| Caractéristique | Description | Exemple |
+|-----------------|-------------|---------|
+| **Intégré** | Données unifiées depuis sources multiples | ClientID standardisé |
+| **Non volatile** | Données en lecture seule après chargement | Pas de UPDATE/DELETE |
+| **Historisé** | Conservation de l'historique complet | Ventes depuis 2010 |
+| **Thématique** | Organisé par sujet, non par application | Domaine "Ventes" |
+
+### 4.1.2 Architecture en Couches
+
+```{mermaid}
+graph TB
+    A[Sources<br/>OLTP, ERP, CRM] --> B{ETL/ELT<br/>Process}
+    B --> C[Data Warehouse<br/>Couche intégration]
+    C --> D[Data Marts<br/>Couche présentation]
+    D --> E[Cubes OLAP<br/>Couche analyse]
+    E --> F[Dashboards<br/>Couche reporting]
+    
+    style C fill:#2E86AB
+    style D fill:#F18F01
+```
+
+**Différence Data Warehouse vs Data Mart :**
+
+| Aspect | Data Warehouse | Data Mart |
+|--------|----------------|-----------|
+| **Portée** | Entreprise | Département/BU |
+| **Granularité** | Détail + agrégats | Principalement agrégats |
+| **Complexité** | Élevée | Modérée |
+| **Temps implémentation** | Long (mois/années) | Court (semaines) |
+| **Coût** | Élevé | Modéré |
+
+---
+
+## 4.2 Modèles OLAP : Cubes, Dimensions, Mesures
+
+### 4.2.1 Le Concept de Cube OLAP
+
+**Cube** : Structure multidimensionnelle permettant l'analyse selon plusieurs axes simultanés.
+
+**Analogie du cube physique :**
+
+
+- **Dimensions** : Axes du cube (X, Y, Z)
+- **Mesures** : Valeurs à l'intérieur du cube
+- **Cellules** : Intersection des membres de dimensions
+
+**Exemple concret : Cube des Ventes**
+```
+Dimensions:
+
+
+- Temps (Année > Trimestre > Mois > Jour)
+- Géographie (Pays > Région > Ville > Magasin)
+- Produits (Catégorie > Sous-catégorie > Produit)
+
+Mesures:
+
+
+- Chiffre d'affaires
+- Quantité vendue
+- Marge brute
+- Nombre de transactions
+```
+
+### 4.2.2 Exercice : Concevoir un Cube Simple
+
+**Scénario :** Analyse des performances commerciales.
+
+**Instructions :**
+
+
+1. Identifier 3 dimensions pertinentes
+2. Définir 4 mesures clés
+3. Dessiner la structure hiérarchique
+
+**Correction :**
+```{mermaid}
+graph TB
+    subgraph "Dimension TEMPS"
+        A1[Année] --> B1[Trimestre]
+        B1 --> C1[Mois]
+        C1 --> D1[Jour]
+    end
+    
+    subgraph "Dimension PRODUIT"
+        A2[Catégorie] --> B2[Sous-catégorie]
+        B2 --> C2[Produit]
+        C2 --> D2[SKU]
+    end
+    
+    subgraph "Dimension COMMERCIAL"
+        A3[Région] --> B3[Secteur]
+        B3 --> C3[Commercial]
+    end
+    
+    subgraph "Cube VENTES"
+        E{Mesures}
+        E --> F[CA HT]
+        E --> G[Marge]
+        E --> H[Quantité]
+        E --> I[Nb Clients]
+    end
+    
+    A1 --> E
+    A2 --> E
+    A3 --> E
+```
+
+---
+
+## 4.3 Comparaison OLTP vs OLAP
+
+### 4.3.1 Tableau Comparatif
+
+| Critère | OLTP (Transactionnel) | OLAP (Décisionnel) |
+|---------|----------------------|-------------------|
+| **Objectif** | Exécution transactions | Analyse et reporting |
+| **Utilisateurs** | Opérationnels (1000+) | Décisionnels (10-100) |
+| **Opérations** | INSERT, UPDATE, DELETE | SELECT (complexes) |
+| **Données** | Courantes, détaillées | Historiques, agrégées |
+| **Modèle** | Normalisé (3NF) | Dénormalisé (star schema) |
+| **Performance** | Optimisé écriture | Optimisé lecture |
+| **Taille** | Go à quelques To | To à Po |
+| **Exemple** | Caisse enregistreuse | Dashboard direction |
+
+### 4.3.2 Exercice : Identifier les Différences
+
+**Analyse de deux requêtes :**
+
+**Requête OLTP (transactionnelle) :**
+```sql
+-- Mise à jour du stock après vente
+BEGIN TRANSACTION;
+UPDATE Produits 
+SET Stock = Stock - 5 
+WHERE ProduitID = 123;
+
+INSERT INTO Ventes (ProduitID, Quantite, DateVente, ClientID)
+VALUES (123, 5, GETDATE(), 456);
+
+COMMIT;
+```
+
+**Requête OLAP (analytique) :**
+```sql
+-- Analyse des ventes par catégorie
+SELECT 
+    p.Categorie,
+    d.Trimestre,
+    d.Annee,
+    SUM(v.Montant) AS CA_Total,
+    AVG(v.Montant) AS Panier_Moyen,
+    COUNT(DISTINCT v.ClientID) AS Clients_Uniques
+FROM Fact_Ventes v
+JOIN Dim_Produit p ON v.ProduitID = p.ProduitID
+JOIN Dim_Date d ON v.DateID = d.DateID
+WHERE d.Annee = 2024
+GROUP BY p.Categorie, d.Trimestre, d.Annee
+ORDER BY d.Annee DESC, CA_Total DESC;
+```
+
+**Questions :**
+
+
+1. Quelle requête modifie les données ?
+2. Quelle requête utilise des jointures complexes ?
+3. Quelle requête est exécutée plus fréquemment ?
+4. Quelle requête nécessite des index différents ?
+
+**Réponses :**
+
+
+1. OLTP (UPDATE/INSERT) vs OLAP (SELECT uniquement)
+2. OLAP (multiples jointures pour analyse)
+3. OLTP (des milliers/jour) vs OLAP (quelques/jour)
+4. OLTP : index sur clés étrangères ; OLAP : index couvrants, columnstore
+
+---
+
+## 4.4 Modélisation Temporelle et SCD
+
+### 4.4.1 La Dimension Temps
+
+**Structure recommandée :**
+```sql
+CREATE TABLE Dim_Date (
+    DateKey INT PRIMARY KEY,           -- Format YYYYMMDD
+    DateFull DATE NOT NULL,
+    DayOfWeek INT,                     -- 1=Dimanche, 7=Samedi
+    DayName VARCHAR(20),
+    DayOfMonth INT,
+    DayOfYear INT,
+    WeekOfYear INT,
+    Month INT,
+    MonthName VARCHAR(20),
+    Quarter INT,
+    QuarterName VARCHAR(10),
+    Year INT,
+    IsWeekend BIT,
+    IsHoliday BIT,
+    HolidayName VARCHAR(50),
+    FiscalMonth INT,
+    FiscalQuarter INT,
+    FiscalYear INT
+);
+```
+
+### 4.4.2 Exercice : Création d'une Dimension Date
+
+**Objectif :** Générer une dimension date pour les années 2020-2030.
+
+```sql
+-- Script de génération
+DECLARE @StartDate DATE = '2020-01-01';
+DECLARE @EndDate DATE = '2030-12-31';
+
+WITH DateCTE AS (
+    SELECT @StartDate AS DateValue
+    UNION ALL
+    SELECT DATEADD(DAY, 1, DateValue)
+    FROM DateCTE
+    WHERE DateValue < @EndDate
+)
+INSERT INTO Dim_Date (
+    DateKey, DateFull, DayOfWeek, DayName, DayOfMonth, 
+    DayOfYear, WeekOfYear, Month, MonthName, Quarter, 
+    QuarterName, Year, IsWeekend, IsHoliday
+)
+SELECT
+    -- DateKey au format YYYYMMDD
+    CONVERT(INT, CONVERT(VARCHAR, DateValue, 112)) AS DateKey,
+    DateValue AS DateFull,
+    DATEPART(WEEKDAY, DateValue) AS DayOfWeek,
+    DATENAME(WEEKDAY, DateValue) AS DayName,
+    DATEPART(DAY, DateValue) AS DayOfMonth,
+    DATEPART(DAYOFYEAR, DateValue) AS DayOfYear,
+    DATEPART(WEEK, DateValue) AS WeekOfYear,
+    DATEPART(MONTH, DateValue) AS Month,
+    DATENAME(MONTH, DateValue) as MonthName,
+    DATEPART(QUARTER, DateValue) AS Quarter,
+    'Q' + CAST(DATEPART(QUARTER, DateValue) AS VARCHAR) AS QuarterName,
+    DATEPART(YEAR, DateValue) AS Year,
+    CASE WHEN DATEPART(WEEKDAY, DateValue) IN (1,7) THEN 1 ELSE 0 END AS IsWeekend,
+    0 AS IsHoliday  -- À compléter avec un calendrier de jours fériés
+FROM DateCTE
+OPTION (MAXRECURSION 0);
+```
+
+### 4.4.3 SCD (Slowly Changing Dimensions)
+
+**Rappel des types SCD :**
+
+
+- **Type 0** : Attribut fixe (jamais modifié)
+- **Type 1** : Écrasement (pas d'historique)
+- **Type 2** : Nouvelle ligne avec dates de validité
+- **Type 3** : Colonnes supplémentaires pour ancienne valeur
+- **Type 4** : Table historique séparée
+- **Type 6** : Hybride (1+2+3)
+
+**Exercice : Implémentation SCD Type 2**
+
+**Table client avec historique :**
+```sql
+CREATE TABLE Dim_Client_SCD2 (
+    ClientKey INT IDENTITY(1,1) PRIMARY KEY,
+    ClientID VARCHAR(20) NOT NULL,          -- Clé naturelle
+    Nom VARCHAR(100),
+    Prenom VARCHAR(100),
+    Email VARCHAR(255),
+    Ville VARCHAR(100),
+    Region VARCHAR(100),
+    
+    -- Colonnes de gestion SCD Type 2
+    ValidFrom DATE NOT NULL,
+    ValidTo DATE NOT NULL,
+    IsCurrent BIT NOT NULL DEFAULT 1,
+    
+    -- Pour détection des changements
+    HashKey AS CAST(
+        HASHBYTES('MD5', 
+            COALESCE(Nom, '') + '|' + 
+            COALESCE(Prenom, '') + '|' + 
+            COALESCE(Ville, '') + '|' + 
+            COALESCE(Region, '')
+        ) AS BINARY(16)
+    ) PERSISTED
+);
+
+-- Index pour performances
+CREATE INDEX IX_Client_SCD2_Current 
+ON Dim_Client_SCD2(ClientID, IsCurrent);
+
+CREATE INDEX IX_Client_SCD2_Dates 
+ON Dim_Client_SCD2(ValidFrom, ValidTo);
+```
+
+**Procédure de mise à jour :**
+```sql
+CREATE PROCEDURE Update_Dim_Client_SCD2
+AS
+BEGIN
+    SET NOCOUNT ON;
+    
+    -- Étape 1 : Fermer les enregistrements modifiés
+    UPDATE target
+    SET 
+        ValidTo = DATEADD(DAY, -1, CAST(GETDATE() AS DATE)),
+        IsCurrent = 0
+    FROM Dim_Client_SCD2 target
+    INNER JOIN Staging_Client source 
+        ON target.ClientID = source.ClientID
+    WHERE target.IsCurrent = 1
+      AND target.HashKey <> source.HashKey;
+    
+    -- Étape 2 : Insérer les nouvelles versions
+    INSERT INTO Dim_Client_SCD2 (
+        ClientID, Nom, Prenom, Email, Ville, Region,
+        ValidFrom, ValidTo, IsCurrent
+    )
+    SELECT 
+        source.ClientID,
+        source.Nom,
+        source.Prenom,
+        source.Email,
+        source.Ville,
+        source.Region,
+        CAST(GETDATE() AS DATE) AS ValidFrom,
+        '9999-12-31' AS ValidTo,
+        1 AS IsCurrent
+    FROM Staging_Client source
+    WHERE NOT EXISTS (
+        SELECT 1 
+        FROM Dim_Client_SCD2 target 
+        WHERE target.ClientID = source.ClientID 
+          AND target.IsCurrent = 1
+    );
+    
+    -- Étape 3 : Insérer les nouveaux clients
+    INSERT INTO Dim_Client_SCD2 (
+        ClientID, Nom, Prenom, Email, Ville, Region,
+        ValidFrom, ValidTo, IsCurrent
+    )
+    SELECT 
+        source.ClientID,
+        source.Nom,
+        source.Prenom,
+        source.Email,
+        source.Ville,
+        source.Region,
+        CAST(GETDATE() AS DATE) AS ValidFrom,
+        '9999-12-31' AS ValidTo,
+        1 AS IsCurrent
+    FROM Staging_Client source
+    WHERE NOT EXISTS (
+        SELECT 1 
+        FROM Dim_Client_SCD2 target 
+        WHERE target.ClientID = source.ClientID
+    );
+END;
+```
+
+---
+
+## 4.5 Atelier Pratique : Hiérarchies et Analyses Temporelles
+
+### 4.5.1 Exercice : Créer 3 Hiérarchies
+
+**Objectif :** Construire les hiérarchies Date, Produit et Région.
+
+**1. Hiérarchie Date :**
+```sql
+-- Structure déjà vue dans Dim_Date
+-- Hiérarchie : Année > Trimestre > Mois > Jour
+
+-- Requête utilisant la hiérarchie
+SELECT
+    d.Year,
+    d.Quarter,
+    d.MonthName,
+    SUM(v.Montant) AS CA_Total,
+    SUM(v.Quantite) AS Quantite_Total
+FROM Fact_Ventes v
+JOIN Dim_Date d ON v.DateKey = d.DateKey
+GROUP BY 
+    ROLLUP(d.Year, d.Quarter, d.MonthName)
+ORDER BY 
+    d.Year, d.Quarter, d.MonthName;
+```
+
+**2. Hiérarchie Produit :**
+```sql
+-- Table de dimension
+CREATE TABLE Dim_Produit (
+    ProduitKey INT PRIMARY KEY,
+    ProduitID VARCHAR(50),
+    NomProduit VARCHAR(200),
+    SousCategorie VARCHAR(100),
+    Categorie VARCHAR(100),
+    Departement VARCHAR(100),
+    
+    -- Hiérarchie : Département > Catégorie > Sous-catégorie > Produit
+    HierarchieProduit AS 
+        Departement + ' > ' + Categorie + ' > ' + SousCategorie + ' > ' + NomProduit
+);
+
+-- Analyse par niveau hiérarchique
+SELECT
+    COALESCE(p.Departement, 'Tous Départements') AS Departement,
+    COALESCE(p.Categorie, 'Toutes Catégories') AS Categorie,
+    COALESCE(p.SousCategorie, 'Toutes Sous-catégories') AS SousCategorie,
+    SUM(v.Montant) AS CA_Total,
+    COUNT(DISTINCT v.VenteID) AS Nb_Ventes
+FROM Fact_Ventes v
+JOIN Dim_Produit p ON v.ProduitKey = p.ProduitKey
+GROUP BY 
+    CUBE(p.Departement, p.Categorie, p.SousCategorie)
+ORDER BY 
+    p.Departement, p.Categorie, p.SousCategorie;
+```
+
+**3. Hiérarchie Région :**
+```sql
+CREATE TABLE Dim_Region (
+    RegionKey INT PRIMARY KEY,
+    MagasinID VARCHAR(20),
+    NomMagasin VARCHAR(100),
+    Ville VARCHAR(100),
+    Region VARCHAR(100),
+    Pays VARCHAR(50),
+    
+    -- Hiérarchie : Pays > Région > Ville > Magasin
+    HierarchieRegion AS 
+        Pays + ' > ' + Region + ' > ' + Ville + ' > ' + NomMagasin
+);
+
+-- Analyse géographique avec drill-down
+WITH RegionalSales AS (
+    SELECT
+        r.Pays,
+        r.Region,
+        r.Ville,
+        r.NomMagasin,
+        SUM(v.Montant) AS CA_Total,
+        RANK() OVER (PARTITION BY r.Region ORDER BY SUM(v.Montant) DESC) AS Rang_Magasin
+    FROM Fact_Ventes v
+    JOIN Dim_Region r ON v.RegionKey = r.RegionKey
+    JOIN Dim_Date d ON v.DateKey = d.DateKey
+    WHERE d.Year = 2024
+    GROUP BY r.Pays, r.Region, r.Ville, r.NomMagasin
+)
+SELECT
+    Pays,
+    Region,
+    Ville,
+    NomMagasin,
+    CA_Total,
+    Rang_Magasin,
+    SUM(CA_Total) OVER (PARTITION BY Region) AS CA_Region,
+    CA_Total * 100.0 / SUM(CA_Total) OVER (PARTITION BY Region) AS Pourcentage_Region
+FROM RegionalSales
+ORDER BY Pays, Region, CA_Total DESC;
+```
+
+### 4.5.2 Analyse YTD (Year-To-Date) et YoY (Year-Over-Year)
+
+**Formule YTD :**
+```
+YTD = Cumul depuis début d'année jusqu'à date donnée
+```
+
+**Formule YoY :**
+```
+YoY = (Valeur Année N / Valeur Année N-1) - 1
+```
+
+**Exercice : Calculer YTD et YoY**
+
+```sql
+WITH MonthlySales AS (
+    SELECT
+        d.Year,
+        d.Month,
+        SUM(v.Montant) AS CA_Mensuel,
+        -- YTD: somme cumulative sur l'année
+        SUM(SUM(v.Montant)) OVER (
+            PARTITION BY d.Year 
+            ORDER BY d.Month 
+            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+        ) AS CA_YTD
+    FROM Fact_Ventes v
+    JOIN Dim_Date d ON v.DateKey = d.DateKey
+    GROUP BY d.Year, d.Month
+),
+YoYComparison AS (
+    SELECT
+        Year,
+        Month,
+        CA_Mensuel,
+        CA_YTD,
+        -- CA même mois année précédente
+        LAG(CA_Mensuel, 12) OVER (ORDER BY Year, Month) AS CA_Mensuel_Precedent,
+        -- YTD année précédente (même mois)
+        LAG(CA_YTD, 12) OVER (ORDER BY Year, Month) AS CA_YTD_Precedent
+    FROM MonthlySales
+)
+SELECT
+    Year,
+    Month,
+    CA_Mensuel,
+    CA_YTD,
+    CA_Mensuel_Precedent,
+    CA_YTD_Precedent,
+    -- Evolution mensuelle YoY
+    CASE 
+        WHEN CA_Mensuel_Precedent > 0 
+        THEN (CA_Mensuel - CA_Mensuel_Precedent) / CA_Mensuel_Precedent * 100 
+        ELSE NULL 
+    END AS Evolution_Mensuelle_YoY_Percent,
+    -- Evolution YTD YoY
+    CASE 
+        WHEN CA_YTD_Precedent > 0 
+        THEN (CA_YTD - CA_YTD_Precedent) / CA_YTD_Precedent * 100 
+        ELSE NULL 
+    END AS Evolution_YTD_YoY_Percent
+FROM YoYComparison
+WHERE Year >= 2023
+ORDER BY Year, Month;
+```
+
+### 4.5.3 Exercice Avancé : Tableaux de Bord OLAP
+
+**Objectif :** Créer un ensemble de KPIs avec calculs avancés.
+
+```sql
+-- Vue complète des KPIs
+CREATE VIEW vw_KPIs_Commerciaux AS
+WITH BaseData AS (
+    SELECT
+        d.Year,
+        d.Quarter,
+        d.Month,
+        r.Region,
+        r.Ville,
+        p.Categorie,
+        SUM(v.Montant) AS CA_Total,
+        SUM(v.Quantite) AS Quantite_Total,
+        COUNT(DISTINCT v.ClientKey) AS Clients_Uniques,
+        COUNT(DISTINCT v.VenteKey) AS Transactions,
+        SUM(v.Montant - (v.Quantite * v.CoutUnitaire)) AS Marge_Brute
+    FROM Fact_Ventes v
+    JOIN Dim_Date d ON v.DateKey = d.DateKey
+    JOIN Dim_Region r ON v.RegionKey = r.RegionKey
+    JOIN Dim_Produit p ON v.ProduitKey = p.ProduitKey
+    GROUP BY 
+        d.Year, d.Quarter, d.Month, 
+        r.Region, r.Ville, p.Categorie
+),
+YTDData AS (
+    SELECT
+        Year,
+        Region,
+        Categorie,
+        SUM(CA_Total) AS CA_YTD,
+        SUM(Marge_Brute) AS Marge_YTD
+    FROM BaseData
+    GROUP BY Year, Region, Categorie
+),
+PreviousYear AS (
+    SELECT
+        Year,
+        Region,
+        Categorie,
+        CA_YTD,
+        Marge_YTD,
+        LAG(CA_YTD) OVER (PARTITION BY Region, Categorie ORDER BY Year) AS CA_YTD_Precedent,
+        LAG(Marge_YTD) OVER (PARTITION BY Region, Categorie ORDER BY Year) AS Marge_YTD_Precedent
+    FROM YTDData
+)
+SELECT
+    b.Year,
+    b.Quarter,
+    b.Month,
+    b.Region,
+    b.Ville,
+    b.Categorie,
+    b.CA_Total,
+    b.Quantite_Total,
+    b.Clients_Uniques,
+    b.Transactions,
+    b.Marge_Brute,
+    -- Calculs dérivés
+    b.CA_Total / NULLIF(b.Transactions, 0) AS Panier_Moyen,
+    b.Marge_Brute / NULLIF(b.CA_Total, 0) * 100 AS Taux_Marge,
+    -- Comparaisons temporelles
+    y.CA_YTD,
+    y.Marge_YTD,
+    p.CA_YTD_Precedent,
+    p.Marge_YTD_Precedent,
+    -- Evolutions
+    CASE 
+        WHEN p.CA_YTD_Precedent > 0 
+        THEN (y.CA_YTD - p.CA_YTD_Precedent) / p.CA_YTD_Precedent * 100 
+        ELSE NULL 
+    END AS Evolution_CA_YoY_Percent,
+    -- Classements
+    RANK() OVER (PARTITION BY b.Year, b.Month ORDER BY b.CA_Total DESC) AS Rang_CA_Mensuel,
+    RANK() OVER (PARTITION BY b.Year, b.Region ORDER BY b.CA_Total DESC) AS Rang_Ville_Region
+FROM BaseData b
+JOIN YTDData y ON b.Year = y.Year 
+    AND b.Region = y.Region 
+    AND b.Categorie = y.Categorie
+LEFT JOIN PreviousYear p ON b.Year = p.Year 
+    AND b.Region = p.Region 
+    AND b.Categorie = p.Categorie;
+```
+
+---
+
+## 4.6 Optimisation des Cubes OLAP
+
+### 4.6.1 Stratégies d'Agrégation
+
+**Types d'agrégations :**
+
+
+1. **Pré-calculées** : Stockées (performantes mais volumineuses)
+2. **À la volée** : Calculées (lentes mais économes)
+3. **Hybrides** : Combinaison optimisée
+
+**Exemple :** Agréger par mois et région pour accélérer les requêtes courantes.
+
+```sql
+-- Table d'agrégation
+CREATE TABLE Agg_Ventes_Mensuelles (
+    Year INT,
+    Month INT,
+    RegionKey INT,
+    CategorieKey INT,
+    CA_Total DECIMAL(15,2),
+    Quantite_Total INT,
+    Clients_Uniques INT,
+    Marge_Total DECIMAL(15,2),
+    PRIMARY KEY (Year, Month, RegionKey, CategorieKey)
+);
+
+-- Procédure de remplissage
+CREATE PROCEDURE Refresh_Agg_Ventes_Mensuelles
+AS
+BEGIN
+    TRUNCATE TABLE Agg_Ventes_Mensuelles;
+    
+    INSERT INTO Agg_Ventes_Mensuelles
+    SELECT
+        d.Year,
+        d.Month,
+        v.RegionKey,
+        v.CategorieKey,
+        SUM(v.Montant) AS CA_Total,
+        SUM(v.Quantite) AS Quantite_Total,
+        COUNT(DISTINCT v.ClientKey) AS Clients_Uniques,
+        SUM(v.Marge) AS Marge_Total
+    FROM Fact_Ventes v
+    JOIN Dim_Date d ON v.DateKey = d.DateKey
+    GROUP BY d.Year, d.Month, v.RegionKey, v.CategorieKey;
+END;
+```
+
+### 4.6.2 Partitionnement pour les Gros Volumes
+
+**Partitionnement par année :**
+```sql
+-- Fonction de partitionnement
+CREATE PARTITION FUNCTION pf_Ventes_By_Year (INT)
+AS RANGE RIGHT FOR VALUES (
+    20200101, 20210101, 20220101, 20230101,
+    20240101, 20250101
+);
+
+-- Schéma de partitionnement
+CREATE PARTITION SCHEME ps_Ventes_By_Year
+AS PARTITION pf_Ventes_By_Year
+TO ([PRIMARY], [FG2020], [FG2021], [FG2022], 
+    [FG2023], [FG2024], [FG2025]);
+
+-- Table partitionnée
+CREATE TABLE Fact_Ventes_Partitioned (
+    VenteKey BIGINT IDENTITY(1,1),
+    DateKey INT NOT NULL,
+    -- autres colonnes...
+    CONSTRAINT PK_Fact_Ventes_Part PRIMARY KEY (DateKey, VenteKey)
+) ON ps_Ventes_By_Year(DateKey);
+```
+
+---
+
+## 4.7 Synthèse du Module 4
+
+### 4.7.1 Points Clés à Retenir
+
+
+✅ **Data Warehouse** : Caractéristiques et architecture  
+✅ **Cubes OLAP** : Dimensions, mesures, hiérarchies  
+✅ **Modélisation** : Différences OLTP vs OLAP  
+✅ **Analyses temporelles** : YTD, YoY, SCD  
+✅ **Optimisation** : Agrégations, partitionnement  
+
+### 4.7.2 Checklist d'Auto-évaluation
+
+
+- [ ] Je comprends les 4 caractéristiques d'un Data Warehouse
+- [ ] Je peux expliquer la différence entre OLTP et OLAP
+- [ ] Je sais concevoir une hiérarchie à 3 niveaux
+- [ ] Je maîtrise les calculs YTD et YoY
+- [ ] Je comprends les différents types SCD
+- [ ] Je connais les techniques d'optimisation OLAP
+
+### 4.7.3 Projet Pratique Final
+
+**Mission :** Concevoir un mini Data Warehouse avec :
+
+
+1. 3 dimensions avec hiérarchies
+2. 1 table de faits
+3. Calculs YTD/YoY
+4. Procédure SCD Type 2
+5. Vues analytiques
+
+**Livrables attendus :**
+
+
+- Scripts de création des tables
+- Procédures ETL de chargement
+- Requêtes analytiques démonstratives
+- Documentation technique
+
+---
+
+## Fichiers Sources à Télécharger
+
+
+### Pour le Module 4 (Data Warehouse & OLAP) :
+
+1. **Scripts SQL :**
+
+   - [Script_Dim_Date.sql](LAB_MODULE4/script_DIM_date.sql)
+   - [Script_SCD_Type2.sql](LAB_MODULE4\script_SCD_type2.sql)
+   - [Script_Hierarchies.sql](LAB_MODULE4/script_Hierarchies.sql)
+   - [Script_YTD_YoY.sql](LAB_MODULE4/script_YTD_YOY.sql)
+
+2. **Jeux de données d'exemple :**
+
+   - [Sample_Sales_Data.csv](LAB_MODULE4/sample_sales_data.csv)
+   - [Product_Hierarchy.xlsx](LAB_MODULE4/Product_Hierarchy.xlsx)
+   - [Regional_Structure.json](LAB_MODULE4/Regional_structure.json)
+

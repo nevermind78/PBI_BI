@@ -1,0 +1,8 @@
+ID;Nom;Prenom;Email;Telephone;Ville;CodePostal;DateInscription
+1;DUPONT;Jean;jean.dupont@mail.com;0123456789;Paris;75001;2023-01-15
+2;MARTIN;;martin@mail.com;06 12 34 56 78;Lyon;69000;2023-02-20
+3;durand;Marie;MARIE.DURAND@MAIL.COM;+33123456789;Marseille;13000;23-03-10
+4;LEFEBVRE;Pierre;lefebvre@mail;01.23.45.67.89;Lille;59000;2023/04/05
+5;ROBERT;Sophie;;;Paris;75015;2023-05-12
+6;PETIT;Lucas;lucas.petit@mail.fr;0611223344;Toulouse;31000;2023-06-18
+7;BERTRAND;Julie;julie.bertrand@mail.com;0688776655;Nice;06000;2023-07-22

@@ -1,0 +1,973 @@
+---
+title: "Module 1 : Fondamentaux Business Intelligence"
+toc: false
+toc-depth: 3
+number-sections: false
+format: 
+  revealjs:
+    scrollable: true
+    center: true
+    slide-number: true
+    width: 1400
+    height: 800
+    margin: 0.04
+
+---
+<style>
+/* Testez différentes tailles */
+
+.reveal { font-size: 30px !important; }  /* Légèrement réduit */
+
+/* Couleur de texte principale */
+.mermaid text, .mermaid tspan {
+  fill: #2E86AB !important;  /* Bleu foncé */
+  color: #2E86AB !important;
+}
+
+/* Labels des nœuds */
+.mermaid .node .label {
+  fill: #A23B72 !important;  /* Violet */
+  color: #A23B72 !important;
+}
+
+/* Labels des liens */
+.mermaid .edgeLabel, .mermaid .edge-path .label {
+  fill: #F18F01 !important;  /* Orange */
+  color: #F18F01 !important;
+}
+</style>
+
+## 📑 Table des Matières
+
+<div class="toc-two-columns">
+
+### Partie 1
+- **1.1** Introduction à la BI
+- **1.2** Architecture Décisionnelle  
+- **1.3** Cycle de Vie Projet BI
+- **1.4** Panorama des Outils BI
+
+### Partie 2
+- **1.5** Gouvernance Data-Driven
+- **1.6** Atelier Pratique
+- **1.7** Synthèse du Module
+
+</div>
+
+<style>
+.toc-two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.toc-two-columns h3 {
+  color: #2E86AB;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #2E86AB;
+  padding-bottom: 5px;
+}
+
+.toc-two-columns ul {
+  margin-left: 0;
+  padding-left: 20px;
+}
+
+.toc-two-columns li {
+  margin-bottom: 8px;
+  font-size: 0.9em;
+}
+</style>
+
+## Slide 1: Introduction
+
+**Durée : 5 heures** | **Objectif : Maîtriser les concepts fondamentaux de la BI et comprendre l'architecture décisionnelle**
+
+---
+
+## Slide 2: 1.1 Introduction à la Business Intelligence
+
+### 1.1.1 Définition et Contexte
+
+La **Business Intelligence** (BI) représente l'ensemble des technologies, processus et pratiques permettant de collecter, intégrer, analyser et présenter les données d'entreprise pour faciliter la prise de décision stratégique.
+
+Dans un contexte où les organisations génèrent des volumes massifs de données, la BI transforme cette complexité en opportunités concrètes :
+
+- **Visibilité opérationnelle** : comprendre ce qui se passe réellement dans l'entreprise
+- **Anticipation stratégique** : détecter les tendances et prédire les évolutions
+- **Optimisation des ressources** : identifier les inefficacités et les leviers d'amélioration
+- **Avantage concurrentiel** : exploiter la donnée comme actif stratégique différenciant
+
+---
+
+## Slide 3: 1.1.2 Les Trois Piliers de la BI Moderne
+
+```{mermaid}
+graph TB
+    A[Business Intelligence] --> B[Descriptive Analytics]
+    A --> C[Predictive Analytics]
+    A --> D[Prescriptive Analytics]
+    
+    B --> B1["Que s'est-il passé ?<br/>Tableaux de bord, Rapports"]
+    C --> C1["Que va-t-il se passer ?<br/>Modèles prédictifs, Forecasting"]
+    D --> D1["Que doit-on faire ?<br/>Recommandations, Optimisation"]
+    
+    style A fill:#2E86AB
+    style B fill:#A23B72
+    style C fill:#F18F01
+    style D fill:#C73E1D
+```
+
+---
+
+## Slide 4: Tableau Comparatif des Analytics
+
+| Type d'Analytics | Objectif | Exemples d'Usage | Outils Typiques |
+|-----------------|----------|------------------|-----------------|
+| **Descriptive** | Comprendre le passé | Rapports de ventes mensuels, analyses de performance | Power BI, Tableau, Excel |
+| **Diagnostic** | Expliquer les causes | Analyse des écarts budgétaires, root cause analysis | SQL, Python, DAX |
+| **Predictive** | Anticiper l'avenir | Prévision des ventes, churn prediction | Python (scikit-learn), R, Azure ML |
+| **Prescriptive** | Recommander des actions | Optimisation des prix, allocation de ressources | Algorithmes d'optimisation, IA |
+
+---
+
+## Slide 5: 1.1.3 Cas d'Usage Concrets par Département
+
+**Finance & Contrôle de Gestion**
+
+- Suivi budgétaire et analyse des écarts en temps réel 
+- Consolidation financière multi-entités 
+- Prévisions de trésorerie et cash-flow forecasting
+
+**Commercial & Marketing**
+
+- Analyse de la performance des ventes par segment/produit/région
+- Scoring clients et segmentation RFM (Récence, Fréquence, Montant) 
+- ROI des campagnes marketing et attribution multi-touch
+
+---
+
+## Slide 6: Suite des Cas d'Usage
+
+**Opérations & Supply Chain**
+
+- Optimisation des stocks et prévision de la demande
+- Analyse de la performance logistique (taux de service, lead times)
+- Suivi de la qualité et détection des anomalies
+
+**Ressources Humaines**
+
+- Tableaux de bord RH : turnover, absentéisme, productivité
+- Analyse prédictive du départ des talents
+- Planification des effectifs et gestion des compétences
+
+---
+
+## Slide 7: 1.2 Architecture Décisionnelle
+
+### 1.2.1 Vue d'Ensemble de l'Architecture BI
+
+```{mermaid}
+flowchart LR
+    A[Sources de Données] --> B[ETL/ELT]
+    B --> C[Data Warehouse]
+    C --> D[Cube OLAP]
+    D --> E[Couche Sémantique]
+    E --> F[Reporting & Dashboards]
+    
+    A1[ERP<br/>SAP, Oracle] --> A
+    A2[CRM<br/>Salesforce] --> A
+    A3[Fichiers<br/>Excel, CSV] --> A
+    A4[APIs<br/>Web Services] --> A
+    A5[Bases de Données<br/>PostgreSQL, MySQL] --> A
+    
+    F --> F1[Power BI]
+    F --> F2[Tableau]
+    F --> F3[Excel]
+    
+    style C fill:#2E86AB
+    style D fill:#A23B72
+    style F fill:#F18F01
+```
+
+---
+
+## Slide 8: 1.2.2 Les Composants de l'Architecture
+
+#### **1. Sources de Données (Data Sources)**
+
+| Type de Source | Caractéristiques | Exemples | Challenges |
+|---------------|------------------|----------|------------|
+| **Systèmes transactionnels** | Données opérationnelles en temps réel | ERP (SAP, Oracle), CRM (Salesforce) | Volume élevé, structure complexe |
+| **Fichiers plats** | Données semi-structurées | Excel, CSV, JSON, XML | Qualité variable, formats inconsistants |
+| **Bases de données** | Données structurées | PostgreSQL, MySQL, SQL Server | Schémas différents, silos de données |
+
+---
+
+## Slide 9: Suite des Sources de Données
+
+| Type de Source | Caractéristiques | Exemples | Challenges |
+|---------------|------------------|----------|------------|
+| **APIs & Web Services** | Données externes | REST APIs, réseaux sociaux, Open Data | Limitation de débit, authentification |
+| **IoT & Capteurs** | Données streaming | Capteurs industriels, logs applicatifs | Volume massif, traitement temps réel |
+
+---
+
+## Slide 10: Processus ETL/ELT
+
+**ETL (Approche Traditionnelle)**
+```{mermaid}
+graph LR
+    A[Extract<br/>Extraction] --> B[Transform<br/>Transformation]
+    B --> C[Load<br/>Chargement]
+    
+    A1[Sources<br/>Hétérogènes] --> A
+    C --> C1[Data<br/>Warehouse]
+    
+    style B fill:#F18F01
+```
+
+**Opérations de Transformation :**
+
+- **Nettoyage** : suppression des doublons, gestion des valeurs manquantes
+- **Normalisation** : uniformisation des formats (dates, devises, codes)
+- **Enrichissement** : calcul de métriques dérivées, géocodage
+
+---
+
+## Slide 11: Data Warehouse
+
+**Caractéristiques Clés :**
+
+| Critère | OLTP (Transactionnel) | OLAP (Analytique) |
+|---------|----------------------|-------------------|
+| **Objectif** | Gérer les opérations quotidiennes | Analyser et décider |
+| **Type de requêtes** | INSERT, UPDATE, DELETE | SELECT avec agrégations |
+| **Volume de données** | Données courantes | Historique complet |
+| **Normalisation** | Fortement normalisé (3NF) | Dénormalisé (modèle étoile) |
+
+---
+
+## Slide 12: Architectures Data Warehouse
+
+```{mermaid}
+graph TB
+    subgraph "Architecture Traditionnelle"
+    A1[Sources] --> B1[Staging Area]
+    B1 --> C1[Data Warehouse]
+    C1 --> D1[Data Marts]
+    end
+    
+    subgraph "Architecture Lakehouse Moderne"
+    A2[Sources] --> B2[Data Lake<br/>Données brutes]
+    B2 --> C2[Data Warehouse<br/>Données structurées]
+    C2 --> D2[Couche Analytique]
+    end
+    
+    style C1 fill:#2E86AB
+    style C2 fill:#2E86AB
+```
+
+---
+
+## Slide 13: Cubes OLAP
+
+**Opérations OLAP Fondamentales :**
+
+```{mermaid}
+graph LR
+    A[Cube OLAP] --> B[Slice<br/>Découpage]
+    A --> C[Dice<br/>Sous-cube]
+    A --> D[Drill-Down<br/>Descente]
+    A --> E[Drill-Up<br/>Montée]
+    A --> F[Pivot<br/>Rotation]
+    
+    style A fill:#A23B72
+```
+
+---
+
+## Slide 14: Tableau des Opérations OLAP
+
+| Opération | Description | Exemple |
+|-----------|-------------|---------|
+| **Slice** | Sélectionner une tranche du cube | Ventes pour l'année 2024 uniquement |
+| **Dice** | Extraire un sous-cube | Ventes 2024 pour la France et l'Allemagne |
+| **Drill-Down** | Descendre dans la hiérarchie | De l'année → trimestre → mois → jour |
+| **Drill-Up** | Remonter dans la hiérarchie | Du produit → catégorie → division |
+| **Pivot** | Faire pivoter les axes d'analyse | Permuter lignes et colonnes |
+
+---
+
+## Slide 15: 1.3 Cycle de Vie d'un Projet BI
+
+### 1.3.1 Les Phases du Projet BI
+
+```{mermaid}
+gantt
+    title Cycle de Vie Projet BI (6-9 mois)
+    dateFormat  YYYY-MM-DD
+    section Cadrage
+    Expression des besoins      :a1, 2024-01-01, 30d
+    Audit de l'existant         :a2, after a1, 15d
+    
+    section Conception
+    Modélisation conceptuelle   :b1, after a2, 20d
+    Architecture technique      :b2, after b1, 15d
+    
+    section Développement
+    Développement ETL           :c1, after b2, 45d
+    Création des cubes OLAP     :c2, after c1, 30d
+    Développement dashboards    :c3, after c2, 30d
+    
+    section Déploiement
+    Tests & Recette             :d1, after c3, 20d
+    Formation utilisateurs      :d2, after d1, 10d
+    Mise en production          :d3, after d2, 5d
+    
+    section Exploitation
+    Support & Maintenance       :e1, after d3, 60d
+```
+
+---
+
+## Slide 16: 1.3.2 Détail des Phases
+
+#### **Phase 1 : Cadrage et Expression des Besoins (4-6 semaines)**
+
+**Objectifs :**
+
+- Définir le périmètre fonctionnel et les objectifs métier
+- Identifier les parties prenantes et leurs besoins analytiques
+- Évaluer la maturité BI de l'organisation
+
+**Livrables :**
+
+- Cahier des charges fonctionnel
+- Matrice des KPI prioritaires
+- Roadmap projet avec jalons
+- Budget et planning prévisionnel
+
+---
+
+## Slide 17: Ateliers Métier
+
+| Atelier | Participants | Durée | Objectif |
+|---------|-------------|-------|----------|
+| **Kickoff** | Sponsors, chef de projet | 2h | Aligner la vision et les enjeux |
+| **Expression besoins** | Utilisateurs clés, métier | 3h x 3 | Recueillir les besoins analytiques détaillés |
+| **Priorisation KPI** | Comité de pilotage | 2h | Définir les 15-20 KPI critiques |
+| **Validation périmètre** | Direction, métier | 2h | Valider le scope et le planning |
+
+---
+
+## Slide 18: Phase 2 : Conception (4-5 semaines)
+
+**Modélisation Conceptuelle :**
+
+- Identification des processus métier (ventes, achats, finance, etc.)
+- Définition des dimensions et des faits
+- Création du modèle logique de données (MLD)
+- Documentation des règles de gestion
+
+**Architecture Technique :**
+
+- Choix des technologies (Power BI, Azure, SQL Server, etc.)
+- Design de l'architecture ETL/ELT
+- Stratégie de sécurité et gouvernance
+- Plan de sauvegarde et de reprise d'activité
+
+---
+
+## Slide 19: Phase 3 : Développement (10-14 semaines)
+
+**Développement ETL (5-6 semaines) :**
+
+- Extraction des données sources
+- Implémentation des transformations
+- Chargement dans le Data Warehouse
+- Tests unitaires de chaque flux
+
+**Création des Cubes OLAP (3-4 semaines) :**
+
+- Implémentation du modèle en étoile
+- Création des dimensions et hiérarchies
+- Configuration des mesures et calculs
+- Optimisation des agrégations
+
+---
+
+## Slide 20: Suite Développement
+
+**Développement des Dashboards (4-5 semaines) :**
+
+- Création des rapports Power BI / Tableau
+- Développement des mesures DAX
+- Design UX/UI des tableaux de bord
+- Implémentation de la sécurité au niveau ligne (RLS)
+
+---
+
+## Slide 21: Phases 4-5-6
+
+**Phase 4 : Tests et Recette (3-4 semaines)**
+
+- Tests unitaires des flux ETL
+- Tests d'intégration end-to-end
+- Tests de performance et de charge
+- Validation fonctionnelle par les utilisateurs
+
+**Phase 5 : Déploiement et Formation (2-3 semaines)**
+
+- Formation utilisateurs finaux et power users
+- Déploiement de l'environnement de production
+- Migration des données historiques
+
+**Phase 6 : Exploitation et Amélioration Continue**
+
+- Support niveau 1-2-3
+- Analyse de l'usage et collecte de feedback
+- Optimisation des performances
+- Priorisation des évolutions
+
+---
+
+## Slide 22: 1.4 Panorama des Outils BI
+
+### 1.4.1 Comparatif des Principales Plateformes
+
+| Critère | Power BI | Tableau | Qlik Sense | Looker Studio |
+|---------|----------|---------|------------|---------------|
+| **Éditeur** | Microsoft | Salesforce | Qlik | Google |
+| **Courbe d'apprentissage** | ⭐⭐⭐ Modérée | ⭐⭐⭐⭐ Facile | ⭐⭐ Complexe | ⭐⭐⭐⭐⭐ Très facile |
+| **Puissance analytique** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ |
+| **Intégration écosystème** | Excellent (Microsoft) | Bon (Salesforce) | Bon | Excellent (Google) |
+| **Prix (par utilisateur/mois)** | 10-20€ (Pro/Premium) | 70-140$ | 30-100$ | Gratuit - 10€ |
+
+---
+
+## Slide 23: Suite Comparatif Outils
+
+| Critère | Power BI | Tableau | Qlik Sense | Looker Studio |
+|---------|----------|---------|------------|---------------|
+| **Déploiement** | Cloud ou On-premise | Cloud ou On-premise | Cloud ou On-premise | Cloud uniquement |
+| **Langage de calcul** | DAX | Calculs Tableau | Qlik Script | SQL-like |
+| **Connecteurs natifs** | 200+ | 100+ | 150+ | 800+ (via Google) |
+| **Mobile** | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ |
+| **Collaboration** | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+
+---
+
+## Slide 24: Microsoft Power BI Ecosystem
+
+```{mermaid}
+graph TB
+    A[Power BI Ecosystem] --> B[Power BI Desktop]
+    A --> C[Power BI Service]
+    A --> D[Power BI Mobile]
+    A --> E[Power BI Embedded]
+    A --> F[Power BI Report Server]
+    
+    B --> B1["Développement de rapports<br/>Modélisation de données<br/>DAX & Power Query"]
+    C --> C1["Publication & Partage<br/>Collaboration<br/>Planification de rafraîchissement"]
+    D --> D1["Consultation mobile<br/>Notifications<br/>Mode offline"]
+    E --> E1["Intégration dans<br/>applications tierces<br/>White-labeling"]
+    F --> F1["Déploiement<br/>on-premise<br/>Pour organisations isolées"]
+    
+    style A fill:#2E86AB
+    style B fill:#F18F01
+    style C fill:#A23B72
+```
+
+---
+
+## Slide 25: Avantages et Limitations Power BI
+
+**Avantages Power BI :**
+
+- ✅ Intégration transparente avec l'écosystème Microsoft (Excel, Azure, Office 365)
+- ✅ Rapport qualité/prix exceptionnel
+- ✅ DAX : langage puissant pour les calculs complexes
+- ✅ Mises à jour mensuelles avec nouvelles fonctionnalités
+- ✅ Large communauté et nombreuses ressources de formation
+
+**Limitations :**
+
+- ❌ Dépendance à l'écosystème Microsoft
+- ❌ Personnalisation visuelle limitée comparée à Tableau
+- ❌ Performance sur très gros volumes (> 10 Go)
+
+---
+
+## Slide 26: Autres Outils BI
+
+**Tableau : L'Excellence de la Visualisation**
+
+- ✅ Interface intuitive et ergonomique
+- ✅ Capacités de visualisation avancées et flexibles
+- ✅ Excellente gestion des données spatiales (cartographie)
+- ✅ Communauté très active (Tableau Public)
+
+**Qlik Sense : Le Moteur Associatif**
+
+- ✅ Exploration libre et découverte de relations cachées
+- ✅ Performance élevée même sur gros volumes
+- ✅ Sécurité granulaire et gouvernance robuste
+
+**Looker Studio : L'Outil Accessible de Google**
+
+- ✅ Gratuit pour usage de base
+- ✅ Intégration native avec Google Analytics, Ads, BigQuery
+- ✅ Collaboration en temps réel (comme Google Docs)
+
+---
+
+## Slide 27: 1.5 Gouvernance et Culture Data-Driven
+
+### 1.5.1 Les Piliers de la Gouvernance des Données
+
+```{mermaid}
+graph TB
+    A[Gouvernance des Données] --> B[Qualité des Données]
+    A --> C[Sécurité & Confidentialité]
+    A --> D[Métadonnées & Documentation]
+    A --> E[Rôles & Responsabilités]
+    A --> F[Processus & Standards]
+    
+    B --> B1["Exactitude<br/>Complétude<br/>Cohérence<br/>Actualité"]
+    C --> C1["RGPD<br/>Contrôle d'accès<br/>Chiffrement<br/>Audit"]
+    D --> D1["Dictionnaire de données<br/>Lignage<br/>Catalogue de données"]
+    E --> E1["Data Owners<br/>Data Stewards<br/>Data Architects"]
+    F --> F1["Conventions de nommage<br/>Processus ETL<br/>Cycle de vie"]
+    
+    style A fill:#2E86AB
+```
+
+---
+
+## Slide 28: 1.5.2 Framework de Qualité des Données
+
+**Les 6 Dimensions de la Qualité :**
+
+| Dimension | Définition | Mesure | Exemple d'Anomalie |
+|-----------|------------|--------|-------------------|
+| **Exactitude** | Les données reflètent la réalité | % de conformité aux règles | Adresse email invalide |
+| **Complétude** | Absence de valeurs manquantes | % de champs remplis | Code postal manquant |
+| **Cohérence** | Uniformité entre sources | % de concordance | Client avec 2 dates de naissance différentes |
+
+---
+
+## Slide 29: Suite Dimensions Qualité
+
+| Dimension | Définition | Mesure | Exemple d'Anomalie |
+|-----------|------------|--------|-------------------|
+| **Actualité** | Fraîcheur des données | Délai de mise à jour | Stock non actualisé depuis 3 jours |
+| **Unicité** | Absence de doublons | % de doublons détectés | 3 comptes pour le même client |
+| **Validité** | Respect des formats et contraintes | % de valeurs valides | Date future dans un champ historique |
+
+---
+
+## Slide 30: Processus Data Quality Management
+
+```{mermaid}
+flowchart LR
+    A[Profiling<br/>Analyse initiale] --> B[Validation<br/>Règles de qualité]
+    B --> C[Nettoyage<br/>Correction]
+    C --> D[Enrichissement<br/>Complétion]
+    D --> E[Monitoring<br/>Surveillance]
+    E --> A
+    
+    style A fill:#F18F01
+    style C fill:#2E86AB
+    style E fill:#A23B72
+```
+
+---
+
+## Slide 31: 1.5.3 Sécurité et Conformité RGPD
+
+**Principes de Sécurité BI :**
+
+1. **Authentification** : qui accède aux données ?
+2. **Autorisation** : qui peut voir quoi ?
+3. **Audit** : traçabilité des accès et modifications
+4. **Chiffrement** : protection des données sensibles
+5. **Anonymisation** : masquage des données personnelles
+
+**Row-Level Security (RLS) : Exemple Power BI**
+
+```dax
+-- Exemple de filtre RLS dans Power BI
+[Région] = USERPRINCIPALNAME()
+
+-- Ou plus sophistiqué avec table de mapping
+VAR UserEmail = USERPRINCIPALNAME()
+VAR UserRegion = LOOKUPVALUE(
+    Users[Région],
+    Users[Email], UserEmail
+)
+RETURN [Région] = UserRegion
+```
+
+---
+
+## Slide 32: Checklist RGPD BI
+
+**Conformité RGPD : Checklist BI**
+
+- [ ] Inventaire des données personnelles traitées
+- [ ] Finalité légitime et transparente
+- [ ] Minimisation des données collectées
+- [ ] Durée de conservation définie
+- [ ] Droit d'accès et de rectification implémenté
+- [ ] Droit à l'oubli (suppression sur demande)
+- [ ] Chiffrement des données sensibles
+- [ ] Registre des traitements tenu à jour
+- [ ] DPO (Data Protection Officer) désigné
+- [ ] Analyse d'impact (PIA Privacy Impact Assessment) réalisée si nécessaire
+
+---
+
+## Slide 33: 1.5.4 Culture Data-Driven
+
+**Les 5 Niveaux de Maturité Data**
+
+```{mermaid}
+graph LR
+    A[Niveau 1<br/>Ad-hoc] --> B[Niveau 2<br/>Réactif]
+    B --> C[Niveau 3<br/>Défini]
+    C --> D[Niveau 4<br/>Géré]
+    D --> E[Niveau 5<br/>Optimisé]
+    
+    style A fill:#C73E1D
+    style C fill:#F18F01
+    style E fill:#06A77D
+```
+
+---
+
+## Slide 34: Tableau des Niveaux de Maturité
+
+| Niveau | Caractéristiques | Actions Clés |
+|--------|------------------|--------------|
+| **1. Ad-hoc** | Données en silos, décisions intuitives | Sensibiliser la direction |
+| **2. Réactif** | Rapports manuels, analyses ponctuelles | Lancer premiers projets BI |
+| **3. Défini** | Processus standardisés, BI centralisée | Former les équipes, gouvernance |
+| **4. Géré** | Mesure de la performance, dashboards temps réel | Self-service BI, culture data |
+| **5. Optimisé** | IA/ML intégrés, amélioration continue | Innovation data, data products |
+
+---
+
+## Slide 35: Facteurs Clés de Succès
+
+**Facteurs Clés de Succès :**
+
+1. **Sponsorship exécutif** : engagement visible de la direction
+2. **Quick wins** : projets pilotes rapides pour démontrer la valeur
+3. **Formation continue** : montée en compétence des équipes
+4. **Démocratisation** : self-service BI pour les métiers
+5. **Mesure de l'impact** : ROI des initiatives data
+
+---
+
+## Slide 36: 1.6 Atelier Pratique
+
+### 1.6.1 Objectifs de l'Atelier
+
+Cet atelier de 90 minutes permet aux participants de :
+
+- Cartographier l'architecture data d'une entreprise fictive
+- Identifier les sources de données et leurs flux
+- Définir 5 KPI stratégiques prioritaires
+- Proposer une roadmap BI simplifiée
+
+---
+
+## Slide 37: Cas d'Étude : TechnoRetail SA
+
+**Contexte Entreprise :**
+
+TechnoRetail est une chaîne de magasins d'électronique avec :
+
+- 50 points de vente en France
+- 200M€ de CA annuel
+- E-commerce représentant 30% du CA
+- 500 000 clients actifs
+
+**Problématiques Métier :**
+
+- Visibilité limitée sur la performance magasin vs web
+- Ruptures de stock fréquentes
+- Difficulté à analyser le comportement client omnicanal
+- Reporting financier manuel et chronophage
+
+---
+
+## Slide 38: Exercice 1 : Sources de Données
+
+**Exercice 1 : Identifier les sources (15 min)**
+
+| Système | Type | Données Clés | Fréquence de Mise à Jour |
+|---------|------|--------------|--------------------------|
+| **SAP ECC** | ERP | Ventes, achats, stocks, comptabilité | Temps réel |
+| **Salesforce** | CRM | Clients, contacts, opportunités | Temps réel |
+| **Magento** | E-commerce | Commandes web, paniers abandonnés | Temps réel |
+| **Google Analytics** | Web analytics | Trafic, conversions, parcours | Batch quotidien |
+
+---
+
+## Slide 39: Exercice 2 : Architecture Cible
+
+**Exercice 2 : Dessiner l'architecture cible (20 min)**
+
+```{mermaid}
+graph TB
+    subgraph Sources
+        A1[SAP ECC]
+        A2[Salesforce]
+        A3[Magento]
+        A4[Google Analytics]
+        A5[Fichiers Excel]
+    end
+    
+    subgraph ETL
+        B[Azure Data Factory]
+    end
+    
+    subgraph Storage
+        C1[Data Lake<br/>Azure Data Lake]
+        C2[Data Warehouse<br/>Azure Synapse]
+    end
+    
+    subgraph Semantic
+        D[Modèle Power BI<br/>Étoile Ventes]
+    end
+    
+    subgraph Reporting
+        E1[Dashboards Ventes]
+        E2[Rapports Financiers]
+        E3[Analytics Clients]
+    end
+    
+    A1 --> B
+    A2 --> B
+    A3 --> B
+    A4 --> B
+    A5 --> B
+    
+    B --> C1
+    C1 --> C2
+    C2 --> D
+    D --> E1
+    D --> E2
+    D --> E3
+    
+    style C2 fill:#2E86AB
+    style D fill:#F18F01
+```
+
+---
+
+## Slide 40: Exercice 3 : KPI Stratégiques
+
+**Exercice 3 : Identifier 5 KPI prioritaires (25 min)**
+
+Méthodologie SMART pour définir des KPI efficaces :
+
+- **S**pécifique : clairement défini et compréhensible
+- **M**esurable : quantifiable avec une unité de mesure
+- **A**tteignable : réaliste et actionnable
+- **R**elevant : aligné avec les objectifs stratégiques
+- **T**emporel : avec une fréquence de mise à jour définie
+
+---
+
+## Slide 41: Template Fiche KPI
+
+**Template de Fiche KPI :**
+
+| Élément | Description |
+|---------|-------------|
+| **Nom du KPI** | Nom explicite |
+| **Définition** | Formule de calcul détaillée |
+| **Objectif métier** | Pourquoi mesurer ce KPI ? |
+| **Source de données** | Système(s) source(s) |
+| **Fréquence de mise à jour** | Temps réel, quotidien, hebdomadaire, mensuel |
+| **Propriétaire** | Responsable métier |
+| **Seuil d'alerte** | Valeurs limites (min/max) |
+| **Visualisation recommandée** | Type de graphique |
+
+---
+
+## Slide 42: Exemple KPI 1 : CA Consolidé
+
+#### KPI 1 : Chiffre d'Affaires Consolidé
+
+```dax
+Total Sales = 
+SUM(FACT_Sales[SalesAmount])
+
+Sales YoY % = 
+IF(
+    HASONEVALUE('DIM_Date'[Year]),
+    VAR CurrentSales = [Total Sales]
+    VAR CurrentYear = MAX('DIM_Date'[Year])
+    VAR PreviousYearSales =
+        CALCULATE(
+            [Total Sales],
+            FILTER(
+                ALL('DIM_Date'),
+                'DIM_Date'[Year] = CurrentYear - 1
+            )
+        )
+    RETURN
+        IF(
+            ISBLANK(PreviousYearSales) || PreviousYearSales = 0,
+            0,
+            DIVIDE(CurrentSales - PreviousYearSales, PreviousYearSales)
+        ),
+    BLANK()
+)
+```
+
+---
+
+## Slide 43: Détail KPI 1
+
+| Critère | Détail |
+|---------|--------|
+| **Formule** | Somme des montants HT de toutes les ventes |
+| **Objectif** | Suivre la performance commerciale globale |
+| **Source** | SAP ECC + Magento |
+| **Fréquence** | Temps réel |
+| **Seuil** | Objectif annuel : 220M€ (+10% vs N-1) |
+| **Visualisation** | Carte KPI + Line chart avec tendance |
+
+---
+
+## Slide 44: Exemple KPI 2 : Rupture de Stock
+
+#### KPI 2 : Taux de Rupture de Stock
+
+```dax
+Stock Out Rate = 
+VAR OutOfStockDays = 
+    CALCULATE(
+        COUNTROWS('FACT_Stock'),
+        'FACT_Stock'[QuantityInStock] = 0
+    )
+VAR TotalDays = 
+    COUNTROWS('FACT_Stock')
+RETURN
+    DIVIDE(OutOfStockDays, TotalDays, 0)
+```
+
+| Critère | Détail |
+|---------|--------|
+| **Formule** | (Nb jours en rupture / Nb jours total) × 100 |
+| **Objectif** | Optimiser la disponibilité produits |
+| **Source** | SAP ECC (module MM) |
+| **Fréquence** | Quotidien |
+| **Seuil** | < 5% (alerte si > 8%) |
+| **Visualisation** | Gauge + Table des produits critiques |
+
+---
+
+## Slide 45: Exercice 4 : Dashboard de Synthèse
+
+**Exercice 4 : Esquisser le dashboard exécutif (30 min)**
+
+**Principes de Design :**
+
+| Principe | Application |
+|----------|-------------|
+| **Hiérarchie visuelle** | Les KPI critiques en haut, détails en bas |
+| **Règle des 5 secondes** | Le message clé doit être compris en 5 secondes |
+| **Consistance** | Même palette de couleurs, même format de chiffres |
+| **Interactivité** | Filtres dynamiques (période, région, canal) |
+| **Contexte** | Toujours comparer (vs objectif, vs N-1, vs benchmark) |
+
+---
+
+## Slide 46: Structure Dashboard
+
+**Structure Recommandée :**
+
+```{mermaid}
+graph TB
+    A[En-tête : Titre + Filtres] --> B[Zone KPI : 5 Cartes Principales]
+    B --> C[Zone Tendances : Graphiques Temporels]
+    C --> D[Zone Analyse : Détails par Dimension]
+    
+    style A fill:#2E86AB
+    style B fill:#F18F01
+    style C fill:#A23B72
+    style D fill:#06A77D
+```
+
+---
+
+## Slide 47: 1.7 Synthèse du Module 1
+
+### 1.7.1 Récapitulatif des Concepts
+
+À l'issue de ce module, les participants maîtrisent :
+
+✅ **Les fondamentaux de la BI** : définitions, enjeux, niveaux d'analytics  
+✅ **L'architecture décisionnelle** : de la source au dashboard  
+✅ **Le cycle de vie projet BI** : phases, livrables, parties prenantes  
+✅ **Le panorama des outils** : Power BI, Tableau, Qlik, Looker Studio  
+✅ **La gouvernance et la qualité des données** : RGPD, sécurité, culture data-driven  
+✅ **La méthodologie de définition des KPI** : approche SMART, dashboarding
+
+---
+
+## Slide 48: Checklist de Fin de Module
+
+**Auto-évaluation des Acquis :**
+
+- [ ] Je peux expliquer la différence entre OLTP et OLAP
+- [ ] Je comprends le rôle de chaque composant de l'architecture BI
+- [ ] Je sais définir un KPI selon la méthodologie SMART
+- [ ] Je peux comparer les avantages de Power BI vs Tableau
+- [ ] Je connais les 6 dimensions de la qualité des données
+- [ ] Je peux identifier les phases d'un projet BI
+- [ ] Je comprends les enjeux de la gouvernance et du RGPD
+
+---
+
+## Slide 49: Ressources Complémentaires
+
+**Lectures Recommandées :**
+
+- **Livres** : 
+  - "The Data Warehouse Toolkit" - Ralph Kimball
+  - "Building a Data-Driven Organization" - Carl Anderson
+  - "Storytelling with Data" - Cole Nussbaumer Knaflic
+
+**Sites Web & Communautés :**
+
+- [Microsoft Learn - Power BI](https://learn.microsoft.com/power-bi/)
+- [Tableau Community Forums](https://community.tableau.com/)
+- [DAMA International](https://www.dama.org/) - Data Management Body of Knowledge
+
+---
+
+## Slide 50: Certifications
+
+**Certifications :**
+
+- Microsoft Certified: Power BI Data Analyst Associate (PL-300)
+- Tableau Desktop Specialist
+- AWS Certified Data Analytics - Specialty
+
+---
+
+## Slide 51: Questions & Réponses
+
+### Session de Questions
+
+**Temps alloué : 15 minutes**
+
+Merci pour votre attention !
